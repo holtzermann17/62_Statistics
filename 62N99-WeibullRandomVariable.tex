@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeibullRandomVariable}
+\pmcreated{2013-03-22 14:26:44}
+\pmmodified{2013-03-22 14:26:44}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Weibull random variable}
+\pmrecord{8}{35960}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62N99}
+\pmclassification{msc}{62E15}
+\pmclassification{msc}{60E05}
+\pmclassification{msc}{62P05}
+\pmsynonym{Weibull distribution}{WeibullRandomVariable}
+\pmsynonym{Rayleigh distribution}{WeibullRandomVariable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+$X$ is a \emph{Weibull random variable} if it has a probability density function, given by
+$$f_X(x)=\frac{\gamma}{\alpha}(\frac{x-\mu}{\alpha})^{\gamma-1}
+e^{-(\frac{x-\mu}{\alpha})^\gamma}$$
+where $\alpha,\gamma,\mu\in\mathbb{R}$, $\alpha,\gamma>0$ and $x\ge\mu$.  $\alpha$ is the \emph{scale parameter}, $\gamma$ is the \emph{shape parameter}, and $\mu$ is the \emph{location parameter}.
+
+Notation for $X$ having a Weibull distribution is $X\sim \mbox{Wei}(\alpha,\gamma,\mu)$.  Usually, the location and scale parameters are dropped by the transformation $$Y=\frac{X-\mu}{\alpha}$$ so that $Y\sim \mbox{Wei}(\gamma):=\mbox{Wei}(1,\gamma,0)$.  The resulting distribution is called the \emph{standard Weibull}, or \emph{Rayleigh distribution}:
+$$f_X(x)=\gamma x^{\gamma-1}\operatorname{exp}(-x^\gamma)$$
+
+\textbf{\PMlinkescapetext{Properties}}:
+Given a standard Weibull distribution $X\sim \mbox{Wei}(\gamma)$:
+\begin{enumerate}
+\item 
+$\operatorname{E}[X]=\Gamma(\frac{\gamma+1}{\gamma})$, where $\Gamma$ is the gamma function
+\item 
+Median = $(\operatorname{ln}2)^{\frac{1}{\gamma}}$
+\item
+Mode $= \begin{cases}
+(1-\frac{1}{\gamma})^{1/\gamma} & \mbox{if $\gamma>1$}\\
+0 & \mbox{otherwise} \end{cases}$
+\item 
+$\operatorname{Var}[X]=\Gamma(\frac{\gamma+2}{\gamma})-\Gamma(\frac{\gamma+1}{\gamma})^2$
+\item 
+$X\sim \mbox{Wei}(\alpha,\gamma,0)$ iff $X^{\gamma}\sim \mbox{Exp}(\alpha^\gamma)$, the exponential distribution with parameter $\alpha^\gamma$
+\end{enumerate}
+
+\textbf{Remark.}
+The Weibull distribution is often used to model reliability or lifetime of \PMlinkescapetext{products} such as light bulbs.
+%%%%%
+%%%%%
+\end{document}

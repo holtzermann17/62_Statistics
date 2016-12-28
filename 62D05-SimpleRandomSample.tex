@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimpleRandomSample}
+\pmcreated{2013-03-22 15:13:01}
+\pmmodified{2013-03-22 15:13:01}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{simple random sample}
+\pmrecord{5}{36980}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62D05}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+A sample $S$ of size $n$ from a population $U$ of size $N$ is called
+a \emph{simple random sample} if
+\begin{enumerate}
+\item it is a sample without replacement, and
+\item the probability of picking this sample is equal to the
+probability of picking any other sample of size $n$ from the same
+population $U$.
+\end{enumerate}
+From the first part of the definition, there are $\binom{N}{n}$
+samples of $n$ items from a population of $N$ items.  From the
+second part of the definition, the probability of any sample of size
+$n$ in $U$ is a constant.  Therefore, the probability of picking a
+particular simple random sample of size $n$ from a population of
+size $N$ is $\binom{N}{n}^{-1}$.
+\\\\
+\textbf{Remarks}  Suppose $x_1,x_2,\ldots,x_n$ are values
+representing the items sampled in a simple random sample of size
+$n$.
+\begin{itemize}
+\item The sample mean $\overline{x}=\frac{1}{n}\sum_{i=1}^{n}x_i$ is an
+unbiased estimator of the true population mean $\mu$.
+\item The sample variance $s^2=\frac{1}{n-1}
+\sum_{i=1}^{n}(x_i-\overline{x})^2$ is an unbiased estimator of
+$S^2$, where $(\frac{N-1}{N})S^2=\sigma^2$ is the true variance of
+the population given by
+$$\sigma^2:=\frac{1}{N}\sum_{i=1}^{N}(x_i-\overline{x})^2.$$
+\item The variance of the sample mean $\overline{x}$ from the true
+mean $\mu$ is $$\left(\frac{N-n}{nN}\right) S^2.$$  The larger the sample size,
+the smaller the deviation from the true population mean.  When
+$n=1$, the variance is the same as the true population variance.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

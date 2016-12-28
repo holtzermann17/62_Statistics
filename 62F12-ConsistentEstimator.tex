@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConsistentEstimator}
+\pmcreated{2013-03-22 15:26:34}
+\pmmodified{2013-03-22 15:26:34}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{consistent estimator}
+\pmrecord{5}{37290}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62F12}
+\pmdefines{consistent sequence of estimators}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Given a set of samples $X_1,\ldots,X_n$ from a given probability
+distribution $f$ with an unknown parameter $\theta\in\Theta$, where
+$\Theta$ is the parameter space that is a subset of $\mathbb{R}^m$.
+Let $U(=U(X_1,\ldots,X_n))$ be an estimator of $\theta$. Allowing
+the sample size $n$ to vary, we get a sequence of estimators for
+$\theta$:
+\begin{eqnarray*}
+U_1 &=& U(X_1),\\
+&\vdots& \\
+U_n &=& U(X_1,\ldots,X_n), \\
+&\vdots&
+\end{eqnarray*}
+We say that the sequence of estimators $\lbrace U_n \rbrace$
+\emph{consistent} (or that $U$ is a \emph{consistent estimator} of
+$\theta$), if $U_i$ converges in probability to $\theta$ for
+\emph{every} $\theta\in\Theta$.  That is, for every $\varepsilon>0$,
+$$\lim_{n\rightarrow\infty}P(|h_n-\theta|\geq\varepsilon)=0$$
+for all $\theta\in\Theta$.
+\\\\
+\textbf{Remark}.  Suppose $U$ is an estimator of $\theta$ such that
+the sequence $\lbrace U_n\rbrace$ is consistent.  If
+$\alpha_n\to\alpha\in\mathbb{R}$ and $\beta_n\to\beta\in
+\mathbb{R}^m$ are two convergent sequences of constants with
+$0<|\alpha|<\infty$ and $|\beta|<\infty$, then the sequence $\lbrace
+V_n\rbrace$, defined by $V_n:=\alpha_n U_n+\beta_n$, is consistent,
+$V$ is an estimator of $\alpha\theta + \beta$.
+\begin{proof}
+First, observe that
+\begin{eqnarray*}
+|V_n-(\alpha\theta+\beta)| &=&
+|\alpha_nU_n+\beta_n-\alpha\theta-\beta|\\
+&\le&|\alpha_nU_n-\alpha\theta|+|\beta_n-\beta|\\
+&=&|\alpha_nU_n-\alpha_n\theta+\alpha_n\theta-\alpha\theta|+|\beta_n-\beta|\\
+&\le&|\alpha_nU_n-\alpha_n\theta|+|\alpha_n\theta-\alpha\theta|+|\beta_n-\beta|\\
+&=&|\alpha_n||U_n-\theta|+|\alpha_n-\alpha||\theta|+|\beta_n-\beta|.
+\end{eqnarray*}
+This implies
+\begin{eqnarray*}
+&& P(|V_n-(\alpha\theta+\beta)|\ge\varepsilon)
+\\&\le& P(|\alpha_n||U_n-\theta|+|\alpha_n-\alpha|
+|\theta|+|\beta_n-\beta|\ge\varepsilon)
+\\&=&P(|U_n-\theta|\ge
+\frac{\varepsilon-|\beta_n-\beta|-|\alpha_n-\alpha||\theta|}{|\alpha_n|}).
+\end{eqnarray*}
+As $n\to\infty$, $|\beta_n-\beta|\to 0$,
+$|\alpha_n-\alpha||\theta|\to 0$, and $|\alpha_n|\to|\alpha|\ne 0$.
+So the last expression goes to $0$ as $n\to\infty$. Therefore,
+$$\lim_{n\to\infty}P(|V_n-(\alpha\theta+\beta)|\ge\varepsilon)=0,$$
+and thus $\lbrace V_n\rbrace$ is a consistent sequence of estimators
+of $\alpha\theta+\beta$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

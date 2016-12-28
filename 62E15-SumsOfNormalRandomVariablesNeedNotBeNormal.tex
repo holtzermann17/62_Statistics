@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SumsOfNormalRandomVariablesNeedNotBeNormal}
+\pmcreated{2013-03-22 18:43:44}
+\pmmodified{2013-03-22 18:43:44}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{sums of normal random variables need not be normal}
+\pmrecord{5}{41497}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+\pmclassification{msc}{60E05}
+%\pmkeywords{normal random variable}
+%\pmkeywords{independent}
+%\pmkeywords{covariance}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{sum}
+\PMlinkescapeword{variables}
+\PMlinkescapeword{normal}
+\PMlinkescapeword{property}
+\PMlinkescapeword{conditional}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{normals}
+ 
+A common misconception among students of probability theory is the belief that the sum of two \PMlinkname{normally distributed}{NormalRandomVariable} random variables is itself normally distributed. By constructing a counterexample, we show this to be false.
+
+It is however well known that the sum of normally distributed variables  $X,Y$ will be normal under either of the following situations.
+\begin{itemize}
+\item $X,Y$ are independent.
+\item $X,Y$ are \PMlinkname{joint normal}{JointNormalDistribution}.
+\end{itemize}
+The statement that the sum of two independent normal random variables is itself normal is a very useful and often used property. Furthermore, when working with normal variables which are not independent, it is common to suppose that they are in fact joint normal. This can lead to the belief that this property holds always.
+
+Another common fallacy, which our example shows to be false, is that normal random variables are independent if and only if their covariance, defined by
+\begin{equation*}
+\operatorname{Cov}(X,Y)\equiv\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]
+\end{equation*}
+is zero. While it is certainly true that independent variables have zero covariance, the converse statement does not hold. Again, it is often supposed that they are joint normal, in which case a zero covariance will indeed imply independence.
+
+We construct a pair of random variables $X,Y$ satisfying the following.
+\begin{enumerate}
+\item $X$ and $Y$ each have the standard normal distribution.
+\item The covariance, $\operatorname{Cov}(X,Y)$, is zero.
+\item The sum $X+Y$ is not normally distributed, and $X$ and $Y$ are not independent.
+\end{enumerate}
+We start with a pair of independent random variables $X,\epsilon$ where $X$ has the standard normal distribution and $\epsilon$ takes the values $1,-1$, each with a probability of $1/2$.
+Then set,
+\begin{equation*}
+Y=\left\{
+\begin{array}{ll}
+\epsilon X,&\textrm{if }|X|\le 1,\\
+-\epsilon X,&\textrm{if }|X|>1.
+\end{array}
+\right.
+\end{equation*}
+If $S$ is any measurable subset of the real numbers, the symmetry of the normal distribution implies that $\mathbb{P}(X\in S)$ is equal to $\mathbb{P}(-X\in S)$. Then, by the independence of $X$ and $\epsilon$, the distribution of $Y$ conditional on $\epsilon=1$ is given by,
+\begin{equation*}\begin{split}
+\mathbb{P}(Y\in S\mid\epsilon=1) &= \mathbb{P}(|X|\le 1, X\in S) +\mathbb{P}(|X|>1,-X\in S)\\
+&=\mathbb{P}(|X|\le 1,X\in S)+\mathbb{P}(|X|>1,X\in S)=\mathbb{P}(X\in S).
+\end{split}\end{equation*}
+It can similarly be shown that $\mathbb{P}(Y\in S\mid\epsilon=-1)$ is equal to $\mathbb{P}(X\in S)$.
+So, $Y$ has the same distribution as $X$ and is normal with mean zero and variance one.
+
+Using the fact that $\epsilon$ has zero mean and is independent of $X$, it is easily shown that the covariance of $X$ and $Y$ is zero.
+\begin{equation*}
+\begin{split}
+\operatorname{Cov}(X,Y) &=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]=\mathbb{E}[XY]\\
+&=\mathbb{E}\left[1_{\{|X|\le 1\}}\epsilon X^2\right] +\mathbb{E}\left[-1_{\{|X|> 1\}}\epsilon X^2\right]\\
+&=\mathbb{E}[\epsilon]\mathbb{E}\left[1_{\{|X|\le 1\}}X^2\right] -\mathbb{E}[\epsilon]\mathbb{E}\left[1_{\{|X|> 1\}}X^2\right]\\
+&=0.
+\end{split}
+\end{equation*}
+As $X$ and $Y$ have zero covariance and each have variance equal to $1$, the sum $X+Y$ will have variance equal to $2$. Also, the sum satisfies
+\begin{equation*}
+X+Y=\left\{
+\begin{array}{ll}
+2\epsilon X,&\textrm{if }|X|\le 1,\\
+0,&\textrm{if }|X|>1.
+\end{array}
+\right.
+\end{equation*}
+In particular, this shows that $\mathbb{P}(|X+Y|>2)=0$. However, normal random variables with nonzero variance always have a positive probability of being greater than any given real number. So, $X+Y$ is not normally distributed.
+
+This also shows that, despite having zero covariance, $X$ and $Y$ are not independent. If they were, then the fact that sums of independent normals are normal would imply that $X+Y$ is normal, contradicting what we have just demonstrated.
+
+%%%%%
+%%%%%
+\end{document}

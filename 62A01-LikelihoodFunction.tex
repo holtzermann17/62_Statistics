@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LikelihoodFunction}
+\pmcreated{2013-03-22 14:27:58}
+\pmmodified{2013-03-22 14:27:58}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{likelihood function}
+\pmrecord{13}{35987}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62A01}
+\pmsynonym{likelihood statistic}{LikelihoodFunction}
+\pmsynonym{likelihood}{LikelihoodFunction}
+\pmdefines{maximum likelihood estimate}
+\pmdefines{MLE}
+\pmdefines{log-likelihood function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let \textbf{X}=($X_1,\ldots,X_n$) be a random vector and $$\lbrace f_{\mathbf{X}}(\boldsymbol{x}\mid\boldsymbol{\theta}) : \boldsymbol{\theta} \in \Theta \rbrace$$ a statistical model parametrized by $\boldsymbol{\theta}=(\theta_1,\ldots,\theta_k)$, the parameter vector in the \emph{parameter space} $\Theta$.  The \emph{likelihood function} is a map $L: \Theta \to \mathbb{R}$ given by $$L(\boldsymbol{\theta}\mid\boldsymbol{x}) =  f_{\mathbf{X}}(\boldsymbol{x}\mid\boldsymbol{\theta}).$$
+In other words, the likelikhood function is functionally the same in form as a probability density function.  However, the emphasis is changed from the $\boldsymbol{x}$ to the $\boldsymbol{\theta}$.  The pdf is a function of the $x$'s while holding the parameters $\theta$'s constant, $L$ is a function of the parameters $\theta$'s, while holding the $x$'s constant.
+
+When there is no confusion, $L(\boldsymbol{\theta}\mid\boldsymbol{x})$ is abbreviated to be $L(\boldsymbol{\theta})$.  
+
+The parameter vector $\hat{\boldsymbol{\theta}}$ such that $L(\hat{\boldsymbol{\theta}})\geq L(\boldsymbol{\theta})$ for all $\boldsymbol{\theta}\in\Theta$ is called a \emph{maximum likelihood estimate}, or \emph{MLE}, of $\boldsymbol{\theta}$.
+
+Many of the density functions are exponential in nature, it is therefore easier to compute the MLE of a likelihood 
+function $L$ by finding the maximum of the natural log of $L$, known as the log-likelihood function: $$\ell(\boldsymbol{\theta}\mid\boldsymbol{x}) =  \operatorname{ln}(L(\boldsymbol{\theta}\mid\boldsymbol{x}))$$
+due to the monotonicity of the log function.
+
+\textbf{Examples}:
+\begin{enumerate}
+\item
+A coin is tossed $n$ times and $m$ heads are observed.  Assume that the probability of a head after one toss is $\pi$.  What is the MLE of $\pi$?
+
+\emph{Solution}:  Define the outcome of a toss be 0 if a tail is observed and 1 if a head is observed.  Next, let $X_i$ be the outcome of 
+the $i$th toss.  For any single toss, the density function is $\pi^x(1-\pi)^{1-x}$ where $x\in \lbrace 0,1\rbrace$.  Assume that the tosses are independent events, then the joint probability density is $$f_{\mathbf{X}}(\boldsymbol{x}\mid\pi)=\binom{n}{\Sigma x_i}\pi^{\Sigma x_i}(1-\pi)^{\Sigma (1-x_i)}=\binom{n}{m}\pi^m(1-\pi)^{n-m},$$
+which is also the likelihood function $L(\pi)$.  Therefore, the log-likelihood function has the form $$\ell(\pi\mid\boldsymbol{x})=\ell(\pi)=\operatorname{ln}\binom{n}{m}+m\operatorname{ln}(\pi)+(n-m)\operatorname{ln}(1-\pi).$$  Using standard calculus, we get that the MLE of $\pi$ is $$\hat{\pi}=\frac{m}{n}=\overline{x}.$$
+
+\item
+Suppose a sample of $n$ data points $X_i$ are collected.  Assume that the $X_i\sim N(\mu,\sigma^2)$ and the $X_i$'s are independent of each other.  What is the MLE of the parameter vector $\boldsymbol{\theta}=(\mu,\sigma^2)$?
+
+\emph{Solution}:  The joint pdf of the $X_i$, and hence the likelihood function, is $$L(\boldsymbol{\theta}\mid\boldsymbol{x})=\frac{1}{\sigma^n(2\pi)^{n/2}}\operatorname{exp}(-\frac{\Sigma(x_i-\mu)^2}{2\sigma^2}).$$  The log-likelihood function is $$\ell(\boldsymbol{\theta}\mid\boldsymbol{x})=-\frac{\Sigma(x_i-\mu)^2}{2\sigma^2}-\frac{n}{2}\operatorname{ln}(\sigma^2)-\frac{n}{2}\operatorname{ln}(2\pi).$$  Taking the first derivative (gradient), we get $$\frac{\partial\ell}{\partial \boldsymbol{\theta}}=(\frac{\Sigma(x_i-\mu)}{\sigma^2},\frac{\Sigma(x_i-\mu)^2}{2\sigma^4}-\frac{n}{2\sigma^2}).$$  Setting $$\frac{\partial\ell}{\partial \boldsymbol{\theta}}=\boldsymbol{0}\mbox{ See score function}$$ and solve for $\boldsymbol{\theta}=(\mu,\sigma^2)$ we have $$\boldsymbol{\hat{\theta}}=(\hat{\mu},\hat{\sigma}^2)=(\overline{x},\frac{n-1}{n}s^2),$$ where $\overline{x}=\Sigma x_i/n$ is the sample mean and $s^2=\Sigma (x_i-\overline{x})^2/(n-1)$ is the sample variance.  Finally, we verify that $\hat{\boldsymbol{\theta}}$ is indeed the MLE of $\boldsymbol{\theta}$ by checking the negativity of the 2nd derivatives (for each parameter).
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

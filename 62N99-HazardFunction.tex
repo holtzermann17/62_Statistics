@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HazardFunction}
+\pmcreated{2013-03-22 14:27:45}
+\pmmodified{2013-03-22 14:27:45}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{hazard function}
+\pmrecord{6}{35982}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62N99}
+\pmclassification{msc}{62P05}
+\pmdefines{cumulative hazard function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $Y$ be a random variable with probability density function $f_Y(y)$.  Then the \emph{hazard function} $h(y)$ is defined to be:
+$$h(y) = \frac{f_Y(y)}{1 - F_Y(y)} = \frac{f_Y(y)}{S(y)},$$
+where $S(y)$ is the survivor function and $Y$ is the survival time.
+
+The hazard function is the rate of probability of death (non survival) is changing at time $Y=y$, given survival up to time $y$:
+$$h(y) = \lim_{\Delta y\rightarrow 0} \frac
+{P(y\leq Y \leq y+\Delta y \mid Y > y)}{\Delta y}.$$
+
+The \emph{cumulative hazard function}, $H(y)$ of $Y$ is defined as 
+$$H(y) = \int_{-\infty}^{y} h(t) dt.$$
+
+From this definition, we see that $H(y)=-\operatorname{ln}S(y)$.
+
+\textbf{Examples}.
+The hazard functions for the three most widely used probability density functions for survival time are:
+
+\begin{itemize}
+\item The exponential distribution, with $h(y)=\gamma$.
+\item The Weibull distribution, with $h(y)=\gamma y^{\gamma-1}$ using the standard Weibull distribution.
+\item The extreme-value distribution, with $h(y)=\frac{1}{\beta}\operatorname{exp}(\frac{y-\alpha}{\beta})$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

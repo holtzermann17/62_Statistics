@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OccamsRazor}
+\pmcreated{2013-03-22 14:44:14}
+\pmmodified{2013-03-22 14:44:14}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Occam's razor}
+\pmrecord{9}{36371}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62-07}
+\pmclassification{msc}{00A20}
+\pmclassification{msc}{62A01}
+\pmsynonym{law of parsimony}{OccamsRazor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{tabls}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{model}
+
+The following example in statistics illustrates the principle of \emph{Occam's razor}.  See \PMlinkexternal{Article on Occam's Razor on Wikipedia}{http://en.wikipedia.org/wiki/Occam's_Razor} for a thorough discussion, mathematical or not, of this principle, which is also known as the \emph{principle of parsimony}.
+
+\textbf{Example in statistics:}
+
+Given the following ten pairs of hypothetical observations of continuous response variable $Y$ and continuous explanatory variable $X$:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$X$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\hline
+$Y$ & 11 & 13 & 15 & 15 & 16 & 18 & 21 & 22 & 22 & 24 \\
+\hline
+\end{tabular}
+\end{center}
+be fitted using a linear regression model given by 
+$$Y=\alpha + \beta X.$$
+Using the method of least squares, the regression coefficients are found to be $\alpha=9.867$ and $\beta=1.424$, so that the regression line is
+$$Y=9.867+1.424X.$$
+The p-values for both regression coefficients are found to be less than 0.0001 and the p-value for the overall fit of the model is also less than 0.0001.  The p-value analysis can be summarized by the following table:
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & $\alpha$ & $\beta$ & overall fit of model \\
+\hline
+p-value & $<0.0001$ & $<0.0001$ & $<0.0001$ \\
+\hline
+\end{tabular}
+\end{center}
+This indicates that the linear regression equation fits the data very well.
+
+Next, fit the data using a 2nd order polynomial regression model, given by
+$$Y=\alpha + \beta X + \gamma X^2.$$
+Least square estimation shows that the regression equation is given by 
+$$Y=9.783 + 1.466X - 0.004X^2.$$
+The following table shows the result of the p-value analysis of the 2nd order polynomial regression model:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ & $\alpha$ & $\beta$ & $\gamma$ & overall fit of model \\
+\hline
+p-value & $<0.0001$ & $0.0085$ & 0.9188 & $<0.0001$ \\
+\hline
+\end{tabular}
+\end{center}
+The p-value for the fit of the overall model suggests that the polynomial regression equation also fits the data well.  The same can be said about the estimates of the regression coefficients $\alpha$ and $\beta$.  However, the coefficient $\gamma=-0.004$ shows that the additional term does not contribute too much to the overall fit of the model to the observations.  Furthermore, its p-value is very high, indicating that the $X^2$ term is not significant.
+
+In light of the above analysis, we prefer the simpler model $Y=\alpha + \beta X$ over the more complicated one $Y=\alpha + \beta X + \gamma X^2$.  This example shows that, in statistical modeling, when a simpler, easier to interpret model exists in the presence of more complicated ones, the simpler one should be chosen.  This is Occam's razor at work!
+%%%%%
+%%%%%
+\end{document}

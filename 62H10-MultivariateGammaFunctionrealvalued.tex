@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultivariateGammaFunctionrealvalued}
+\pmcreated{2013-03-22 14:22:06}
+\pmmodified{2013-03-22 14:22:06}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{multivariate gamma function (real-valued)}
+\pmrecord{15}{35853}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62H10}
+%\pmkeywords{Gamma multivariate real}
+\pmdefines{gamma function (multivariate real)}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Tr}{Tr}
+\begin{document}
+The real-valued multivariate gamma function is defined by
+\begin{equation}
+\Gamma_m(a) = \int_{\mathfrak{S}} e^{-\Tr S} \left|S\right|^{a-{1 \over 2}(m+1)}\, {\rm d} S,
+\end{equation}
+
+where $\mathfrak{S}$ is the set of all $m \times m$ real, positive definite symmetric matrices, i.e.
+\begin{equation}
+\mathfrak{S} = \left\{S \in \Bbb{R}^{m \times m} \mid S > 0, x^{\rm T}Sx > 0\, \forall\, x \in \mathbb{R}^{m \times 1}\setminus\{ 0\}\right\}.
+\end{equation}
+The real-valued multivariate gamma function can also be expressed in terms of the gamma function as follows
+
+\begin{equation}
+\Gamma_m(a) = \pi^{{1 \over 4} m (m-1)} \prod\limits_{i=1}^{m}\Gamma\left(a-{1 \over 2}(i-1)\right).
+\end{equation}
+
+\subsection*{Reference}
+A. T. James, ``Distributions of matrix variates and latent roots derived from normal samples,'' {\it Ann. Math. Statist.}, vol. 35, pp. 475-501, 1964.
+%%%%%
+%%%%%
+\end{document}

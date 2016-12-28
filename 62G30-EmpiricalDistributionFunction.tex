@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EmpiricalDistributionFunction}
+\pmcreated{2013-03-22 14:33:27}
+\pmmodified{2013-03-22 14:33:27}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{empirical distribution function}
+\pmrecord{7}{36110}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62G30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X_1,\ldots,X_n$ be random variables with realizations $x_i=X_i(\omega)\in\mathbb{R}$, $i=1,\ldots,n$.  The \emph{empirical distribution function} $F_n(x,\omega)$ based on $x_1,\ldots,x_n$ is
+$$F_n(x,\omega)=\frac{1}{n}\sum_{i=1}^{n}\chi_{A_i}(x,\omega),$$
+where $\chi_{A_i}$ is the indicator function (or characteristic function) and $A_i=\lbrace(x,\omega)\mid x_i\leq x \rbrace$.  Note that each indicator function is itself a random variable.
+\par
+The empirical function can be alternatively and equivalently defined by using the order statistics $X_{(i)}$ of $X_i$ as:
+$$
+F_n(x,\omega)= 
+\begin{cases}
+0 & \text{if $x<x_{(1)}$;}\\
+\frac{1}{n} & \text{if $x_{(1)}\leq x<x_{(2)}$, $1\leq k<2$;}\\
+\frac{2}{n} & \text{if $x_{(2)}\leq x<x_{(3)}$, $2\leq k<3$;}\\
+\vdots\\
+\frac{i}{n} & \text{if $x_{(i)}\leq x<x_{(i+1)}$, $i\leq k<i+1$;}\\
+\vdots\\
+1 & \text{if $x\geq x_{(n)}$;}
+\end{cases}
+$$
+where $x_{(i)}$ is the realization of the random variable $X_{(i)}$ with outcome $\omega$.
+%%%%%
+%%%%%
+\end{document}

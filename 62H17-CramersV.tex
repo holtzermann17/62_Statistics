@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CramersV}
+\pmcreated{2013-03-22 15:10:11}
+\pmmodified{2013-03-22 15:10:11}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Cramer's V}
+\pmrecord{7}{36920}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62H17}
+\pmsynonym{Cram\'{e}r's V}{CramersV}
+\pmsynonym{phi coefficient}{CramersV}
+\pmdefines{phi statistic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabls}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{cell}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{calculate}
+\PMlinkescapeword{order}
+\PMlinkescapeword{categories}
+\PMlinkescapeword{category}
+\PMlinkescapeword{classes}
+\PMlinkescapeword{information}
+
+Cramer's V is a statistic measuring the strength of association or
+dependency between two (nominal) categorical variables in a
+contingency table.
+\\\\
+\textbf{Setup.} Suppose $X$ and $Y$ are two categorical variables
+that are to be analyzed in a some experimental or observational data
+with the following information:
+\begin{itemize}
+\item $X$ has $M$ distinct categories or classes, labeled
+$X_1,\ldots,X_M$,
+\item $Y$ has $N$ distinct categories, labeled $Y_1,\ldots,Y_N$,
+\item $n$ pairs of observations $(x_k,y_k)$ are taken, where $x_i$
+belongs to one of the $M$ categories in $X$ and $y_i$ belongs to one
+of the $N$ categories in $Y$.
+\end{itemize}
+Form a $M\times N$ contingency table such that Cell $(i,j)$ contains
+the count $n_{ij}$ of occurrences of Category $X_i$ in $X$ and
+Category $Y_j$ in $Y$:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$X\backslash Y$ & $Y_1$ & $Y_2$ & $\cdots$ & $Y_N$ \\
+\hline
+$X_1$ & $n_{11}$ & $n_{12}$ & $\cdots$ & $n_{1N}$ \\
+\hline
+$X_2$ & $n_{21}$ & $n_{22}$ & $\cdots$ & $n_{2N}$ \\
+\hline
+$\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ & $\vdots$ \\
+\hline
+$X_M$ & $n_{M1}$ & $n_{M2}$ & $\cdots$ & $n_{MN}$ \\
+\hline
+\end{tabular}
+\end{center}
+Note that $n=\sum n_{ij}$.
+\\\\
+\textbf{Definition.} Suppose that the null hypothesis is that $X$
+and $Y$ are independent random variables.  Based on the table and
+the null hypothesis, the chi-squared statistic $\chi^2$ can be
+computed. Then, \emph{Cramer's V} is defined to be
+$$V=V(X,Y)=\sqrt{\frac{\chi^2}{n\operatorname{min}(M-1,N-1)}}.$$  Of course,
+in order for $V$ to make sense, each categorical variable must have
+at least 2 categories.
+\\\\
+\textbf{Remarks.}
+\begin{enumerate}
+\item $0\leq V\leq 1$.  The closer $V$ is to 0, the smaller the
+association between the categorical variables $X$ and $Y$.  On the
+other hand, $V$ being close to 1 is an indication of a strong
+association between $X$ and $Y$.  If $X=Y$, then $V(X,Y)=1$.
+\item When comparing more than two categorical variables, it is
+customary to set up a square matrix, where cell $(i,j)$ represents
+the Cramer's V between the $i$th variable and the $j$th variable. If
+there are $n$ variables, there are $\frac{n(n-1)}{2}$ Cramer's V's
+to calculate, since, for any discrete random variables $X$ and $Y$,
+$V(X,X)=1$ and $V(X,Y)=V(Y,X)$. Consequently, this matrix is
+symmetric.
+\item If one of the categorical variables is dichotomous, (either $M$ or $N=2$), Cramer's V is equal to the \emph{phi statistic} ($\Phi$), which is defined to be $$\Phi=\sqrt{\frac{\chi^2}{n}}.$$
+\item Cramer's V is named after the Swedish
+mathematician and statistician Harald Cram\'{e}r, who sought to make
+statistics mathematically rigorous, much like Kolmogorov's
+axiomatization of probability theory.  Cram\'{e}r also made
+contributions to number theory, probability theory, and actuarial
+mathematics widely used by the insurance industry.
+\end{enumerate}
+\begin{thebibliography}{8}
+\bibitem{agresti} A. Agresti, \emph{Categorical Data Analysis}, Wiley-Interscience, 2nd ed. 2002.
+\bibitem{cramer} H. Cram\'{e}r, \emph{Mathematical Methods of Statistics}, Princeton University Press, 1999.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StatisticalModel}
+\pmcreated{2013-03-22 14:33:18}
+\pmmodified{2013-03-22 14:33:18}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{statistical model}
+\pmrecord{10}{36107}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62A01}
+\pmdefines{identifiable parameterization}
+\pmdefines{parameter space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\textbf{X}=(X_1,\ldots,X_n)$ be a random vector with a given realization 
+$\textbf{X}(\omega)=(x_1,\ldots,x_n)$, where $\omega$ is the outcome (of an observation or an experiment) in the sample space $\Omega$.  A \emph{statistical model} $\mathcal{P}$ based on $\textbf{X}$ is a set of probability distribution functions of $\textbf{X}$: 
+$$\mathcal{P}=\lbrace F_{\textbf{X}} \rbrace.$$
+If it is known in advance that this family of distributions comes from a set of continuous distributions, the statistical model $\mathcal{P}$ can be equivalently defined as a set of probability density functions:
+$$\mathcal{P}=\lbrace f_{\textbf{X}} \rbrace.$$
+\par
+As an example, a coin is tossed $n$ times and the results are observed.  The probability of landing a head during one toss is $p$.  Assume that each toss is independent of one another.  If $\textbf{X}=(X_1,\ldots,X_n)$ is defined to be the vector of the $n$ ordered outcomes, then a statistical model based on $\textbf{X}$ can be a family of Bernoulli distributions 
+$$\mathcal{P}=\lbrace \prod_{i=1}^n p^{x_i}(1-p)^{1-x_i} \rbrace,$$
+where $X_i(\omega)=x_i$ and $x_i=1$ if $\omega$ is the outcome that the $i$th toss lands a head and $x_i=0$ if $\omega$ is the outcome that the $i$th toss lands a tail.
+\par
+Next, suppose $X$ is the number of tosses where a head is observed, then a statistical model based on $X$ can be a family binomial distributions:
+$$\mathcal{P}=\lbrace {n\choose x}p^x(1-p)^{n-x} \rbrace,$$
+where $X(\omega)=x$, where $\omega$ is the outcome that $x$ heads (out of $n$ tosses) are observed.
+\par
+A statistical model is usually \emph{parameterized} by a function, called a \emph{parameterization} 
+$$\Theta\rightarrow\mathcal{P}\mbox{ given by }\theta\mapsto F_{\theta}\mbox{ so that }\mathcal{P}=\lbrace F_{\theta} \mid \theta\in\Theta \rbrace,$$
+where $\Theta$ is called a \emph{parameter space}.  $\Theta$ is usually a subset of $\mathbb{R}^n$.  However, it can also be a function space.
+\par
+In the first part of the above example, the statistical model is parameterized by $$p\mapsto\prod_{i=1}^n p^{x_i}(1-p)^{1-x_i}.$$
+\par
+If the parameterization is a one-to-one function, it is called an \emph{identifiable parameterization} and $\theta$ is called a \emph{parameter}.  The $p$ in the above example is a parameter.
+%%%%%
+%%%%%
+\end{document}

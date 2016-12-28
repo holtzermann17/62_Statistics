@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultivariateGammaFunctioncomplexvalued}
+\pmcreated{2013-03-22 14:22:10}
+\pmmodified{2013-03-22 14:22:10}
+\pmowner{mathpeter}{5480}
+\pmmodifier{mathpeter}{5480}
+\pmtitle{multivariate gamma function (complex-valued)}
+\pmrecord{14}{35854}
+\pmprivacy{1}
+\pmauthor{mathpeter}{5480}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62H10}
+%\pmkeywords{Gamma multivariate complex}
+\pmdefines{gamma function (multivariate complex)}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\DeclareMathOperator{\Tr}{Tr}
+\begin{document}
+The complex multivariate gamma function is defined as
+\begin{equation}
+\tilde{\Gamma}_m(a)=\int_{\mathfrak{A}} e^{-\Tr A}|A|^{a-m} {\rm d}A,
+\end{equation}
+where $ \mathfrak{A}$ is the set of all $ m \times m$ positive, complex-valued Hermitian matrices, i.e.
+\begin{equation}
+\mathfrak{A} = \left\{A \in \Bbb{C}^{m \times m} | A = A^H, A > 0\right\}.
+\end{equation}
+It can also be expressed in terms of the gamma function as follows
+\begin{equation}
+\tilde{\Gamma}_m(a)=\pi^{{1 \over 2}m(m-1)} \prod\limits_{i=1}^{m}\Gamma(a-i+1).
+\end{equation}
+
+\subsection*{Reference}
+A. T. James,``Distributions of matrix variates and latent roots derived from normal samples,'' {\it Ann. Math. Statist.}, vol. 35, pp. 475-501, 1964.
+%%%%%
+%%%%%
+\end{document}

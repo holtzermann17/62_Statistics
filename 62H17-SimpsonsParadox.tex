@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimpsonsParadox}
+\pmcreated{2013-03-22 14:42:05}
+\pmmodified{2013-03-22 14:42:05}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Simpson's paradox}
+\pmrecord{8}{36313}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62H17}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabls}
+\usepackage{multirow}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\renewcommand\multirowsetup{\centering}
+\newlength\LL \settowidth\LL{100}
+%\renewcommand\LL{\hspace{100}}
+\begin{document}
+\PMlinkescapeword{types}
+\PMlinkescapeword{measure}
+\PMlinkescapeword{groups}
+
+Before describing what a \emph{Simpson's paradox} is, let's start with a hypothetical example.  During a particular summer, an experiment was conducted to find out the preference between two types of beverages: soda and lemonade.  The data was drawn from two locations: city and rural.  In each location, the gender and the choice of drinks were collected.  The results are summarized as follows:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+location&gender&lemonade&soda&total&\% preferring lemonade&\PMlinkname{odds ratio}{OddsRatio}\\
+\hline
+\multirow{2}{\LL}{city}
+&female&150&300&450&24.9\% & \multirow{2}{\LL}{1.10} \\ \cline{2-6}
+&male&300&660&960&23.1\% & \\ 
+\hline
+\multirow{2}{\LL}{rural}
+&female&285&860&1145&33.3\% & \multirow{2}{\LL}{1.10} \\ \cline{2-6}
+&male&30&100&130&31.3\% & \\
+\hline
+\end{tabular}
+\end{center}
+The odds ratio given that location = city is about 1.1, showing that females are about 10\% more likely to drink lemonade than males.  Because the conditional odds ratio given that location = rural is also 1.1, the same conclusion can be drawn.
+\par
+Next, combine the results from both locations and form the following 2 by 2 contingency table:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+gender&lemonade&soda&total&\% preferring lemonade&odds ratio\\
+\hline
+female&435&1160&1595&27.3\% & \multirow{2}{\LL}{0.86} \\ \cline{1-5}
+male&330&760&1090&30.3\% & \\
+\hline
+\end{tabular}
+\end{center}
+The odds ratio of 0.86 shows that females are about 14\% less likely to drink lemonade than males, rather than 10\% more likely as was shown earlier!  This is an example of \emph{Simpson's paradox}.
+\par
+In general, Simpson's paradox illustrates that the effect of an omission of a categorical explanatory variable $Z$ can have on the measure of association between a categorical explanatory variable $X$ and a categorical response variable $Y$.  
+\par
+In the example, given the location variable $Z$, the conditional odds ratios show that the gender variable $X$ and choice of drinks response variable $Y$ have a positive association, with positive log-odds ratios.  However, when the location variable $Z$ is removed, the marginal association between $X$ and $Y$ is negative, with a negative log-odds ratio.
+\par
+One reason for this apparent paradox is due to the dissimilar populations between the city and the rural groups.  In the rural area, the majority of the test subjects are female, whereas in the city area, the majority is male.
+\par
+For an excellent explanation of Simpson's paradox, please refer to the book below.
+\begin{thebibliography}{8}
+\bibitem{agresti} A. Agresti, {\em An Introduction to Categorical Data Analysis}, Wiley \& Sons, New York (1996).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

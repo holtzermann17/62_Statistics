@@ -1,0 +1,156 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TableOfProbabilitiesOfStandardNormalDistribution}
+\pmcreated{2013-03-22 17:27:05}
+\pmmodified{2013-03-22 17:27:05}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{table of probabilities of standard normal distribution}
+\pmrecord{9}{39833}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+\pmclassification{msc}{62Q05}
+\pmclassification{msc}{60E05}
+\pmrelated{AreaUnderGaussianCurve}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{tabls}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Below is a table of the values of the area (probabilities) $\Phi(z)$ under the standard normal distribution function $N(1,0)=\operatorname{exp}(-x^2/2)$ given by
+$$\Phi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^z N(1,0) \, dx\,,$$
+evaluated from $-\infty$ to various $z$-scores.  The values are rounded to the nearest ten thousandths.
+
+\footnotesize{
+\begin{tabular}{|c||r|r|r|r|r|r|r|r|r|r|}
+\hline z-score &\textbf{\red0.00} &\red0.01 &\red0.02 &\textbf{\red0.03} &\red0.04 &\red0.05 &\textbf{\red0.06} &\red0.07 &\red0.08 &\textbf{\red0.09} \\
+\hline \hline 0.0 &\textbf{0.5000} &0.5040 &0.5080 &\textbf{0.5120} &0.5160 &0.5199 &\textbf{0.5239} &0.5279 &0.5319 &\textbf{0.5359} \\
+\hline 0.1 &\textbf{0.5398} &0.5438 &0.5478 &\textbf{0.5517} &0.5557 &0.5596 &\textbf{0.5636} &0.5675 &0.5714 &\textbf{0.5753} \\
+\hline \blue0.2 &\textbf{\blue0.5793} &\blue0.5832 &\blue0.5871 &\textbf{\blue0.5910} &\blue0.5948 &\blue0.5987 &\textbf{\blue0.6026} &\blue0.6064 &\blue0.6103 &\textbf{\blue0.6141} \\
+\hline 0.3 &\textbf{0.6179} &0.6217 &0.6255 &\textbf{0.6293} &0.6331 &0.6368 &\textbf{0.6406} &0.6443 &0.6480 &\textbf{0.6517} \\
+\hline 0.4 &\textbf{0.6554} &0.6591 &0.6628 &\textbf{0.6664} &0.6700 &0.6736 &\textbf{0.6772} &0.6808 &0.6844 &\textbf{0.6879} \\
+\hline \blue0.5 &\textbf{\blue0.6915} &\blue0.6950 &\blue0.6985 &\textbf{\blue0.7019} &\blue0.7054 &\blue0.7088 &\textbf{\blue0.7123} &\blue0.7157 &\blue0.7190 &\textbf{\blue0.7224} \\
+\hline 0.6 &\textbf{0.7257} &0.7291 &0.7324 &\textbf{0.7357} &0.7389 &0.7422 &\textbf{0.7454} &0.7486 &0.7517 &\textbf{0.7549} \\
+\hline 0.7 &\textbf{0.7580} &0.7611 &0.7642 &\textbf{0.7673} &0.7704 &0.7734 &\textbf{0.7764} &0.7794 &0.7823 &\textbf{0.7852} \\
+\hline \blue0.8 &\textbf{\blue0.7881} &\blue0.7910 &\blue0.7939 &\textbf{\blue0.7967} &\blue0.7995 &\blue0.8023 &\textbf{\blue0.8051} &\blue0.8078 &\blue0.8106 &\textbf{\blue0.8133} \\
+\hline 0.9 &\textbf{0.8159} &0.8186 &0.8212 &\textbf{0.8238} &0.8264 &0.8289 &\textbf{0.8315} &0.8340 &0.8365 &\textbf{0.8389} \\
+\hline 1.0 &\textbf{0.8413} &0.8438 &0.8461 &\textbf{0.8485} &0.8508 &0.8531 &\textbf{0.8554} &0.8577 &0.8599 &\textbf{0.8621} \\
+\hline \blue1.1 &\textbf{\blue0.8643} &\blue0.8665 &\blue0.8686 &\textbf{\blue0.8708} &\blue0.8729 &\blue0.8749 &\textbf{\blue0.8770} &\blue0.8790 &\blue0.8810 &\textbf{\blue0.8830} \\
+\hline 1.2 &\textbf{0.8849} &0.8869 &0.8888 &\textbf{0.8907} &0.8925 &0.8944 &\textbf{0.8962} &0.8980 &0.8997 &\textbf{0.9015} \\
+\hline 1.3 &\textbf{0.9032} &0.9049 &0.9066 &\textbf{0.9082} &0.9099 &0.9115 &\textbf{0.9131} &0.9147 &0.9162 &\textbf{0.9177} \\
+\hline \blue1.4 &\textbf{\blue0.9192} &\blue0.9207 &\blue0.9222 &\textbf{\blue0.9236} &\blue0.9251 &\blue0.9265 &\textbf{\blue0.9279} &\blue0.9292 &\blue0.9306 &\textbf{\blue0.9319} \\
+\hline 1.5 &\textbf{0.9332} &0.9345 &0.9357 &\textbf{0.9370} &0.9382 &0.9394 &\textbf{0.9406} &0.9418 &0.9429 &\textbf{0.9441} \\
+\hline 1.6 &\textbf{0.9452} &0.9463 &0.9474 &\textbf{0.9484} &0.9495 &0.9505 &\textbf{0.9515} &0.9525 &0.9535 &\textbf{0.9545} \\
+\hline \blue1.7 &\textbf{\blue0.9554} &\blue0.9564 &\blue0.9573 &\textbf{\blue0.9582} &\blue0.9591 &\blue0.9599 &\textbf{\blue0.9608} &\blue0.9616 &\blue0.9625 &\textbf{\blue0.9633} \\
+\hline 1.8 &\textbf{0.9641} &0.9649 &0.9656 &\textbf{0.9664} &0.9671 &0.9678 &\textbf{0.9686} &0.9693 &0.9699 &\textbf{0.9706} \\
+\hline 1.9 &\textbf{0.9713} &0.9719 &0.9726 &\textbf{0.9732} &0.9738 &0.9744 &\textbf{0.9750} &0.9756 &0.9761 &\textbf{0.9767} \\
+\hline \blue2.0 &\textbf{\blue0.9772} &\blue0.9778 &\blue0.9783 &\textbf{\blue0.9788} &\blue0.9793 &\blue0.9798 &\textbf{\blue0.9803} &\blue0.9808 &\blue0.9812 &\textbf{\blue0.9817} \\
+\hline 2.1 &\textbf{0.9821} &0.9826 &0.9830 &\textbf{0.9834} &0.9838 &0.9842 &\textbf{0.9846} &0.9850 &0.9854 &\textbf{0.9857} \\
+\hline 2.2 &\textbf{0.9861} &0.9864 &0.9868 &\textbf{0.9871} &0.9875 &0.9878 &\textbf{0.9881} &0.9884 &0.9887 &\textbf{0.9890} \\
+\hline \blue2.3 &\textbf{\blue0.9893} &\blue0.9896 &\blue0.9898 &\textbf{\blue0.9901} &\blue0.9904 &\blue0.9906 &\textbf{\blue0.9909} &\blue0.9911 &\blue0.9913 &\textbf{\blue0.9916} \\
+\hline 2.4 &\textbf{0.9918} &0.9920 &0.9922 &\textbf{0.9925} &0.9927 &0.9929 &\textbf{0.9931} &0.9932 &0.9934 &\textbf{0.9936} \\
+\hline 2.5 &\textbf{0.9938} &0.9940 &0.9941 &\textbf{0.9943} &0.9945 &0.9946 &\textbf{0.9948} &0.9949 &0.9951 &\textbf{0.9952} \\
+\hline \blue2.6 &\textbf{\blue0.9953} &\blue0.9955 &\blue0.9956 &\textbf{\blue0.9957} &\blue0.9959 &\blue0.9960 &\textbf{\blue0.9961} &\blue0.9962 &\blue0.9963 &\textbf{\blue0.9964} \\
+\hline 2.7 &\textbf{0.9965} &0.9966 &0.9967 &\textbf{0.9968} &0.9969 &0.9970 &\textbf{0.9971} &0.9972 &0.9973 &\textbf{0.9974} \\
+\hline 2.8 &\textbf{0.9974} &0.9975 &0.9976 &\textbf{0.9977} &0.9977 &0.9978 &\textbf{0.9979} &0.9979 &0.9980 &\textbf{0.9981} \\
+\hline \blue2.9 &\textbf{\blue0.9981} &\blue0.9982 &\blue0.9982 &\textbf{\blue0.9983} &\blue0.9984 &\blue0.9984 &\textbf{\blue0.9985} &\blue0.9985 &\blue0.9986 &\textbf{\blue0.9986} \\
+\hline 3.0 &\textbf{0.9987} &0.9987 &0.9987 &\textbf{0.9988} &0.9988 &0.9989 &\textbf{0.9989} &0.9989 &0.9990 &\textbf{0.9990} \\
+\hline 3.1 &\textbf{0.9990} &0.9991 &0.9991 &\textbf{0.9991} &0.9992 &0.9992 &\textbf{0.9992} &0.9992 &0.9993 &\textbf{0.9993} \\
+\hline \blue3.2 &\textbf{\blue0.9993} &\blue0.9993 &\blue0.9994 &\textbf{\blue0.9994} &\blue0.9994 &\blue0.9994 &\textbf{\blue0.9994} &\blue0.9995 &\blue0.9995 &\textbf{\blue0.9995} \\
+\hline 3.3 &\textbf{0.9995} &0.9995 &0.9995 &\textbf{0.9996} &0.9996 &0.9996 &\textbf{0.9996} &0.9996 &0.9996 &\textbf{0.9997} \\
+\hline 3.3 &\textbf{0.9995} &0.9995 &0.9995 &\textbf{0.9996} &0.9996 &0.9996 &\textbf{0.9996} &0.9996 &0.9996 &\textbf{0.9997} \\
+\hline \blue3.4 &\textbf{\blue0.9997} &\blue0.9997 &\blue0.9997 &\textbf{\blue0.9997} &\blue0.9997 &\blue0.9997 &\textbf{\blue0.9997} &\blue0.9997 &\blue0.9997 &\textbf{\blue0.9998} \\
+\hline 3.5 &\textbf{0.9998} &0.9998 &0.9998 &\textbf{0.9998} &0.9998 &0.9998 &\textbf{0.9998} &0.9998 &0.9998 &\textbf{0.9998} \\
+\hline 3.6 &\textbf{0.9998} &0.9998 &0.9999 &\textbf{0.9999} &0.9999 &0.9999 &\textbf{0.9999} &0.9999 &0.9999 &\textbf{0.9999} \\
+\hline \blue3.7 &\textbf{\blue0.9999} &\blue0.9999 &\blue0.9999 &\textbf{\blue0.9999} &\blue0.9999 &\blue0.9999 &\textbf{\blue0.9999} &\blue0.9999 &\blue0.9999 &\textbf{\blue0.9999} \\
+\hline 3.8 &\textbf{0.9999} &0.9999 &0.9999 &\textbf{0.9999} &0.9999 &0.9999 &\textbf{0.9999} &0.9999 &0.9999 &\textbf{0.9999} \\
+\hline 3.9 &\textbf{1.0000} &1.0000 &1.0000 &\textbf{1.0000} &1.0000 &1.0000 &\textbf{1.0000} &1.0000 &1.0000 &\textbf{1.0000} \\
+\hline \blue4.0 &\textbf{\blue1.0000} &\blue1.0000 &\blue1.0000 &\textbf{\blue1.0000} &\blue1.0000 &\blue1.0000 &\textbf{\blue1.0000} &\blue1.0000 &\blue1.0000 &\textbf{\blue1.0000} \\
+\hline
+\end{tabular}}
+
+\normalsize
+Graphically, this looks like
+
+\def\d{\psplot{0}{1.8}{0}}
+\def\z{\psplot{-1.8}{1.8}{2.718282 x 2 mul 2 exp neg 2 div exp 0.75 mul }}
+\psset{yunit=4cm,xunit=4}
+\begin{pspicture}(-2,-0.2)(2,1)
+\psaxes{->}(0,0)(-2,0)(2,1)
+  \uput[-90](2,0){x}\uput[0](0,0.9){y}
+  \psplot{-1.8}{1.8}{2.718282 x 2 mul 2 exp neg 2 div exp 0.75 mul }
+     \psclip{
+    \pscustom[linestyle=none]{\moveto(-1.8,0)\z\lineto(0.4,-1)}
+    \pscustom[linestyle=none]{\moveto(-1.8,0)\d\lineto(0.4,1)}
+    }
+    \psframe*[linecolor=lightgray](-1.8,0)(0.4,2)
+ \endpsclip
+\rput[t](0.4,-0.05){$z$} 
+\rput[t](-0.1,0.4){$\Phi(z)$}
+\end{pspicture}
+
+where the curve is the probability density function $N(0,1)$ of the standard normal distribution (with mean $0$ and standard deviation $1$), $z$ on the $x$-axis is the $z$-score, and $\Phi(z)$ (represented by the light gray region) is the area bounded by $N(0,1)$, the $x$-axis, and $x\le z$.
+
+\subsubsection*{Finding $\Phi(z)$ from $z$}  
+
+Given a $z$-score, one can easily find $\Phi(z)$ as follows: 
+\begin{enumerate}
+\item round the $z$-score $z$ to the nearest hundredths decimal place; for example, if $z=1.2345$, then rounding it to the hundredths gives you $1.23$.
+\item
+if $0\le z\le 4$, write $z=a+b$, where $a$ is the truncation of $r$ at the tenths place, and $b=r-a$; for example, if $z=1.23$, then $a=1.2$ and $b=0.03$.
+\item
+locate $a$ in the first column of the table, and then locate $b$ in the first row of the table
+\item 
+find the value in the cell corresponding to row $a$ and column $b$; this value is $\Phi(z)$; for example, if $a=1.2$ and $b=0.03$, then the corresponding value is $0.8907$.
+\end{enumerate}
+
+If $z>4$, then $\Phi(z)=1$ when rounded to the nearest ten thousandths.  If $z<0$, then we will not be able to use the table above.  However, since $N(0,1)$ is an even function, $\Phi(z)$, the area bounded by $N(0,1)$, the $x$-axis, and $x\le z$ is the same as the area bounded by $N(0,1)$, the $x$-axis, and $x\ge -z$, which is equal to $1-\Phi(-z)$.  These two facts can be summarized:
+\begin{enumerate}
+\item If $z>4$, then $\Phi(z)=1$ when rounded to the nearest ten thousandths to the right of the decimal point.
+\item If $z<0$, then use the formula $\Phi(z)=1-\Phi(-z)$ before applying the table.  For example, $\Phi(-1.23)=1-\Phi(1.23)=1-0.8907=0.1093$.
+\end{enumerate}
+
+Also, we may use linear interpolation to find (approximate) $\Phi(z)$ for any arbitrary $z$-score.  For example, if we want to compute $\Phi(1.234)$, then we first find $\Phi(1.23)$ and $\Phi(1.24)$.  Then $$\Phi(1.234)\approx 0.6\cdot \Phi(1.23)+ 0.4\cdot \Phi(1.24)=0.6\cdot 0.8907+0.4\cdot 0.8925 \approx 0.8914.$$
+
+\subsubsection*{Finding $z$ from $\Phi(z)$}  
+
+Given $\Phi(z)$, we may use the table to find $z$.  The process works in reverse of the process presented in the previous section:
+\begin{enumerate}
+\item round $r=\Phi(z)$ to the nearest ten thousandths; for example if $\Phi(z)=0.91236$, then $r=0.9124$ after rounding
+\item if $0.5\le r\le 1$, then find the cell in the table with value as close to $r$ as possible; for example, for $r=0.9124$, the closest value that can be found in the table is $0.9131$
+\item if this cell is found, then find the corresponding value $a$ in the first column and $b$ in the first row, and $z^*=a+b$ is the approximate $z$-score that we are looking for; for example, $0.9131$ corresponds to $a=1.3$ and $b=0.06$ so that $z^*=1.36$.
+\item if $\Phi(z)<0.5$, then use $r=1-\Phi(z)$ to find $z^*$ using the first three steps above.  Then $z=-z^*$ is the $z$-score that we are looking for.
+\end{enumerate}
+
+Note that if $\Phi(z)=1$, then any $z\ge 3.9$ will work.  Also, linear interpolation can again be applied to get better approximations of the $z$-scores given $\Phi(z)$.  For example, $\Phi(z)=0.91236$ is between $0.9115$ and $0.9131$, two consecutive values found in the table, and can be written 
+$$0.91236 \approx 0.4625 \cdot 0.9115 + 0.5375 \cdot 0.9131.$$
+So, the $z$-score corresponding to $0.91236$ can be obtained similarly
+$$0.4625 \cdot 1.35 + 0.5375 \cdot 1.36 \approx 1.3554 \approx z,$$
+where $1.35$ is the $z$-score for $0.9115$ and $1.36$ is the $z$-score for $0.9131$.
+%%%%%
+%%%%%
+\end{document}

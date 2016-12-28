@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Overdispersion}
+\pmcreated{2013-03-22 14:30:34}
+\pmmodified{2013-03-22 14:30:34}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{overdispersion}
+\pmrecord{10}{36047}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62J12}
+\pmdefines{dispersion parameter}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabls}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{normal}
+
+When applying the generalized linear model or GLM to the real world, a phenomenon called \emph{overdispersion} occurs when the observed variance of the data is larger than the predicted variance.  This is particularly apparent in the case of a Poisson regression model, where 
+\begin{center}
+predicted variance = predicted mean, 
+\end{center}
+or the binary logistic regression model, where 
+\begin{center}
+predicted variance = predicted mean(1- predicted mean).
+\end{center}
+A parameter, called the \emph{dispersion parameter}, $\phi$, is introducted to the model to lower this overdispersion effect.  
+
+The GLM, with the inclusion of this dispersion parameter, has the following density function: 
+$$f_{Y_i}(y_i\mid\theta_i)=\operatorname{exp}[\frac{y\theta_i-b(\theta_i)}{a(\phi)}+c(y,\phi)]$$
+
+Dispersion parameters for some of the well known distributions from the exponential family are listed in the following table:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+distribution&notation&dispersion parameter $\phi$\\
+\hline\hline
+\PMlinkname{Normal}{NormalRandomVariable}&$N(\mu,\sigma^2)$&$\sigma^2$\\
+\hline
+\PMlinkname{Poisson}{PoissonRandomVariable}&$Poisson(\mu)$&1\\
+\hline
+\PMlinkname{Binomial}{BernoulliDistribution2}&$Bin(m,\pi)$&$\displaystyle{\frac{1}{m}}$\\
+\hline
+\PMlinkname{Gamma}{GammaRandomVariable}&$Gamma(\alpha,\lambda)$&$\displaystyle{\frac{1}{\alpha}}$\\
+\hline
+\end{tabular}
+\end{center}
+
+\par
+\begin{thebibliography}{8}
+\bibitem{hilbe} J. M. Hilbe, {\em Negative Binomial Regression}, Cambridge University Press, Cambridge (2007).
+\bibitem{agresti} A. Agresti, {\em An Introduction to Categorical Data Analysis}, Wiley \& Sons, New York (1996).
+\bibitem{mccullagh} P. McCullagh and J. A. Nelder, {\em Generalized Linear Models}, Chapman \& Hall/CRC, 2nd ed., London (1989).
+\bibitem{dobson} A. J. Dobson, {\em An Introduction to Generalized Linear Models}, Chapman \& Hall, 2nd ed. (2001).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

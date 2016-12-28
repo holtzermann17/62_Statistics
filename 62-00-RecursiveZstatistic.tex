@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RecursiveZstatistic}
+\pmcreated{2013-03-22 19:11:30}
+\pmmodified{2013-03-22 19:11:30}
+\pmowner{statsCab}{25915}
+\pmmodifier{statsCab}{25915}
+\pmtitle{Recursive Z-statistic}
+\pmrecord{4}{42103}
+\pmprivacy{1}
+\pmauthor{statsCab}{25915}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In respones to: Consider a standard Z-statistic used in hypothesis testing. One of the variables needed to compute the Z-statistic is the number of observations. The problem is that with each additional observation one has to recompute the Z-statistic from scratch. It seems like there is no recursive formulation, e.g. a representation such as
+Z(n) = Z(n-1) + new piece of information. Is there perhaps an approximate recursive formulation? Any other thoughts?
+Thanks. 
+
+An example hypothesis test is:
+
+$H_0:$ $\mu = \mu_0$
+
+$H_1:$ $\mu \neq \mu_0$
+
+We reject this hypothesis if $\overline{x}$ is either greater than or lower than a critical value.
+Assuming the critical values do not change all you have to update is $Z_0$.
+
+The test statistic is: 
+$$ Z_0 = \frac{\overline{X} - \mu}{\sigma / \sqrt{n}}$$
+
+Assuming you know $\sigma$, when you get a new variable $X_{n+1}$ you can update $\overline{x}$ 
+using $n$, $\overline{X}$, and $X_{n+1}$, then recalculate $Z_0$.
+
+Now if you do not know $\sigma$, and your sample size is large enough to use the Normal distribution, you have
+to update your sample variance, $S^2$. If your sample size is not large enough and you are using the t-distribution then
+your critical values will change when $n$ changes.
+
+To do update $S$ without recalculating, you should keep running totals of $\sum_i X_i$ and $\sum_i X_i^2$,
+so you can update $S$ using the computation formula for the sample variance.
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

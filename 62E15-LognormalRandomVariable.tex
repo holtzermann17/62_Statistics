@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LognormalRandomVariable}
+\pmcreated{2013-03-22 11:54:46}
+\pmmodified{2013-03-22 11:54:46}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{lognormal random variable}
+\pmrecord{12}{30550}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+\pmsynonym{lognormal distribution}{LognormalRandomVariable}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{graphicx}
+%%%%%\usepackage{xypic}
+
+\def\R{\mathbb{R}}
+\begin{document}
+$X$ is a \emph{lognormal random variable} with parameters $\mu\in\R$ and $\sigma^2>0$ if its probability density function is given for $x>0$ by
+
+\begin{align*}
+f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \frac{e^{-\frac{(\ln{x}-\mu)^2}{2 \sigma^2}}}{x}.
+\end{align*}
+
+To denote this, one usually writes $X\sim LogN(\mu,\sigma^2)$.
+
+
+For a lognormal random variable $X$:
+\begin{enumerate}
+\item $X$ is a random variable such that $\ln(X)$ is a normal random variable with mean $\mu$ and variance $\sigma^2$.
+\item $E[X] = e^{\mu + \sigma^2/2}$
+\item $Var[X] = e^{2\mu + \sigma^2}(e^{\sigma^2} - 1)$
+\item $M_X(t)$ is not a useful quantity.
+
+\end{enumerate}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

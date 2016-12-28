@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Estimator}
+\pmcreated{2013-03-22 14:52:22}
+\pmmodified{2013-03-22 14:52:22}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{estimator}
+\pmrecord{6}{36549}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62A01}
+\pmdefines{estimate}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{strictly}
+
+Let $X_1,X_2,\ldots,X_n$ be samples (with observations $X_i=x_i$) from a distribution with probability density function $f(X\mid\theta)$, where $\theta$ is a real-valued unknown \PMlinkname{parameter}{StatisticalModel} in $f$.  Consider $\theta$ as a random variable and let $\tau(\theta)$ be its realization.  
+
+An \emph{estimator} for $\theta$ is a statistic $\eta_{\theta}=\eta_{\theta}(X_1,X_2,\ldots,X_n)$ that is used to, loosely speaking, estimate $\tau(\theta)$.  Any value $\eta_{\theta}(X_1=x_1,X_2=x_2,\ldots,X_n=x_n)$ of $\eta_{\theta}$ is called an \emph{estimate} of $\tau(\theta)$.
+
+\textbf{Example}.
+Let $X_1,X_2,\ldots,X_n$ be iid from a normal distribution $N(\mu,\sigma^2)$.  Here the two parameters are the mean $\mu$ and the variance $\sigma^2$.  The sample mean $\overline{X}$ is an estimator of $\mu$, while the sample variance $s^2$ is an estimator of $\sigma^2$.  In addition, sample median, sample mode, sample trimmed mean are all estimators of $\mu$.  The statistic defined by 
+$$\frac{1}{n-1}\sum_{i=1}^{n}(X_i-m)^2,$$
+where $m$ is a sample median, is another estimator of $\sigma^2$.
+%%%%%
+%%%%%
+\end{document}

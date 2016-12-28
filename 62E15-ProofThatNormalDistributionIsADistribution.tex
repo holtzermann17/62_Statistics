@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatNormalDistributionIsADistribution}
+\pmcreated{2013-03-22 13:29:12}
+\pmmodified{2013-03-22 13:29:12}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof that normal distribution is a distribution}
+\pmrecord{7}{34059}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+\pmrelated{AreaUnderGaussianCurve}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\lint}{\int\limits}
+\begin{document}
+\begin{eqnarray*}
+\lint_{-\infty}^\infty \frac{e^{-\frac{(x-\mu)^2}{2\sigma^2}}}{\sigma\sqrt{2\pi}} \, dx
+&=& \sqrt{ \left( \lint_{-\infty}^\infty \frac{e^{-\frac{(x-\mu)^2}{2\sigma^2}}}{\sigma\sqrt{2\pi}} \, dx \right)^2} \\
+&=& \sqrt{ \lint_{-\infty}^\infty \frac{e^{-\frac{(x-\mu)^2}{2\sigma^2}}}{\sigma\sqrt{2\pi}} \, dx
+\lint_{-\infty}^\infty \frac{e^{-\frac{(y-\mu)^2}{2\sigma^2}}}{\sigma\sqrt{2\pi}} \, dy} \\
+&=& \sqrt{ \lint_{-\infty}^\infty \lint_{-\infty}^\infty \frac{e^{-\frac{(x-\mu)^2+(y-\mu)^2}{2\sigma^2}}}{\sigma^2 2\pi} \, dx \, dy}
+\end{eqnarray*}
+
+Substitute $x^\prime=x-\mu$ and $y^\prime=y-\mu$.  Since the bounds are infinite, they do not change, and $dx^\prime=dx$ and $dy^\prime=dy$.  Thus, we have
+\begin{eqnarray*}
+\sqrt{\lint_{-\infty}^\infty \lint_{-\infty}^\infty \frac{e^{-\frac{(x-\mu)^2+(y-\mu)^2}{2\sigma^2}}}{\sigma^2 2\pi} \, dx \, dy}
+&=& \sqrt{\lint_{-\infty}^\infty \lint_{-\infty}^\infty \frac{e^{-\frac{(x^\prime)^2+(y^\prime)^2}{2\sigma^2}}}{\sigma^2 2\pi} \, dx^\prime \, dy^\prime}.
+\end{eqnarray*}
+
+Converting to polar coordinates, we obtain
+\begin{eqnarray*}
+\sqrt{\lint_{-\infty}^\infty \lint_{-\infty}^\infty \frac{e^{-\frac{(x^\prime)^2+(y^\prime)^2}{2\sigma^2}}}{\sigma^2 2\pi} \, dx^\prime \, dy^\prime}
+&=& \sqrt{\lint_0^\infty \lint_0^{2\pi} \frac{re^{-\frac{r^2}{2\sigma^2}}}{\sigma^2 2\pi} \, dr \, d\theta} \\
+&=& \sqrt{\lint_0^{2\pi} \frac{d\theta}{2\pi}} \sqrt{\lint_0^\infty \frac{re^{-\frac{r^2}{2\sigma^2}}}{\sigma^2} \, dr} \\
+&=& \sqrt{\frac{\theta}{2\pi}\bigg|_0^{2\pi}} \sqrt{\frac{1}{\sigma^2}\lint_{0}^\infty r e^{-\frac{r^2}{2\sigma^2}} \, dr} \\
+&=& \sqrt{\frac{2\pi}{2\pi}} \sqrt{\frac{\sigma^2}{\sigma^2}\left( -e^{-\frac{r^2}{2\sigma^2}} \right)\bigg|_0^\infty} \\
+&=& \sqrt{1} \sqrt{1}\\
+&=& 1.
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

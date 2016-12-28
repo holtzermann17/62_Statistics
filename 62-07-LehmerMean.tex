@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LehmerMean}
+\pmcreated{2013-03-22 19:02:06}
+\pmmodified{2013-03-22 19:02:06}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Lehmer mean}
+\pmrecord{11}{41908}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62-07}
+\pmclassification{msc}{11-00}
+\pmrelated{OrderOfSixMeans}
+\pmrelated{LeastAndGreatestNumber}
+\pmrelated{MinimalAndMaximalNumber}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $p$ be a real number.\, \emph{Lehmer mean} of the positive numbers $a_1,\,\ldots,\,a_n$ is defined as
+\begin{align}
+L_p(a_1,\,\ldots,\,a_n) \;:=\; \frac{a_1^p+\ldots+a_n^p}{a_1^{p-1}+\ldots+a_n^{p-1}}.
+\end{align}
+This definition fulfils both requirements set for \PMlinkname{means}{Mean3}.\, In the case of Lehmer mean of two positive numbers $a$ and $b$ we see for\, $a \leqq b$\, that
+$$a \;=\; \frac{a^p\!+\!ab^{p-1}}{a^{p-1}\!+\!b^{p-1}} \;\leqq\; \frac{a^p\!+\!b^p}{a^{p-1}\!+\!b^{p-1}} 
+\;\leqq\; \frac{a^{p-1}b\!+\!b^p}{a^{p-1}\!+\!b^{p-1}} \;=\; b.$$
+
+
+The Lehmer mean of certain numbers is the greater the greater is the parametre $p$, i.e. 
+$$L_p(a_1,\,\ldots,\,a_n) \;\geqq\; L_q(a_1,\,\ldots,\,a_n) \quad \forall\; p \;>\; q.$$
+This turns out from the nonnegativeness of the partial derivative of $L_p$ with respect to $p$; in the case \,$n =2$\, it writes
+$$\frac{\partial L_p}{\partial p} \;=\; \frac{a^{p-1}b^{p-1}(a\!-\!b)(\ln{a}-\ln{b})}{(a^{p-1}\!+\!b^{p-1})^2} 
+\;\geqq\; 0.$$
+Thus in the below list containing special cases of Lehmer mean, the \PMlinkescapetext{harmonic mean} is the least and the contraharmonic the greatest (cf. the comparison of Pythagorean means).
+
+E.g. for two arguments $a$ and $b$, one has
+\begin{itemize}
+\item $\displaystyle L_0(a,\,b) \,=\, \frac{2ab}{a\!+\!b}$, \quad harmonic mean,
+\item $\displaystyle L_{1/2}(a,\,b) \,=\, \sqrt{ab}$, \quad geometric mean,
+\item $\displaystyle L_1(a,\,b) \,=\, \frac{a\!+\!b}{2}$, \quad arithmetic mean,
+\item $\displaystyle L_2(a,\,b) \,=\, \frac{a^2\!+\!b^2}{a\!+\!b}$, \quad contraharmonic mean.
+\end{itemize}
+
+
+
+\textbf{Note.}\, The \PMlinkname{least}{LeastNumber} and the \PMlinkname{greatest of the numbers}{GreatestNumber} 
+$a_1,\,\ldots,\,a_n$ may be regarded as borderline cases of the Lehmer mean, since
+$$\lim_{p\to-\infty}L_p(a_1,\,\ldots,\,a_n) \;=\; \min\{a_1,\,\ldots,\,a_n\}, \quad 
+\lim_{p\to+\infty}L_p(a_1,\,\ldots,\,a_n) \;=\; \max\{a_1,\,\ldots,\,a_n\}.$$
+For proving these equations, suppose that there are exactly $k$ greatest (resp. least) ones among the numbers and that those are \,$a_1 = \ldots = a_k$.\, Then we can write
+$$L_p(a_1,\,\ldots,\,a_n) \;=\; 
+\frac{a_1^p\left[k+\!\left(\frac{a_{k+1}}{a_1}\right)^p\!+\ldots+\!\left(\frac{a_{n}}{a_1}\right)^p\right]}
+ {a_1^{p-1}\left[k+\!\left(\frac{a_{k+1}}{a_1}\right)^{p-1}\!+\ldots+\!\left(\frac{a_{n}}{a_1}\right)^{p-1}\right]}.$$
+Letting\, $p \to +\infty$\, (resp. $p \to -\infty$),\, this equation yields
+$$L_p(a_1,\,\ldots,\,a_n) \;\longrightarrow\; a_1.$$
+%%%%%
+%%%%%
+\end{document}

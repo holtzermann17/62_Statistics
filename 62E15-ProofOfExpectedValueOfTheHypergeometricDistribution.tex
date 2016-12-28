@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfExpectedValueOfTheHypergeometricDistribution}
+\pmcreated{2013-03-22 13:27:44}
+\pmmodified{2013-03-22 13:27:44}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of expected value of the hypergeometric distribution}
+\pmrecord{8}{34029}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We will first prove a useful property of binomial coefficients. We know
+$${n\choose k}=\frac{n!}{k!(n-k)!}.$$
+This can be transformed to
+\begin{equation}\label{eq:binomial}
+{n\choose k}=\frac{n}{k}\frac{(n-1)!}{(k-1)!(n-1-(k-1))!}=\frac{n}{k}{n-1\choose k-1}.
+\end{equation}
+Now we can start with the definition of the expected value:
+$$E[X]=\sum_{x=0}^n \frac{x{K\choose x}{M-K\choose n-x}}{{M\choose n}}.$$
+Since for $x=0$ we add a $0$ in this \PMlinkescapetext{formula} we can say
+$$E[X]=\sum_{x=1}^n \frac{x{K\choose x}{M-K\choose n-x}}{{M\choose n}}.$$
+Applying equation (\ref{eq:binomial}) we get:
+$$E[X]=\frac{nK}{M}\sum_{x=1}^n \frac{{K-1\choose x-1}{M-1-(K-1)\choose n-1-(x-1)}}{{M-1\choose n-1}}.$$
+Setting $l:=x-1$ we get:
+$$E[X]=\frac{nK}{M}\sum_{l=0}^{n-1}\frac{{K-1\choose l}{M-1-(K-1)\choose n-1-l}}{{M-1\choose n-1}}.$$
+The sum in this equation is $1$ as it is the sum over all probabilities of a hypergeometric distribution. Therefore we have
+$$E[X]=\frac{nK}{M}.$$
+%%%%%
+%%%%%
+\end{document}

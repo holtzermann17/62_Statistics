@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderStatistics}
+\pmcreated{2013-03-22 14:33:30}
+\pmmodified{2013-03-22 14:33:30}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{order statistics}
+\pmrecord{8}{36111}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62G30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X_1,\ldots,X_n$ be random variables with realizations in $\mathbb{R}$.  Given an outcome $\omega$, order $x_i=X_i(\omega)$ in non-decreasing order so that 
+$$x_{(1)}\leq x_{(2)}\leq\cdots\leq x_{(n)}.$$
+Note that $x_{(1)}=\operatorname{min}(x_1,\ldots,x_n)$ and $x_{(n)}=\operatorname{max}(x_1,\ldots,x_n)$.  Then each $X_{(i)}$, such that $X_{(i)}(\omega)=x_{(i)}$, is a random variable.  Statistics defined by $X_{(1)},\ldots,X_{(n)}$ are called \emph{order statistics} of $X_1,\ldots,X_n$.  If all the orderings are strict, then $X_{(1)},\ldots,X_{(n)}$ are \emph{the} order statistics of $X_1,\ldots,X_n$.  Furthermore, each $X_{(i)}$ is called the $i$th order statistic of $X_1,\ldots,X_n$.
+\par
+\textbf{Remark.}
+If $X_1,\ldots,X_n$ are iid as $X$ with probability density function $f_X$ (assuming $X$ is a continuous random variable), Let $\textbf{Z}$ be the vector of the order statistics $(X_{(1)},\ldots,X_{(n)})$ (with strict orderings), then one can show that the joint probability density function $f_{\textbf{Z}}$ of the order statistics is:
+$$f_{\textbf{Z}}(\boldsymbol{z})=n!\prod_{i=1}^{n}f_X(z_i),$$
+where $\boldsymbol{z}=(z_1,\ldots,z_n)$ and $z_1<\cdots<z_n$.
+%%%%%
+%%%%%
+\end{document}

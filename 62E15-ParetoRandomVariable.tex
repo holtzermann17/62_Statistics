@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ParetoRandomVariable}
+\pmcreated{2013-03-22 12:34:05}
+\pmmodified{2013-03-22 12:34:05}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{Pareto random variable}
+\pmrecord{9}{32816}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+\pmsynonym{Pareto distribution}{ParetoRandomVariable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+ $X$ is a \textbf{Pareto random variable} with parameters \textbf{$a, b$} if
+
+$f_X(x) = \frac{a b^a}{x^{a+1}} $, $x\in[b,\infty)$
+
+Parameters:
+
+\begin{list}{$\star$ }{}
+\item $a \in (0,\infty)$
+\item $b \in (0,\infty)$
+\end{list}
+
+Syntax:
+
+$X\sim Pareto(a,b)$
+
+Notes:
+
+\begin{enumerate}
+\item $X$ represents a random variable with shape parameter $a$ and scale parameter $b$.
+\item The expected value of $X$ is noted as $E[X] = \frac{a b}{a-1}$ with $a\in\{2,3,\ldots\}$
+\item The variance of $X$ is noted as $Var[X] = \frac{a b^2}{(a-1)^2 (a-2)}$, $a \in \{3,4,...\}$
+\item The cumulative distribution function of $X$ is noted as $F(x) = 1 - (\frac{b}{x})^a$
+\item The moments of $X$ around 0 are noted as $E[X^n] = \frac{a b^n}{a-n}$, $n \in \{1,2,...,a-1\}$
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

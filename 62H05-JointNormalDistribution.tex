@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JointNormalDistribution}
+\pmcreated{2013-03-22 15:22:34}
+\pmmodified{2013-03-22 15:22:34}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{joint normal distribution}
+\pmrecord{14}{37204}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62H05}
+\pmclassification{msc}{60E05}
+\pmsynonym{multivariate Gaussian distribution}{JointNormalDistribution}
+\pmrelated{NormalRandomVariable}
+\pmdefines{jointly normal}
+\pmdefines{multivariate normal distribution}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+\usepackage{float}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\newcommand{\trnsp}[1]{#1^{\operatorname{T}}}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+
+\begin{document}
+\PMlinkescapeword{normal}
+A finite set of random variables $X_1,\ldots,X_n$ are said to have a
+\emph{joint normal distribution} or \emph{multivariate normal
+distribution} if all real linear combinations
+\begin{equation*}
+\lambda_1X_1 + \lambda_2X_2 +\cdots+\lambda_nX_n
+\end{equation*}
+are \PMlinkname{normal}{NormalRandomVariable}. This implies, in particular, that the individual random variables $X_i$ are each normally distributed. However, the converse is not not true and sets of normally distributed random variables need not, in general, be jointly normal.
+
+If $\bs{X}=(X_1,X_2,\ldots,X_n)$ is joint normal, then its probability distribution is uniquely determined by the means $\bs{\mu}\in\mathbb{R}^n$ and the $n\times n$ positive semidefinite covariance matrix $\bs{\Sigma}$,
+\begin{align*}
+&\mu_i=\mathbb{E}[X_i],\\
+&\Sigma_{ij}=\operatorname{Cov}(X_i,X_j)=\mathbb{E}[X_iX_j]-\mathbb{E}[X_i]\mathbb{E}[X_j].
+\end{align*}
+Then, the joint normal distribution is commonly denoted as $\operatorname{N}(\bs{\mu},\bs{\Sigma})$. Conversely, this distribution exists for any such $\bs{\mu}$ and $\bs{\Sigma}$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[bb = 50 568 320 770,clip=,scale=1.2]{jointnormal}
+\caption{Density of joint normal variables $X,Y$ with $\operatorname{Var}(X)=2$, $\operatorname{Var}(Y)=1$ and $\operatorname{Cov}(X,Y)=-1$.}
+\end{figure}
+
+The joint normal distribution has the following properties:
+\begin{enumerate}
+\item If $\bs{X}$ has the $\operatorname{N}(\bs{\mu},\bs{\Sigma})$ distribution for nonsigular $\bs{\Sigma}$ then it has the multidimensional Gaussian probability density function
+\begin{equation*}
+f_{\bs{X}}(\bs{x})=\frac{1
+}{\sqrt{(2\pi)^n \det{\bs{(\Sigma})}}}
+\exp\left(-\frac{1}{2}\trnsp{(\bs{x} -  \bs{\mu})}\bs{\Sigma}^{-1} (\bs{x} -  \bs{\mu})\right).
+\end{equation*}
+\item If $\bs{X}$ has the $\operatorname{N}(\bs{\mu},\bs{\Sigma})$ distribution and $\bs{\lambda}\in\mathbb{R}^n$ then
+\begin{equation*}
+\bs{\lambda}\cdot\bs{X}=\lambda_1X_1+\cdots+\lambda_nX_n\sim\operatorname{N}(\bs{\lambda}\cdot\bs{\mu},\trnsp{\bs{\lambda}}\bs{\Sigma}\bs{\lambda}).
+\end{equation*}
+\item Sets of linear combinations of joint normals are themselves joint normal. In particular, if $\bs{X}\sim\operatorname{N}(\bs{\mu},\bs{\Sigma})$ and $A$ is an $m\times n$ matrix, then $A\bs{X}$ has the joint normal distribution $\operatorname{N}(A\bs{\mu},A\bs{\Sigma}\trnsp{A})$.
+\item The characteristic function is given by
+\begin{equation*}
+\varphi_{\bs{X}}(\bs{a})\equiv\mathbb{E}\left[\exp(i\bs{a}\cdot\bs{X})\right]=\exp\left(i\bs{a}\cdot\bs{\mu}-\frac{1}{2}\trnsp{\bs{a}}\bs{\Sigma}\bs{a}\right),
+\end{equation*}
+for $\bs{X}\sim\operatorname{N}(\bs{\mu},\bs{\Sigma})$ and any $\bs{a}\in\mathbb{C}^n$.
+\item A pair $X,Y$ of jointly normal random variables are independent if and only if they have zero covariance.
+\item Let $\bs{X}$ be a random vector whose distribution is jointly
+normal.  Suppose the coordinates of $\bs{X}$ are partitioned
+into two groups, forming random vectors $\bs{X_1}$ and
+$\bs{X_2}$, then the conditional distribution of
+$\bs{X_1}$ given $\bs{X_2}=\bs{c}$ is
+jointly normal.
+\end{enumerate}
+
+%%%%%
+%%%%%
+\end{document}

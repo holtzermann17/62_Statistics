@@ -1,0 +1,156 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DataTypesInStatistics}
+\pmcreated{2013-03-22 14:44:27}
+\pmmodified{2013-03-22 14:44:27}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{data types in statistics}
+\pmrecord{15}{36377}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62-07}
+\pmdefines{response variable}
+\pmdefines{explanatory variable}
+\pmdefines{continuous variable}
+\pmdefines{discrete variable}
+\pmdefines{categorical variable}
+\pmdefines{nominal variable}
+\pmdefines{ordinal variable}
+\pmdefines{predictor}
+\pmdefines{control variable}
+\pmdefines{observation}
+\pmdefines{qualitative variable}
+\pmdefines{quantitative variable}
+\pmdefines{dichotomous}
+\pmdefines{polychotomous}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabls}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{types}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{type}
+\PMlinkescapeword{code}
+\PMlinkescapeword{Acc}
+\PMlinkescapeword{level}
+\PMlinkescapeword{category}
+\PMlinkescapeword{real}
+\PMlinkescapeword{mean}
+\PMlinkescapeword{binary}
+\PMlinkescapeword{multinomial}
+\PMlinkescapeword{levels}
+\PMlinkescapeword{ordinal}
+\PMlinkescapeword{transformation}
+\PMlinkescapeword{extension}
+\PMlinkescapeword{state}
+\PMlinkescapeword{weight}
+
+Data drives statistics.  In traditional statistical analysis, data can usually be visualized by a matrix.  Each column in the matrix represents a data variable (slightly different from the mathematical definition of a variable), and each row respesents an observation or outcome, in which case only one data variable is involved, or a vector of observations or outcomes where several data variables are involved.  
+
+The types of data that are being distinguished have to do with the data variables.  Before going into the details, let's begin with an example as a setting.  A statistical analysis is conducted based on an observational study of autombile insurance data during a particular calendar year $Yr$.  A matrix of data is formed with the following data variables being observed:  
+\begin{description}
+\item[\textbf{\PMlinkescapetext{Acc}}] whether a policy has been involved in an accident during $Yr$, 
+\item[\textbf{NumAcc}] number of accidents have a policy been involved in an accident during $Yr$, 
+\item[\textbf{Cost}] the total amount of money a policy cost the insurance company during $Yr$, 
+\item[\textbf{Gen}] gender of driver, 
+\item[\textbf{Mar}] marital status of driver, 
+\item[\textbf{Age}] age of driver, 
+\item[\textbf{Hist}] number of accidents a driver had prior to year $Yr$,
+\item[\textbf{DrvZIP}] zip code location where the driver lives, 
+\item[\textbf{AccZIP}] zip code location where the accident happened, 
+\item[\textbf{AccSt}] a numerical code corresponding to the state or province where the accident took place (for example, 0=Alabama, 1=Alaska, etc..., 50=Wyoming),
+\item[\textbf{Inj}] the extent of the injury sustained during an accident, 
+\item[\textbf{VehType}] the type of vehicle in the policy, and finally, 
+\item[\textbf{VehWgt}] the weight of the vehicle in the policy.
+\end{description}
+
+Now, we are ready to breakdown the data variables.  First, the data variables can be broken down in terms of their uses:
+\begin{enumerate}
+\item \emph{response variable} or \emph{predicted variable}.  From the above example, \textbf{\PMlinkescapetext{Acc}}, \textbf{NumAcc}, \textbf{Cost} can all be response variables.  These are variables that we are trying to study, and predict.
+\item \emph{explanatory variable} or \emph{predictor variable} or \emph{control variable}.  In the example above, given the response variable is \textbf{\PMlinkescapetext{Acc}}, the explanatory variables can be any of the other variables except \textbf{NumAcc}, \textbf{Cost}, and \textbf{Inj}.  Although possibly highly correlated with \textbf{\PMlinkescapetext{Acc}},  \textbf{NumAcc}, \textbf{Cost}, and \textbf{Inj} do not ``explain" why an accident occurs.  In particular, \textbf{Inj} is only valid when there was an accident.
+\end{enumerate}
+Usually, the response variable(s) $\boldsymbol{y}$ and the explanatory variable(s) $\boldsymbol{x}$ can be related functionally as 
+$$\boldsymbol{y}=f(\boldsymbol{x}).$$
+\par
+A breakdown of data variables in terms of the natures of the variables is as follows:
+\begin{enumerate}
+\item \emph{categorical variable} or \emph{discrete variable}.  These are data variables whose ranges are countable, often finite.  Any value of a categorical variable is called a \emph{level}, or a \emph{category}.  For example, \textbf{\PMlinkescapetext{Acc}} is a categorical variable whose values are ``Yes'' (to mean that at least an accident occurred during year $Yr$) and ``No'' (to mean otherwise).  A categorical variable whose number of values is two is often called a \emph{binary variable} or a \emph{dichotomous variable}.  A categorical variable that has more than two values is called a \emph{multinomial variable} or a \emph{polychotomous variable}.  \textbf{DrvZip}, \textbf{Inj} (no injury, light, medium, serious injuries, or death), \textbf{VehType} (family sedan, sports coupe, etc...) and \textbf{NumAcc} are examples of a multinomial variable.
+\item \emph{continuous variable}.  Any data variable that is not a categorical variable is a continuous variable.  \textbf{Age} and \textbf{VehWgt} are both examples of continuous variables.  In real situations, these continuous variables usually lie within a certain bounded interval or ball (in higher dimensions).  For example, it is safe to say that the range of the variable \textbf{Age} is $[\ 0, 140\ ]$.
+\end{enumerate}
+\par
+In many statistical modeling situations, it is often convenient, sometimes even desirable to change continuous variables to categorical ones, and vice versa.  Discretization is a way to turn a continuous variable into a categorical one.  For example, the continuous variable \textbf{Age} can be turned into a dichotomous variable by the grouping: ``Young'' = Age $\in [0,25]$ and ``Not Young'' = Age $\in (25,140]$.  Another possible grouping rule may be ``Young'' = Age $\in [0,25]$, ``Mature'' = Age $\in (25,55]$ Age  and ``Old'' = Age $\in (55,140]$.  
+\par
+Conversely, to turn a categorical variable into a continuous one, either the method of extension or transformation, or both, are used.  For example, \textbf{Hist}, the number of prior accidents is a discrete variable taking on non-negative integer values, can be extended to a continuous variable taking on all non-negative real values to suit a certain modeling function $f$, even though non-integral values do not make sense and are not used in actual predictions.  \textbf{AccZIP} can be transformed into a two-dimensional real-valued vector (longitude, latitude), since each (U.S.) zip code corresponds to an area with a unique centroid whose coordinate is measured in longitude and latitude.
+\par
+Next, data variables can be grouped as whether they are:
+\begin{enumerate}
+\item \emph{quantitative}.  All variables such as \textbf{Age}, \textbf{NumAcc}, \textbf{Hist}, and \textbf{VehWgt} are quantitative variables since they take on numerical values.  Variable \textbf{AccSt} is not a quantitative variable even though it is numeric in nature, since its values have no intrinsic numerical meanings.  Another possible non-quantitative variable may be \textbf{DrvZIP}.
+\item \emph{qualitative}.  Variables like \textbf{Gen}, \textbf{Mar}, \textbf{Inj}, as well as \textbf{AccSt} and \textbf{DrvZIP} are all qualitative variables.
+\end{enumerate}
+\par
+Finally, data variables can be classified in terms of whether they can be ordered or not:
+\begin{enumerate}
+\item \emph{nominal} variables have no intrinsic ordering structure.  \textbf{Gen} and \textbf{Mar} are such examples, as are \textbf{AccSt}, \textbf{DrvZIP} and \textbf{VehType}.
+\item The meaning of \emph{ordinal} variables is self-explanatory.  Usually, numerical variables are ordinal, except when they are multi-dimensional or vectorial.  \textbf{AccZIP}, when transformed into {longitude,latitude}, is not ordinal.  However, fixing any one of the two coordinates turns the other coordinate into an ordinal variable.  An example of a non-numerical ordinal variable is \textbf{Inj}.  Since the levels of \textbf{Inj} can be ranked by their severity, from ``no injury" to ``death'', it is ordinal.
+\end{enumerate}
+The data variables in the above example is summarized in the following table:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+data variable & use & continuity & numerality & ordinality \\
+\hline
+\textbf{\PMlinkescapetext{Acc}} & response & categorical & quantitative & nominal \\
+\hline
+\textbf{NumAcc} & response & categorical & quantitative & ordinal \\
+\hline
+\textbf{Cost} & response & continuous & quantitative & ordinal \\
+\hline
+\textbf{Gen} & explanatory & categorical & qualitative & nominal \\
+\hline
+\textbf{Mar} & explanatory & categorical & qualitative & nominal \\
+\hline
+\textbf{Age} & explanatory & continuous & quantitative & ordinal \\
+\hline
+\textbf{Hist} & explanatory & categorical & quantitative & ordinal \\
+\hline
+\textbf{DrvZIP} & explanatory & categorical & qualitative & nominal \\
+\hline
+\textbf{AccZIP} & explanatory & categorical & qualitative & nominal \\
+\hline
+\textbf{AccSt} & explanatory & categorical & qualitative & nominal \\
+\hline
+\textbf{Inj} & explanatory & categorical & qualitative & ordinal \\
+\hline
+\textbf{VehType} & explanatory & categorical & qualitative & nominal \\
+\hline
+\textbf{VehWgt} & explanatory & continuous & quantitative & ordinal \\
+\hline
+\end{tabular}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

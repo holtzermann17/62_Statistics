@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ScoreFunction}
+\pmcreated{2013-03-22 14:28:02}
+\pmmodified{2013-03-22 14:28:02}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{score function}
+\pmrecord{13}{35988}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62A01}
+\pmsynonym{score}{ScoreFunction}
+\pmsynonym{score statistic}{ScoreFunction}
+\pmdefines{likelihood equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a statistical model $\lbrace f_{\mathbf{X}}(\boldsymbol{x}\mid\boldsymbol{\theta}) : \boldsymbol{\theta} \in \Theta \rbrace$ with log-likelihood function $\ell(\boldsymbol{\theta}\mid\boldsymbol{x})$, the \emph{score function} $U$ is defined to be the gradient of $\ell$:
+$$U(\boldsymbol{\theta})=\nabla\ell=\frac{\partial\ell}{\partial\boldsymbol{\theta}}.$$
+Since the score function $U$ is also a function of the random vector $\boldsymbol{x}$, $U$ is itself a random vector.
+By setting $U$ to \textbf{0}, we have a system of $k$ equation(s), otherwise known as the \emph{likelihood equation(s)}:
+$$U(\boldsymbol{\theta})=\Big(\frac{\partial\ell}{\partial\theta_1},\ldots,\frac{\partial\ell}{\partial\theta_k}\Big)= (0,\ldots,0).$$
+If $\boldsymbol{\theta}=\theta$ is one-dimensional, then the score function is simply referred to as the \emph{score} of $\theta$.
+
+The maximum likelihood estimate (MLE) $\hat{\boldsymbol{\theta}}$ of the parameter vector $\boldsymbol{\theta}$ can usually be found by finding the solutions of the likelihood equations. The likelihood equations may also be formed by setting the gradient of the plain likelihood function to zero. The use of the log function often facilitates the algebra as many distributions are exponential in nature. For some distributions it may also be necessary to test that the solution to the likelihood equations is really a minimum as opposed to a point of inflection.
+
+\textbf{Example}.  $n$ independent observations are made from a random variable $X$ with a Poisson distribution with parameter $\lambda$.  The observed values are $x_1,\ldots,x_n$.  The log-likelihood of the joint pdf is 
+$$\ell(\lambda\mid\boldsymbol{x})=\sum_{i=1}^{n}-\lambda+x_i\ln(\lambda)-\ln(x_i!)$$ 
+and so the score function is 
+$$U(\lambda)=\frac{d\ell}{d\lambda}=\sum_{i=1}^{n}\big(-1+\frac{x_i}{\lambda}\big)=-n+\frac{n\overline{x}}{\lambda},$$  
+where $n\overline{x}=\sum x_i$.  To find the MLE of $\lambda$, we set $U=0$ and solve for $\lambda$.  So the MLE $\hat{\lambda}$ of $\lambda=\overline{x}$.
+%%%%%
+%%%%%
+\end{document}

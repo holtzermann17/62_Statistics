@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormalRandomVariable}
+\pmcreated{2013-03-22 11:54:20}
+\pmmodified{2013-03-22 11:54:20}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{normal random variable}
+\pmrecord{22}{30527}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+\pmclassification{msc}{60E05}
+\pmclassification{msc}{05C50}
+\pmclassification{msc}{34K05}
+\pmsynonym{normal distribution}{NormalRandomVariable}
+\pmsynonym{standard normal distribution}{NormalRandomVariable}
+\pmsynonym{bell distribution}{NormalRandomVariable}
+\pmsynonym{bell curve}{NormalRandomVariable}
+\pmsynonym{Gaussian}{NormalRandomVariable}
+\pmrelated{AreaUnderGaussianCurve}
+\pmrelated{JointNormalDistribution}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+\PMlinkescapeword{normal}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{terms}
+
+
+For any real numbers $\mu$ and $\sigma > 0$, the
+\emph{Gaussian probability distribution function} 
+with mean $\mu$ and variance $\sigma^2$ is defined by
+\[
+f(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} 
+\exp \left( - \tfrac12 \left( \tfrac{x - \mu}{\sigma} \right) ^2 \right).
+\]
+When $\mu=0$ and $\sigma = 1$, 
+it is usually called \emph{standard normal distribution}.
+
+A random variable $X$ having distribution density $f$ is said to be a 
+\emph{normally distributed random variable}, denoted by $X\sim N(\mu,\sigma^2)$. 
+It has expected value $\mu$, 
+and variance $\sigma^2$. 
+
+\subsection*{Cumulative distribution function}
+
+The cumulative distribution function of a standard normal variable,
+often denoted by
+\[
+\Phi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^z e^{-x^2/2} \, dx\,,
+\]
+cannot be calculated in closed form in terms of the elementary functions,
+but its values are tabulated in most statistics books and \PMlinkname{here}{TableOfProbabilitiesOfStandardNormalDistribution},
+and can be computed using most computer statistical packages and spreadsheets.
+
+\subsection*{Uses of the Gaussian distribution}
+
+The normal distribution is probably the most frequently used distribution. 
+Its graph looks like a bell-shaped function, which is why it is often 
+called \emph{bell distribution}. 
+
+The normal distribution is important in probability theory and statistics.
+Empircally, many observed distributions, 
+such as of people's heights, test scores, 
+experimental errors, are found to be more or less to be Gaussian.
+And theoretically, the normal distribution arises as a limiting
+distribution of averages of large numbers of samples, justified 
+by the central limit theorem.
+
+\begin{figure}
+\includegraphics{bell-curve}
+\caption{Graph of densities of the normal 
+distribution for various values of the standard deviation $\sigma$}
+\end{figure}
+
+\subsection*{Properties}
+
+\begin{center}
+\begin{tabular}{c|c}
+Mean & $\mu$ \\
+Variance & $\sigma^2$ \\
+Skewness & 0 \\
+Kurtosis & 3 \\
+\hline
+Moment-generating function & $M_X(t) = \exp\bigl(\mu t + (\sigma t)^2/2 \bigr) $ \\
+Characteristic function & $\phi_X(t) = \exp\bigl(\mu i t -(\sigma t)^2/2 \bigr) $
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item
+If $Z$ is a standard normal random variable,
+then $X = \sigma Z + \mu$ is distributed as $N(\mu, \sigma^2)$,
+and conversely.
+\item
+The sum of any finite number of independent normal variables is itself
+a normal random variable.
+\end{itemize}
+
+
+\subsection*{Relations to other distributions}
+\begin{enumerate}
+\item
+The standard normal distribution can be considered as a Student-t distribution
+with infinite degrees of freedom.
+\item
+The square of the standard normal random variable is the chi-squared random variable of degree 1.  Therefore, the sum of squares of $n$ independent standard normal random variables is the chi-squared random variable of degree $n$.
+\end{enumerate}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

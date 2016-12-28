@@ -1,0 +1,447 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IncidenceStructure}
+\pmcreated{2013-03-22 15:10:56}
+\pmmodified{2013-03-22 15:10:56}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{incidence structure}
+\pmrecord{18}{36937}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62K10}
+\pmclassification{msc}{51E30}
+\pmclassification{msc}{51E05}
+\pmclassification{msc}{05B25}
+\pmclassification{msc}{05B07}
+\pmclassification{msc}{05B05}
+%\pmkeywords{incidence}
+%\pmkeywords{block}
+%\pmkeywords{design}
+\pmrelated{Hypergraph}
+\pmrelated{SteinerSystem}
+\pmrelated{TacticalDecomposition}
+\pmrelated{ProjectivePlane2}
+\pmrelated{FiniteProjectivePlane4}
+\pmrelated{BuekenhoutTitsGeometry}
+\pmdefines{incidence relation}
+\pmdefines{point}
+\pmdefines{block}
+\pmdefines{incident}
+\pmdefines{simple incidence structure}
+\pmdefines{affine plane}
+\pmdefines{finite affine plane}
+
+\usepackage{amssymb}
+% \usepackage{amsmath}
+% \usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% portions from
+% makra.sty 1989-2005 by Marijke van Gans %
+                                          %          ^ ^
+\catcode`\@=11                            %          o o
+                                          %         ->*<-
+                                          %           ~
+%%%% CHARS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        %    code    char  frees  for
+
+\let\Para\S             %    \Para     ÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃ‚Â§   \S \scriptstyle
+\let\Pilcrow\P          %    \Pilcrow  ÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃ‚Â¶   \P
+\mathchardef\pilcrow="227B
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+\let\bs\backslash       %    \bs       \
+\let\us\_               %    \us       _     \_  ...
+
+%%%% DIACRITICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\udot\d             % under-dot (text mode), frees \d
+\let\odot\.             % over-dot (text mode),  frees \.
+%let\hacek\v            % hacek (text mode),     frees \v
+%let\makron\=           % makron (text mode),    frees \=
+%let\tilda\~            % tilde (text mode),     frees \~
+\let\uml\"              % umlaut (text mode),    frees \"
+
+%def\ij/{i{\kern-.07em}j}
+%def\trema#1{\discretionary{-}{#1}{\uml #1}}
+
+%%%% amssymb %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\le\leqslant
+\let\ge\geqslant
+%let\prece\preceqslant
+%let\succe\succeqslant
+
+%%%% USEFUL MISC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\C++{C$^{_{++}}$}
+
+%let\writelog\wlog
+%def\wl@g/{{\sc wlog}}
+%def\wlog{\@ifnextchar/{\wl@g}{\writelog}}
+
+%def\org#1{\lower1.2pt\hbox{#1}} 
+% chem struct formulae: \bs, --- /  \org{C} etc. 
+
+%%%% USEFUL INTERNAL LaTeX STUFF %%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\Ifnextchar=\@ifnextchar
+%let\Ifstar=\@ifstar
+%def\currsize{\@currsize}
+
+%%%% KERNING, SPACING, BREAKING %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\comma{,\,\allowbreak}
+
+%def\qqquad{\hskip3em\relax}
+%def\qqqquad{\hskip4em\relax}
+%def\qqqqquad{\hskip5em\relax}
+%def\qqqqqquad{\hskip6em\relax}
+%def\qqqqqqquad{\hskip7em\relax}
+%def\qqqqqqqquad{\hskip8em\relax}
+
+%%%% LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% COUNTERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\addtoreset\@addtoreset
+%{A}{B} adds A to list of counters reset to 0
+% when B is \refstepcounter'ed (see latex.tex)
+%
+%def\numbernext#1#2{\setcounter{#1}{#2}\addtocounter{#1}{\m@ne}}
+
+%%%% EQUATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% LEMMATA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% DISPLAY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% MATH LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\D\displaystyle
+\let\T\textstyle
+\let\S\scriptstyle
+\let\SS\scriptscriptstyle
+
+% array:
+%def\<#1:{\begin{array}{#1}}
+%def\>{\end{array}}
+
+% array using [ ] with rounded corners:
+%def\[#1:{\left\lgroup\begin{array}{#1}} 
+%def\]{\end{array}\right\rgroup}
+
+% array using ( ):
+%def\(#1:{\left(\begin{array}{#1}}
+%def\){\end{array}\right)}
+
+%def\hh{\noalign{\vskip\doublerulesep}}
+
+%%%% MATH SYMBOLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\d{\mathord{\rm d}}                      % d as in dx
+%def\e{{\rm e}}                              % e as in e^x
+
+%def\Ell{\hbox{\it\char`\$}}
+
+\def\sfmath#1{{\mathchoice%
+{{\sf #1}}{{\sf #1}}{{\S\sf #1}}{{\SS\sf #1}}}}
+\def\Stalkset#1{\sfmath{I\kern-.12em#1}}
+\def\Bset{\Stalkset B}
+\def\Nset{\Stalkset N}
+\def\Rset{\Stalkset R}
+\def\Hset{\Stalkset H}
+\def\Fset{\Stalkset F}
+\def\kset{\Stalkset k}
+\def\In@set{\raise.14ex\hbox{\i}\kern-.237em\raise.43ex\hbox{\i}}
+\def\Roundset#1{\sfmath{\kern.14em\In@set\kern-.4em#1}}
+\def\Qset{\Roundset Q}
+\def\Cset{\Roundset C}
+\def\Oset{\Roundset O}
+\def\Zset{\sfmath{Z\kern-.44emZ}}
+
+% \frac overwrites LaTeX's one (use TeX \over instead)
+%def\fraq#1#2{{}^{#1}\!/\!{}_{\,#2}}
+\def\frac#1#2{\mathord{\mathchoice%
+{\T{#1\over#2}}
+{\T{#1\over#2}}
+{\S{#1\over#2}}
+{\SS{#1\over#2}}}}
+%def\half{\frac12}
+
+\mathcode`\<="4268         % < now is \langle, \lt is <
+\mathcode`\>="5269         % > now is \rangle, \gt is >
+
+%def\biggg#1{{\hbox{$\left#1\vbox %to20.5\p@{}\right.\n@space$}}}
+%def\Biggg#1{{\hbox{$\left#1\vbox %to23.5\p@{}\right.\n@space$}}}
+
+\let\epsi=\varepsilon
+\def\omikron{o}
+
+\def\Alpha{{\rm A}}
+\def\Beta{{\rm B}}
+\def\Epsilon{{\rm E}}
+\def\Zeta{{\rm Z}}
+\def\Eta{{\rm H}}
+\def\Iota{{\rm I}}
+\def\Kappa{{\rm K}}
+\def\Mu{{\rm M}}
+\def\Nu{{\rm N}}
+\def\Omikron{{\rm O}}
+\def\Rho{{\rm P}}
+\def\Tau{{\rm T}}
+\def\Ypsilon{{\rm Y}} % differs from \Upsilon
+\def\Chi{{\rm X}}
+
+%def\dg{^{\circ}}                   % degrees
+
+%def\1{^{-1}}                       % inverse
+
+\def\*#1{{\bf #1}}                  % boldface e.g. vector
+%def\vi{\mathord{\hbox{\bf\i}}}     % boldface vector \i
+%def\vj{\mathord{\,\hbox{\bf\j}}}   % boldface vector \j
+
+%def\union{\mathbin\cup}
+%def\isect{\mathbin\cap}
+
+%let\so\Longrightarrow
+%let\oso\Longleftrightarrow
+%let\os\Longleftarrow
+
+% := and :<=>
+%def\isdef{\mathrel{\smash{\stackrel{\SS\rm def}{=}}}}
+%def\iffdef{\mathrel{\smash{stackrel{\SS\rm def}{\oso}}}}
+
+\def\isdef{\mathrel{\mathop{=}\limits^{\smash{\hbox{\tiny def}}}}}
+%def\iffdef{\mathrel{\mathop{\oso}\limits^{\smash{\hbox{\tiny %def}}}}}
+
+%def\tr{\mathop{\rm tr}}            % tr[ace]
+%def\ter#1{\mathop{^#1\rm ter}}     % k-ter[minant]
+
+%let\.=\cdot
+%let\x=\times                % ÃƒÃƒÃƒÃƒ (direct product)
+
+%def\qed{ ${\S\circ}\!{}^\circ\!{\S\circ}$}
+%def\qed{\vrule height 6pt width 6pt depth 0pt}
+
+%def\edots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}\mkern1mu   %  .shorter
+%   \raise4pt\hbox{.}\mkern1mu                  %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %        .
+%def\fdots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}            %   . ~45ÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃ‚Â°
+%   \raise4pt\hbox{.}                           %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %       .
+
+\def\mod#1{\allowbreak \mkern 10mu({\rm mod}\,\,#1)}
+% redefines TeX's one using less space
+
+%def\int{\intop\displaylimits}
+%def\oint{\ointop\displaylimits}
+
+%def\intoi{\int_0^1}
+%def\intall{\int_{-\infty}^\infty}
+
+%def\su#1{\mathop{\sum\raise0.7pt\hbox{$\S\!\!\!\!\!#1\,$}}}
+
+%let\frakR\Re
+%let\frakI\Im
+%def\Re{\mathop{\rm Re}\nolimits}
+%def\Im{\mathop{\rm Im}\nolimits}
+%def\conj#1{\overline{#1\vphantom1}}
+%def\cj#1{\overline{#1\vphantom+}}
+
+%def\forAll{\mathop\forall\limits}
+%def\Exists{\mathop\exists\limits}
+
+%%%% PICTURES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\cent{\makebox(0,0)}
+
+%def\node{\circle*4}
+%def\nOde{\circle4}
+
+%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\opcit{[{\it op.\,cit.}]}
+\def\bitem#1{\bibitem[#1]{#1}}
+\def\name#1{{\sc #1}}
+\def\book#1{{\sl #1\/}}
+\def\paper#1{``#1''}
+\def\mag#1{{\it #1\/}}
+\def\vol#1{{\bf #1}}
+\def\isbn#1{{\small\tt ISBN\,\,#1}}
+\def\seq#1{{\small\tt #1}}
+%def\url<{\verb>}
+%def\@cite#1#2{[{#1\if@tempswa\ #2\fi}]}
+
+%%%% VERBATIM CODE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\"{\verb"}
+
+%%%% AD HOC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Pow{\mathop{\rm Pow}\nolimits}
+\def\I{{\cal I}}
+\def\P{{\cal P}}
+\def\B{{\cal B}}
+\def\0#1{\hbox{\sc #1}}
+\def\Bp{\B_{\SS\rm P}}
+\def\Pb{\P_{\SS\rm B}}
+\def\Pbi{\P_{{\SS\rm B}'}}
+\def\Pbii{\P_{{\SS\rm B}''}}
+
+%%%% WORDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \hyphenation{pre-sent pre-sents pre-sent-ed pre-sent-ing
+% re-pre-sent re-pre-sents re-pre-sent-ed re-pre-sent-ing
+% re-fer-ence re-fer-ences re-fer-enced re-fer-encing
+% ge-o-met-ry re-la-ti-vi-ty Gauss-ian Gauss-ians
+% Des-ar-gues-ian}
+
+%def\oord/{o{\trema o}rdin\-ate}
+% usage: C\oord/s, c\oord/.
+% output: co\"ord... except when linebreak at co-ord...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                                          %
+                                          %          ^ ^
+\catcode`\@=12                            %          ` '
+                                          %         ->*<-
+                                          %           ~
+\begin{document}
+\PMlinkescapeword{alphabets}
+\PMlinkescapeword{combinations}
+\PMlinkescapeword{constant}
+\PMlinkescapeword{decompositions}
+\PMlinkescapeword{difference}
+\PMlinkescapeword{meet}
+\PMlinkescapeword{order}
+\PMlinkescapeword{orders}
+\PMlinkescapeword{property}
+\PMlinkescapeword{restricted}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{size}
+\PMlinkescapeword{square}
+\PMlinkescapeword{states}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{term}
+\PMlinkescapeword{type}
+
+\textbf{Definition}.  An {\em incidence structure} $\mathcal{S}$ is a triple $(\mathcal{P},\mathcal{B},\mathcal{I})$, where 
+\begin{enumerate}
+\item $\mathcal{P}$ and $\mathcal{B}$ are two disjoint sets; the elements of $\mathcal{P}$ and $\mathcal{B}$ are respectively {\em points} and {\em blocks} of $\mathcal{S}$, and
+\item $\mathcal{I}\subseteq\mathcal{P}\times\mathcal{B}$ called the \emph{incidence relation} of $\mathcal{S}$.
+\end{enumerate}
+%
+and a point $P$ and a block $B$ are said to be {\em incident} iff $(P,B)\in\mathcal{I}$. The {\em dual} incidence structure $\mathcal{I}^*$ is the same structure with the labels ``point'' and ``block'' reversed.
+
+Every block $B$ has a set $\mathcal{P}_B\subseteq \mathcal{P}$ of points it is incident with.  The collection of all $\mathcal{P}_B$ is a multiset, since it is possible that identical sets of points be related to distinct blocks.  When $\mathcal{P}_{B'}\ne\mathcal{P}_{B''}$ whenever $B' \ne B''$, the incidence structure is said to be {\em simple}.  In a simple incidence structure, we could identify each block $B$ with its $\mathcal{P}_B$ so that blocks no longer {\em have\/} sets of points they are incident with but {\em are\/} such sets. If we define it that way, then
+\begin{itemize}
+\item a {\em simple} incidence structure consists of a set $\mathcal{P}$ and a set $\mathcal{B}\subseteq P(\mathcal{P})$ where $P(\mathcal{P})$ is the powerset of $\mathcal{P}$.
+\end{itemize}
+A simple incidence structure is also called a hypergraph (with points as vertices, and blocks as an extended type of ``edges'' that are no longer restricted to exactly two vertices each).
+
+Every point $P$ also has a set $\mathcal{B}_P\subseteq \mathcal{B}$ of blocks it is incident with. Often, a simple incidence structure also has a simple dual, but the set theory formalism does not allow us to regard blocks as sets of points and simultaneously points as sets of blocks! Nevertheless, it is often useful to alternate between these dual interpretations.
+
+The definition given above is quite general, so one can easily come up with arbitrary examples.  Nevertheless, interesting examples of incidence structures are found mainly in geometry and combinatorics.  In geometry, incidence is usually interpreted as set inclusion, so when we say a line is incident with a plane, we are saying that the line is included (as a subset) in the plane.  In combinatorics, the main use of incidence structure is in the study of block designs: grouping a finite collection of objects so that certain ``incidence'' properties are satisfied.
+
+Incidence structures are examples of relational structures.  As such, we can define substructures and homomorphisms between structures:
+
+\textbf{Definition}.  Given an incidence structure $\mathcal{S}=(\mathcal{P},\mathcal{B},\mathcal{I})$, a \emph{substructure} of $\mathcal{S}$ is an incidence structure $(\mathcal{P}',\mathcal{B}',\mathcal{I}')$ such that $\mathcal{P}'\subseteq \mathcal{P}$, $\mathcal{B}'\subseteq \mathcal{B}$, and $\mathcal{I}'=\mathcal{I}\cap (\mathcal{P}'\times \mathcal{B}')$.
+
+\textbf{Definition}.  Given two incidence structures $\mathcal{S}_1=(\mathcal{P}_1,\mathcal{B}_1,\mathcal{I}_1)$, $\mathcal{S}_2=(\mathcal{P}_2,\mathcal{B}_2,\mathcal{I}_2)$, a \emph{homomorphism} from $\mathcal{S}_1$ to $\mathcal{S}_2$ is a pair of functions $f:\mathcal{P}_1\to \mathcal{P}_2$ and $g:\mathcal{B}_1\to \mathcal{B}_2$ such that $(P,B)\in \mathcal{I}_1$ iff $(f(P),g(B))\in \mathcal{I}_2$.  A homomorphism is an isomorphism if both $f$ and $g$ are bijections.  An isomorphism is an automorphism if $\mathcal{S}'=\mathcal{S}$.  It is easy to see that if both $\mathcal{S}_1$ and $\mathcal{S}_2$ are simple, then a homomorphism can be thought of as a single function $f:\mathcal{P}_1\to \mathcal{P}_2$ such that $P\in B$ iff $f(P)\in f(B)$, where $f(B)=\lbrace f(Q)\mid Q\in B\rbrace$.
+
+Incidence structures are special cases of a general form of geometry called Buekenhout-Tits geometry.  Given an incidence structure $(\mathcal{P},\mathcal{B},\mathcal{I})$, form the disjoint union $\Lambda$ of $\mathcal{P}$ and $\mathcal{B}$, and define a function $\tau: \Lambda \to \lbrace 0,1\rbrace$ where $\tau(x)=0$ iff $x$ is a point.  Finally, define binary relation $\#$ on $\Lambda$ so that $x\# y$ iff one is incident with another, or $x=y$.  Then $(\Lambda,\#,\lbrace 0,1\rbrace,\tau)$ so constructed is a geometry of rank 2.
+
+\clearpage
+\subsection*{Finite planes}
+
+The term {\bf line} has a specific meaning for 2-designs in general: for any two points, it is the intersection of all blocks containing both those points.  For 2-designs that are also Steiner systems ($\tau=2$ and $\lambda=1$) there
+is only one such block, so line becomes a synonym for block. And it becomes a finite analogue of the usual geometric meaning of the word.
+%
+\begin{itemize}
+\item An $S(2,\kappa,\nu)$ is the finite analogue of a {\bf plane}, with blocks in the r\^ole of {\bf lines}
+\end{itemize}
+%
+in the following sense: the design property now requires there to be, for any two different points, exactly one line ``through'' both those points. Just like in a real (continuous) plane.
+
+This also implies that, for any two different lines $l$ and $m$, there is {\em no more\/} than one point ``on'' both those lines (if both of $P$ and $Q$ were on both those lines, there would be two lines through those points).
+It does not imply there is always such a point: just like in a real plane, lines can be parallel.
+
+One example is a (finite) {\bf affine plane} with $q^2$ points and $q^2+q$ lines. It can be obtained by deleting one line (and all its points) from a projective plane (for which see below). Lines that used to intersect in one of the deleted points are parallel in the affine plane.
+%
+\begin{itemize}
+\item A (finite) {\bf projective plane} is an $S(2, q+1, q^2+q+1)$
+\end{itemize}
+%
+and it has no parallel lines. Because any two lines meet in a point, the dual is again a projective plane. So a projective plane is a square design, as well as being a great many other things.
+
+It is easy to prove that the property of being a plane dual to a plane (i.e.\ the absence of parallel lines) implies, apart from a few trivial cases, numbers of the form $q+1$ and $q^2+q+1$. Much harder is determining for which $q$
+such planes exist. The parameter $q$ is known as the {\bf order} of the plane (this agrees with order as defined above for designs in general).
+
+Highly symmetric ``classical'' (aka Desarguesian, Pappian) projective planes can be constructed based on finite fields, for any prime power $q$. Many non-Desarguesian projective planes are known, but thus far their $q$ are also prime powers. The {\bf prime power conjecture} is that orders of all projective planes will be prime powers.
+
+The {\bf Bruck--Ryser theorem} states that if $q\equiv1$ or $2\pmod 4$, and not (a square or) the sum of two squares, it cannot be the order of a projective plane. This rules out 6 for instance, as well as 14 etc. It has been extended
+to the {\bf Bruck--Ryser--Chowla theorem} for all square 2-designs, with a more complicated constraint.
+
+The only other order ruled out to date is 10, via an epic computer search by Lam, Swiercz and Thiel (read
+{\tt\PMlinkexternal{http://www.cecm.sfu.ca/organics/papers/lam/index.html}{http://www.cecm.sfu.ca/organics/papers/lam/index.html}} for Lam's account).
+
+\vfill\pagebreak %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\raggedright
+\begin{thebibliography}{MST73}
+
+\bitem{AK93}  \name{E.\,F.\,Assmus} and \name{J.\,D.\,Key},
+              \book{Designs and their Codes}\\
+              (pbk.~ed.~w.~corr.), Camb.~Univ.~Pr.~1993,
+              \isbn{0\,521\,45839\,0}\\
+              {\em first part has thorough introduction to
+               various flavors of incidence structure}
+
+\bitem{Cam94} \name{Peter J.\,Cameron},
+              \book{Combinatorics: topics, techniques, algorithms},\\
+              Camb.~Univ.~Pr.~1994, \isbn{0\,521\,45761\,0}\\
+{\tt\PMlinkexternal{http://www.maths.qmul.ac.uk/~pjc/comb/}{http://www.maths.qmul.ac.uk/~pjc/comb/}} 
+              (solutions, errata \&c.)\\
+              {\em good combinatorics textbook, with detail}
+
+\bitem{Pot95} \name{Alexander Pott},
+              \book{Finite Geometry and Character Theory},\\
+              Lect.~Notes~in~Math.~\vol{1601}, Springer~1995,
+              \isbn{3\,540\,59065\,X}\\
+              {\em includes clear introduction to incidence
+               structures}
+
+\bitem{CD96}  \name{Charles J.\,Colbourn} and \name{Jeffrey H.\,Dinitz}, eds.\\
+              \book{The CRC Handbook of Combinatorial Designs},\\
+              CRC~Press~1996, \isbn{0\,8493\,8948\,8}\\
+{\tt\PMlinkexternal{http://www.emba.uvm.edu/~dinitz/hcd.html}{http://www.emba.uvm.edu/~dinitz/hcd.html}} (errata, new results)\\
+              {\em the reference work on designs incl.\ Steiner systems,
+               proj.~planes}
+
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

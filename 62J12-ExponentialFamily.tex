@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExponentialFamily}
+\pmcreated{2013-03-22 14:30:08}
+\pmmodified{2013-03-22 14:30:08}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{exponential family}
+\pmrecord{7}{36039}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62J12}
+\pmdefines{canonical exponential family}
+\pmdefines{nuisance parameter}
+\pmdefines{natural parameter}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A probability (density) function $f_X(x\mid\theta)$ given a parameter $\theta$ is said to belong to the (one parameter) \emph{exponential family} of distributions if it can be written in one of the following two equivalent forms:
+\begin{enumerate}
+\item $a(x)b(\theta)\operatorname{exp}\big[ c(x)d(\theta)\big ]$
+\item $\operatorname{exp}\big[ a(x)+b(\theta)+c(x)d(\theta) \big]$
+\end{enumerate}
+where $a,b,c,d$ are known functions. 
+If $c(x)=x$, then the distribution is said to be in \emph{canonical form}.  When the distribution is in canonical form, the function $d(\theta)$ is called a \emph{natural parameter}.  Other parameters present in the distribution that are not of any interest, or that are already calculated in advance, are called \emph{nuisance parameters}.
+
+\textbf{Examples:}
+\begin{itemize}
+\item The normal distribution, $N(\mu,\sigma^2)$, treating $\sigma^2$ as a nuisance parameter, belongs to the exponential family.  To see this, take the natural logarithm of $N(\mu,\sigma^2)$ to get 
+$$-\frac{1}{2}\operatorname{ln}(2\pi\sigma^2)-\frac{1}{2\sigma^2}(x-\mu)^2$$
+Rearrange the above expression and we have
+$$\frac{x\mu}{\sigma^2}-\frac{\mu^2}{2\sigma^2}-\frac{1}{2}\Big[\frac{x^2}{\sigma^2}+\operatorname{ln}(2\pi\sigma^2)\Big]$$
+Set $c(x)=x$, $d(\mu)=\mu/\sigma^2$, $b(\mu)=-\mu^2/(2\sigma^2)$, and 
+$a(x)=-1/2\big[x^2/\sigma^2+\operatorname{ln}(2\pi\sigma^2)\big]$.  Then we see that $N(\mu,\sigma^2)$ does indeed belong to the exponential family.  Furthermore, it is in canonical form.  The natural parameter is $d(\mu)=\mu/\sigma^2$.
+\item Similarly, the Poisson, binomial, Gamma, and inverse Gaussian distributions all belong to the exponential family and they are all in canonical form.
+\item Lognormal and Weibull distributions also belong to the exponential family but they are not in canonical form.
+\end{itemize}
+
+\textbf{Remarks}
+\begin{itemize}
+\item If the p.d.f of a random variable $X$ belongs to an exponential family, and it is expressed in the second of the two above forms, then 
+\begin{equation}
+\operatorname{E}[c(X)]=-\frac{b'(\theta)}{d'(\theta)},
+\end{equation}
+\begin{center} and \end{center}
+\begin{equation}
+\operatorname{Var}[c(X)]=\frac{d''(\theta)b'(\theta)-d'(\theta)b''(\theta)}{d'(\theta)^3},
+\end{equation}
+provided that functions $b$ and $d$ are appropriately conditioned.
+\item Given a member from the exponential family of distributions, we have 
+$\operatorname{E}[U]=0$ and $I=-\operatorname{E}[U']$, where $U$ is the score function and $I$ the Fisher information.  To see this, first observe that the log-likelihood function from a member of the exponential family of distributions is given by 
+$$\ell(\theta\mid x)=a(x)+b(\theta)+c(x)d(\theta),$$
+and hence the score function is
+$$U(\theta)=b'(\theta)+c(X)d'(\theta).$$
+From (1), $\operatorname{E}[U]=0$.  
+Next, we obtain the Fisher information $I$.  By definition, we have 
+\begin{eqnarray*}
+I&=&\operatorname{E}[U^2]-\operatorname{E}[U]^2\\
+&=&\operatorname{E}[U^2]\\
+&=&d'(\theta)^2\operatorname{Var}[c(X)]\\
+&=&\frac{d''(\theta)b'(\theta)-d'(\theta)b''(\theta)}{d'(\theta)}
+\end{eqnarray*}
+On the other hand, 
+$$\frac{\partial U}{\partial\theta}=b''(\theta)+c(X)d''(\theta)$$
+so 
+\begin{eqnarray*}
+\operatorname{E}\Big[\frac{\partial U}{\partial\theta}\Big]
+&=&b''(\theta)+\operatorname{E}[c(X)]d''(\theta)\\
+&=&b''(\theta)-\frac{b'(\theta)}{d'(\theta)}d''(\theta)\\
+&=&\frac{b''(\theta)d'(\theta)-b'(\theta)d''(\theta)}{d'(\theta)}\\
+&=&-I
+\end{eqnarray*}
+\item For example, for a Poisson distribution
+$$f_X(x\mid\theta) = \frac{\theta^x e^{-\theta}}{x!},$$
+the natural parameter $d(\theta)$ is $\operatorname{ln}\theta$ and $b(\theta)=-\theta$.  $c(x)=x$ since Poisson is in canonical form.  Then $$U(\theta)=-1+\frac{X}{\theta}\mbox{ and }I=-\operatorname{E}\Big[\frac{-X}{\theta^2}\Big]=\frac{1}{\theta}$$ as expected.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

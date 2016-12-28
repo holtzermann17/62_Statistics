@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LawOfRareEvents}
+\pmcreated{2013-03-22 14:39:32}
+\pmmodified{2013-03-22 14:39:32}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{law of rare events}
+\pmrecord{6}{36252}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62P05}
+\pmclassification{msc}{60E99}
+\pmclassification{msc}{60F99}
+\pmsynonym{Poisson theorem}{LawOfRareEvents}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be distributed as $Bin(n,p)$, a binomial random variable with parameters $n$ and $p$.  Suppose $$\lim_{n\rightarrow\infty}np=\lambda,$$ where $\lambda$ is a positive real constant, then $X$ is asymptotically distributed as $Poisson(\lambda)$, a Poisson distribution with parameter $\lambda$.
+\par
+Basically, when the size of the population $n$ is very large and the occurrence of certain \emph{event} $A$ is rare, where $p$, the probability of $A$ is very small, the binomial random variable $X$ can be approximated by a Poisson random variable.
+\par
+\textbf{Sketch of Proof.}  Let $X\sim Bin(n,p)$.  So 
+\begin{eqnarray*}
+P(X=m) &=& \frac{n!}{m!(n-m)!}p^m(1-p)^{n-m} \\ 
+&=& \frac{n!}{n^m(n-m)!}\frac{(np)^m}{m!}(1-\frac{np}{n})^{n-m} \\ 
+&=& \frac{n!}{n^m(n-m)!}\frac{(np)^m}{m!}(1-\frac{np}{n})^n(1-\frac{np}{n})^{-m}.
+\end{eqnarray*}
+As $n\rightarrow\infty$, $$\frac{n!}{n^m(n-m)!}=\frac{n}{n}\frac{n-1}{n}\cdots\frac{n-m+1}{n}\approx 1,$$
+$$(1-\frac{np}{n})^{-m}\approx (1-\frac{\lambda}{n})^{-m}\approx 1,$$
+$$(1-\frac{np}{n})^n\approx (1-\frac{\lambda}{n})^n\approx e^{-\lambda},$$ and 
+$$\frac{(np)^m}{m!}\approx \frac{\lambda^m}{m!}.$$  Therefore, 
+$$P(X=m)\approx \frac{\lambda^m}{m!}e^{-\lambda} = Poisson(\lambda).$$
+\par
+\textbf{Example.}  Suppose in a given year, the number of fatal automobile accidents has a binomial distribution for a particular insuarance company with five hundred automobile insurance policies.  On average, there is one policy out of the five hundred that will be involved in a fatal crash.  What is the probability that there will be no fatal accidents (out of five hundred policies) in any particular year?
+\par
+\textbf{Solution.}  If $X$ be the number of fatal accidents in a year from a population of 500 auto policies, then $X\sim Bin(n,p)$ with $n=500$ and $p=1/500$.  $\lambda=500\times 1/500=1$ and so $$P(X=0)\approx e^{-1}\approx 0.368.$$  Using the binomial distribution, we have $$P(X=0)=(1-\frac{1}{500})^{500}\approx 0.367.$$
+%%%%%
+%%%%%
+\end{document}

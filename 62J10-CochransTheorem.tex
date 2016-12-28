@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CochransTheorem}
+\pmcreated{2013-03-22 14:33:01}
+\pmmodified{2013-03-22 14:33:01}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Cochran's theorem}
+\pmrecord{8}{36101}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62J10}
+\pmclassification{msc}{62H10}
+\pmclassification{msc}{62E10}
+\pmdefines{Fisher's theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\textbf{X}$ be multivariate normally distributed as $\boldsymbol{N_p(0,I)}$ such that 
+$$\textbf{X}^{\operatorname{T}}\textbf{X}=\sum_{i=1}^{k}Q_i,$$
+where each 
+\begin{enumerate}
+\item $Q_i$ is a quadratic form
+\item $Q_i=\textbf{X}^{\operatorname{T}}\textbf{B}_i\textbf{X}$, where $\textbf{B}_i$ is a $p$ by $p$ square matrix
+\item $\textbf{B}_i$ is positive semidefinite
+\item $\operatorname{rank}(\textbf{B}_i)=r_i$
+\end{enumerate}
+Then any two of the following imply the third:
+\begin{enumerate}
+\item $\sum_{i=1}^{k}r_i=p$
+\item each $Q_i$ has a \PMlinkname{chi square distribution}{ChiSquaredRandomVariable} with $r_i$ \PMlinkescapetext{degrees} of freedom, $\chi^2(r_i)$
+\item $Q_i$'s are mutually independent
+\end{enumerate}
+\par
+As an example, suppose ${X_1}^2\sim\chi^2(m_1)$ and ${X_2}^2\sim\chi^2(m_2)$.  Furthermore, assume ${X_1}^2\geq {X_2}^2$ and $m_1>m_2$, then $${X_1}^2-{X_2}^2\sim\chi^2(m_1-m_2).$$  This corollary is known as \emph{Fisher's theorem}.
+%%%%%
+%%%%%
+\end{document}

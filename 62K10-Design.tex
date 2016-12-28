@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Design}
+\pmcreated{2013-03-22 19:14:09}
+\pmmodified{2013-03-22 19:14:09}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{design}
+\pmrecord{5}{42160}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62K10}
+\pmclassification{msc}{51E30}
+\pmclassification{msc}{51E05}
+\pmclassification{msc}{05B25}
+\pmclassification{msc}{05B07}
+\pmclassification{msc}{05B05}
+\pmsynonym{block design}{Design}
+\pmsynonym{tau-design}{Design}
+\pmsynonym{$\tau$-design}{Design}
+\pmsynonym{BIBD}{Design}
+\pmdefines{block}
+\pmdefines{simple design}
+\pmdefines{square design}
+\pmdefines{symmetric design}
+\pmdefines{tactical configuration}
+\pmdefines{balanced incomplete block design}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A $\tau$-$(\nu,\kappa,\lambda)$ {\bf design}, aka $\tau${\bf-design} or {\bf block design}, is an incidence structure $(\mathcal{P},\mathcal{B},\mathcal{I})$ with
+\begin{itemize}
+      \item $|\mathcal{P}| = \nu$ points in all,
+      \item $|\mathcal{P}_B| = \kappa$ points in each block $B$, and such that
+      \item any set $T\subseteq \mathcal{P}$ of $|T|=\tau$ points occurs as
+            subset $T\subseteq \mathcal{P}_B$ in exactly $\lambda$ blocks.
+\end{itemize}
+The numbers $\tau,\nu,\kappa,lambda$ are called the parameters of a design.  They are often called $t$, $v$, $k$, $\lambda$ (in mixed Latin and Greek alphabets) by some authors.
+
+Given parameters $\tau,\nu,\kappa,lambda$, there may be several non-isomorphic designs, or no designs at all.
+
+Designs need not be simple (they can have {\bf repeated blocks}), but they usually are (and don't) in which case $B$ can again be used as synonym for $\mathcal{P}_B$.
+%
+\begin{itemize}
+\item[$\circ$] 0-designs ($\tau=0$) are allowed.
+\item[$\circ$] 1-designs ($\tau=1$) are known as {\bf tactical configurations}.
+\item[$\circ$] 2-designs are called {\bf balanced incomplete block designs} or {\bf BIBD}.
+\item[$\circ$] 3, 4, 5\dots\ -designs have all been studied.
+\end{itemize}
+%
+Being a $\tau$-$(\nu,\kappa,\lambda)$ design implies also being an $\iota$-$(\nu,\kappa,\lambda_{\,\iota})$ design for every $0\le\iota\le\tau$ (on the same $\nu$ points and with the same block size $\kappa$), with $\lambda_{\,\iota}$ given by $\lambda_{\,\tau}=\lambda$ and recursively
+$$
+  \lambda_{\,\iota} \,=\; {\nu-\iota \over \kappa-\iota} \,\lambda_{\,\iota+1}
+$$
+from which we get the number of blocks as
+$$
+  \lambda_0 \,=\; {\nu!\,/\,(\nu-\tau)! \over \kappa!\,/\,(\kappa-\tau)!}
+            \;=\; {\nu\choose\tau} \bigg/ {\kappa\choose\tau}
+$$
+Being a 0-design says nothing more than all blocks having the same size. As soon as we have $\tau\ge1$ however we also have a 1-design, so the number $\lambda_1 = |\mathcal{B}_P|$ of blocks per point $P$ is constant throughout the structure.  Note now
+$$
+  \lambda_0\,\kappa \;=\; \lambda_1\,\nu
+$$
+which is also evident from their interpretation.
+
+\clearpage
+As an example: designs (simple designs) with $\kappa=2$ are multigraphs
+(simple {\bf graphs}), now
+%
+\begin{itemize}
+\item[$\circ$] $\tau=0$ implies no more than that,
+\item[$\circ$] $\tau=1$ gives {\bf regular graphs}, and
+\item[$\circ$] $\tau=2$ gives {\bf complete graphs}.
+\end{itemize}
+%
+A more elaborate ``lambda calculus'' (pun intended) can be introduced as follows. Let $I\subseteq P$ and $O\subseteq P$ with $|I|=\iota$ and $|O|=o$.  The number of blocks $B$ such that all the points of $I$ are inside $B$ and all the points of $O$ are outside $B$ is independent of the choice of $I$ and $O$, only depending on $\iota$ and $o$, provided $\iota+o\le\tau$. Call this number $\lambda_\iota^o$. It satisfies a kind of reverse Pascal triangle like
+recursion
+$$
+  \lambda_\iota^o \,=\,
+  \lambda_{\iota+1}^o +
+  \lambda_\iota^{o+1}
+$$
+that starts off for $o=0$ with $\lambda_\iota^0 = \lambda_\iota$. An important quantity (for designs with $\tau\ge2$) is the {\bf order} $\lambda_1^1 = \lambda_1^0 - \lambda_2^0 = \lambda_1 - \lambda_2$.
+
+Finally, the dual of a design can be a design but need not be.
+%
+\begin{itemize}
+
+\item A {\bf square design} aka {\bf symmetric design} is one where $\tau=2$
+      and $|\mathcal{P}|=|\mathcal{B}|$, now also $|\mathcal{P}_B|=|\mathcal{B}_P|$. Here the dual is also a
+      square design.
+\end{itemize}
+%
+Note that for $\tau\ge3$ no designs exist with $|\mathcal{P}|=|\mathcal{B}|$ other than trivial ones (where any $\kappa=\nu-1$ points form a block).
+%%%%%
+%%%%%
+\end{document}

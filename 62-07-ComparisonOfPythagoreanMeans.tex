@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComparisonOfPythagoreanMeans}
+\pmcreated{2013-03-22 17:49:01}
+\pmmodified{2013-03-22 17:49:01}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{comparison of Pythagorean means}
+\pmrecord{35}{40280}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62-07}
+\pmclassification{msc}{11-00}
+\pmclassification{msc}{01A20}
+\pmclassification{msc}{01A17}
+\pmrelated{ArithmeticGeometricMeansInequality}
+\pmrelated{GeneralMeansInequality}
+\pmrelated{HeronianMeanIsBetweenGeometricAndArithmeticMean}
+\pmrelated{IntegerContraharmonicMeans}
+\pmrelated{OrderOfSixMeans}
+\pmdefines{Pythagorean means}
+\pmdefines{Babylonian inequality chain}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If $u$ and $v$ are positive numbers and\, $u \le v$,\, then their {\em Pythagorean means}, viz. the harmonic mean $h(u,v)$,\, the geometric mean \,$g(u,v)$,\, the arithmetic mean \,$a(u,v)$\, and the contraharmonic mean \,$c(u,v)$, obey the \PMlinkname{order}{TotalOrder}
+\begin{align}
+u \;\le\; h(u,v) \;\le\; g(u,v) \;\le\; a(u,v) \;\le\; c(u,v) \;\le\; v.
+\end{align}
+The part
+\begin{align}
+u \;\le\; h(u,v) \;\le\; g(u,v) \;\le\; a(u,v) \;\le\; v
+\end{align}
+of (1) was known already by the ancient Babylonians.\, Therefore it may be called the\, {\em Babylonian inequality chain} (Horst Hischer). \\
+
+The below diagram plots the means \,$h(x,1)$ in black,\, $g(x,1)$ in \PMlinkescapetext{blue},\, $a(x,1)$ in cyan and\, $c(x,1)$ in green for\, $0 \le x \le 1$.
+
+
+\begin{center}
+\begin{pspicture}(-1,-1)(5.9,5.9)
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-0.5,-0.5)(5.7,5.7)
+\rput(-0.2,-0.2){$0$}
+\rput(5,-0.3){$1$}
+\rput(-0.2,5){$1$}
+\rput(-0.2,2.5){$\frac{1}{2}$}
+\rput(5.85,-0.1){$x$}
+\rput(-0.1,5.85){$y$}
+\psdot(5,5)
+\psdot(5,0)
+\psdot[linecolor=green](0,5)
+\psdot[linecolor=cyan](0,2.5)
+\psline[linestyle=dotted](5,0)(5,5)
+\psline[linestyle=dotted](0,5)(5,5)
+\psplot[linecolor=green]{0}{5}{x x mul 25 add x 5 add div}
+\psplot[linecolor=red]{0}{5}{x x mul 25 add 2 div sqrt}
+\psplot[linecolor=cyan]{0}{5}{x 5 add 2 div}
+\psplot[linecolor=blue]{0}{5}{5 x mul sqrt}
+\psplot[linecolor=black]{0}{5}{10 x mul x 5 add div}
+\psplot[linecolor=yellow]{0}{5}{x 5 x mul sqrt add 5 add 3 div}
+\psplot[linecolor=brown]{0}{5}{5 x sub 2 exp 100 add sqrt x add 5 sub 2 div}
+
+\end{pspicture}
+\end{center}
+
+
+
+
+Note that the \PMlinkname{linear graph}{Slope} of the arithmetic mean is the common \PMlinkname{tangent}{TangentLine} all those curves in the point \,$(1,1)$, since here the derivatives of all functions have the value $\frac{1}{2}$.\, The same concerns the yellow graph of the Heronian mean of $x$ and $1$, similarly the red graph of the quadratic mean.
+
+\begin{thebibliography}{8}
+\bibitem{HH}{\sc Horst Hischer}: ``\PMlinkexternal{Viertausend Jahre Mittelwertbildung}{http://hischer.de/uds/forsch/preprints/hischer/Preprint98.pdf}''.\, --- {\em mathematica didactica} \textbf{25} (2002).\; See also \PMlinkexternal{this}{http://www.math.uni-sb.de/PREPRINTS/preprint126.pdf}.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FDistribution}
+\pmcreated{2013-03-22 14:26:56}
+\pmmodified{2013-03-22 14:26:56}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{F distribution}
+\pmrecord{15}{35964}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62A01}
+\pmsynonym{Fisher F distribution}{FDistribution}
+\pmsynonym{F-distribution}{FDistribution}
+\pmsynonym{central F-distribution}{FDistribution}
+\pmsynonym{central F distribution}{FDistribution}
+\pmdefines{non-central F distribution}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ and $Y$ be random variables such that
+\begin{enumerate}
+\item $X$ and $Y$ are independent
+\item $X\sim \chi^2(m)$, the \PMlinkname{chi-squared distribution}{ChiSquaredRandomVariable} with $m$ degrees of freedom
+\item $Y\sim \chi^2(n)$, the chi-squared distribution with $n$ degrees of freedom
+\end{enumerate}
+Define a new random variable $Z$ by
+$$Z=\frac{(X/m)}{(Y/n)}.$$
+Then the distribution of $Z$ is called the \emph{central F distribution}, or simply the \emph{F distribution with m and n degrees of freedom}, denoted by $Z\sim \operatorname{F}(m,n)$.
+
+By transformation of the random variables $X$ and $Y$, one can show that the probability density function of the F distribution of $Z$ has the form:
+$$f_Z(x)=\frac{m^{m/2}n^{n/2}}{\operatorname{B}(\frac{m}{2},\frac{n}{2})}
+\cdot\frac{x^{(m/2)-1}}{(mx+n)^{(m+n)/2}},$$
+for $x>0$, where $\operatorname{B}(\alpha,\beta)$ is the beta function.  $f_Z(x)=0$ for $x\le 0$.
+
+For a fixed $m$, say 10, below are some graphs for the probability density functions of the F distribution with $(m,n)$ degrees of freedom.
+
+\begin{center}
+\includegraphics[scale=0.9]{fdist1}
+\end{center}
+
+The next set of graphs shows the density functions with $(m,n)$ degrees of freedom when $n$ is fixed.  In this example, $n=10$.
+
+\begin{center}
+\includegraphics[scale=0.9]{fdist2}
+\end{center}
+
+If $X\sim \chi^2(m,\lambda)$, the non-central chi-square distribution with m degrees of freedom and non-centrality parameter $\lambda$, with $Y$ and $Z$ defined as above, then the distribution of $Z$ is called the \emph{non-central 
+F distribution with m and n degrees of freedom and non-centrality parameter} $\lambda$.
+
+\textbf{Remarks}
+\begin{itemize}
+\item the ``F'' in the F distribution is given in honor of statistician  R. A. Fisher.
+\item If $X\sim \operatorname{F}(m,n)$, then $1/X\sim \operatorname{F}(n,m)$. 
+\item If $X\sim \operatorname{t}(n)$, the t distribution with $n$ degrees of freedom, then $X^2\sim \operatorname{F}(1,n)$.
+\item If $X\sim \operatorname{F}(m,n)$, then $$\operatorname{E}[X] = \frac{n}{n-2}\mbox{ if }n>2,$$ and 
+$$\operatorname{Var}[X] = \frac{2n^2(m+n-2)}{m(n-2)^2(n-4)}\mbox{ if }n>4.$$
+\item Suppose $X_1,\ldots,X_m$ are random samples from a normal distribution with mean $\mu_1$ and variance $\sigma_1^2$.  Furthermore, suppose $Y_1,\ldots,Y_n$ are random samples from another normal distribution with mean $\mu_2$ and variance $\sigma_2^2$.  Then the statistic defined by $$V=\frac{\hat{\sigma_1}^2}{\hat{\sigma_2}^2},$$ where $\hat{\sigma_1}^2$ and $\hat{\sigma_1}^2$ are sample variances of the $X_i's$ and the $Y_j's$, respectively, has an F distribution with m and n degrees of freedom.  $V$ can be used to test whether $\sigma_1^2=\sigma_2^2$.  $V$ is an example of an F test.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

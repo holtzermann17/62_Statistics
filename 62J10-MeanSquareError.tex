@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeanSquareError}
+\pmcreated{2013-03-22 12:07:42}
+\pmmodified{2013-03-22 12:07:42}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{mean square error}
+\pmrecord{11}{31289}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62J10}
+\pmclassification{msc}{94A12}
+\pmsynonym{MSE}{MeanSquareError}
+\pmsynonym{MVUE}{MeanSquareError}
+\pmsynonym{UMVU}{MeanSquareError}
+\pmsynonym{UMVUE}{MeanSquareError}
+\pmsynonym{uniformly minimum variance unbiased}{MeanSquareError}
+\pmrelated{MeanSquareDeviation}
+\pmdefines{minimum variance unbiased estimator}
+\pmdefines{rms error}
+\pmdefines{root-mean-square}
+\pmdefines{root mean square}
+\pmdefines{rms}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+The \emph{mean square error} of an estimator $\hat{\theta}$ of a
+parameter $\theta$ in a statistical model is defined as:
+$$\operatorname{MSE}(\hat{\theta})\colon=\operatorname{E}\big[(\hat{\theta}-\theta)^2\big].$$
+
+From the definition of the variance
+$\operatorname{Var}[X]=\operatorname{E}[X^2]-\operatorname{E}[X]^2$,
+we can express the mean square error in terms of the bias by
+expanding the right hand side above:
+$$\operatorname{MSE}(\hat{\theta})=\operatorname{Var}\big[\hat{\theta}\big]+
+\operatorname{Bias}(\hat{\theta})^2.$$
+
+If $\hat{\theta}$ is an unbiased estimator, then its mean square
+error is identical to its variance:
+$\operatorname{MSE}(\hat{\theta})=\operatorname{Var}[\hat{\theta}]$.
+An unbiased estimator such that $\operatorname{MSE}(\hat{\theta})$
+is a minimum value among all unbiased estimators for $\theta$ is
+called a \emph{minimum variance unbiased estimator}, abbreviated \emph{MVUE}, or \emph{uniformly minimum variance unbiased estimator}, abbreviated \emph{UMVU} estimator.
+
+\textbf{Example}.  Suppose $X_1,X_2,\ldots,X_n$ are iid random
+variables ($n$ independent measurements of the radius of a coin,
+etc...) from a normal distribution $N(\mu,\sigma^2)$ (for example,
+$\mu$ would be the true radius of the coin, and $\sigma^2$ would be
+the error component of the measurements).  Suppose $\overline{X}$
+($=\overline{X}_n$) is the sample mean.  Then $\overline{X}$ is an
+unbiased estimator, so that
+$$\operatorname{MSE}(\overline{X})=\operatorname{Var}\left[\overline{X}\right]=
+\operatorname{Var}\left[\frac{1}{n}\sum_{i=1}^n
+X_i\right]=\frac{1}{n^2}\left(\sum_{i=1}^n \sigma^2\right)=\frac{\sigma^2}{n}.$$
+
+\textbf{Remark}.  The square root of MSE is called the ``root mean square error'', or \emph{rms error} for short.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

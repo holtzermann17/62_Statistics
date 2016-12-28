@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Deviance}
+\pmcreated{2013-03-22 14:34:04}
+\pmmodified{2013-03-22 14:34:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{deviance}
+\pmrecord{8}{36125}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62J12}
+\pmdefines{null model}
+\pmdefines{saturated model}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Background}
+
+In testing the fit of a generalized linear model $\mathcal{P}$ of some data (with response variable \textbf{Y} and explanatory variable(s) \textbf{X}), one way is to compare $\mathcal{P}$ with a similar model $\mathcal{P}_0$.  By similarity we mean: given $\mathcal{P}$ with the response variable $Y_i\sim f_{Y_i}$ and link function $g$ such that $g(\operatorname{E}[Y_i])={\textbf{X}_i}^{\operatorname{T}}\boldsymbol{\beta}$, the model $\mathcal{P}_0$
+\begin{enumerate}
+\item is a generalized linear model of the same data,
+\item has the response variable $Y$ distributed as $f_Y$, same as found in $\mathcal{P}$
+\item has the same link function $g$ as found in $\mathcal{P}$, such that $g(\operatorname{E}[Y_i])={\textbf{X}_i}^{\operatorname{T}}\boldsymbol{\beta_0}$
+\end{enumerate}
+Notice that the only possible difference is found in the parameters $\boldsymbol{\beta}$.  
+
+It is desirable for this $\mathcal{P}_0$ to be served as a base model in case when more than one models are being assessed.  Two possible candidates for $\mathcal{P}_0$ are the \emph{null model} and the \emph{saturated model}.  The null model $\mathcal{P}_{null}$ is one in which only one parameter $\mu$ is used so that $g(\operatorname{E}[Y_i])=\mu$, all responses have the same predicted outcome.  The saturated model $\mathcal{P}_{max}$ is the other extreme where the maximum number of parameters are used in the model so that the observed response values equal to the predicted response values exactly, $g(\operatorname{E}[Y_i])={\textbf{X}_i}^{\operatorname{T}}\boldsymbol{\beta}_{max}=y_i$
+
+\textbf{Definition}
+The \emph{deviance} of a model $\mathcal{P}$ (generalized linear model) is given by
+$$\operatorname{dev}(\mathcal{P})=2\big[\ell(\hat{\boldsymbol{\beta}}_{max}\mid\textbf{y})-\ell(\hat{\boldsymbol{\beta}}\mid\textbf{y})\big],$$
+where $\ell$ is the log-likelihood function, $\hat{\boldsymbol{\beta}}$ is the MLE of the parameter vector $\boldsymbol{\beta}$ from $\mathcal{P}$ and $\hat{\boldsymbol{\beta}}_{max}$ is the MLE of parameter vector $\boldsymbol{\beta}_{max}$ from the saturated model $\mathcal{P}_{max}$.
+
+\textbf{Example}
+For a normal or general linear model, where the link function is the identity: 
+$$\operatorname{E}[Y_i]={\textbf{x}_i}^{\operatorname{T}}\boldsymbol{\beta},$$
+where the $Y_i$'s are mutually independent and normally distributed as $N(\mu_i,\sigma^2)$.  The log-likelihood function is given by
+$$\ell(\boldsymbol{\beta}\mid\textbf{y})=-\frac{1}{2\sigma^2}\sum_{i=1}^{n}(y_i-\mu_i)^2-\frac{n\operatorname{ln}(2\pi\sigma^2)}{2},$$
+where $\mu_i={\textbf{x}_i}^{\operatorname{T}}\boldsymbol{\beta}$ is the predicted response values, and $n$ is the number of observations.
+
+For the model in question, suppose $\hat{\mu}_i={\textbf{X}_i}^{\operatorname{T}}\hat{\boldsymbol{\beta}}$ is the expected mean calculated from the maximum likelihood estimate $\hat{\boldsymbol{\beta}}$ of the parameter vector $\boldsymbol{\beta}$.  So,
+$$\ell(\hat{\boldsymbol{\beta}}\mid\textbf{y})=-\frac{1}{2\sigma^2}\sum_{i=1}^{n}(y_i-\hat{\mu}_i)^2-\frac{n\operatorname{ln}(2\pi\sigma^2)}{2},$$
+
+For the saturated model $\mathcal{P}_{max}$, the predicted value $(\hat{\mu}_{max})_i$ = the observed response value $y_i$.  Therefore,
+$$\ell(\hat{\boldsymbol{\beta}}_{max}\mid\textbf{y})=-\frac{1}{2\sigma^2}\sum_{i=1}^{n}(y_i-(\hat{\mu}_{max})_i)^2-\frac{n\operatorname{ln}(2\pi\sigma^2)}{2}=-\frac{n\operatorname{ln}(2\pi\sigma^2)}{2}.$$
+So the deviance is 
+$$\operatorname{dev}(\mathcal{P})=2\big[\ell(\hat{\boldsymbol{\beta}}_{max}\mid\textbf{y})-\ell(\hat{\boldsymbol{\beta}}\mid\textbf{y})\big]=\frac{1}{\sigma^2}\sum_{i=1}^{n}(y_i-\hat{\mu}_i)^2,$$
+which is exactly the residual sum of squares, or RSS, used in regression models.
+
+\textbf{Remarks}
+\begin{itemize}
+\item The deviance is necessarily non-negative.
+\item The distribution of the deviance is asymptotically a \PMlinkname{chi square distribution}{ChiSquaredRandomVariable} with $n-p$ degress of freedom, where $n$ is the number of observations and $p$ is the number of parameters in the model $\mathcal{P}$.
+\item If two generalized linear models $\mathcal{P}_1$ and $\mathcal{P}_2$ are nested, say $\mathcal{P}_1$ is nested within $\mathcal{P}_2$, we can perform hypothesis testing $H_0$: the model for the data is $\mathcal{P}_1$ with $p_1$ parameters, against $H_1$: the model for the data is the more general $\mathcal{P}_2$ with $p_2$ parameters, where $p_1<p_2$.  The deviance difference $\Delta$(dev)$=\operatorname{dev}(\mathcal{P}_2)-\operatorname{dev}(\mathcal{P}_1)$ can be used as a test statistic and it is approximately a chi square distribution with $p_2-p_1$ degrees of freedom.
+\end{itemize}
+\par
+\begin{thebibliography}{8}
+\bibitem{mccullagh} P. McCullagh and J. A. Nelder, {\em Generalized Linear Models}, Chapman \& Hall/CRC, 2nd ed., London (1989).
+\bibitem{dobson} A. J. Dobson, {\em An Introduction to Generalized Linear Models}, Chapman \& Hall, 2nd ed. (2001).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

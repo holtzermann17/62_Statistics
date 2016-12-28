@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MovingAverage}
+\pmcreated{2013-03-22 16:45:03}
+\pmmodified{2013-03-22 16:45:03}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{moving average}
+\pmrecord{9}{38976}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62M10}
+\pmclassification{msc}{26D15}
+\pmclassification{msc}{11-00}
+\pmclassification{msc}{91B84}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A {\em moving average} is a sequence of arithmetic means taken over a fixed interval moved along consecutive data points from an infinite (or sufficiently large) set of data points. That is, given a sequence $a_x, \ldots, a_{x + k}$ and an interval $n$, the average $$\frac{a_{i - \frac{n}{2}} + \ldots + a_{i + \frac{n}{2}}}{n}$$ is taken for each value $(x +  n) < i < (x + k - n)$.
+
+Plotting a moving average can help to smooth out an extremely jagged curve so as to allow one to see larger patterns. For example, take this plot of the \PMlinkname{number of (nondistinct) prime factors function}{NumberOfNondistinctPrimeFactorsFunction} $\Omega(n)$ for $20 < n < 120$:
+
+\begin{center}
+\includegraphics{BigOmegaPlot}
+\end{center}
+
+If instead we plot a moving average with an interval of 40, we get a smoother curve:
+
+\begin{center}
+\includegraphics{BigOmegaMovAvgPlot}
+\end{center}
+
+Though in all honesty, moving averages are not all that useful in number theory. They are much used, however, in statistics and fields using statistics, such as physics and economics. In economics, for example, a moving average over an interval of say, 3 months, helps investors worry less about the wild hectic fluctuations in a day of trading and focus on the overall direction of a given stock. In physics, to give another example, a yearly moving average of parts per million of carbon dioxide in the atmosphere of the Earth smooths out the yearly dips of summer to show that overall carbon dioxide is going up, contributing to significant global warming.
+%%%%%
+%%%%%
+\end{document}

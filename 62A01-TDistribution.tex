@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TDistribution}
+\pmcreated{2013-03-22 14:26:50}
+\pmmodified{2013-03-22 14:26:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{t distribution}
+\pmrecord{34}{35962}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62A01}
+\pmsynonym{Student's $t$}{TDistribution}
+\pmsynonym{t-distribution}{TDistribution}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[usenames]{color}
+\begin{document}
+Let $X$ and $Y$ be random variables such that
+\begin{enumerate}
+\item $X$ and $Y$ are independent
+\item $X\sim \operatorname{N}(0,1)$, the standard normal distribution (with mean $0$ and variance $1$)
+\item $Y\sim \chi^2(n)$, the chi-square distribution with n degrees of freedom
+\end{enumerate}
+Define a new random variable $Z$ by
+\[Z=X/\Big(\frac{Y}{n}\Big)^{\frac{1}{2}}\]
+Then the distribution of $Z$ is called the \emph{$t$ distribution with $n$ degrees of freedom}, 
+denoted by $Z\sim \operatorname{t}(n)$.
+
+By transformation of the random variables $X$ and $Y$, one can show that the probability density function of the $t$ distribution of $Z$ has the form:
+$$f_Z(x)=\frac{1}{\sqrt{n}\operatorname{B}(\frac{n}{2},\frac{1}{2})}
+\Big(1+\frac{x^2}{n}\Big)^{-\frac{n+1}{2}},$$ 
+where $\operatorname{B}(\alpha,\beta)$ is the beta function.
+
+Below are graphs of some $t$ probability density functions for various degrees ($d$) of freedom.
+
+\begin{center}
+\includegraphics[scale=0.45]{tdist}
+
+\textcolor{red}{$d=1$}, \textcolor{blue}{$d=2$}, \textcolor{green}{$d=3$}, \textcolor{magenta}{$d=500$}
+\end{center}
+
+\textbf{Remarks}
+\begin{itemize}
+\item the $t$ distribution is also known as the Student's $t$ distribution.  The name Student came from the 19th Century research chemist William Sealy Gossett, who was employed by the brewing company Guinness to improve the yield of crops used to produce its beer.  Gossett conducted agricultural experiments and used random numbers to help determine the sampling distribution of the data he collected.  Because the brewing company wanted to keep the research results confidential for competitve reasons, Gossett had to use a pen name to publish his findings.  Student was his pen name and the distribution he found turned out to be the $t$ distribution.
+\item $\operatorname{t}(1) = \operatorname{Cauchy}(0,1)$, the Cauchy distribution with parameters $0$ and $1$.
+\item $\operatorname{t}(n)$ is asymptotically (as $n\rightarrow\infty$) $\operatorname{N}(0,1)$, the standard normal distribution 
+with mean $0$ and variance $1$.
+\item If $X\sim  \operatorname{t}(n)$, $E[|X |^k]$ exists iff $k<n$.  Therefore, a $t$ distribution has no mean if it has 
+one degree of freedom.  For $n>1$, $\operatorname{E}[X] = 0$.  For $n>2$, $\operatorname{Var}[X] = \frac{n}{n-2}$.
+\item If $X_1,\ldots,X_n$ are random samples from a normal distribution with mean $\mu$ and variance $\sigma^2$.  Let $\hat{\mu}$ be the sample mean and $\hat{\sigma}^2$ the sample variance, then 
+$$U=\frac{\hat{\mu}-\mu}{\hat{\sigma}/\sqrt{n}}\sim \operatorname{t}(n-1)$$  Please note that the statistic $U$ does not depend on $\sigma^2$, and thus is used often in testing hypotheses involving comparison of the sample mean to the true mean, given a set of random samples that are normally distributed with an unknown mean and an unknown variance.  This is an example of a $t$ test.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

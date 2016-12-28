@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HypothesisTesting}
+\pmcreated{2013-03-22 14:42:12}
+\pmmodified{2013-03-22 14:42:12}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{hypothesis testing}
+\pmrecord{5}{36316}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62A01}
+\pmrelated{ChiSquaredStatistic}
+\pmdefines{null hypothesis}
+\pmdefines{alternative hypothesis}
+\pmdefines{significance level}
+\pmdefines{t test}
+\pmdefines{f test}
+\pmdefines{chi-squared test}
+\pmdefines{chi-square test}
+\pmdefines{$\chi^2$ test}
+\pmdefines{p-value}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{mean}
+\PMlinkescapeword{link}
+\PMlinkescapeword{times}
+\PMlinkescapeword{types}
+\PMlinkescapeword{normal}
+
+Hypothesis testing is a statistical inferencial procedure in which a statement based on some experimental or observational study is formulated, tested, then put through a decision process.  The decision process either accepts or rejects the statement.
+\par
+More precisely, the hypothesis testing procedure can be broken down into three steps:
+\begin{enumerate}
+\item Formulation of a (hypothetical) statement. \par
+The hypothetical statement formed is called the null hypothesis, or $H_0$.  For example, in testing whether a coin is ``fair'', it is tossed 100 times and the number of heads are counted.  $H_0$ could be $\lbrace\mbox{ The number of heads = }50 \rbrace$.  Accompanying the null hypothesis $H_0$ is the alternative hypothesis $H_a$.  The statement in $H_a$ is the compliment of the statement in $H_0$ (the universe is the sample space).  For example, $H_a$ would be $\lbrace\mbox{ The number of heads }\neq 50 \rbrace$.
+\item Testing of the statement. \par
+This is usually the most mathematical part of the procedure.  To test $H_0$, first assume $H_0$ is true.  Then apply an appropriate test statistic using values obtained from the study.  There are many test statistics, depending on $H_0$, $H_a$, and the nature of the study.  \par Based on the distributional forms of these test statistics, four major types of tests are of interest.  A \emph{t test} is based on a test statistic that has a t-distribution.  An \PMlinkname{\emph{f test}}{fdistribution} and a \PMlinkname{$\chi^2$ \emph{test}}{ChiSquaredRandomVariable} are so named for the same reason.  A \emph{z-test} is one that is based on a test statistic having a normal or Gaussian distribution. \par Before calculating the test statistic, a value of the \emph{significance level} of the test needs to be specified.  The significance level, known as $\alpha$, is the probability of rejecting $H_0$ (or accepting $H_a$) when in fact, $H_0$ is true: $\alpha=P(H_a\mid H_0)$.
+\item Deciding whether to accept or reject the statement. \par
+Once the value of the test statistic is obtained, it is used to find a corresponding probability of obtaining such a statistic given that $H_0$ is true.  This probability is called the \emph{p-value}.  This $p$-value is then compared $\alpha$, the significance level of the test.  If $p$-value $<\alpha$, then the usual next step is to reject the null hypothesis $H_0$ (and $H_a$ accepted).  Otherwise, $H_0$ will be accepted.
+\end{enumerate}
+When a statement (whether it is null hypothesis or the alternative hypothesis) is accepted, it merely says that, statistically, there is not enough evidence to reject the statement.  Acceptance of a hypothetical statement does not prove that the underlying statement is true.
+\par
+The concept of statistical hypothesis testing can be found in any standard introductory statistics textbooks, as well as numerous internet websites (for example, \PMlinkexternal{click to find the result of a Google search}{http://www.google.com/search?hl=en&lr=&q=hypothesis+testing}).  The purpose of this entry is to give a very brief description of hypothesis testing and to serve as a link reference for other entries.
+%%%%%
+%%%%%
+\end{document}

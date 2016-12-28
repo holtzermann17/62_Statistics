@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Percentile}
+\pmcreated{2013-03-22 16:17:13}
+\pmmodified{2013-03-22 16:17:13}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{percentile}
+\pmrecord{17}{38402}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62-07}
+\pmsynonym{first quartile}{Percentile}
+\pmsynonym{third quartile}{Percentile}
+\pmsynonym{IQR}{Percentile}
+\pmdefines{quartile}
+\pmdefines{upper quartile}
+\pmdefines{lower quartile}
+\pmdefines{interquartile range}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Given a distribution  function $F_X$ of a random variable $X$, on a probability space $(\Omega, B, P)$ a \emph{$p^{\text{th}}$-percentile} of $F_X$ for a given real number $p$, is a real number $r$ such that 
+\begin{enumerate}
+\item
+$\displaystyle P(X\leq r)\geq \frac{p}{100},$
+\item
+$\displaystyle P(X\geq r)\geq 1-\frac{p}{100}.$
+\end{enumerate}
+
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+The most common percentiles of a distribution function are the \PMlinkname{median}{MedianOfADistribution} (the $50^{\text{th}}$-percentile or the second quartile), the \emph{lower quartile} (the $25^{\text{th}}$-percentile or the first quartile), and the \emph{upper quartile} (the $75^{\text{th}}$-percentile or the third quartile).  
+\item
+In practice, the quartiles are calculated as follows: calculate the median $m$ first, then the median of the data points below $m$ is the first quartile, and the median of the data points above $m$ is the third quartile.
+\item
+The interval between the first quartile and the third quartile is called the \emph{interquartile range}, or \emph{IQR} for short.  Sometimes, the difference between the first and third quartiles is also called the IQR.  Like standard deviation, IQR is a measure of dispersion.  However, IQR is a more robust statistic.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NoncentralChisquaredRandomVariable}
+\pmcreated{2013-03-22 14:56:16}
+\pmmodified{2013-03-22 14:56:16}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{non-central chi-squared random variable}
+\pmrecord{11}{36628}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E99}
+\pmclassification{msc}{60E05}
+\pmsynonym{non-central chi-squared distribution}{NoncentralChisquaredRandomVariable}
+\pmdefines{non-centrality parameter}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+\usepackage{float}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{number}
+\PMlinkescapeword{real part}
+\PMlinkescapeword{integers}
+\PMlinkescapeword{variable}
+\PMlinkescapeword{degree}
+\PMlinkescapeword{normals}
+\PMlinkescapeword{density}
+\PMlinkescapeword{restricted}
+
+Let $X_1,\ldots,X_n$ be IID random variables, each with the standard normal distribution.  Then, for any $\boldsymbol{\mu}\in\mathbb{R}^n$, the random variable $X$ defined by 
+\begin{equation*}
+X=\sum_{i=1}^{n}(X_i+\mu_i)^2
+\end{equation*}
+is called a \emph{non-central chi-squared random variable}.
+Its distribution depends only on the number of degrees of freedom $n$ and non-centrality parameter $\lambda\equiv\Vert\boldsymbol{\mu}\Vert$. This is denoted by $\chi^2(n,\lambda)$ and has moment generating function
+\begin{equation}\label{eq:1}
+\operatorname{M}_X(t)\equiv\mathbb{E}\left[e^{tX}\right]=\left(1-2t\right)^{-\frac{n}{2}}\exp\left(\frac{\lambda t}{1-2t}\right),
+\end{equation}
+which is defined for all $t\in\mathbb{C}$ with real part less than $1/2$.
+More generally, for any $n,\lambda\ge 0$, not necessarily integers, a random variable has the  \emph{non-central chi-squared distribution}, $\chi^2(n,\lambda)$, if its moment generating function is given by (\ref{eq:1}).
+
+A non-central chi-squared random variable for any $n,\lambda\ge 0$ can be constructed as follows. Let $Y$ be a (central) chi-squared variable with degree $n$, $Z_1,Z_2,\ldots$ be standard normals, and $N$ have the $\textrm{Poisson}(\lambda/2)$ distribution. If these are all independent then
+\begin{equation*}
+X\equiv Y+\sum_{k=1}^{2N}Z_k^2.
+\end{equation*}
+has the $\chi^2(n,\lambda)$ distribution. Correspondingly, the probability density function for $X$ is
+\begin{equation}\label{eq:2}
+f_X(x)=\sum_{k=0}^\infty \frac{\lambda^k}{2^k k!}e^{-\lambda/2} f_{n+2k}(x),
+\end{equation}
+where $x>0$ and $f_k$ is the probability density of the $\chi^2_{(k)}$ distribution.
+Alternatively, this can be expressed as
+\begin{equation*}
+f_X(x)=\frac{1}{2}e^{-(x+\lambda)/2}(x/\lambda)^{n/4-1/2}I_{n/2-1}\left(\sqrt{\lambda x}\right).
+\end{equation*}
+where $I_\nu$ is a modified Bessel function of the first kind,
+\begin{equation*}
+I_\nu(x)=\sum_{k=0}^\infty\frac{\left(x/2\right)^{\nu+2k}}{k!\,\Gamma\left(\nu+k+1\right)}.
+\end{equation*}
+
+\begin{figure}[H]
+\centering
+\includegraphics{ncchisquared}
+\caption{Densities of the non-central chi-squared distribution $\chi^2(n,\lambda)$.}
+\end{figure}
+
+\textbf{Remarks}
+\begin{enumerate}
+\item $\chi^2(n,\lambda)$ has mean $n+\lambda$ and variance $2n+4\lambda$.
+\item $\chi^2(n,0)=\chi^2_{(n)}$.  The (central) chi-squared random variable is a special case of the non-central chi-squared random variable, when the non-centrality parameter $\lambda=0$.
+\item (The reproductive property of chi-squared distributions).  If $Z_1,\ldots,Z_m$ are non-central chi-squared random variables such that each $Z_i\sim\chi^2(n_i,\lambda_i)$, then their total $Z=\sum Z_i$ is also a non-central chi-squared random variable with distribution $\chi^2(\sum n_i, \sum \lambda_i)$.
+\item If $n>0$ then the $\chi^2(n,\lambda)$ distribution is restricted to the domain $(0,\infty)$ with probability density function (\ref{eq:2}). On the other hand, if $n=0$, then there is also an atom at $0$,
+\begin{equation*}
+\mathbb{P}(X=0)=\lim_{t\rightarrow-\infty}\operatorname{M}_X(t)=e^{-\lambda/2}.
+\end{equation*}
+\item If $\boldsymbol{x}$ is a multivariate normally distributed $n$-dimensional random vector with distribution $\boldsymbol{N(\mu,V)}$ where $\boldsymbol{\mu}$ is the mean vector and $\boldsymbol{V}$ is the $n\times n$ covariance matrix.  Suppose that $\boldsymbol{V}$ is singular, with $k$ = rank of $V<n$.  Then $\boldsymbol{x^{\operatorname{T}}V^{-}x}$ is a non-central chi-squared random variable, where $\boldsymbol{V^{-}}$ is a generalized inverse of $\boldsymbol{V}$.  Its distribution has $k$ degrees of freedom with non-centrality parameter $\lambda=\boldsymbol{\mu^{\operatorname{T}}V^{-}\mu}$.
+\end{enumerate}
+
+%%%%%
+%%%%%
+\end{document}

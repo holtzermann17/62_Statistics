@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CovarianceMatrix}
+\pmcreated{2013-03-22 14:27:23}
+\pmmodified{2013-03-22 14:27:23}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{covariance matrix}
+\pmrecord{8}{35975}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62H99}
+\pmsynonym{variance covariance matrix}{CovarianceMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\mathbf{X}=(X_1,\ldots,X_n)^T$ be a random vector.  Then the \emph{covariance matrix} of $\mathbf{X}$, denoted by $\mathbf{Cov(X)}$, is $\lbrace Cov(X_i,X_j) \rbrace$.  The diagonals of $\mathbf{Cov(X)}$ are $Cov(X_i,X_i)=Var[X_i]$.  In matrix notation, 
+$$\mathbf{Cov(X)}=\begin{pmatrix} Var[X_1] & \cdots & Cov(X_1,X_n) \\
+\vdots & & \vdots \\ Cov(X_n,X_1) & \cdots & Var[X_n] \end{pmatrix}.$$
+
+It is easily seen that $\mathbf{Cov(X)}=\mathbf{Var[X]}$ via
+$$\begin{pmatrix} E[{X_1}^2]-E[X_1]^2 & \cdots & E[X_1X_n]-E[X_1]E[X_n] \\
+\vdots & & \vdots \\ E[X_nX_1]-E[X_n]E[X_1] & \cdots & E[{X_n}^2]-E[X_n]^2 \end{pmatrix} = \mathbf{E\Big[\big(X-E[X]\big)\big(X-E[X]\big)^T\Big]}.$$
+
+The covariance matrix is symmetric and if the $X_i$'s are independent, identically distributed (iid) with variance $\boldsymbol{\sigma}^2$, then 
+$$\mathbf{Cov(X)}=\boldsymbol{\sigma}^2\mathbf{I}.$$
+%%%%%
+%%%%%
+\end{document}

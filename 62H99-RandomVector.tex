@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RandomVector}
+\pmcreated{2013-03-22 14:27:20}
+\pmmodified{2013-03-22 14:27:20}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{random vector}
+\pmrecord{15}{35974}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62H99}
+\pmclassification{msc}{15A52}
+\pmdefines{random matrix}
+\pmdefines{distribution of a random vector}
+\pmdefines{distribution of a random matrix}
+\pmdefines{mean vector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\trnsp}[1]{#1^{\operatorname{T}}}
+\begin{document}
+A \emph{random vector} is a finite-dimensional formal vector of
+random variables.  The random vector can be written either as a
+column or row of random variables, depending on its context and use.
+So if $X_1,X_2,\ldots,X_n$ are random variables, then
+$$\textbf{X}=\begin{pmatrix} X_1 \\ X_2 \\
+\vdots \\ X_n \end{pmatrix}=\trnsp{(X_1,X_2,\ldots,X_n)}$$ is a
+random (column) vector.  Similarly, one defines a \emph{random
+matrix} to be a formal matrix whose entries are all random
+variables.  The size of a random vector and the size of a
+random matrix are assumed to be finite fixed constants.
+
+The \emph{distribution of a random vector}
+$\textbf{X}=(X_1,X_2,\ldots,X_n)$ is defined to be the joint
+distribution of its coordinates $X_1,\ldots,X_n$:
+$$F_{\textbf{X}}(\textbf{x}):=F_{X_1,\ldots,X_n}(x_1,\ldots,x_n).$$
+Similarly, the \emph{distribution of a random matrix} is the joint
+distribution of its matrix components.
+
+Let $\textbf{X}=(X_1,X_2,\ldots,X_n)$ be a random vector.  If
+$\operatorname{E}[X_i]$ exists ($<\infty$) for each $i$, then the expectation of
+$\textbf{X}$, called the \emph{mean vector} and denoted by
+$\mathbf{E}[\textbf{X}]$, is defined to be:
+$$\mathbf{E}[\textbf{X}]:=(\operatorname{E}[X_1],\operatorname{E}[X_2],\ldots, \operatorname{E}[X_n]).$$
+Clearly $\mathbf{E}[\textbf{X}]^T=\mathbf{E}[\textbf{X}^T]$. The
+expectation of a random matrix is similarly defined.  Note that the
+definitions of expectations can also be defined via measure theory.  Then,
+using Fubini's Theorem, one can show that the two sets of definitions coincide.
+
+Again, let $\textbf{X}=(X_1,X_2,\ldots,X_n)^T$ be a random vector.
+If $\boldsymbol{\mu}$=$\mathbf{E}[\textbf{X}]$ is defined and
+$\operatorname{E}[X_iX_j]$ are defined for all $1\leq i,j \leq n$, then the
+variance of $\textbf{X}$, denoted by $\textbf{Var}[\textbf{X}]$, is
+defined to be:
+$$\textbf{Var}[\textbf{X}]:= \mathbf{E}\big[(\textbf{X}-\boldsymbol{\mu})(\textbf{X}-\boldsymbol{\mu})^T\big].$$
+It is not hard to see that $\textbf{Var}[\textbf{X}]$ is an $n\times
+n$ symmetric matrix and it is equal to the covariance matrix of the
+$X_i$'s.
+
+\textbf{\PMlinkescapetext{Properties}:}
+\begin{enumerate}
+\item If \textbf{X} is an $n$-dimensional random vector with \textbf{A} a $m\times n$ constant matrix and $\boldsymbol{\alpha}$ an $m$-dimensional constant vector, then $$\mathbf{E}[\mathbf{AX}+\boldsymbol{\alpha}]=\mathbf{AE}[\mathbf{X}]+\boldsymbol{\alpha}.$$
+\item Same set up as above.  Then $$\mathbf{Var}[\mathbf{AX}+\boldsymbol{\alpha}]=\mathbf{AVar}[\mathbf{X}]\mathbf{A}^T.$$  If the ${X_i}$'s are \emph{iid} (independent identically distributed), with variance $\boldsymbol{\sigma}^2$, then $$\mathbf{Var}[\mathbf{AX}+\boldsymbol{\alpha}]=\boldsymbol{\sigma}^2\mathbf{AA}^T.$$
+\item Let $\mathbf{X}$ be an $n$-dimensional random vector with $\boldsymbol{\mu}=\mathbf{E[X]}$,
+$\boldsymbol{\Sigma}=\mathbf{Var[X]}$.  $\mathbf{A}$ is an $n\times
+n$ constant matrix.  Then
+$$\mathbf{E}[\mathbf{X}^T\mathbf{AX}]=\operatorname{tr}(\mathbf{A}\boldsymbol{\Sigma})+
+\boldsymbol{\mu}^T\mathbf{A}\boldsymbol{\mu}.$$
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

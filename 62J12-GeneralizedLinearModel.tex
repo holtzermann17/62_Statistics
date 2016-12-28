@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedLinearModel}
+\pmcreated{2013-03-22 14:30:11}
+\pmmodified{2013-03-22 14:30:11}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{generalized linear model}
+\pmrecord{17}{36040}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62J12}
+\pmsynonym{GLM}{GeneralizedLinearModel}
+\pmdefines{link function}
+\pmdefines{canonical parameter}
+\pmdefines{cumulant function}
+\pmdefines{variance function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabls}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{model}
+\PMlinkescapeword{normal}
+
+Given a random vector, or the response variable, \textbf{Y}, a \emph{generalized linear model}, or GLM for short, is a statistical model $\lbrace f_\textbf{Y}(\boldsymbol{y}\mid\boldsymbol{\theta})\rbrace$ such that
+\begin{enumerate}
+\item the components of \textbf{Y} are mutually independent of each other,
+\item $f_{Y_i}(y_i\mid\theta_i)$ belongs to the exponential family of distributions and has the following canonical form:
+$$f_{Y_i}(y_i\mid\theta_i)=\operatorname{exp}[y\theta_i-b(\theta_i)+c(y)],$$
+where the parameter $\theta_i$ is called the \emph{canonical parameter} and $b(\theta_i)$ is called the \emph{cumulant function}.
+\item for each component or variate $Y_i$, with a corresponding set of $p$ covariates $X_{ij}$, there exists a monotone differentiable function $g$, called the \emph{link function}, such that 
+$$g(\operatorname{E}[Y_i])={\textbf{X}_i}^{\operatorname{T}}\boldsymbol{\beta},$$ 
+where ${\textbf{X}_i}^{\operatorname{T}}=(X_{i1},\ldots,X_{ip})$, and $\boldsymbol{\beta}=(\beta_1,\ldots,\beta_p)^{\operatorname{T}}$ is a parameter vector.
+\end{enumerate}
+
+In practice, an extra parameter called the dispersion parameter, $\phi$, is introducted to the model to lower a phenonmenon known as overdispersion.  The GLM now looks like: $$f_{Y_i}(y_i\mid\theta_i)=\operatorname{exp}[\frac{y\theta_i-b(\theta_i)}{a(\phi)}+c(y,\phi)]$$
+
+\textbf{Remarks}
+\begin{itemize}
+\item Below is a table of canonical parameters and cumulant functions for some well-known distributions from the exponential family:
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+distribution&notation&canonical parameter $\theta$&cumulant function $b(\theta)$\\
+\hline\hline
+\PMlinkname{Normal}{NormalRandomVariable}&$N(\mu,\sigma^2)$&$\mu$&$\displaystyle{\frac{\theta^2}{2}}$\\
+\hline
+\PMlinkname{Poisson}{PoissonRandomVariable}&$Poisson(\mu)$&$\operatorname{ln}\mu$&$\operatorname{exp}(\theta)$\\
+\hline
+\PMlinkname{Binomial}{BernoulliDistribution2}&$Bin(m,\pi)$&$\operatorname{logit}(\pi)$&$\operatorname{ln}(1+e^{\theta})$\\
+\hline
+\PMlinkname{Gamma}{GammaRandomVariable}&$Gamma(\alpha,\lambda)$&$-\lambda$&$-\operatorname{ln}(-\theta)$\\
+\hline
+\end{tabular}
+\end{center}
+\item GLM is a direct generalization of the general linear model, which includes linear regression models, ANOVA and ANCOVA.  The link function for the general linear model is the identity function $g(\mu)=\mu$.
+\item For a GLM, $\operatorname{E}[Y]=b^{\prime}(\theta)$ and $\operatorname{Var}[Y]=b^{\prime\prime}(\theta)$. $b^{\prime\prime}(\theta)$, when expressed in terms of $\mu=\operatorname{E}[Y]$, is known as the \emph{variance function} $V(\mu)$.  Below are some examples of variance functions:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+distribution & notation & variance function \\
+\hline\hline
+Normal & $N(\mu,\sigma^2)$ & 1 \\
+\hline
+Poisson& $ Poisson(\mu)$ & $\mu$ \\
+\hline
+\PMlinkname{Binomial}{BernoulliDistribution2} & $Bin(m,\pi)$ & $\pi(1-\pi)$ \\
+\hline
+Gamma & $Gamma(\alpha,\lambda)$ & $\displaystyle{\frac{1}{\lambda^2}}$ \\
+\hline
+\end{tabular}
+\end{center}
+\item The logistic regression model, where the response variable $Y$ is categorial in nature, is a special case of GLM, with possible link functions the logit function, $\operatorname{logit}(\pi)=\operatorname{ln}(\operatorname{odds}(\pi))$, the inverse cumulative normal distribution function, or probit function $\Phi^{-1}(\pi)$, or the complementary-log-log function, $\operatorname{ln}(-\operatorname{ln}(1-\pi))$, where the parameter $\pi$ is between 0 and 1, usually measured as the frequency of occurrences of certain events.
+\item The log-linear model, where the response variable $Y$ has a Poisson distribution, is also a special case of GLM, with link function the natural logarithm of the parameter $\mu$ in question.  Poisson distribution is typically used to model count or frequency data.
+\end{itemize}
+\par
+\begin{thebibliography}{8}
+\bibitem{mccullagh} P. McCullagh and J. A. Nelder, {\em Generalized Linear Models}, Chapman \& Hall/CRC, 2nd ed., London (1989).
+\bibitem{dobson} A. J. Dobson, {\em An Introduction to Generalized Linear Models}, Chapman \& Hall, 2nd ed. (2001).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

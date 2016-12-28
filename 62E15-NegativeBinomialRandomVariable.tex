@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NegativeBinomialRandomVariable}
+\pmcreated{2013-03-22 11:54:15}
+\pmmodified{2013-03-22 11:54:15}
+\pmowner{bgins}{4516}
+\pmmodifier{bgins}{4516}
+\pmtitle{negative binomial random variable}
+\pmrecord{9}{30524}
+\pmprivacy{1}
+\pmauthor{bgins}{4516}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+\pmclassification{msc}{18E05}
+\pmclassification{msc}{18-00}
+\pmsynonym{negative binomial distribution}{NegativeBinomialRandomVariable}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{graphicx}
+%%%%%\usepackage{xypic}
+\begin{document}
+$X$ is a \emph{negative binomial random variable} with parameters $r$ and $p$ if\\
+\par
+$f_X(x) ={r+x-1 \choose x} p^r (1-p)^x$,     $x=\{0,1,...\}$	\\
+\par
+Parameters:\\
+\par
+\begin{list}{$\star$ }{}
+\item $r > 0$
+\item $p \in [0,1]$
+\end{list}
+\par
+Syntax:\\
+\par
+$X\sim NegBin(r,p)$\\
+\par
+Notes:\\
+\par
+\begin{enumerate}
+
+\item If $r \in \mathbb{N}$, $X$ represents the number of failed Bernoulli trials before the $r$th success. Note that if $r=1$ the variable is a geometric random variable.
+\item $E[X] = r \frac{1-p}{p}$
+\item $Var[X] = r \frac{1-p}{p^2}$
+\item $M_X(t) = (\frac{p}{1 - (1-p)e^t})^r$
+
+\end{enumerate}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

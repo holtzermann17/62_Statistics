@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StratifiedSampling}
+\pmcreated{2013-03-22 15:17:17}
+\pmmodified{2013-03-22 15:17:17}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{stratified sampling}
+\pmrecord{6}{37080}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62D05}
+%\pmkeywords{strata}
+\pmdefines{stratified random sampling}
+\pmdefines{stratum}
+\pmdefines{stratum weight}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabls}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{subdivisions}
+\PMlinkescapeword{place}
+\PMlinkescapeword{units}
+\PMlinkescapeword{groups}
+\PMlinkescapeword{order}
+\PMlinkescapeword{decide}
+\PMlinkescapeword{information}
+\PMlinkescapeword{divide}
+\PMlinkescapeword{contains}
+
+In sampling surveys, it is sometimes a good idea to break up the
+population into subdivisions before any sampling were to take place.
+For example, from a population $U$ of automobile insurance policies,
+the claim frequencies (loosely speaking, this is the ratio of the
+number of claims to the number of policies in the $U$) are found in
+the following table:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+male drivers & female drivers & all drivers \\
+\hline $10\%$ & $7\%$ & $9\%$ \\
+\hline
+\end{tabular}
+\end{center}
+Suppose that we would like to take a sample from $U$ so that when
+the sample units are divided up into male drivers and female
+drivers, the respective sample claim frequencies are more or less
+$10\%$ and $7\%$.  How would we do this?  If a simple random sample
+is taken directly from the population, we may get the total claim
+frequency (for all drivers) to be more or less $9\%$, but when the
+sample is broken down into two groups by gender, we may no longer
+guarantee that the claim frequencies by gender match (more or less)
+those calculated from the population.  To insure that the sample
+taken preserves claim frequencies by gender, we would take a
+\emph{stratified sampling}.
+\\\\
+Formally, in \emph{stratified sampling}, the following steps are
+taken, in order, from a population $U$ of $N$ units:
+\begin{enumerate}
+\item Decide what subdivisions are to be analyzed from
+within $U$ and what information (or statistics) within the
+subdivisions should be ``preserved''.  For example, if we want to
+analyze our data by gender, then we would have two subdivisions to
+study. If there is more than one categorical variable, then we would
+look at all the \emph{possible} combinations of the these variables.
+\item Make sure all the possible combinations are mutually exclusive
+events;
+\item Divide $U$ into $k$ subdivisions, or \emph{strata}, $U_i$,
+where $k$ is the total number of possible combinations described
+above.  From the first two steps, we have $$U=U_1\cup U_2\cup\ldots
+U_k \mbox{ such that }U_i\cap U_j=\varnothing,$$ for all $i\neq j$
+and $1\leq i,j\leq k$.  In addition, if we let $N_i=\lvert U_i
+\rvert$, then
+$$N=\sum_{i=1}^{k}N_i.$$
+\item Draw a sample $S_i$ from each stratum $U_i$.
+\end{enumerate}
+\textbf{Remarks}.
+\begin{itemize}
+\item When each $S_i$ is a simple random sample within each $U_i$,
+then we call this procedure a \emph{stratified random sampling}.
+\item Each stratum corresponds to a number $$W_i:=\frac{N}{N_i},$$ called a
+\emph{stratum weight}.
+\item Suppose each sample $S_i$ contains $n_i$ units ($\lvert S_i
+\rvert = n_i$) and that $n=\sum_{i=1}^{k}n_i$.  We call the
+stratified sampling \emph{proportional} if, for each $i$,
+$$\frac{n}{n_i}=W_i.$$
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

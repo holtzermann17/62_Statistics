@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Copula}
+\pmcreated{2013-03-22 16:33:43}
+\pmmodified{2013-03-22 16:33:43}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{copula}
+\pmrecord{11}{38750}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62A01}
+\pmclassification{msc}{54E70}
+\pmrelated{MultivariateDistributionFunction}
+\pmrelated{ThinSquare}
+\pmdefines{subcopula}
+\pmdefines{$n$-increasing}
+\pmdefines{grounded}
+\pmdefines{margin}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\subsubsection*{Set-up}
+
+An $n$-dimensional rectangle $S$ is a subset of $\mathbb{R}^n$ of the form $I_1\times \cdots \times I_n$, where each $I_k$ is an interval, with end points $a_k\le b_k\in \mathbb{R}^*$, where $\mathbb{R}^*$ is the set of extended real numbers (so that $\mathbb{R}$ itself may be considered as an interval).
+
+\textbf{Groundedness}. A function $C:S\to \mathbb{R}$ is said to be \emph{grounded} if for each $1\le k\le n$, and each $r_j\in I_j$ where $j\ne k$, the function $C_k:I_k\to \mathbb{R}$ defined by $$C_k(x):=C(r_1,\ldots,r_{j-1},x,r_{j+1},\ldots,r_n)$$ is right-continuous at $a_k$, the lower end point of $I_k$.
+
+\textbf{Margin}.  Note that $C_k$ defined above may or may not exist as each $r_j\to b_j$, the upper end point of $I_j$ ($j\ne k$).  If the limit exists, then we call this limiting function, also written $C_k$, a (one-dimensional) \emph{margin} of $C$:
+$$C_k(x):=\lim_{r_j\to b_j}\ C(r_1,\ldots,r_{j-1},x,r_{j+1},\ldots,r_n),\mbox{ where }j\in\lbrace 1,\ldots,n\rbrace\mbox{, }j\neq i.$$
+
+Given an $n$-dimensional rectangle $S=I_1\times \cdots \times I_n$, let's call each $I_k$ a \emph{side} of $S$.  A \emph{vertex} of $S$ is a point $v\in\mathbb{R}^n$ such that each of its coordinates is an end point.  Clearly $S$ is a convex set and the sides and vertices lie on the boundary of $S$.
+
+\textbf{$C$-volume}. Suppose we have a function $C:S\to \mathbb{R}$, with $S$ defined as above.  Let $T$ be a closed $n$-dimensional rectangle in $S$ ($T\subseteq S$), with sides $J_k=[c_k,d_k]$, $1\le k\le n$.  The \emph{$C$-volume} of $T$ is the sum
+$$\operatorname{Vol}_C(T)=\sum (-1)^{n(v)}C(v)$$
+where $v$ is a vertex of $T$, $n(v)$ is the number of lower end points that occur in the coordinate representation of $v$, and the sum is taken over all vertices of $T$.
+
+The name \PMlinkescapetext{volume} is derived from the fact that if $C(x_1,\ldots,x_n)=x_1\cdots x_n$, then for each closed rectangle $T$, $\operatorname{Vol}_C(T)$ is the volume of $T$ in the traditional sense.
+
+Note, however, depending on the function $C$, $\operatorname{Vol}_C(T)$ may be $0$ or even negative.  For example, if $C$ is a linear function, then the $C$-volume is identically $0$ for every closed rectangle $T$, whenever $n$ is even.  An example where $\operatorname{Vol}_C(T)$ is negative is given by the function $C(x,y)=-xy$, and $T$ is the unit square.
+
+\textbf{$n$-increasing}.  A function $C:S\to\mathbb{R}$ where $S$ is an open $n$-dimensional rectange is said to be \emph{$n$-increasing} if $\operatorname{Vol}_C$ is non-negative evaluated at each closed rectangle $T\subseteq S$.
+
+Any multivariate distribution function is both grounded and $n$-increasing.
+
+\subsubsection*{Definition}
+
+A copula, introduced by Sklar, is both a variant and a generalization of a multivariate distribution function.
+
+Formally, a \emph{copula} is a function $C$ from the $n$-dimensional unit cube $I^n$ ($I=[0,1]$) to $\mathbb{R}$ satisfying the following conditions:
+\begin{enumerate}
+\item $C$ is $n$-increasing,
+\item $C$ is grounded,
+\item every margin $C_k$ of $C$ is the identity function.
+\end{enumerate}
+
+If we replace the domain by any $n$-dimensional rectangle $S$, then the resulting function is called a \emph{subcopula}.
+
+For example, the functions $C(x,y,z)=xyz$, $C(x,y,z)=\min(x,y,z)$, and $C(x,y,z)=\max(0,(x+y+z-2))$ defined on the unit cube are all copulas.
+
+(This entry is in the process of being expanded, more to come shortly).
+
+\begin{thebibliography}{8}
+\bibitem{bs as} B. Schweizer and A. Sklar, {\em Probabilistic Metric Spaces}, Dover Publications, (2005).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

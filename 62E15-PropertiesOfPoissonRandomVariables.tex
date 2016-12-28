@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfPoissonRandomVariables}
+\pmcreated{2013-03-22 18:50:55}
+\pmmodified{2013-03-22 18:50:55}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of Poisson random variables}
+\pmrecord{4}{41657}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\begin{prop} If $X_1,X_2$ are independent Poisson random variables with parameters $\lambda_1,\lambda_2$, then $X_1+X_2$ is a Poisson random variable with parameter $\lambda_1+\lambda_2$. \end{prop}
+\begin{proof}  Let $X:=X_1+X_2$ and $\lambda:=\lambda_1+\lambda_2$, let us calculate the distribution function of $X$:
+\begin{eqnarray*}
+F_X(x) &=& P(X\le x) = P(X_1+X_2\le x) = \sum_{i=0}^x P(X_1+X_2=i) \\
+&=& \sum_{i=0}^x \sum_{j=0}^i P(X_1=j \mbox{ and } X_2=i-j) = \sum_{i=0}^x \sum_{j=0}^i P(X_1=j)P(X_2=i-j) \\
+&=& \sum_{i=0}^x \sum_{j=0}^i \frac{e^{-\lambda_1} \lambda_1^j}{j!} \frac{e^{-\lambda_2} \lambda_2^{i-j}}{(i-j)!} 
+= \sum_{i=0}^x \sum_{j=0}^i \frac{e^{-\lambda}}{i!} \binom{i}{j} \lambda_1^j \lambda_2^{i-j} \\
+&=& \sum_{i=0}^x \frac{e^{-\lambda}}{i!} \sum_{j=0}^i \binom{i}{j} \lambda_1^j \lambda_2^{i-j} = \sum_{i=0}^x \frac{e^{-\lambda}}{i!} (\lambda_1+\lambda_2)^i = \sum_{i=0}^x \frac{e^{-\lambda}}{i!} \lambda^i.
+\end{eqnarray*}
+As a result, $X$ is a Poisson random variable with parameter $\lambda$.  Notice that in the fifth equation, we used the assumption that $X_1$ and $X_2$ are independent.
+\end{proof}
+
+As a corollary, any sum of independent Poisson random variables is Poisson, with parameter the sum of the parameters from the independent random variables.
+
+\begin{prop} A Poisson random variable is infinitely divisible. \end{prop}
+\begin{proof}  Let $X$ be a Poisson random variable with parameter $\lambda$.  Let $n$ be any positive integer.  Let $X_1,\ldots, X_n$ be independent identically distributed Poisson random variables with parameter $\frac{\lambda}{n}$.  Then the sum of these random variables is easily seen to be Poisson, with parameter $\lambda$, and is therefore identically distributed as $X$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

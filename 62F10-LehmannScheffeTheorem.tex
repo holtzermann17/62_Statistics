@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LehmannScheffeTheorem}
+\pmcreated{2013-03-22 16:31:59}
+\pmmodified{2013-03-22 16:31:59}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Lehmann-Scheff\'e theorem}
+\pmrecord{13}{38714}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62F10}
+\pmsynonym{Lehmann-Scheffe theorem}{LehmannScheffeTheorem}
+\pmdefines{complete statistic}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+
+\begin{document}
+\PMlinkescapeword{complete}
+
+A statistic $S(\boldsymbol{X})$ on a random sample of data $\boldsymbol{X}=(X_1,\ldots,X_n)$ is said to be a \emph{complete statistic} if for any Borel measurable function $g$, $$E(g(S))=0\quad\mbox{implies}\quad P(g(S)=0)=1.$$
+In other words, $g(S)=0$ almost everywhere whenever the expected value of $g(S)$ is $0$.  If $S(\boldsymbol{X})$ is associated with a family $f(x\mid \theta)$ of probability density functions (or mass function in the discrete case), then completeness of $S$ means that $g(S)=0$ almost everywhere whenever $E_{\theta}(g(S))=0$ for every $\theta$.
+
+\begin{thm} [Lehmann-Scheff\'e]  If $S(\boldsymbol{X})$ is a complete sufficient statistic and $h(\boldsymbol{X})$ is an unbiased estimator for $\theta$, then, given $$h_0(s) = E(h(\boldsymbol{X}) | S(\boldsymbol{X})=s),$$ $h_0(S)=h_0(S(\boldsymbol{X}))$ is a uniformly minimum variance unbiased estimator of $\theta$.  Furthermore, $h_0(S)$ is unique almost everywhere for every $\theta$.  \end{thm}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,202 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Variance}
+\pmcreated{2013-03-22 11:53:46}
+\pmmodified{2013-03-22 11:53:46}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{variance}
+\pmrecord{14}{30510}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62-00}
+\pmclassification{msc}{60-00}
+\pmclassification{msc}{81-00}
+\pmclassification{msc}{83-00}
+\pmclassification{msc}{82-00}
+\pmclassification{msc}{55-00}
+\pmrelated{GeometricDistribution2}
+\pmrelated{StandardDeviation}
+\pmrelated{Covariance}
+\pmrelated{MeanSquareDeviation}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+%\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+%\newtheorem*{thm*}{Theorem}
+
+\newcommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\absW}[1]{\left\lvert#1\right\rvert}
+\newcommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\normW}[1]{\left\lVert#1\right\rVert}
+\newcommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Inverse functions
+\newcommand{\inv}[1]{{#1}^{-1}}
+
+% Differentiation operators
+\newcommand{\od}[2]{\frac{d #1}{d #2}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\newcommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Differentials on integrals
+\newcommand{\dx}{\, dx}
+\newcommand{\dt}{\, dt}
+\newcommand{\dmu}{\, d\mu}
+
+% Inner products
+\newcommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+
+% Complex numbers
+\DeclareMathOperator{\zRe}{Re}
+\DeclareMathOperator{\zIm}{Im}
+\newcommand{\conjug}[1]{\overline{#1}}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sD}{\mathcal{D}}
+
+% Standard spaces
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Le}{\mathbf{L}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\lindim}{dim}
+\DeclareMathOperator{\sinc}{sinc}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+
+\begin{document}
+\PMlinkescapeword{measure}
+\PMlinkescapeword{variation}
+
+
+\subsection*{Definition}
+The \emph{variance} of a real-valued random variable $X$ is
+\[
+\Var X = \E\bigl[ (X - m)^2 \bigr]\,, \quad m = \E X\,,
+\]
+provided that both expectations $\E X$ and $\E[(X-m)^2]$ exist.
+
+The variance of $X$ is often denoted by $\sigma^2(X)$, $\sigma^2_X$,
+or simply $\sigma^2$.
+The exponent on $\sigma$ is put there so that the number 
+$\sigma = \sqrt{\sigma^2}$ 
+is measured in the same units as the random variable $X$
+itself.  
+
+The quantity $\sigma = \sqrt{\Var X}$ is called the \emph{standard deviation}
+of $X$; 
+because of the compatibility of the measuring units, 
+standard deviation is usually the quantity that is quoted
+to describe an emprical probability distribution, rather than the variance.
+
+\subsection*{Usage}
+
+The variance is a measure of the dispersion or variation
+of a random variable
+about its mean $m$.
+
+It is not always the best measure of dispersion for all random variables,
+but compared to other measures,
+such as the absolute mean deviation, $\E[ \abs{X-m} ]$,
+the variance is the most tractable analytically.
+
+The variance is closely related to the $\Le^2$ norm for
+random variables over a probability space.
+
+\subsection*{Properties}
+
+\begin{enumerate}
+\item
+The variance of $X$ is the second moment of $X$ minus 
+the square of the first moment:
+\[
+\Var X  = \E[X^2] - \E[X]^2\,.
+\]
+This formula is often used to calculate variance analytically.
+
+\item
+Variance is not a linear function. It scales quadratically,
+and is not affected by shifts in the mean of the distribution:
+\[
+\Var[ aX + b ] = a^2 \Var X\,, \quad \text{ for any $a, b \in \real$.}
+\]
+
+\item
+A random variable $X$ is constant almost surely if and only
+if $\Var X = 0$.
+
+\item
+The variance can also be characterized as
+the minimum of expected squared deviation of a random variable from any point:
+\[
+\Var X = \inf_{a \in \real} \E[(X-a)^2]\,.
+\]
+
+\item
+For any two random variables $X$ and $Y$ whose variances exist,
+the variance of the linear combination $aX + bY$
+can be expressed in terms of their covariance:
+\[
+\Var[aX+bY] = a^2 \Var X  + b^2 \Var Y  + 2ab \Cov[X,Y]\,,
+\]
+where $\Cov[X,Y] = \E[(X-\E X)(Y-\E Y)]$,
+and $a, b \in \real$.
+
+\item
+For a random variable $X$, with actual observations $x_1, \dotsc, x_n$,
+its variance is often estimated
+empirically with the \emph{sample variance}:
+\[
+\Var X  \approx s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2\,,
+\quad
+\bar{x} = \frac{1}{n} \sum_{j=1}^n x_j\,.
+\]
+
+\end{enumerate}
+
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

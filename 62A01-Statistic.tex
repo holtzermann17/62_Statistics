@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Statistic}
+\pmcreated{2013-03-22 14:46:18}
+\pmmodified{2013-03-22 14:46:18}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{statistic}
+\pmrecord{11}{36416}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62A01}
+\pmdefines{sample mean}
+\pmdefines{sample variance}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{statistic}, or \emph{sample statistic}, $S$ is simply a function, usually real-valued, of a set of (sample) data or observations $\boldsymbol{X}=(X_1,X_2,\ldots,X_n)$: $S=S(\boldsymbol{X})$.  More formally, let $\Omega$ be the sample space of the data $\boldsymbol{X}$, then $S$ is a function from $\Omega$ to some set $T$, usually a subset of $\mathbb{R}^k$.  The data $\boldsymbol{X}$ is usually considered as a vector of iid random variables $X_i$.
+\par
+\textbf{Examples}
+\begin{enumerate}
+\item 100 light bulbs out of 1,000,000 are tested for their functionality.  Then the number $n$, of defective light bulbs in the 100 samples is a statistic.  To see this, define, for each $i$ from 1 to 100, 
+$$
+x_i = 
+\begin{cases}
+1 & \text{if the event }X_i=\lbrace \text{the }i\text{th light bulb is defective}\rbrace \\
+0 & \text{otherwise.}
+\end{cases}
+$$
+Then $n=\sum_{i=1}^{100} x_i$, a function of the data.  Similarly, the number of operating light bulbs is also a statistic if we switch the 1 and 0 in the above definitions for the $x_i$'s.  If we make all $x_i=1$, then $n$ is just the 
+count of the observations, one of the simplest forms of sample statistics.  If we make all $x_i=0$, then $n=0$ is a statistic that is not at all useful.
+\item Let $w_1,w_2,\ldots,w_{20}$ be the weights of 20 students from a particular college.  Then the average weight defined by 
+$$\overline{w}=\frac{1}{20}\sum_{i=1}^{20}w_i$$
+is a statistic.  It is commonly called the \emph{sample mean}.  It is often used to estimate $\operatorname{E}[X]$, the expectation of a particular random variable, which, in this case, is the weight of a student in the college.  Of course, other averages, such as medians, mode, trimmed mean, are also examples of (sample) statistics.
+\item Using the same example as in (2), we can define 
+$$s^2=\frac{1}{20-1}\sum_{i=1}^{20}(w_i-\overline{w})^2.$$
+This is also a statistic, for, after some substitution and rewriting, 
+$$s^2=\frac{1}{20-1}\Big[\sum_{i=1}^{20}{w_i}^2-\frac{1}{20}(\sum_{i=1}^{20}{w_i)}^2\Big],$$
+which is a function explicitly in terms of the $w_i$'s.  This statistic is known as the \emph{sample variance}, which is a common estimate of $\operatorname{Var}[X]$, the variance of the random variable $X$.  Again, in this example, the $X$ is the weight of a student in the college.
+\item Again, borrowing from the same example above, we can simply order the weights of the 20 students in an ascending order, so we get a vector of 20 real numbers $(w_{(1)},w_{(2)},\ldots,w_{(20)})$.  This is also a statistic, called an order statistic.  It is not real-valued and its range is a subset of $\mathbb{R}^{20}$.
+\item Given a set of numeric observations $X_1,X_2,\ldots,X_n$, without knowing the distribution of these observations, one can define what is known as the empirical distribution function $\hat{F}$, which is a real-valued function, based on the observations.  This is an example of a statistic whose range is a function space.
+\end{enumerate}
+\par
+\textbf{Remarks}.
+\begin{itemize}
+\item Any function of a statistic is again a statistic.
+\item Since the underlying data is assumed to be random, a statistic is necessarily a random variable.
+\item Although mostly real-valued, a statistic can be vector-valued, or even function-valued as we have seen in earlier examples.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

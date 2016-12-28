@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContingencyTable}
+\pmcreated{2013-03-22 14:32:53}
+\pmmodified{2013-03-22 14:32:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{contingency table}
+\pmrecord{11}{36096}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62H17}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabls}
+\usepackage{multirow}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\renewcommand\multirowsetup{\centering}
+\newlength\LL \settowidth\LL{100}
+\begin{document}
+\PMlinkescapeword{times}
+\PMlinkescapeword{level}
+\PMlinkescapeword{type}
+\PMlinkescapeword{levels}
+
+Given a random sample of $N$ observations $\textbf{Z}_i=(Y_i,X_{i1},\ldots,X_{ik})$ where 
+\begin{enumerate}
+\item the response variables $Y_i$ are identically distributed as $Y$
+\item $Y$ is categorical in nature (coming from a multinomial distribution)
+\item each of the explanatory variables $X_{ij}$ is categorical in nature
+\end{enumerate}
+Then we can analyze the data by forming a \emph{contingency table}.  The table is customarily formed by labeling the categories for the response across the top, and then the combinations of the levels for each explanatory variable down the left-most columns.  Then the cells are filled with counts or frequencies of occurrences corresponding to the specific explanatory variable level combination to the left and the response to the top.  
+\par
+The simplest example of a contingency table is where the response variable $Y$ comes from a binomial distribution (with two possible responses $r_1$ and $r_2$) and there is only one explanatory variable $X$, which has only two levels, $A_1$ and $A_2$.  This is an instance of a \emph{2 way contingency table}:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+ & $r_1$ & $r_2$ \\
+\hline
+$A_1$ & $n_{11}$ & $n_{12}$ \\
+\hline
+$A_2$ & $n_{21}$ & $n_{22}$ \\
+\hline
+\end{tabular}
+\end{center}
+where $n_{ij}$ corresponds to the count or frequency of level $A_i$ and response $r_j$.
+\par
+\textbf{Example}
+A penny $P$ and a quarter $Q$ are each tossed separately 100 times.  The outcome for each toss is recorded, $H$ for head and $T$ for tail.  The numbers of heads and tails obtained from the tosses are recorded in the following 2 way table:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Coin Type & $H$ & $T$ \\
+\hline
+$P$ & 45 & 55 \\
+\hline
+$Q$ & 56 & 44 \\
+\hline
+\end{tabular}
+\end{center}
+A \emph{3 way contingency table} consists of one response variable and two explanatory variables.  
+\par
+\textbf{Example}
+Four dice are used in an experiment to test whether they are more or less the ``same'' (having the same probability distribution).  Each die comes from a combination of one of two casinos, $C_1$ and $C_2$, made by one of two manufacturers, $M_1$ and $M_2$.  Furthermore, no two dice have the same combination.  Now, each dice is tossed 120 times and the outcomes (1 through 6) are recorded.  We have the following contingency table:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+Casino & Manufacturer & 1 & 2 & 3 & 4 & 5 & 6 \\
+\hline
+\multirow{2}{\LL}{$C_1$}
+& $M_1$ & 17 & 21 & 19 & 20 & 22 & 21 \\ 
+\cline{2-8}
+ & $M_2$ & 22 & 20 & 20 & 19 & 21 & 18 \\
+\hline
+\multirow{2}{\LL}{$C_2$}
+& $M_1$ & 21 & 18 & 18 & 23 & 21 & 19 \\ 
+\cline{2-8}
+ & $M_2$ & 20 & 19 & 18 & 21 & 21 & 21 \\
+\hline
+\end{tabular}
+\end{center}
+The explanatory variables are the casinos ($C$'s) and the manufacturers ($M$'s), and the response variable is the number appearing on the top face of a thrown die ($1$ through $6$).
+%%%%%
+%%%%%
+\end{document}

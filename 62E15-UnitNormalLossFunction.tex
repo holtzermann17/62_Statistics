@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnitNormalLossFunction}
+\pmcreated{2013-03-22 15:56:42}
+\pmmodified{2013-03-22 15:56:42}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{unit normal loss function}
+\pmrecord{6}{37955}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The \emph{\PMlinkescapetext{unit normal loss}} function, $UNL$, is defined by
+$$UNL(c)=\int_{c}^{\infty}(t-c)f(t)dt$$
+where $c$ is a constant and $f(.)$ is the normal probability distribution function.
+\\An alternative computational formula for $UNL$ is the following:
+$$UNL(z)=f(z)-z(1-F(z))$$
+where $f(.)$ and $F(.)$ are the probability distribution function and cumulative distribution function 
+for Standard Normal Distribution   respectively.
+\\\textbf{Remark.}
+This function has an extensive use in Risk Analysis and the Theory of Blackjack.
+%%%%%
+%%%%%
+\end{document}

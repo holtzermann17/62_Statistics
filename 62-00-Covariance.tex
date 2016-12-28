@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Covariance}
+\pmcreated{2013-03-22 12:19:29}
+\pmmodified{2013-03-22 12:19:29}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{covariance}
+\pmrecord{9}{31943}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62-00}
+\pmsynonym{cov}{Covariance}
+\pmsynonym{correlation}{Covariance}
+\pmsynonym{correlation coefficient}{Covariance}
+%\pmkeywords{covariance}
+%\pmkeywords{correlation coefficient}
+\pmrelated{Variance}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\mv}[1]{\mathbf{#1}}	% matrix or vector
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\corr}{\mathrm{corr}}
+\newcommand{\mvt}[1]{\mv{#1}^{\mathrm{T}}}
+\newcommand{\mvi}[1]{\mv{#1}^{-1}}
+\newcommand{\mpderiv}[1]{\frac{\partial}{\partial {#1}}} 
+\newcommand{\defined}{:=}
+\begin{document}
+\PMlinkescapeword{mean}
+\PMlinkescapeword{measure}
+\PMlinkescapeword{ranges}
+
+The \emph{covariance} of two random variables $X_1$ and $X_2$ with \PMlinkname{mean}{ExpectedValue} $\mu_1$ and $\mu_2$ respectively is defined as
+
+\begin{equation}
+\cov(X_1,X_2) \defined E[(X_1 - \mu_1)(X_2 - \mu_2)].
+\end{equation}
+
+The covariance of a random variable $X$ with itself is simply the variance, $E[(X - \mu)^2]$.
+
+Covariance captures a measure of the correlation of two variables.  Positive covariance indicates that as $X_1$ increases, so does $X_2$.  Negative covariance indicates $X_1$ decreases as $X_2$ increases and vice versa.  Zero covariance can indicate that $X_1$ and $X_2$ are uncorrelated.
+
+The \emph{correlation coefficient} provides a normalized view of correlation based on covariance:
+
+\begin{equation}
+\corr(X,Y) \defined \frac{\cov(X,Y)}{\sqrt{\var(X)\var(Y)}}.
+\end{equation}
+
+$\corr(X,Y)$ ranges from -1 (for negatively correlated variables) through zero (for uncorrelated variables) to +1 (for positively correlated variables).
+
+While if $X$ and $Y$ are independent we have $\corr(X,Y)=0$, the latter does not imply the former.
+%%%%%
+%%%%%
+\end{document}

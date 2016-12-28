@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SystematicSampling}
+\pmcreated{2013-03-22 15:15:23}
+\pmmodified{2013-03-22 15:15:23}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{systematic sampling}
+\pmrecord{4}{37039}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62D05}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Systematic sampling is a method of sampling $n$ items from a
+population of $N$ items with the following sequence of procedures:
+\begin{enumerate}
+\item label each item in the population as $x_i$, where $1\leq i\leq
+N$,
+\item randomly select one item from the first $k$ items in the
+population, where $k=\lceil N/n \rceil$, the smallest integer
+greater than or equal to $N/n$,
+\item pick the $k$th item thereafter, $x_i,x_{i+k},x_{i+2k},\ldots$,
+until all $n$ items are picked.
+\end{enumerate}
+If $N\equiv0 \mod n$, then all $n$ items can be picked before
+reaching the end of the population.  Otherwise, define
+$x_{j+N}:=x_j$.  Using this, we can continue to pick our sample
+units until all $n$ items are picked.
+\\\\
+The above method suggests that we do not have to make our first pick
+from among the first $k$ items.  By the above definition, we can
+start anywhere in the population and still end up $n$ units of
+sample.
+\\\\
+\textbf{Remarks.}
+\begin{itemize}
+\item If $n$ divides $N$, then systematic sampling can be viewed as
+grouping the population into $k=N/n$ strata, and picking one sample
+from each stratum.  The difference between systematic sampling and
+stratified sampling is that in systematic sampling, only the first
+sample is picked randomly, all other samples are picked based on the
+position of the first pick.
+\item Again, if $n\mid N$, one can view systematic sampling as a
+one-stage cluster sampling, where a primary sampling unit is defined
+as the set of units $x_i,x_{i+k},\ldots,x_{i+(n-1)k}$ in the
+population, where $k=N/n$ and $1\leq i\leq k$.  In this way, there
+are $k$ primary sampling units.  A simple random sample of one unit
+can then be drawn from these $k$ units.  All of the items within the
+selected primary sample will then be the complete sample drawn by
+systematic sampling.
+\item If some linear trend exists in the population, it is a good
+idea to order the population so the linearity is preserved by the
+order, so that when a systematic sampling is performed, the
+linearity gets carried over to the samples.
+\item When ordering the population, care should be taken so that there
+does not exhibit any periodic patterns (seasonality, etc...) that
+would greatly bias the sample.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

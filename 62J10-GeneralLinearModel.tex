@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralLinearModel}
+\pmcreated{2013-03-22 14:31:23}
+\pmmodified{2013-03-22 14:31:23}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{general linear model}
+\pmrecord{6}{36064}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62J10}
+\pmclassification{msc}{62J05}
+\pmsynonym{normal linear model}{GeneralLinearModel}
+\pmdefines{analysis of variance}
+\pmdefines{ANOVA}
+\pmdefines{analysis of covariance}
+\pmdefines{ANCOVA}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{model}
+\PMlinkescapeword{models}
+
+In statistical modeling of $N$ data observations ($N<\infty$), two types of variables are usually defined.  One is the response variable or variate, usually denoted by $Y$, and the other is the explanatory variable or covariate $X$.  While there is only one response variable, there may be one or more than one explanatory variables.  The response variable is considered random, where as the explanatory variable(s) may or may not be random. 
+ 
+Based on the above setup, a \emph{general linear model}, or \emph{normal linear model}, is a statistical model with the following assumptions:
+\begin{enumerate}
+\item the response variable $Y$ is a continuous random variable
+\item the response variable $Y$ can be expressed as a linear combination of functions $z_i(\textbf{X})$, of the explanatory variables, plus a random error term $\varepsilon$:  
+$$Y=\beta_0z_0(\textbf{X})+\cdots+\beta_kz_k(\textbf{X})+\varepsilon.$$
+The portion of $Y$ without the error term is known as the \emph{systematic component} of $Y$.
+\item the error component and the systematic component are independent
+\item random error variables $\varepsilon_i$ for the $N$ observations are iid normal with mean 0 and variance $\sigma^2$
+\end{enumerate}
+
+\textbf{Remarks}
+\begin{itemize}
+\item Conditioning on the explanatory variables, the random variables $Y_i$ corresponding to the individual responses are independent, normally distributed, with mean $$\mu=\operatorname{E}[Y\mid\textbf{X}=\boldsymbol{x}]=\beta_0z_0(\textbf{X})+\cdots+\beta_kz_k(\textbf{X})$$ and variance $\sigma^2$.
+\item A linear regression model is a special case of the general linear model where all explanatory variables are assumed to be continuous.
+\item \emph{Analysis of variance} model, or \emph{ANOVA}, is another special case of the general linear model, where all of the explantory variables are categorical in nature (for example, gender, marital status, etc..).
+\item \emph{Analysis of covariance}, or \emph{ANCOVA}, sits between a linear regression model and the ANOVA, where some of the explanatory variables are continuous and some are categorical.
+\item The general linear model is a special case of the \emph{generalized linear model}, where the assumption that the response variable $Y$ has a normal distribution is dropped.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

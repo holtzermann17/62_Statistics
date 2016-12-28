@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExponentialRandomVariable}
+\pmcreated{2013-03-22 11:54:23}
+\pmmodified{2013-03-22 11:54:23}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{exponential random variable}
+\pmrecord{9}{30528}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+\pmclassification{msc}{06F20}
+\pmclassification{msc}{11B65}
+\pmclassification{msc}{05C15}
+\pmsynonym{exponential distribution}{ExponentialRandomVariable}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+$X$ is a \emph{exponential random variable} with parameter $\lambda>0$ if its probability density function is given for $x>0$ by
+
+\begin{align*}
+f_X(x) = \lambda e^{-\lambda x}.
+\end{align*}
+
+To denote this, one usually writes $X\sim Exp(\lambda)$.
+
+
+For an exponential random variable $X$:
+\begin{enumerate}
+\item $X$ is commonly used to model lifetimes and duration between Poisson events.
+\item The expected value of $X$ is given by $E[X] = \frac{1}{\lambda}$
+\item The variance of $X$ is given by $Var[X] = \frac{1}{\lambda^2}$
+\item The moments of $X$ are given by $M_X(t) = \frac{\lambda}{\lambda - t}$
+\item It is interesting to note that $X$ is a gamma random variable with an $\alpha$ parameter of 1.
+
+\end{enumerate}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

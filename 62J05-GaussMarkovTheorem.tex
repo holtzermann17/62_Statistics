@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GaussMarkovTheorem}
+\pmcreated{2013-03-22 15:02:53}
+\pmmodified{2013-03-22 15:02:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Gauss-Markov theorem}
+\pmrecord{8}{36763}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62J05}
+\pmsynonym{BLUE}{GaussMarkovTheorem}
+\pmrelated{LinearLeastSquaresFit}
+\pmdefines{Gauss-Markov linear model}
+\pmdefines{best linear unbiased estimator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage[usenames]{color}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{Gauss-Markov linear model} is a linear statistical model
+that satisfies all the conditions of a general linear model except
+the normality of the error terms.  Formally, if $\boldsymbol{Y}$ is
+an $m$-dimensional response variable vector, and
+$\boldsymbol{Z_i}=z_i(\boldsymbol{X})$, $i=1,\ldots,k$ are the
+$m$-dimensional functions of the explanatory variable vector
+$\boldsymbol{X}$, a Gauss-Markov linear model has the form:
+$$\boldsymbol{Y}=\beta_0\boldsymbol{Z_0}+\cdots+
+\beta_k\boldsymbol{Z_k}+\boldsymbol{\epsilon},$$ with
+$\boldsymbol{\epsilon}$ the error vector such that
+\begin{enumerate}
+\item $\operatorname{E}[\boldsymbol{\epsilon}]=\boldsymbol{0}$, and
+\item
+$\operatorname{Var}[\boldsymbol{\epsilon}]=\sigma^2\boldsymbol{I}$.
+\end{enumerate}
+
+In other words, the observed responses $Y_i$, $i=1,\ldots,m$ are not
+assumed to be normally distributed, are not correlated with one
+another, and have a common variance
+$\operatorname{Var}[Y_i]=\sigma^2$.
+
+\textbf{Gauss-Markov Theorem}. Suppose the response variable
+$\boldsymbol{Y}=(Y_1,\ldots,Y_m)$ and the explanatory variables
+$\boldsymbol{X}$ satisfy a Gauss-Markov linear model as described
+above. Consider any linear combination of the responses
+\begin{eqnarray}
+Y=\sum_{i=1}^m c_iY_i,
+\end{eqnarray}
+where $c_i\in\mathbb{R}$.  If each $\mu_i$ is an estimator for response $Y_i$, parameter $\theta$ of the form
+\begin{eqnarray}
+\theta=\sum_{i=1}^m c_i\mu_i,
+\end{eqnarray}
+can be used as an estimator for $Y$.  Then, among all unbiased estimators for $Y$ having form (2), the ordinary least square estimator (OLS)
+\begin{eqnarray}
+\hat{\theta}=\sum_{i=1}^m c_i\hat{\mu_i},
+\end{eqnarray}
+yields the smallest variance.  In other words, the OLS estimator is the uniformly minimum variance unbiased estimator.
+
+\textbf{Remark}.  $\hat{\theta}$ in equation (3) above is more
+popularly known as the \emph{BLUE}, or the \emph{best linear unbiased estimator}
+for a linear combination of the responses in a Gauss-Markov linear
+model.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WishartDistribution}
+\pmcreated{2013-03-22 16:12:31}
+\pmmodified{2013-03-22 16:12:31}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Wishart distribution}
+\pmrecord{9}{38304}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62H05}
+\pmdefines{central Wishart distribution}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $U_i \sim  N_p(\mu_i, \Sigma ), \quad i=1,\ldots, k$ be independent $p$-dimensional random variables, which are
+\PMlinkname{multivariate normally distributed}{jointnormaldistribution}. 
+Let $S= \sum_{i=1}^k U_i {U_i}^T$. Let $M$ be the $k\times p$ matrix
+with $\mu_1, \ldots, \mu_k$ as rows. 
+Then the joint distribution of the
+elements of $S$ is said to be a \emph{Wishart distribution on} $k$ 
+\emph{\PMlinkescapetext{degrees} of freedom }, and is 
+denoted by $W_p(k, \Sigma, M)$. If $M=0$, the distribution is said to be
+\emph{central} and is denoted by $W_p(k, \Sigma)$. 
+The Wishart distribution is a multivariate generalization  of the $\chi^2$ distribution. 
+
+$W_p$ has a density function when $k \geq p$. 
+%%%%%
+%%%%%
+\end{document}

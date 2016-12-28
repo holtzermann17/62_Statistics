@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegressionModel}
+\pmcreated{2013-03-22 14:30:31}
+\pmmodified{2013-03-22 14:30:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{regression model}
+\pmrecord{10}{36046}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62J02}
+\pmclassification{msc}{62J05}
+\pmsynonym{univariate regression model}{RegressionModel}
+\pmrelated{LinearLeastSquaresFit}
+\pmdefines{regression function}
+\pmdefines{regression coefficient}
+\pmdefines{simple regression model}
+\pmdefines{multiple regression model}
+\pmdefines{linear regression model}
+\pmdefines{polynomial regression model}
+\pmdefines{non-linear regression model}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{model}
+\PMlinkescapeword{models}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{types}
+\PMlinkescapeword{class}
+\PMlinkescapeword{term}
+
+In statistical modeling of $N$ data observations ($N<\infty$), two types of variables are usually defined.  One is the response variable or variate, usually denoted by $Y$, and the other is the explanatory variable or covariate $X$.  While there is only one response variable, there may be one or more than one explanatory variables.  The response variable is considered random, where as the explanatory variable(s) may or may not be random. 
+ 
+Based on the above setup, a \emph{univariate regression model}, or simply \emph{regression model}, is a statistical model with the following assumptions:
+\begin{enumerate}
+\item all of the variables, random or not, are \emph{continuous} in nature (as opposed to categorical in nature)
+\item the response variable $Y$ can be expressed as the sum of a function $f(\textbf{X})$, called the \emph{regression function}, where $\textbf{X}$ represents the row vector of explanatory variables, and an error term $\varepsilon_i$:  
+$$Y=f(\textbf{X})+\varepsilon=f(X_1,\ldots,X_p)+\varepsilon$$
+where $p$ is the number of explanatory variables.  $f(\textbf{X})$ is called the systematic component, and $\varepsilon$ is the random error component.
+\item the error component and the systematic component are independent
+\item random error variables $\varepsilon_i$ for the $N$ observations are iid normal with mean 0 and variance $\sigma^2$
+\end{enumerate}
+
+Any unknown variables appearing in the regression function $f$, other than the covariates, are called the \emph{regression coefficients}.
+
+\textbf{Remarks}
+\begin{itemize}
+\item The conditional distribution of $Y$, given $\textbf{X}$ is normal, or Gaussian, with mean $\mu=\operatorname{E}\big[Y\mid\textbf{X}=\boldsymbol{x}\big]=\operatorname{E} \big[Y\mid X_1=x_1,\ldots,X_p=x_p\big]$ and variance $\sigma^2$.  In addition, the random variables $Y_i$ corresponding to the reponses are independent.
+\item Sometimes, Condition 4 above is skipped to encompass a wider class of regression models.  Those models that observe Condition 4 is generally called a normal, or Gaussian regression model.  Otherwise, they are classified under the non-linear regression model discussed below.  Some well known non-normal regression models are the logistic regression for binary data and the Poisson regression for count data.
+\item A regression model can be classified by the number or explanatory variables.  If there is only one explanatory variable, it is called a \emph{simple regression model}.  Otherwise, it is a \emph{multiple regression model}.
+\item A regression model can also be classified by the form of the regression function $f$.  If $f$ can be expressed as a linear combination of the regression coefficients:
+$$f(\textbf{X})=\beta_0z_0(\textbf{X})+\cdots+\beta_kz_k(\textbf{X}),$$
+where the functions $z_i(\textbf{X})$ do not contain any regression coefficients, then the model is called a \emph{linear regression model}.  Two examples of linear regression models are:
+$$Y=\beta_0+\beta_1X_1+\beta_2X_2+\beta_3X_1X_2+\varepsilon$$
+and 
+$$Y=\beta_0+\beta_1X+\cdots+\beta_kX^k+\varepsilon$$
+The last one is called a \emph{polynomial regression model}.  Linear regression models belong to a more general class of statistical models called the general linear model, where explanatory variables are no longer restricted to be continuous ones only.  When $f$ can not be expressed linearly in terms of the regression coefficients, the model is known as a \emph{non-linear regression model}.  An example of a non-linear regression model is $$Y=\beta_0+\frac{1}{\beta_1+\beta_2X}+\varepsilon$$
+\item The univariate regression model can be generalized to what is known as the \emph{multivariate regression model}, where at least two response variables are considered.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

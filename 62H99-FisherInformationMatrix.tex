@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FisherInformationMatrix}
+\pmcreated{2013-03-22 14:30:15}
+\pmmodified{2013-03-22 14:30:15}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Fisher information matrix}
+\pmrecord{14}{36041}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62H99}
+\pmclassification{msc}{62B10}
+\pmclassification{msc}{62A01}
+\pmsynonym{information matrix}{FisherInformationMatrix}
+\pmdefines{Fisher information}
+\pmdefines{information}
+\pmdefines{Cramer-Rao inequality}
+\pmdefines{Cramer-Rao lower bound}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\begin{document}
+\PMlinkescapeword{model}
+
+Given a statistical model $\lbrace f_\textbf{X}(\boldsymbol{x}\mid\boldsymbol{\theta})\rbrace$ of a random vector $\textbf{X}$, the \emph{Fisher information matrix}, $I$, is the variance of the score function $U$.  So,
+$$I=\operatorname{Var}[U].$$
+If there is only one parameter involved, then $I$ is simply called the \emph{Fisher information} or \emph{information} of $f_\textbf{X}(\boldsymbol{x}\mid\theta)$.
+
+\textbf{Remarks}
+\begin{itemize}
+\item 
+If $f_\textbf{X}(\boldsymbol{x}\mid\boldsymbol{\theta})$ belongs to the exponential family, $I=\operatorname{E}\big[U^{\operatorname{T}}U\big]$.  Furthermore, with some regularity conditions imposed, we have $$I=-\operatorname{E}\Big[\frac{\partial U}{\partial\boldsymbol{\theta}}\Big].$$
+\item 
+As an example, the normal distribution, $N(\mu,\sigma^2)$, belongs to the exponential family and its log-likelihood function $\ell(\boldsymbol{\theta}\mid x)$ is $$-\frac{1}{2}\operatorname{ln}(2\pi\sigma^2)-\frac{(x-\mu)^2}{2\sigma^2},$$ where $\boldsymbol{\theta}=(\mu,\sigma^2)$.  Then the score function $U(\boldsymbol{\theta})$ is given by
+$$\Big(\pdiff{\ell}{\mu},\pdiff{\ell}{\sigma^2}\Big) = \Big(\frac{x-\mu}{\sigma^2},\frac{(x-\mu)^2}{2\sigma^4}-\frac{1}{2\sigma^2}\Big).$$
+Taking the derivative with respect to $\boldsymbol{\theta}$, we have
+$$\frac{\partial U}{\partial\boldsymbol{\theta}}=
+\begin{pmatrix}
+\displaystyle{\pdiff{U_1}{\mu}} & \displaystyle{\pdiff{U_2}{\mu}} \\ \ \\
+\displaystyle{\pdiff{U_1}{\sigma^2}} & \displaystyle{\pdiff{U_2}{\sigma^2}} \\
+\end{pmatrix}=
+\begin{pmatrix}
+\displaystyle{\frac{-1}{\sigma^2}} & \displaystyle{-\frac{x-\mu}{\sigma^4}} \\ \ \\
+\displaystyle{-\frac{x-\mu}{\sigma^4}} & \displaystyle{\frac{1}{2\sigma^4}-\frac{(x-\mu)^2}{\sigma^6}}
+\end{pmatrix}.$$
+Therefore, the Fisher information matrix $I$ is 
+$$-\operatorname{E}\Big[\frac{\partial U}{\partial\boldsymbol{\theta}}\Big]=\frac{1}{2\sigma^4}
+\begin{pmatrix} 
+2\sigma^2 & 0 \\
+0 & -1 
+\end{pmatrix}.$$
+\item 
+Now, in linear regression model with constant variance $\sigma^2$, it can be shown that the Fisher information matrix $I$ is
+$$\frac{1}{\sigma^2}\textbf{X}^{\operatorname{T}}\textbf{X},$$
+where $\textbf{X}$ is the design matrix of the regression model.
+\item 
+In general, the Fisher information meansures how much ``information'' is known about a parameter $\theta$.  If $T$ is an unbiased estimator of $\theta$, it can be shown that 
+$$\operatorname{Var}\big[T(X)\big]\ge\frac{1}{I(\theta)}$$
+This is known as the \emph{Cramer-Rao inequality}, and the number $1/I(\theta)$ is known as the \emph{Cramer-Rao lower bound}.  The smaller the variance of the estimate of $\theta$, the more information we have on $\theta$.  If there is more than one parameter, the above can be generalized by saying that 
+$$\operatorname{Var}\big[T(X)\big]-I(\boldsymbol{\theta})^{-1}$$ is positive semidefinite, where $I$ is the Fisher information matrix.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

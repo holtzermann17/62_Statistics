@@ -1,0 +1,161 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TableOfCriticalValuesOfTDistributions}
+\pmcreated{2013-03-22 15:05:25}
+\pmmodified{2013-03-22 15:05:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{table of critical values of t distributions}
+\pmrecord{4}{36817}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Data Structure}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62Q05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Below is a table of the \emph{two-tailed} critical values $c$ of the t
+distribution corresponding to various degrees $d$ of freedom (first
+column) and p-values $p$ (first row in red).
+
+\begin{tabular}{|c||r|r|r|r|r|r|r|r|}
+\hline $d$   &   \textbf{\red0.2} &   \red0.1 &   \red0.05    &
+\textbf{\red0.02} & \red0.01 & \red0.005   &   \textbf{\red0.002}   &   \red0.001   \\
+\hline\hline 1   &   \textbf{3.078}   & 6.314   &   12.706  &
+\textbf{31.821}  & 63.657  &   127.321 &   \textbf{318.309} &   636.619 \\
+\hline 2 &   \textbf{1.886} &   2.920   &   4.303   & \textbf{6.965}
+& 9.925   &  14.089 &   \textbf{22.327}  &   31.599  \\
+\hline \blue3 &   \textbf{\blue1.638}   &   \blue2.353   &
+\blue3.182 &  \textbf{\blue4.541} &   \blue5.841   & \blue7.453 &
+\textbf{\blue10.215}  &   \blue12.924  \\
+\hline 4   &  \textbf{1.533}  & 2.132 &  2.776   &
+\textbf{3.747}   &   4.604   &   5.598   &   \textbf{7.173}   & 8.610   \\
+\hline 5   &   \textbf{1.476}   &   2.015   &   2.571   &
+\textbf{3.365} &  4.032  &   4.773   &   \textbf{5.893}   &   6.869   \\
+\hline \blue6   &  \textbf{\blue1.440}   &  \blue1.943   &
+\blue2.447 &  \textbf{\blue3.143}   &  \blue3.707  & \blue4.317 &
+\textbf{\blue5.208}   &  \blue5.959   \\
+\hline 7   &   \textbf{1.415}   &   1.895   & 2.365   &
+\textbf{2.998}  &   3.499   &   4.029   &   \textbf{4.785}   &   5.408  \\
+\hline 8   &   \textbf{1.397}   &   1.860   &   2.306   &
+\textbf{2.896}  &  3.355   &   3.833   &   \textbf{4.501}   &   5.041   \\
+\hline \blue9   &   \textbf{\blue1.383}  &   \blue1.833   &
+\blue2.262 &  \textbf{\blue2.821}   &  \blue3.250  & \blue3.690   &
+\textbf{\blue4.297}   &   \blue4.781   \\
+\hline 10  &   \textbf{1.372}   & 1.812  & 2.228  &
+\textbf{2.764}   &   3.169   &   3.581   &   \textbf{4.144}   &   4.587   \\
+\hline 11  &   \textbf{1.363}   &   1.796   &   2.201   &
+\textbf{2.718}  & 3.106  &   3.497   &   \textbf{4.025}   &   4.437   \\
+\hline \blue12  &   \textbf{\blue1.356}   &  \blue1.782   &
+\blue2.179 &  \textbf{\blue2.681}   &  \blue3.055  & \blue3.428   &
+\textbf{\blue3.930} &   \blue4.318   \\
+\hline 13  &   \textbf{1.350}   & 1.771 &  2.160   & \textbf{2.650}
+& 3.012  &   3.372   &   \textbf{3.852}   & 4.221   \\
+\hline 14  &   \textbf{1.345}   &   1.761   &   2.145   &
+\textbf{2.624} &  2.977  & 3.326   &   \textbf{3.787}   &   4.140   \\
+\hline \blue15  & \textbf{\blue1.341}   &   \blue1.753  &
+\blue2.131 &  \textbf{\blue2.602}   &  \blue2.947  & \blue3.286   &
+\textbf{\blue3.733}   & \blue4.073  \\
+\hline 16  &   \textbf{1.337}   &   1.746   &   2.120 &
+\textbf{2.583} &  2.921  &   3.252   &   \textbf{3.686}   &   4.015   \\
+\hline 17  & \textbf{1.333}   &  1.740   &   2.110   &
+\textbf{2.567}   &  2.898  & 3.222 &   \textbf{3.646}   & 3.965   \\
+\hline \blue18  &   \textbf{\blue1.330}   &   \blue1.734 &
+\blue2.101 &  \textbf{\blue2.552}   &  \blue2.878   &  \blue3.197   &
+\textbf{\blue3.610}   &   \blue3.922  \\
+\hline 19  &   \textbf{1.328}   &   1.729  & 2.093   &
+\textbf{2.539}   &  2.861   &  3.174   &   \textbf{3.579}   &   3.883  \\
+\hline 20  &   \textbf{1.325} &   1.725  &  2.086   &
+\textbf{2.528}  &  2.845   &  3.153   &  \textbf{3.552}   &   3.850   \\
+\hline \blue21  &   \textbf{\blue1.323}  &   \blue1.721   &
+\blue2.080 &  \textbf{\blue2.518}   &   \blue2.831   &   \blue3.135   &
+\textbf{\blue3.527}   &   \blue3.819   \\
+\hline 22  &   \textbf{1.321}   &   1.717   &   2.074   &
+\textbf{2.508}  & 2.819  &   3.119   &   \textbf{3.505}   &   3.792   \\
+\hline 23  &   \textbf{1.319}   &  1.714   &   2.069   &
+\textbf{2.500}   &  2.807  & 3.104   &   \textbf{3.485} &   3.768   \\
+\hline \blue24  &   \textbf{\blue1.318}   & \blue1.711  &
+\blue2.064   &  \textbf{\blue2.492} &  \blue2.797  &   \blue3.091   &
+\textbf{\blue3.467}   & \blue3.745   \\
+\hline 25  &   \textbf{1.316}   &   1.708   &   2.060   &
+\textbf{2.485} &  2.787  & 3.078   &   \textbf{3.450}   &   3.725   \\
+\hline 26  & \textbf{1.315}   &   1.706  &   2.056   &
+\textbf{2.479}   &  2.779 &  3.067   &  \textbf{3.435}   & 3.707  \\
+\hline \blue27  &   \textbf{\blue1.314}   &   \blue1.703   &
+\blue2.052 &  \textbf{\blue2.473} &  \blue2.771 &  \blue3.057   &
+\textbf{\blue3.421}   &   \blue3.690   \\
+\hline 28  & \textbf{1.313}   & 1.701   &   2.048   &
+\textbf{2.467} &  2.763   &  3.047 &   \textbf{3.408}   & 3.674   \\
+\hline 29  &   \textbf{1.311}   &   1.699 &  2.045   &
+\textbf{2.462}   &  2.756   &  3.038   &   \textbf{3.396}   &   3.659  \\
+\hline \blue30  &   \textbf{\blue1.310}   &   \blue1.697   &
+\blue2.042 &  \textbf{\blue2.457}  &  \blue2.750   &   \blue3.030   &
+\textbf{\blue3.385}   &   \blue3.646   \\
+\hline 40  &   \textbf{1.303}  &   1.684   &   2.021   &
+\textbf{2.423}   &  2.704  & 2.971   &  \textbf{3.307}   &   3.551   \\
+\hline 50  &   \textbf{1.299}   &   1.676   &   2.009  &
+\textbf{2.403}   &   2.678   &   2.937   &   \textbf{3.261}   &   3.496   \\
+\hline \blue60  &   \textbf{\blue1.296}   &   \blue1.671   &
+\blue2.000 &  \textbf{\blue2.390}  & \blue2.660  &   \blue2.915   &
+\textbf{\blue3.232}   &   \blue3.460   \\
+\hline 70  &   \textbf{1.294}   &  1.667   &   1.994   &
+\textbf{2.381}   &  2.648  & 2.899   &   \textbf{3.211}   & 3.435   \\
+\hline 80  &   \textbf{1.292}   &   1.664 &  1.990   &
+\textbf{2.374} & 2.639  &  2.887   &   \textbf{3.195}   &   3.416  \\
+\hline \blue90  & \textbf{\blue1.291}   &   \blue1.662  &
+\blue1.987   &  \textbf{\blue2.368}  & \blue2.632   & \blue2.878   &
+\textbf{\blue3.183}   &   \blue3.402   \\
+\hline 100 &   \textbf{1.290}   & 1.660 &   1.984 &   \textbf{2.364}
+&  2.626   &  2.871   &   \textbf{3.174}   & 3.390   \\
+\hline
+\end{tabular}
+
+These values can be related by the equation:
+$$p=P(\mid\! X\!\mid\ \ge c)\qquad\mbox{where }X\sim t(d).$$
+Graphically, this looks like
+\\
+\begin{center}
+\includegraphics{t_dist}
+\end{center}
+where the curve is the probability density function of the t
+distribution and $p$ is the darkened area.  It is evident from the
+graph where the name \emph{two-tailed} comes from.
+
+The \emph{one-tailed} critical value for the t distribution
+(with degrees of freedom $=d$) is defined to be the value $c$ such that 
+$$p=P(X\ge c)\qquad\mbox{where }X\sim t(d),$$ 
+for any given p-value $p$.  One can use the same table to find the one-tailed critical value $c$ using the following two rules:
+\begin{enumerate}
+\item if the p-value $p\le0.5$ then $c$ is the same as the critical
+value for the two-tailed case with p-value $2p$.
+\item if $p>0.5$ then $c$ corresponds to the negative of the
+one-tailed critical value with p-value $1-p$, which then, is the
+same as the negative of the critical value for the two-tailed case
+with p-value $2(1-p)$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

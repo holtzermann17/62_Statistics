@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FactorizationCriterion}
+\pmcreated{2013-03-22 15:02:48}
+\pmmodified{2013-03-22 15:02:48}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{factorization criterion}
+\pmrecord{4}{36761}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62B05}
+\pmsynonym{factorization theorem}{FactorizationCriterion}
+\pmsynonym{Fisher-Neyman factorization theorem}{FactorizationCriterion}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\boldsymbol{X}=(X_1,\ldots,X_n)$ be a random vector whose
+coordinates are observations, and whose probability (density)
+function is, $f(\boldsymbol{x}\mid\theta)$ where $\theta$ is an
+unknown parameter.  Then a statistic $T(\boldsymbol{X})$ for
+$\theta$ is a sufficient statistic iff $f$ can be expressed as a
+product of (or \emph{factored into}) two functions $g,h$, $f=gh$
+where $g$ is a function of $T(\boldsymbol{X})$ and $\theta$, and $h$
+is a function of $\boldsymbol{x}$.  In symbol, we have
+$$f(\boldsymbol{x}\mid\theta)=g(T(\boldsymbol{X}),\theta)h(\boldsymbol{x}).$$
+
+\textbf{Applications}.
+\begin{enumerate}
+\item In view of the above statement, let's show that the sample
+mean $\overline{X}$ of $n$ independent observations from a normal
+distribution $N(\mu,\sigma^2)$ is a sufficient statistic for the
+unknown mean $\mu$. Since the $X_i$'s are independent random
+variables, then the probability density function
+$f(\boldsymbol{x}\mid\mu)$, being the joint probability density
+function of each of the $X_i$, is the product of the individual
+density functions $f(x\mid\mu)$:
+\begin{eqnarray}
+f(\boldsymbol{x}\mid\mu)&=&\prod_{i=1}^n f(x\mid\mu)= \prod_{i=1}^n
+\frac{1}{\sqrt{2\pi\sigma^2}}\exp\Big[-\frac{(x_i-\mu)^2}{2\sigma^2}\Big]\\
+&=&\frac{1}{\sqrt{(2\pi)^n\sigma^{2n}}}\exp\Big
+[\sum_{i=1}^{n}-\frac{(x_i-\mu)^2}{2\sigma^2}\Big]\\
+&=&\frac{1}{\sqrt{(2\pi)^n\sigma^{2n}}}\exp\Big
+[\frac{-1}{2\sigma^2}\sum_{i=1}^{n}x_i^2\Big]
+\exp\Big[\frac{\mu}{\sigma^2}\sum_{i=1}^n
+x_i-\frac{n\mu^2}{2\sigma^2}\Big]\\
+&=&h(\boldsymbol{x})
+\exp\Big[\frac{n\mu}{\sigma^2}T(\boldsymbol{x})-\frac{n\mu^2}{2\sigma^2}\Big]\\
+&=&h(\boldsymbol{x}) g(T(\boldsymbol{x}),\mu)
+\end{eqnarray}
+where $g$ is the last exponential expression and $h$ is the rest of
+the expression in $(3)$.  By the factorization criterion,
+$T(\boldsymbol{X})=\overline{X}$ is a sufficient statistic.
+\item Similarly, the above shows that the sample variance $s^2$ is
+not a sufficient statistic for $\sigma^2$ if $\mu$ is unknown.
+\item But, if $\mu$ is a known constant, then the statistic
+$$T(X_1,\ldots,X_n)=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\mu)^2$$
+is sufficient for $\sigma^2$ by observing in $(2)$ above, and
+letting $h(\boldsymbol{x})=1$ and $g(T,\sigma^2)$ be all of
+expression $(2)$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

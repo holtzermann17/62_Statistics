@@ -1,0 +1,234 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConditionalDistributionOfMultivariateNormalVariable}
+\pmcreated{2013-03-22 18:39:09}
+\pmmodified{2013-03-22 18:39:09}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{conditional distribution of multi-variate normal variable}
+\pmrecord{5}{41395}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+\pmclassification{msc}{60E05}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+\newtheorem*{thm*}{Theorem}
+
+\newcommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\absW}[1]{\left\lvert#1\right\rvert}
+\newcommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\normW}[1]{\left\lVert#1\right\rVert}
+\newcommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Inverse functions
+\newcommand{\inv}[1]{{#1}^{-1}}
+
+% Differentiation operators
+\newcommand{\od}[2]{\frac{d #1}{d #2}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\newcommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Differentials on integrals
+\newcommand{\dx}{\, dx}
+\newcommand{\dt}{\, dt}
+\newcommand{\dmu}{\, d\mu}
+
+% Inner products
+\newcommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+\newcommand{\TR}[1]{#1^{\ast}}
+
+% Complex numbers
+\DeclareMathOperator{\zRe}{Re}
+\DeclareMathOperator{\zIm}{Im}
+\newcommand{\conjug}[1]{\overline{#1}}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sD}{\mathcal{D}}
+
+% Standard spaces
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Le}{\mathbf{L}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\lindim}{dim}
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\Var}{Var}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+\begin{document}
+\begin{thm*}
+Let $X$ be a random variable, taking values in $\R^n$, normally distributed
+with a non-singular covariance matrix $\Sigma$ and a mean of zero.
+
+Suppose $Y$ is defined by $Y = B^* X $ for some linear transformation $B \colon \R^k \to \R^n$
+of maximum rank.
+(${}^\ast$ to denotes the transpose operator.)
+
+Then the distribution of $X$ conditioned on $Y$ is multi-variate normal,
+with conditional means and covariances of:
+\[
+\E[ X \mid Y] = 
+\Sigma B \inv{(\TR{B} \Sigma B)} Y
+\,, \quad \Var[X \mid Y] = \Sigma - \Sigma B \inv{(\TR{B} \Sigma B)}  \TR{(\Sigma B)}\,.
+\]
+
+If $k = 1$, so that $B$ is simply a vector in $\R^n$,
+these formulas reduce to:
+\[
+\E[ X \mid Y ]
+= \frac{\Sigma B Y}{\Var[Y]}\,, \quad
+\Var[X \mid Y] = \Sigma - \frac{\Sigma B \TR{B} \Sigma}{\Var[Y]} \,.
+\]
+
+If $X$ does not have zero mean, then the 
+formula for $\E[X \mid Y]$
+is modified by adding $\E[X]$ and replacing $Y$ by $Y - \E[Y]$,
+and the formula for $\Var[X \mid Y]$ is unchanged.
+
+\begin{proof}
+We split up $X$ into two stochastically independent parts,
+the first part containing exactly the information embodied in $Y$.
+Then the conditional distribution of $X$ given $Y$ is simply
+the unconditional distribution of the second part that is independent of $Y$.
+
+To this end, we first 
+change variables to express everything in terms of a \emph{standard} multi-variate normal
+$Z$.  Let $A \colon \R^n \to \R^n$ be a ``square root'' factorization of 
+the covariance matrix $\Sigma$,
+so that:
+\[
+A \TR{A} = \Sigma\,, \quad Z = \inv{A} X\,, \quad X = AZ \,, \quad Y = \TR{B}AZ\,.
+\]
+
+We let $H \colon \R^n \to \R^n $ be the orthogonal projection onto the range of 
+$ \TR{A} B : \R^k \to \R^n$, and decompose $Z$ into orthogonal components:
+\[
+Z = HZ + (I-H)Z \,.
+\]
+It is intuitively obvious that orthogonality 
+of the two random normal vectors implies their stochastic independence.
+To show this formally, observe that the Gaussian density function for $Z$
+factors into a product:
+\[
+(2\pi)^{-n/2} \, \exp\bigl( -\tfrac12 \norm{z}^2 \bigr)
+= (2\pi)^{-n/2} \, \exp\bigl( -\tfrac12 \norm{Hz}^2 \bigr) \,
+                   \exp\bigl( -\tfrac12 \norm{(I-H)z}^2 \bigr) \,.
+\]
+We can construct an orthonormal system of coordinates on $\R^n$
+under which the components for $Hz$ are
+completely disjoint from those components of $(I-H)z$.
+On the other hand, the densities for $Z$, $HZ$, and $(I-H)Z$
+remain invariant even after changing coordinates,
+because they are radially symmetric.
+Hence the variables $HZ$ and $(I-H)Z$ are separable in their joint density
+and they are independent.
+
+$HZ$ embodies the information in the linear combination $Y = \TR{B}AZ$.
+For we have the identity:
+\[
+Y = \bigl( \TR{B}A \bigr) Z = \bigl( \TR{B}A \bigr) \bigl( HZ + (I-H)Z \bigr) 
+= \bigl( \TR{B}A \bigr) HZ + 0\,.
+\]
+The last term is null because $(I-H)Z$ is orthogonal to the range of $\TR{A}B$
+by definition.  (Equivalently, $(I-H)Z$ lies in the kernel of $\TR{(\TR{A} B)} = \TR{B} A$.)
+Thus $Y$ can always be recovered by a linear transformation on 
+$HZ$.
+
+Conversely, $Y$ completely determines $HZ$,
+from the analytical expression for $H$ that we now give.
+In general, the orthogonal projection onto the range of an injective 
+transformation $T$
+is $T \inv{(\TR{T} T)} \TR{T}$.  Applying this to $T = \TR{A}B$, we have
+\begin{align*}
+H &= \TR{A} B \inv{\bigl( \TR{B} A \TR{A} B \bigr)} \TR{B} A \\
+&= \TR{A} B \inv{(\TR{B} \Sigma B)} \TR{B} A \,.
+\end{align*}
+We see that $HZ = \TR{A} B \inv{ (\TR{B} \Sigma B) } Y$.
+
+We have proved that conditioning on $Y$ and $HZ$ are equivalent, and so:
+\[
+\E[Z \mid Y] = \E[Z \mid HZ] = \E[HZ + (I-H)Z \mid HZ] = HZ + 0\,, 
+\]
+and
+\begin{align*}
+\Var[Z \mid Y] = \Var[Z \mid HZ] &= \Var[HZ + (I-H)Z \mid HZ] \\
+&= 0 + \Var[(I-H)Z ] \\
+&= \E\bigl[ (I-H)Z \TR{Z} \TR{(I-H)} \bigr] \\
+&= (I-H) \TR{(I-H)} \\
+&= I-H -\TR{H} + H\TR{H} = I-H\,,
+\end{align*}
+using the defining property 
+$H^2 = H = \TR{H}$
+of orthogonal projections.
+
+Now we express the result in terms of $X$, and remove the dependence on the transformation $A$
+(which is not uniquely defined from the covariance matrix):
+\[
+\E[X \mid Y] = A \, \E[Z \mid Y] = AHZ = 
+\Sigma B \inv{(\TR{B} \Sigma B)} Y
+\]
+and
+\[
+\Var[X \mid Y] = A \, \Var[Z \mid Y] \, \TR{A}
+= A \TR{A} - A H \TR{A} 
+= \Sigma - \Sigma B \inv{(\TR{B} \Sigma B)}  \TR{B} \Sigma\,.
+\]
+
+Of course, the conditional distribution of $X$ given $Y$ is the same
+as that of $(I-H)Z$, which is multi-variate normal.
+
+The formula in the statement of this theorem, for the single-dimensional case,
+follows from substituting in $\Var[Y] = \Var[\TR{B}X] = \TR{B} \Sigma B$.
+The formula for when $X$ does not have zero
+mean follows from applying the base case to the shifted 
+variable $X - \E[X]$.
+\end{proof}
+\end{thm*}
+
+%%%%%
+%%%%%
+\end{document}

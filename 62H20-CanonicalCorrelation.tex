@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CanonicalCorrelation}
+\pmcreated{2013-03-22 19:16:11}
+\pmmodified{2013-03-22 19:16:11}
+\pmowner{tony_bruguier}{26297}
+\pmmodifier{tony_bruguier}{26297}
+\pmtitle{canonical correlation}
+\pmrecord{4}{42201}
+\pmprivacy{1}
+\pmauthor{tony_bruguier}{26297}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62H20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$ be the $(T,n)$ matrix corresponding to the $n$ signals and $Y$ be a $(T,p)$ matrix corresponding to one set of $p$ signals. Time indexes each row of the matrix ($T$ time samples). Let $\Sigma_{11}$ and $\Sigma_{22}$ be the sample covariance matrices of $X$ and $Y$, respectively, and let $\Sigma_{12}=\Sigma_{21}'$ be the sample covariance matrix between $X$ and $Y$. For simplicity, we suppose that all signals have zero mean.
+
+Canonical correlation analysis (CCA) finds the linear combinations of the column of $X$ and $Y$ that has the largest correlation; i.e., it finds the weight vectors (loadings) $a$ and $b$ that maximize:
+
+\begin{equation}
+\rho=\frac{a' \Sigma_{12} b}{\sqrt{a' \Sigma_{11} a} \sqrt{b' \Sigma_{22} b}}.
+\end{equation}
+
+We follow the derivations of Johnson and we do a change of basis: $c=\Sigma_{11}^{1/2} a$ and $d=\Sigma_{22}^{1/2} b$. 
+
+\begin{equation}
+\rho=\frac{c' \Sigma_{11}^{-1/2} \Sigma_{12} \Sigma_{22}^{-1/2} d}{\sqrt{c' c} \sqrt{d' d}}
+\end{equation}
+
+By the Cauchy-Schwartz inequality:
+
+\begin{equation}
+\rho \le \frac{\sqrt{c' \Sigma_{11}^{-1/2} \Sigma_{12} \Sigma_{22}^{-1/2} \Sigma_{22}^{-1/2} \Sigma_{21} \Sigma_{11}^{-1/2} c} \sqrt{d' d}}{\sqrt{c' c} \sqrt{d' d}} = \sqrt{\frac{c' \Sigma_{11}^{-1/2} \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21} \Sigma_{11}^{-1/2} c}{c' c}}.
+\end{equation}
+
+The inequality above is an equality when $\Sigma_{22}^{-1/2} \Sigma_{21} \Sigma_{11}^{-1/2} c$ and $d$ are collinear. The right hand side of the expression above is a Rayleigh quotient and it is maximum when $c$ is the eigenvector corresponding to the largest eingenvalue of $\Sigma_{11}^{-1/2} \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21} \Sigma_{11}^{-1/2}$ (we obtain the other rows by using the other eigenvalues in decreasing magnitude). This results if the basis of the CCA. We can compute the two canonical variables: $U_1=X a$ and $V_1 = Y b$.
+
+We can continue this way to find the subsequent vectors
+%%%%%
+%%%%%
+\end{document}

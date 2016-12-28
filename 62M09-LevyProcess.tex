@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LevyProcess}
+\pmcreated{2013-03-22 16:37:19}
+\pmmodified{2013-03-22 16:37:19}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{L\'evy process}
+\pmrecord{6}{38820}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62M09}
+\pmsynonym{Levy process}{LevyProcess}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In probability theory, a L\'evy process, named after the French mathematician Paul Pierre L\'evy is any continuous-time stochastic process that starts at 0, admits c\`adl\`ag (right-continuous with left limits) modification and has ``stationary independent increments''. The most well-known examples are the Wiener process and the Poisson process.
+
+A continuous-time stochastic process assigns a random variable $X_t$ to each point $t \ge 0$ in time. In effect it is a random function of $t$. The increments of such a process are the differences $X_s - X_t$ between its values at different times $t < s$. To call the increments of a process independent means that increments $X_s - X_t$ and $X_u - X_v$ are independent random variables whenever the two time intervals do not overlap and, more generally, any finite number of increments assigned to pairwise non-overlapping time intervals are mutually (not just pairwise) independent. To call the increments stationary means that the probability distribution of any increment $X_s - X_t$ depends only on the length $s  - t$ of the time interval; increments with equally long time intervals are identically distributed.
+
+In the Wiener process, the probability distribution of $X_s - X_t$ is normal with expected value 0 and variance $s - t$.
+
+In the Poisson process, the probability distribution of $X_s - X_t$ is a Poisson distribution with expected value $\lambda(s - t)$, where $\lambda > 0$ is the intensity or rate of the process.
+
+The probability distributions of the increments of any L\'evy process are infinitely divisible. There is a L\'evy process for each infinitely divisible probability distribution.
+
+In any L\'evy process with finite moments, the $n$th moment $\mu_n(t) = E(X_t^n)$ is a polynomial function of $t$; these functions satisfy a binomial identity: $$\mu_n(t + s) = \sum_{k = 0}^n {n \choose k} \mu_k(t) \mu_{n - k}(s).$$
+
+It is possible to characterise all L\'evy processes by looking at their characteristic function.
+
+{\it This entry was adapted from the Wikipedia article \PMlinkexternal{L\'evy process}{http://en.wikipedia.org/wiki/Levy_process} as of January 25, 2007.}
+%%%%%
+%%%%%
+\end{document}

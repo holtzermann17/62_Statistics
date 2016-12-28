@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeometricRandomVariable}
+\pmcreated{2013-03-22 11:54:06}
+\pmmodified{2013-03-22 11:54:06}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{geometric random variable}
+\pmrecord{14}{30520}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62-00}
+\pmclassification{msc}{60-00}
+\pmclassification{msc}{92-01}
+\pmclassification{msc}{92B05}
+\pmsynonym{geometric distribution}{GeometricRandomVariable}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+A \textbf{geometric random variable} with parameter $p\in(0,1]$ is one whose density distribution function is given by
+\begin{equation*}
+f_X(x) = p(1-p)^x,\qquad x=0,1,2,\dotsc
+\end{equation*}
+
+This is denoted by $X\sim Geo(p)$.
+
+Notes:
+\begin{enumerate}
+\item A standard application of geometric random variables is where $X$ represents the number of failed Bernoulli trials before the first success.
+\item The expected value of a geometric random variable is given by $E[X] = \frac{1-p}{p}$, and the variance by $Var[X] = \frac{1-p}{p^2}$
+\item The moment generating function of a geometric random variable is given by $M_X(t) = \frac{p}{1 - (1-p)e^t}$.
+
+\end{enumerate}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

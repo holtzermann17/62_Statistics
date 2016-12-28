@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrthogonalLatinSquares}
+\pmcreated{2013-03-22 16:04:47}
+\pmmodified{2013-03-22 16:04:47}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{orthogonal Latin squares}
+\pmrecord{12}{38138}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62K10}
+\pmclassification{msc}{05B15}
+\pmsynonym{mutually orthogonal Latin squares}{OrthogonalLatinSquares}
+\pmsynonym{MOLS}{OrthogonalLatinSquares}
+\pmsynonym{pairwise orthogonal Latin squares}{OrthogonalLatinSquares}
+\pmdefines{complete set of Latin squares}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{orthogonal}
+\PMlinkescapeword{complete}
+
+Given two Latin squares $L_1=(A,B,C_1,f_1)$ and $L_2=(A,B,C_2,f_2)$ of the same order $n$, we can combine them coordinate-wise to form a single square, whose cells are ordered pairs of elements from $C_1$ and $C_2$ respectively.  Formally, we can form a function $f:A\times B\to C_1\times C_2$ given by $$f(i,j)=(f_1(i,j),f_2(i,j)).$$
+This function $f$ says that we have created a new square $A\times B$, whose cell $(i,j)$ contains the ordered pair of values, the first coordinate of which corresponds to the value in cell $(i,j)$ of $L_1$, and the second to the value in cell $(i,j)$ of $L_2$.  We may write the combined square $L_1*L_2$.
+
+For example,
+
+\begin{equation*}
+\left(\begin{array}{cccc}
+a & b & c & d\\
+c & d & a &b\\
+d & c & b & a\\
+b & a & d & c
+\end{array}\right)
+*
+\left(\begin{array}{cccc}
+1 & 2& 3& 4\\
+4 & 3 & 2 & 1\\
+2 & 1 & 4 & 3\\
+3 & 4 & 1 & 2
+\end{array}\right)
+=
+\left(\begin{array}{cccc}
+(a,1) & (b,2) & (c,3) & (d,4)\\
+(c,4) & (d,3) & (a,2) & (b,1)\\
+(d,2) & (c,1) & (b,4) & (a,3)\\
+(b,3) & (a,4) & (d,1) & (c,2)
+\end{array}\right)
+\end{equation*}
+
+In general, the combined square is not a Latin square unless the original two squares are equivalent: $f_1(i,j)=f_1(k,\ell)$ iff $f_2(i,j)=f_2(k,\ell)$.  Nevertheless, the more interesting aspect of pairing up two Latin squares (of the same order) lies in the function $f$:  
+
+\begin{quote}
+\textbf{Definition}.  We say that two Latin squares are \emph{orthogonal} if $f$ is a bijection.  
+\end{quote}
+
+Since there are $n^2$ cells in the combined square, and $| C_1\times C_2| = n^2$, the function $f$ is a bijection if it is either one-to-one or onto.  It is therefore easy to see that the two Latin squares in the example above are orthogonal.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item The combined square is usually known as a \emph{Graeco-Latin square}, originated from statisticians Fischer and Yates.
+\item It can be shown that if $L_1,\ldots, L_m$ are Latin squares of order $n\ge 3$ such that each pair of them are orthogonal, then $m\le n-1$.  If the equality occurs, then the set of Latin squares are said to be \emph{complete}.
+\item (Bose) If $n\ge 3$, then $L_1,\ldots,L_m$ form a complete set of pairwise orthogonal Latin squares of order $n$ iff there exists a finite projective plane of order $n$.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{ryser} H. J. Ryser, \emph{Combinatorial Mathematics}, The Carus Mathematical Monographs, 1963
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

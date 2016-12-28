@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HypergeometricRandomVariable}
+\pmcreated{2013-03-22 11:54:12}
+\pmmodified{2013-03-22 11:54:12}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{hypergeometric random variable}
+\pmrecord{11}{30523}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62E15}
+\pmclassification{msc}{81-00}
+\pmsynonym{hypergeometric distribution}{HypergeometricRandomVariable}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+$X$ is a \textbf{hypergeometric random variable} with parameters \textbf{$M, K, n$} if\\
+\par
+$f_X(x) = \frac{ { K \choose x} {M-K \choose n-x} }{ {M \choose n} }$,     $x=\{0,1,...,n\}$	\\
+\par
+Parameters:\\
+\par
+\begin{list}{$\star$ }{}
+\item $M \in \{1,2,...\}$
+\item $K \in \{0,1,...,M\}$
+\item $n \in \{1,2,...,M\}$
+\end{list}
+\par
+Syntax:\\
+\par
+$X\sim Hypergeo(M,K,n)$\\
+\par
+Notes:\\
+\par
+\begin{enumerate}
+
+\item $X$ represents the number of ``special'' items (from the $K$ special items) present on a sample of \PMlinkescapetext{size} $n$ from a population with $M$ items.
+\item The expected value of $X$ is noted as $E[X] = n \frac{K}{M}$
+\item The variance of $X$ is noted as $Var[X] = n \frac{K}{M} \frac{M-K}{M} \frac{M-n}{M-1}$
+
+\end{enumerate}
+
+Approximation techniques:
+
+If ${K \choose 2} << n, M-K+1-n$ then $X$ can be approximated as a \textbf{binomial random variable} with parameters $n=K$ and $p=\frac{M-K+1-n}{M-K+1}$.
+This approximation simplifies the distribution by looking at a system with replacement for large values of $M$ and $K$.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

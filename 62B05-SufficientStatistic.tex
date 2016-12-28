@@ -1,0 +1,137 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SufficientStatistic}
+\pmcreated{2013-03-22 15:02:42}
+\pmmodified{2013-03-22 15:02:42}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{sufficient statistic}
+\pmrecord{11}{36759}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62B05}
+\pmsynonym{sufficient estimator}{SufficientStatistic}
+\pmsynonym{minimally sufficient statistic}{SufficientStatistic}
+\pmsynonym{minimal sufficient}{SufficientStatistic}
+\pmsynonym{minimally sufficient}{SufficientStatistic}
+\pmdefines{minimal sufficient statistic}
+\pmdefines{equivalent statistic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\lbrace f_\theta \rbrace$ be a statistical model with parameter
+$\theta$.  Let $\boldsymbol{X}=(X_1,\ldots,X_n)$ be a random vector
+of random variables representing $n$ observations.  A statistic $T=T(\boldsymbol{X})$ of $\boldsymbol{X}$ for the parameter $\theta$ is called a
+\emph{sufficient statistic}, or a \emph{sufficient estimator}, if
+the conditional probability distribution of $\boldsymbol{X}$ given
+$T(\boldsymbol{X})=t$ is not a function of $\theta$ (equivalently,
+does not depend on $\theta$).
+
+In other words, all the information about the unknown parameter
+$\theta$ is captured in the sufficient statistic $T$.  If, say, we
+are interested in finding out the percentage of defective light
+bulbs in a shipment of new ones, it is enough, or \emph{sufficient},
+to count the number of defective ones (sum of the $X_i$'s), rather
+than worrying about which individual light bulbs are the defective
+ones (the vector $(X_1,\ldots,X_n)$).  By taking the sum, a certain
+``reduction'' of data has been achieved.
+
+\textbf{Examples}
+\begin{enumerate}
+\item Let $X_1,\ldots,X_n$ be $n$ independent observations from a
+uniform distribution on integers $1,\ldots,\theta$.  Let
+$T=\max\lbrace X_1,\ldots,X_n \rbrace$ be a statistic for $\theta$.
+ Then the conditional probability distribution of
+$\boldsymbol{X}=(X_1,\ldots,X_n)$ given $T=t$ is
+$$P(\boldsymbol{X}\mid t)=\frac{P(X_1=x_1,\ldots,X_n=x_n,\max\lbrace X_n
+\rbrace=t)}{P(\max\lbrace X_n \rbrace=t)}.$$ The numerator is $0$ if
+$\max\lbrace x_n\rbrace\neq t$.  So in this case,
+$P(\boldsymbol{X}\mid t)=0$ and is not a function of $\theta$.
+Otherwise, the numerator is $\theta^{-n}$ and $P(\boldsymbol{X}\mid
+t)$ becomes
+$$\frac{\theta^{-n}}{P(\max\lbrace X_n \rbrace=t)}=
+(\theta^nP(X_{(1)}\leq \cdots\leq X_{(n)}=t))^{-1},$$ where
+$X_{(i)}$'s are the rearrangements of the $X_i$'s in a
+non-decreasing order from $i=1$ to $n$.  For the denominator, we first note that
+\begin{eqnarray*}
+P(X_{(1)}\leq \cdots\leq X_{(n)}=t) &=& P(X_{(1)}\leq \cdots\leq X_{(n)}\leq t)-P(X_{(1)}\leq \cdots\leq X_{(n)}<t) \\ &=& P(X_{(1)}\leq \cdots\leq X_{(n)}\leq t)-P(X_{(1)}\leq \cdots\leq X_{(n)}\leq t-1).
+\end{eqnarray*}
+From the above equation, we find that there are $t^n-(t-1)^n$ ways to form non-decreasing finite sequences of $n$ positive integers such that the maximum of the sequence is
+$t$.  So
+$$(\theta^nP(X_{(1)}\leq \cdots\leq X_{(n)}=t))^{-1}=
+(\theta^n(t^n-(t-1)^n)\theta^{-n})^{-1}=(t^n-(t-1)^n)^{-1}$$
+ again is not a function of $\theta$.  Therefore, $T=\max\lbrace X_i\rbrace$ is a
+ sufficient statistic for $\theta$.
+ Here, we see that a reduction of data has been achieved by taking
+ only the largest member of set of observations, not the entire set.
+\item If we set $T(X_1,\ldots,X_n)=(X_1,\ldots,X_n)$, then we see
+that $T$ is trivially a sufficient statistic for \emph{any}
+parameter $\theta$.  The conditional probability distribution of
+$(X_1,\ldots,X_n)$ given $T$ is 1.  Even though this is a sufficient
+statistic by definition (of course, the individual observations
+provide as much information there is to know about $\theta$ as
+possible), and there is no loss of data in $T$ (which is simply a
+list of all observations), there is really no reduction of data to
+speak of here.
+\item The sample mean
+$$\overline{X}=\frac{X_1+\cdots+X_n}{n}$$
+of $n$ independent observations from a normal distribution
+$N(\mu,\sigma^2)$ (both $\mu$ and $\sigma^2$ unknown) is a
+sufficient statistic for $\mu$.  This is the result of the
+factorization criterion. Similarly, one sees that any partition of
+the sum of $n$ observations $X_i$ into $m$ subtotals is a sufficient
+statistic for $\mu$.  For instance,
+$$T(X_1,\ldots,X_n)=(\sum_{i=1}^{j}X_i,\sum_{i=j+1}^{k}X_i,\sum_{i=k+1}^{n}X_i)$$
+is a sufficient statistic for $\mu$.
+\item Again, assume there are $n$ independent observations $X_i$ from
+a normal distribution $N(\mu,\sigma^2)$ with unknown mean and
+variance.  The sample variance
+$$\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\overline{X})^2$$ is \emph{not} a
+sufficient statistic for $\sigma^2$.  However, if $\mu$ is a known
+constant, then
+$$\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\mu)^2$$ is a sufficient statistic
+for $\sigma^2$.
+\end{enumerate}
+
+A sufficient statistic for a parameter $\theta$ is called
+a \emph{minimal sufficient statistic} if it can be expressed as a
+function of any sufficient statistic for $\theta$.
+
+\textbf{Example}. In example $3$ above, both the sample mean
+$\overline{X}$ and the finite sum $S=X_1+\cdots+X_n$ are minimal
+sufficient statistics for the mean $\mu$.  Since, by the
+factorization criterion, any sufficient statistic $T$ for $\mu$ is a
+vector whose coordinates form a partition of the finite sum, taking
+the sum of these coordinates is just the finite sum $S$.  So, we
+have just expressed $S$ as a function of $T$.  Therefore, $S$ is
+minimal.  Similarly, $\overline{X}$ is minimal.
+
+Two sufficient statistics $T_1,T_2$ for a parameter $\theta$ are
+said to be equivalent provided that there is a bijection $g$ such
+that $g\circ T_1=T_2$.  $\overline{X}$ and $S$ from the above
+example are two equivalent sufficient statistics.  Two minimal sufficient statistics for the same parameter are equivalent.
+%%%%%
+%%%%%
+\end{document}

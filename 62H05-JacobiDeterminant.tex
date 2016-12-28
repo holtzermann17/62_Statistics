@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JacobiDeterminant}
+\pmcreated{2013-03-22 12:07:08}
+\pmmodified{2013-03-22 12:07:08}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{Jacobi determinant}
+\pmrecord{8}{31268}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62H05}
+\pmclassification{msc}{15-00}
+\pmsynonym{Jacobian}{JacobiDeterminant}
+\pmrelated{ChainRuleSeveralVariables}
+\pmrelated{MultidimensionalGaussianIntegral}
+\pmrelated{ChangeOfVariablesInIntegralOnMathbbRn}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+Let
+
+$$ f=f(x) = f(x_1,\ldots,x_n) $$
+
+be a function of $n$ variables, and let
+
+$$ u = u(x) = (u_1(x),\ldots,u_n(x)) $$
+
+be a function of $x$, where inversely $x$ can be expressed as a function of $u$,
+
+$$ x = x(u) = (x_1(u), \ldots,x_n(u)) $$
+
+The formula for a change of variable in an $n$-dimensional integral is then
+
+$$ \int_\Omega f(x)d^nx = \int_{u(\Omega)} f(x(u))|\det(dx/du)|d^nu  $$
+
+$\Omega$ is an integration region, and one integrates over all $x \in \Omega$, or equivalently, all $u \in u(\Omega)$. $dx/du = (du/dx)^{-1}$ is the Jacobi matrix and
+
+$$ | \det(dx/du)| = |\det(du/dx)|^{-1} $$
+
+is the absolute value of the \emph{Jacobi determinant} or \emph{Jacobian}.
+
+As an example, take $n=2$ and
+
+$$ \Omega = \{(x_1,x_2) | 0<x_1 \le 1, 0 < x_2 \le 1 \} $$
+
+Define
+
+$$ \begin{array}{cc}\rho = \sqrt{-2 \log(x_1)} & \varphi = 2\pi x_2 \\
+    u_1 = \rho \cos \varphi & u_2 = \rho \sin \varphi \end{array} $$
+
+Then by the chain rule and definition of the Jacobi matrix,
+
+\begin{eqnarray*}
+ du/dx & = & \partial(u_1,u_2) / \partial(x_1,x_2) \\
+       & = & (\partial(u_1,u_2)/\partial(\rho,\varphi))(\partial(\rho,\varphi)/\partial(x_1,x_2)) \\
+       & = & \begin{pmatrix}\cos \varphi & - \rho \sin \varphi \\ \sin \varphi & \rho \cos \varphi \end{pmatrix} \begin{pmatrix}-1 / \rho x_1 & 0 \\ 0 & 2 \phi \end{pmatrix} 
+\end{eqnarray*}
+
+The Jacobi determinant is
+
+\begin{eqnarray*}
+\det (du/dx) & = & \det \{ \partial(u_1,u_2)/\partial(\rho,\varphi)\} \det\{\partial(\rho,\varphi) / \partial(x_1,x_2)\} \\
+ & = & \rho(-2 \pi /\rho x_1) = -2 \pi / x_i
+\end{eqnarray*}
+
+and
+
+\begin{eqnarray*}
+ d^2 x & = & | \det(dx/du) | d^2u = |\det(du/dx)|^{-1} d^2 u \\
+  & = & (x_1/2\pi) = (1/2 \pi) \exp(-(u_1^2+u_2^2/2))d^2 u
+\end{eqnarray*}
+
+This shows that if $x_1$ and $x_2$ are independent random variables with uniform distributions between 0 and 1, then $u_1$ and $u_2$ as defined above are independent random variables with standard normal distributions. 
+
+{\bf References}
+
+\begin{itemize}
+\item Originally from The Data Analysis Briefbook
+(\PMlinkexternal{http://rkb.home.cern.ch/rkb/titleA.html}{http://rkb.home.cern.ch/rkb/titleA.html})
+\end{itemize}
+%%%%%
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RandomVariable}
+\pmcreated{2013-03-22 11:53:10}
+\pmmodified{2013-03-22 11:53:10}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{random variable}
+\pmrecord{21}{30485}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{62-00}
+\pmclassification{msc}{60-00}
+\pmclassification{msc}{11R32}
+\pmclassification{msc}{03-01}
+\pmclassification{msc}{20B25}
+\pmrelated{DistributionFunction}
+\pmrelated{DensityFunction}
+\pmrelated{GeometricDistribution2}
+\pmdefines{discrete random variable}
+\pmdefines{continuous random variable}
+\pmdefines{law of a random variable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+If $(\Omega,\mc{A},P)$ is a probability space, then a \textbf{random variable} on $\Omega$ is a measurable function $X: (\Omega,\mc{A}) \to S$ to a measurable space $S$ (frequently taken to be the real numbers with the standard measure).  The \emph{law} of a random variable is the probability measure $PX^{-1}:S\to \R$ defined by $PX^{-1}(s)=P(X^{-1}(s))$.
+
+A random variable $X$ is said to be \emph{discrete} if the set $ \{X(\omega) : \omega \in \Omega \}$ (i.e. the range of $X$) is finite or countable.  A more general version of this definition is as follows:  A random variable $X$ is discrete if there is a countable subset $B$ of the range of $X$  such that $P(X \in B)=1$ (Note that, as a countable subset of $\mathbb{R}$, $B$ is measurable).
+
+A random variable $Y$ is said to be \emph{\PMlinkescapetext{continuous}} if it has a cumulative distribution function which is \PMlinkname{absolutely continuous}{AbsolutelyContinuousFunction2}.
+
+Example:
+
+Consider the event of throwing a coin. Thus, $\Omega = \{ H, T \}$ where $H$ is the event in which the coin falls head and $T$ the event in which falls tails.
+Let $X=$number of tails in the experiment. Then $X$ is a (discrete) random variable.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}
