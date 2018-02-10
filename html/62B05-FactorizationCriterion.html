@@ -1,0 +1,191 @@
+<!DOCTYPE html><html>
+<head>
+<title>factorization criterion</title>
+<!--Generated on Sat Feb 10 12:03:20 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">factorization criterion</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\boldsymbol{X}=(X_{1},\ldots,X_{n})" display="inline"><mrow><mi>𝑿</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> be a random vector whose
+coordinates are observations, and whose probability (density)
+function is, <math id="p1.m2" class="ltx_Math" alttext="f(\boldsymbol{x}\mid\theta)" display="inline"><mrow><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo>∣</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></math> where <math id="p1.m3" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is an
+unknown parameter. Then a statistic <math id="p1.m4" class="ltx_Math" alttext="T(\boldsymbol{X})" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝑿</mi><mo stretchy="false">)</mo></mrow></mrow></math> for
+<math id="p1.m5" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is a sufficient statistic iff <math id="p1.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can be expressed as a
+product of (or <em class="ltx_emph ltx_font_italic">factored into</em>) two functions <math id="p1.m7" class="ltx_Math" alttext="g,h" display="inline"><mrow><mi>g</mi><mo>,</mo><mi>h</mi></mrow></math>, <math id="p1.m8" class="ltx_Math" alttext="f=gh" display="inline"><mrow><mi>f</mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mi>h</mi></mrow></mrow></math>
+where <math id="p1.m9" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is a function of <math id="p1.m10" class="ltx_Math" alttext="T(\boldsymbol{X})" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝑿</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p1.m11" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>, and <math id="p1.m12" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math>
+is a function of <math id="p1.m13" class="ltx_Math" alttext="\boldsymbol{x}" display="inline"><mi>𝒙</mi></math>. In symbol, we have
+</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="f(\boldsymbol{x}\mid\theta)=g(T(\boldsymbol{X}),\theta)h(\boldsymbol{x})." display="block"><mrow><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo>∣</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>g</mi><mrow><mo stretchy="false">(</mo><mi>T</mi><mrow><mo stretchy="false">(</mo><mi>𝑿</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mi>h</mi><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Applications</span>.</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">In view of the above statement, let’s show that the sample
+mean <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\overline{X}" display="inline"><mover accent="true"><mi>X</mi><mo>¯</mo></mover></math> of <math id="I1.i1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> independent observations from a normal
+distribution <math id="I1.i1.p1.m3" class="ltx_Math" alttext="N(\mu,\sigma^{2})" display="inline"><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></math> is a sufficient statistic for the
+unknown mean <math id="I1.i1.p1.m4" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>. Since the <math id="I1.i1.p1.m5" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math>’s are independent random
+variables, then the probability density function
+<math id="I1.i1.p1.m6" class="ltx_Math" alttext="f(\boldsymbol{x}\mid\mu)" display="inline"><mrow><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo>∣</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math>, being the joint probability density
+function of each of the <math id="I1.i1.p1.m7" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math>, is the product of the individual
+density functions <math id="I1.i1.p1.m8" class="ltx_Math" alttext="f(x\mid\mu)" display="inline"><mrow><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>∣</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math>:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle f(\boldsymbol{x}\mid\mu)" display="inline"><mrow><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo>∣</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E1.m3" class="ltx_Math" alttext="\displaystyle\prod_{i=1}^{n}f(x\mid\mu)=\prod_{i=1}^{n}\frac{1}{\sqrt{2\pi%
+\sigma^{2}}}\exp\Big{[}-\frac{(x_{i}-\mu)^{2}}{2\sigma^{2}}\Big{]}" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>∣</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mstyle><mi>exp</mi><mrow><mo maxsize="160%" minsize="160%">[</mo><mo>-</mo><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>-</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E2.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{\sqrt{(2\pi)^{n}\sigma^{2n}}}\exp\Big{[}\sum_{i=1}^{n}-%
+\frac{(x_{i}-\mu)^{2}}{2\sigma^{2}}\Big{]}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><msup><mi>σ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mo>-</mo><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>-</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E3.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{\sqrt{(2\pi)^{n}\sigma^{2n}}}\exp\Big{[}\frac{-1}{2%
+\sigma^{2}}\sum_{i=1}^{n}x_{i}^{2}\Big{]}\exp\Big{[}\frac{\mu}{\sigma^{2}}\sum%
+_{i=1}^{n}x_{i}-\frac{n\mu^{2}}{2\sigma^{2}}\Big{]}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><msup><mi>σ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>μ</mi><msup><mi>σ</mi><mn>2</mn></msup></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>⁢</mo><msup><mi>μ</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E4.m3" class="ltx_Math" alttext="\displaystyle h(\boldsymbol{x})\exp\Big{[}\frac{n\mu}{\sigma^{2}}T(\boldsymbol%
+{x})-\frac{n\mu^{2}}{2\sigma^{2}}\Big{]}" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>μ</mi></mrow><msup><mi>σ</mi><mn>2</mn></msup></mfrac></mstyle><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>⁢</mo><msup><mi>μ</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+<tbody id="S0.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E5.m3" class="ltx_Math" alttext="\displaystyle h(\boldsymbol{x})g(T(\boldsymbol{x}),\mu)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="I1.i1.p1.m9" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is the last exponential expression and <math id="I1.i1.p1.m10" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> is the rest of
+the expression in <math id="I1.i1.p1.m11" class="ltx_Math" alttext="(3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math>. By the factorization criterion,
+<math id="I1.i1.p1.m12" class="ltx_Math" alttext="T(\boldsymbol{X})=\overline{X}" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝑿</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mover accent="true"><mi>X</mi><mo>¯</mo></mover></mrow></math> is a sufficient statistic.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Similarly, the above shows that the sample variance <math id="I1.i2.p1.m1" class="ltx_Math" alttext="s^{2}" display="inline"><msup><mi>s</mi><mn>2</mn></msup></math> is
+not a sufficient statistic for <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math> if <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> is unknown.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">But, if <math id="I1.i3.p1.m1" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> is a known constant, then the statistic</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="T(X_{1},\ldots,X_{n})=\frac{1}{n-1}\sum_{i=1}^{n}(X_{i}-\mu)^{2}" display="block"><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>-</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is sufficient for <math id="I1.i3.p1.m2" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math> by observing in <math id="I1.i3.p1.m3" class="ltx_Math" alttext="(2)" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math> above, and
+letting <math id="I1.i3.p1.m4" class="ltx_Math" alttext="h(\boldsymbol{x})=1" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> and <math id="I1.i3.p1.m5" class="ltx_Math" alttext="g(T,\sigma^{2})" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></math> be all of
+expression <math id="I1.i3.p1.m6" class="ltx_Math" alttext="(2)" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">factorization criterion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">FactorizationCriterion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:02:48</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:02:48</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62B05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">factorization theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Fisher-Neyman factorization theorem</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:03:20 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

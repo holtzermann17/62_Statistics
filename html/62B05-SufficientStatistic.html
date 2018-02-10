@@ -1,0 +1,284 @@
+<!DOCTYPE html><html>
+<head>
+<title>sufficient statistic</title>
+<!--Generated on Sat Feb 10 12:03:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">sufficient statistic</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\{f_{\theta}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mi>θ</mi></msub><mo stretchy="false">}</mo></mrow></math> be a statistical model with parameter
+<math id="p1.m2" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>. Let <math id="p1.m3" class="ltx_Math" alttext="\boldsymbol{X}=(X_{1},\ldots,X_{n})" display="inline"><mrow><mi>𝑿</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> be a random vector
+of random variables representing <math id="p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> observations. A statistic <math id="p1.m5" class="ltx_Math" alttext="T=T(\boldsymbol{X})" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝑿</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> of <math id="p1.m6" class="ltx_Math" alttext="\boldsymbol{X}" display="inline"><mi>𝑿</mi></math> for the parameter <math id="p1.m7" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is called a
+<em class="ltx_emph ltx_font_italic">sufficient statistic</em>, or a <em class="ltx_emph ltx_font_italic">sufficient estimator</em>, if
+the conditional probability distribution of <math id="p1.m8" class="ltx_Math" alttext="\boldsymbol{X}" display="inline"><mi>𝑿</mi></math> given
+<math id="p1.m9" class="ltx_Math" alttext="T(\boldsymbol{X})=t" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝑿</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>t</mi></mrow></math> is not a function of <math id="p1.m10" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> (equivalently,
+does not depend on <math id="p1.m11" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>).</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">In other words, all the information about the unknown parameter
+<math id="p2.m1" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is captured in the sufficient statistic <math id="p2.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>. If, say, we
+are interested in finding out the percentage of defective light
+bulbs in a shipment of new ones, it is enough, or <em class="ltx_emph ltx_font_italic">sufficient</em>,
+to count the number of defective ones (sum of the <math id="p2.m3" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math>’s), rather
+than worrying about which individual light bulbs are the defective
+ones (the vector <math id="p2.m4" class="ltx_Math" alttext="(X_{1},\ldots,X_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math>). By taking the sum, a certain
+“reduction” of data has been achieved.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Examples</span></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I1.i1.p1.m1" class="ltx_Math" alttext="X_{1},\ldots,X_{n}" display="inline"><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></math> be <math id="I1.i1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> independent observations from a
+uniform distribution on integers <math id="I1.i1.p1.m3" class="ltx_Math" alttext="1,\ldots,\theta" display="inline"><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>θ</mi></mrow></math>. Let
+<math id="I1.i1.p1.m4" class="ltx_Math" alttext="T=\max\{X_{1},\ldots,X_{n}\}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></math> be a statistic for <math id="I1.i1.p1.m5" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>.
+Then the conditional probability distribution of
+<math id="I1.i1.p1.m6" class="ltx_Math" alttext="\boldsymbol{X}=(X_{1},\ldots,X_{n})" display="inline"><mrow><mi>𝑿</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> given <math id="I1.i1.p1.m7" class="ltx_Math" alttext="T=t" display="inline"><mrow><mi>T</mi><mo>=</mo><mi>t</mi></mrow></math> is</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="P(\boldsymbol{X}\mid t)=\frac{P(X_{1}=x_{1},\ldots,X_{n}=x_{n},\max\{X_{n}\}=t%
+)}{P(\max\{X_{n}\}=t)}." display="block"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>𝑿</mi><mo>∣</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo>=</mo><msub><mi>x</mi><mi>n</mi></msub><mo>,</mo><mi>max</mi><mrow><mo stretchy="false">{</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mo>=</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>max</mi><mrow><mo stretchy="false">{</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mo>=</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The numerator is <math id="I1.i1.p1.m8" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> if
+<math id="I1.i1.p1.m9" class="ltx_Math" alttext="\max\{x_{n}\}\neq t" display="inline"><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow><mo>≠</mo><mi>t</mi></mrow></math>. So in this case,
+<math id="I1.i1.p1.m10" class="ltx_Math" alttext="P(\boldsymbol{X}\mid t)=0" display="inline"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>𝑿</mi><mo>∣</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mn>0</mn></mrow></math> and is not a function of <math id="I1.i1.p1.m11" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>.
+Otherwise, the numerator is <math id="I1.i1.p1.m12" class="ltx_Math" alttext="\theta^{-n}" display="inline"><msup><mi>θ</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></math> and <math id="I1.i1.p1.m13" class="ltx_Math" alttext="P(\boldsymbol{X}\mid t)" display="inline"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>𝑿</mi><mo>∣</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> becomes</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\frac{\theta^{-n}}{P(\max\{X_{n}\}=t)}=(\theta^{n}P(X_{(1)}\leq\cdots\leq X_{(%
+n)}=t))^{-1}," display="block"><mrow><mfrac><msup><mi>θ</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>max</mi><mrow><mo stretchy="false">{</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mo>=</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>θ</mi><mi>n</mi></msup><mi>P</mi><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mo>≤</mo><mi mathvariant="normal">⋯</mi><mo>≤</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msub><mo>=</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where
+<math id="I1.i1.p1.m14" class="ltx_Math" alttext="X_{(i)}" display="inline"><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msub></math>’s are the rearrangements of the <math id="I1.i1.p1.m15" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math>’s in a
+non-decreasing order from <math id="I1.i1.p1.m16" class="ltx_Math" alttext="i=1" display="inline"><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow></math> to <math id="I1.i1.p1.m17" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. For the denominator, we first note that</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle P(X_{(1)}\leq\cdots\leq X_{(n)}=t)" display="inline"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mo>≤</mo><mi mathvariant="normal">⋯</mi><mo>≤</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msub><mo>=</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle P(X_{(1)}\leq\cdots\leq X_{(n)}\leq t)-P(X_{(1)}\leq\cdots\leq X%
+_{(n)}&lt;t)" display="inline"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mo>≤</mo><mi mathvariant="normal">⋯</mi><mo>≤</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msub><mo>≤</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>-</mo><mi>P</mi><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mo>≤</mo><mi mathvariant="normal">⋯</mi><mo>≤</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msub><mo>&lt;</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle P(X_{(1)}\leq\cdots\leq X_{(n)}\leq t)-P(X_{(1)}\leq\cdots\leq X%
+_{(n)}\leq t-1)." display="inline"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mo>≤</mo><mi mathvariant="normal">⋯</mi><mo>≤</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msub><mo>≤</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>-</mo><mi>P</mi><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mo>≤</mo><mi mathvariant="normal">⋯</mi><mo>≤</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msub><mo>≤</mo><mi>t</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">From the above equation, we find that there are <math id="I1.i1.p1.m18" class="ltx_Math" alttext="t^{n}-(t-1)^{n}" display="inline"><mrow><msup><mi>t</mi><mi>n</mi></msup><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></math> ways to form non-decreasing finite sequences of <math id="I1.i1.p1.m19" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> positive integers such that the maximum of the sequence is
+<math id="I1.i1.p1.m20" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. So</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="(\theta^{n}P(X_{(1)}\leq\cdots\leq X_{(n)}=t))^{-1}=(\theta^{n}(t^{n}-(t-1)^{n%
+})\theta^{-n})^{-1}=(t^{n}-(t-1)^{n})^{-1}" display="block"><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>θ</mi><mi>n</mi></msup><mi>P</mi><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub><mo>≤</mo><mi mathvariant="normal">⋯</mi><mo>≤</mo><msub><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msub><mo>=</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>θ</mi><mi>n</mi></msup><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mi>n</mi></msup><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><msup><mi>θ</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mi>n</mi></msup><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">again is not a function of <math id="I1.i1.p1.m21" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>. Therefore, <math id="I1.i1.p1.m22" class="ltx_Math" alttext="T=\max\{X_{i}\}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></math> is a
+sufficient statistic for <math id="I1.i1.p1.m23" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>.
+Here, we see that a reduction of data has been achieved by taking
+only the largest member of set of observations, not the entire set.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If we set <math id="I1.i2.p1.m1" class="ltx_Math" alttext="T(X_{1},\ldots,X_{n})=(X_{1},\ldots,X_{n})" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>, then we see
+that <math id="I1.i2.p1.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is trivially a sufficient statistic for <em class="ltx_emph ltx_font_italic">any</em>
+parameter <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>. The conditional probability distribution of
+<math id="I1.i2.p1.m4" class="ltx_Math" alttext="(X_{1},\ldots,X_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> given <math id="I1.i2.p1.m5" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is 1. Even though this is a sufficient
+statistic by definition (of course, the individual observations
+provide as much information there is to know about <math id="I1.i2.p1.m6" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> as
+possible), and there is no loss of data in <math id="I1.i2.p1.m7" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> (which is simply a
+list of all observations), there is really no reduction of data to
+speak of here.
+</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">The sample mean</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\overline{X}=\frac{X_{1}+\cdots+X_{n}}{n}" display="block"><mrow><mover accent="true"><mi>X</mi><mo>¯</mo></mover><mo>=</mo><mfrac><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><mi>n</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">of <math id="I1.i3.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> independent observations from a normal distribution
+<math id="I1.i3.p1.m2" class="ltx_Math" alttext="N(\mu,\sigma^{2})" display="inline"><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></math> (both <math id="I1.i3.p1.m3" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> and <math id="I1.i3.p1.m4" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math> unknown) is a
+sufficient statistic for <math id="I1.i3.p1.m5" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>. This is the result of the
+factorization criterion. Similarly, one sees that any partition of
+the sum of <math id="I1.i3.p1.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> observations <math id="I1.i3.p1.m7" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math> into <math id="I1.i3.p1.m8" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> subtotals is a sufficient
+statistic for <math id="I1.i3.p1.m9" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>. For instance,</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="T(X_{1},\ldots,X_{n})=(\sum_{i=1}^{j}X_{i},\sum_{i=j+1}^{k}X_{i},\sum_{i=k+1}^%
+{n}X_{i})" display="block"><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>j</mi></munderover><msub><mi>X</mi><mi>i</mi></msub></mrow><mo>,</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></mrow><mi>k</mi></munderover><msub><mi>X</mi><mi>i</mi></msub></mrow><mo>,</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></mrow><mi>n</mi></munderover><msub><mi>X</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a sufficient statistic for <math id="I1.i3.p1.m10" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Again, assume there are <math id="I1.i4.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> independent observations <math id="I1.i4.p1.m2" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math> from
+a normal distribution <math id="I1.i4.p1.m3" class="ltx_Math" alttext="N(\mu,\sigma^{2})" display="inline"><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></math> with unknown mean and
+variance. The sample variance</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\frac{1}{n-1}\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}" display="block"><mrow><mfrac><mn>1</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>-</mo><mover accent="true"><mi>X</mi><mo>¯</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is <em class="ltx_emph ltx_font_italic">not</em> a
+sufficient statistic for <math id="I1.i4.p1.m4" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math>. However, if <math id="I1.i4.p1.m5" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> is a known
+constant, then</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\frac{1}{n-1}\sum_{i=1}^{n}(X_{i}-\mu)^{2}" display="block"><mrow><mfrac><mn>1</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>-</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a sufficient statistic
+for <math id="I1.i4.p1.m6" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">A sufficient statistic for a parameter <math id="p4.m1" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is called
+a <em class="ltx_emph ltx_font_italic">minimal sufficient statistic</em> if it can be expressed as a
+function of any sufficient statistic for <math id="p4.m2" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example</span>. In example <math id="p5.m1" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math> above, both the sample mean
+<math id="p5.m2" class="ltx_Math" alttext="\overline{X}" display="inline"><mover accent="true"><mi>X</mi><mo>¯</mo></mover></math> and the finite sum <math id="p5.m3" class="ltx_Math" alttext="S=X_{1}+\cdots+X_{n}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></mrow></math> are minimal
+sufficient statistics for the mean <math id="p5.m4" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>. Since, by the
+factorization criterion, any sufficient statistic <math id="p5.m5" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> for <math id="p5.m6" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> is a
+vector whose coordinates form a partition of the finite sum, taking
+the sum of these coordinates is just the finite sum <math id="p5.m7" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. So, we
+have just expressed <math id="p5.m8" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> as a function of <math id="p5.m9" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>. Therefore, <math id="p5.m10" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is
+minimal. Similarly, <math id="p5.m11" class="ltx_Math" alttext="\overline{X}" display="inline"><mover accent="true"><mi>X</mi><mo>¯</mo></mover></math> is minimal.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Two sufficient statistics <math id="p6.m1" class="ltx_Math" alttext="T_{1},T_{2}" display="inline"><mrow><msub><mi>T</mi><mn>1</mn></msub><mo>,</mo><msub><mi>T</mi><mn>2</mn></msub></mrow></math> for a parameter <math id="p6.m2" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> are
+said to be equivalent provided that there is a bijection <math id="p6.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> such
+that <math id="p6.m4" class="ltx_Math" alttext="g\circ T_{1}=T_{2}" display="inline"><mrow><mrow><mi>g</mi><mo>∘</mo><msub><mi>T</mi><mn>1</mn></msub></mrow><mo>=</mo><msub><mi>T</mi><mn>2</mn></msub></mrow></math>. <math id="p6.m5" class="ltx_Math" alttext="\overline{X}" display="inline"><mover accent="true"><mi>X</mi><mo>¯</mo></mover></math> and <math id="p6.m6" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> from the above
+example are two equivalent sufficient statistics. Two minimal sufficient statistics for the same parameter are equivalent.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">sufficient statistic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SufficientStatistic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:02:42</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:02:42</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62B05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">sufficient estimator</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">minimally sufficient statistic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">minimal sufficient</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">minimally sufficient</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">minimal sufficient statistic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">equivalent statistic</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:03:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

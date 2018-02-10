@@ -1,0 +1,307 @@
+<!DOCTYPE html><html>
+<head>
+<title>conditional distribution of multi-variate normal variable</title>
+<!--Generated on Sat Feb 10 12:03:35 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">conditional distribution of multi-variate normal variable</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="Thmthmx1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span>.</h6>
+<div id="Thmthmx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthmx1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a random variable, taking values in <math id="Thmthmx1.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></math>, normally distributed
+with a non-singular covariance matrix <math id="Thmthmx1.p1.m3" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math> and a mean of zero.</span></p>
+</div>
+<div id="Thmthmx1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose <math id="Thmthmx1.p2.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is defined by <math id="Thmthmx1.p2.m2" class="ltx_Math" alttext="Y=B^{*}X" display="inline"><mrow><mi>Y</mi><mo mathvariant="normal">=</mo><mrow><msup><mi>B</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="italic">⁢</mo><mi>X</mi></mrow></mrow></math> for some linear transformation <math id="Thmthmx1.p2.m3" class="ltx_Math" alttext="B\colon\mathbb{R}^{k}\to\mathbb{R}^{n}" display="inline"><mrow><mi>B</mi><mo mathvariant="normal">:</mo><mrow><msup><mi mathvariant="normal">R</mi><mi>k</mi></msup><mo mathvariant="normal">→</mo><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></mrow></mrow></math>
+of maximum rank.
+(<math id="Thmthmx1.p2.m4" class="ltx_Math" alttext="{}^{\ast}" display="inline"><msup><mi></mi><mo mathvariant="normal">∗</mo></msup></math> to denotes the transpose operator.)</span></p>
+</div>
+<div id="Thmthmx1.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Then the distribution of <math id="Thmthmx1.p3.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> conditioned on <math id="Thmthmx1.p3.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is multi-variate normal,
+with conditional means and covariances of:</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathbb{E}[X\mid Y]=\Sigma B{(B^{\ast}\Sigma B)}^{-1}Y\,,\quad\operatorname{%
+Var}[X\mid Y]=\Sigma-\Sigma B{(B^{\ast}\Sigma B)}^{-1}(\Sigma B)^{\ast}\,." display="block"><mrow><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>∣</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi mathvariant="normal">Σ</mi><mi>B</mi><msup><mrow><mo stretchy="false">(</mo><msup><mi>B</mi><mo>∗</mo></msup><mi mathvariant="normal">Σ</mi><mi>B</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mpadded width="+1.7pt"><mi>Y</mi></mpadded><mo rspace="12.5pt">,</mo><mi>Var</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>∣</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi mathvariant="normal">Σ</mi><mo>-</mo><mi mathvariant="normal">Σ</mi><mi>B</mi><msup><mrow><mo stretchy="false">(</mo><msup><mi>B</mi><mo>∗</mo></msup><mi mathvariant="normal">Σ</mi><mi>B</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>∗</mo></msup></mpadded><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmthmx1.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthmx1.p4.m1" class="ltx_Math" alttext="k=1" display="inline"><mrow><mi>k</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">1</mn></mrow></math>, so that <math id="Thmthmx1.p4.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is simply a vector in <math id="Thmthmx1.p4.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></math>,
+these formulas reduce to:</span></p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathbb{E}[X\mid Y]=\frac{\Sigma BY}{\operatorname{Var}[Y]}\,,\quad%
+\operatorname{Var}[X\mid Y]=\Sigma-\frac{\Sigma BB^{\ast}\Sigma}{\operatorname%
+{Var}[Y]}\,." display="block"><mrow><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>∣</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mpadded width="+1.7pt"><mfrac><mrow><mi mathvariant="normal">Σ</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>Y</mi></mrow><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></mfrac></mpadded><mo rspace="12.5pt">,</mo><mi>Var</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>∣</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi mathvariant="normal">Σ</mi><mo>-</mo><mpadded width="+1.7pt"><mfrac><mrow><mi mathvariant="normal">Σ</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi mathvariant="normal">Σ</mi></mrow><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></mfrac></mpadded><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmthmx1.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthmx1.p5.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> does not have zero mean, then the
+formula for <math id="Thmthmx1.p5.m2" class="ltx_Math" alttext="\mathbb{E}[X\mid Y]" display="inline"><mrow><mi mathvariant="normal">E</mi><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>X</mi><mo mathvariant="normal">∣</mo><mi>Y</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math>
+is modified by adding <math id="Thmthmx1.p5.m3" class="ltx_Math" alttext="\mathbb{E}[X]" display="inline"><mrow><mi mathvariant="normal">E</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math> and replacing <math id="Thmthmx1.p5.m4" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> by <math id="Thmthmx1.p5.m5" class="ltx_Math" alttext="Y-\mathbb{E}[Y]" display="inline"><mrow><mi>Y</mi><mo mathvariant="normal">-</mo><mrow><mi mathvariant="normal">E</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>Y</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></mrow></math>,
+and the formula for <math id="Thmthmx1.p5.m6" class="ltx_Math" alttext="\operatorname{Var}[X\mid Y]" display="inline"><mrow><mi mathvariant="normal">Var</mi><mo mathvariant="italic">⁡</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>X</mi><mo mathvariant="normal">∣</mo><mi>Y</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math> is unchanged.</span></p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Thmthmx1.p6" class="ltx_para">
+<p class="ltx_p">We split up <math id="Thmthmx1.p6.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> into two stochastically independent parts,
+the first part containing exactly the information embodied in <math id="Thmthmx1.p6.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>.
+Then the conditional distribution of <math id="Thmthmx1.p6.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> given <math id="Thmthmx1.p6.m4" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is simply
+the unconditional distribution of the second part that is independent of <math id="Thmthmx1.p6.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>.</p>
+</div>
+<div id="Thmthmx1.p7" class="ltx_para">
+<p class="ltx_p">To this end, we first
+change variables to express everything in terms of a <em class="ltx_emph ltx_font_italic">standard</em> multi-variate normal
+<math id="Thmthmx1.p7.m1" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math>. Let <math id="Thmthmx1.p7.m2" class="ltx_Math" alttext="A\colon\mathbb{R}^{n}\to\mathbb{R}^{n}" display="inline"><mrow><mi>A</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> be a “square root” factorization of
+the covariance matrix <math id="Thmthmx1.p7.m3" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math>,
+so that:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="AA^{\ast}=\Sigma\,,\quad Z={A}^{-1}X\,,\quad X=AZ\,,\quad Y=B^{\ast}AZ\,." display="block"><mrow><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mo>∗</mo></msup></mrow><mo>=</mo><mpadded width="+1.7pt"><mi mathvariant="normal">Σ</mi></mpadded></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>Z</mi><mo>=</mo><mrow><msup><mi>A</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><mi>X</mi></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>X</mi><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>Z</mi></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>Y</mi><mo>=</mo><mrow><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>Z</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmthmx1.p8" class="ltx_para">
+<p class="ltx_p">We let <math id="Thmthmx1.p8.m1" class="ltx_Math" alttext="H\colon\mathbb{R}^{n}\to\mathbb{R}^{n}" display="inline"><mrow><mi>H</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> be the orthogonal projection onto the range of
+<math id="Thmthmx1.p8.m2" class="ltx_Math" alttext="A^{\ast}B:\mathbb{R}^{k}\to\mathbb{R}^{n}" display="inline"><mrow><mrow><msup><mi>A</mi><mo>∗</mo></msup><mo>⁢</mo><mi>B</mi></mrow><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>k</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math>, and decompose <math id="Thmthmx1.p8.m3" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math> into orthogonal components:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="Z=HZ+(I-H)Z\,." display="block"><mrow><mrow><mi>Z</mi><mo>=</mo><mrow><mrow><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mi>Z</mi></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is intuitively obvious that orthogonality
+of the two random normal vectors implies their stochastic independence.
+To show this formally, observe that the Gaussian density function for <math id="Thmthmx1.p8.m4" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math>
+factors into a product:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="(2\pi)^{-n/2}\,\exp\bigl{(}-\tfrac{1}{2}\lVert z\rVert^{2}\bigr{)}=(2\pi)^{-n/%
+2}\,\exp\bigl{(}-\tfrac{1}{2}\lVert Hz\rVert^{2}\bigr{)}\,\exp\bigl{(}-\tfrac{%
+1}{2}\lVert(I-H)z\rVert^{2}\bigr{)}\,." display="block"><mrow><mrow><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow></mrow></msup></mpadded><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo fence="true" stretchy="false">∥</mo><mi>z</mi><mo fence="true" stretchy="false">∥</mo></mrow><mn>2</mn></msup></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow></mrow></msup></mpadded><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mn>2</mn></msup></mrow></mrow><mo maxsize="120%" minsize="120%" rspace="4.2pt">)</mo></mrow></mrow><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>z</mi></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mn>2</mn></msup></mrow></mrow><mo maxsize="120%" minsize="120%" rspace="4.2pt">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We can construct an orthonormal system of coordinates on <math id="Thmthmx1.p8.m5" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>
+under which the components for <math id="Thmthmx1.p8.m6" class="ltx_Math" alttext="Hz" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mi>z</mi></mrow></math> are
+completely disjoint from those components of <math id="Thmthmx1.p8.m7" class="ltx_Math" alttext="(I-H)z" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>z</mi></mrow></math>.
+On the other hand, the densities for <math id="Thmthmx1.p8.m8" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math>, <math id="Thmthmx1.p8.m9" class="ltx_Math" alttext="HZ" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow></math>, and <math id="Thmthmx1.p8.m10" class="ltx_Math" alttext="(I-H)Z" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi></mrow></math>
+remain invariant even after changing coordinates,
+because they are radially symmetric.
+Hence the variables <math id="Thmthmx1.p8.m11" class="ltx_Math" alttext="HZ" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow></math> and <math id="Thmthmx1.p8.m12" class="ltx_Math" alttext="(I-H)Z" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi></mrow></math> are separable in their joint density
+and they are independent.</p>
+</div>
+<div id="Thmthmx1.p9" class="ltx_para">
+<p class="ltx_p"><math id="Thmthmx1.p9.m1" class="ltx_Math" alttext="HZ" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow></math> embodies the information in the linear combination <math id="Thmthmx1.p9.m2" class="ltx_Math" alttext="Y=B^{\ast}AZ" display="inline"><mrow><mi>Y</mi><mo>=</mo><mrow><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>Z</mi></mrow></mrow></math>.
+For we have the identity:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="Y=\bigl{(}B^{\ast}A\bigr{)}Z=\bigl{(}B^{\ast}A\bigr{)}\bigl{(}HZ+(I-H)Z\bigr{)%
+}=\bigl{(}B^{\ast}A\bigr{)}HZ+0\,." display="block"><mrow><mrow><mi>Y</mi><mo>=</mo><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi>A</mi></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mi>Z</mi></mrow><mo>=</mo><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi>A</mi></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi>A</mi></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow><mo>+</mo><mpadded width="+1.7pt"><mn>0</mn></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The last term is null because <math id="Thmthmx1.p9.m3" class="ltx_Math" alttext="(I-H)Z" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi></mrow></math> is orthogonal to the range of <math id="Thmthmx1.p9.m4" class="ltx_Math" alttext="A^{\ast}B" display="inline"><mrow><msup><mi>A</mi><mo>∗</mo></msup><mo>⁢</mo><mi>B</mi></mrow></math>
+by definition. (Equivalently, <math id="Thmthmx1.p9.m5" class="ltx_Math" alttext="(I-H)Z" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi></mrow></math> lies in the kernel of <math id="Thmthmx1.p9.m6" class="ltx_Math" alttext="(A^{\ast}B)^{\ast}=B^{\ast}A" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>A</mi><mo>∗</mo></msup><mo>⁢</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∗</mo></msup><mo>=</mo><mrow><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi>A</mi></mrow></mrow></math>.)
+Thus <math id="Thmthmx1.p9.m7" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> can always be recovered by a linear transformation on
+<math id="Thmthmx1.p9.m8" class="ltx_Math" alttext="HZ" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow></math>.</p>
+</div>
+<div id="Thmthmx1.p10" class="ltx_para">
+<p class="ltx_p">Conversely, <math id="Thmthmx1.p10.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> completely determines <math id="Thmthmx1.p10.m2" class="ltx_Math" alttext="HZ" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow></math>,
+from the analytical expression for <math id="Thmthmx1.p10.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> that we now give.
+In general, the orthogonal projection onto the range of an injective
+transformation <math id="Thmthmx1.p10.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>
+is <math id="Thmthmx1.p10.m5" class="ltx_Math" alttext="T{(T^{\ast}T)}^{-1}T^{\ast}" display="inline"><mrow><mi>T</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>T</mi><mo>∗</mo></msup><mo>⁢</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>T</mi><mo>∗</mo></msup></mrow></math>. Applying this to <math id="Thmthmx1.p10.m6" class="ltx_Math" alttext="T=A^{\ast}B" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><msup><mi>A</mi><mo>∗</mo></msup><mo>⁢</mo><mi>B</mi></mrow></mrow></math>, we have</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle H" display="inline"><mi>H</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=A^{\ast}B{\bigl{(}B^{\ast}AA^{\ast}B\bigr{)}}^{-1}B^{\ast}A" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mi>A</mi><mo>∗</mo></msup><mo>⁢</mo><mi>B</mi><mo>⁢</mo><msup><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mo>∗</mo></msup><mo>⁢</mo><mi>B</mi></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi>A</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=A^{\ast}B{(B^{\ast}\Sigma B)}^{-1}B^{\ast}A\,." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mi>A</mi><mo>∗</mo></msup><mo>⁢</mo><mi>B</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi mathvariant="normal">Σ</mi><mo>⁢</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mpadded width="+1.7pt"><mi>A</mi></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We see that <math id="Thmthmx1.p10.m7" class="ltx_Math" alttext="HZ=A^{\ast}B{(B^{\ast}\Sigma B)}^{-1}Y" display="inline"><mrow><mrow><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow><mo>=</mo><mrow><msup><mi>A</mi><mo>∗</mo></msup><mo>⁢</mo><mi>B</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi mathvariant="normal">Σ</mi><mo>⁢</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>Y</mi></mrow></mrow></math>.</p>
+</div>
+<div id="Thmthmx1.p11" class="ltx_para">
+<p class="ltx_p">We have proved that conditioning on <math id="Thmthmx1.p11.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> and <math id="Thmthmx1.p11.m2" class="ltx_Math" alttext="HZ" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow></math> are equivalent, and so:</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\mathbb{E}[Z\mid Y]=\mathbb{E}[Z\mid HZ]=\mathbb{E}[HZ+(I-H)Z\mid HZ]=HZ+0\,," display="block"><mrow><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>∣</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>∣</mo><mi>H</mi><mi>Z</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>H</mi><mi>Z</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>-</mo><mi>H</mi><mo stretchy="false">)</mo></mrow><mi>Z</mi><mo>∣</mo><mi>H</mi><mi>Z</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>H</mi><mi>Z</mi><mo>+</mo><mpadded width="+1.7pt"><mn>0</mn></mpadded><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle\operatorname{Var}[Z\mid Y]=\operatorname{Var}[Z\mid HZ]" display="inline"><mrow><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>∣</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>∣</mo><mrow><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle=\operatorname{Var}[HZ+(I-H)Z\mid HZ]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi></mrow></mrow><mo>∣</mo><mrow><mi>H</mi><mo>⁢</mo><mi>Z</mi></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle=0+\operatorname{Var}[(I-H)Z]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>0</mn><mo>+</mo><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle=\mathbb{E}\bigl{[}(I-H)ZZ^{\ast}(I-H)^{\ast}\bigr{]}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi><mo>⁢</mo><msup><mi>Z</mi><mo>∗</mo></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∗</mo></msup></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle=(I-H)(I-H)^{\ast}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∗</mo></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle=I-H-H^{\ast}+HH^{\ast}=I-H\,," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>I</mi><mo>-</mo><mi>H</mi><mo>-</mo><msup><mi>H</mi><mo>∗</mo></msup></mrow><mo>+</mo><mrow><mi>H</mi><mo>⁢</mo><msup><mi>H</mi><mo>∗</mo></msup></mrow></mrow><mo>=</mo><mrow><mi>I</mi><mo>-</mo><mpadded width="+1.7pt"><mi>H</mi></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">using the defining property
+<math id="Thmthmx1.p11.m3" class="ltx_Math" alttext="H^{2}=H=H^{\ast}" display="inline"><mrow><msup><mi>H</mi><mn>2</mn></msup><mo>=</mo><mi>H</mi><mo>=</mo><msup><mi>H</mi><mo>∗</mo></msup></mrow></math>
+of orthogonal projections.</p>
+</div>
+<div id="Thmthmx1.p12" class="ltx_para">
+<p class="ltx_p">Now we express the result in terms of <math id="Thmthmx1.p12.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and remove the dependence on the transformation <math id="Thmthmx1.p12.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+(which is not uniquely defined from the covariance matrix):</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\mathbb{E}[X\mid Y]=A\,\mathbb{E}[Z\mid Y]=AHZ=\Sigma B{(B^{\ast}\Sigma B)}^{-%
+1}Y" display="block"><mrow><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>∣</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mpadded width="+1.7pt"><mi>A</mi></mpadded><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>∣</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>A</mi><mi>H</mi><mi>Z</mi><mo>=</mo><mi mathvariant="normal">Σ</mi><mi>B</mi><msup><mrow><mo stretchy="false">(</mo><msup><mi>B</mi><mo>∗</mo></msup><mi mathvariant="normal">Σ</mi><mi>B</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mi>Y</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="\operatorname{Var}[X\mid Y]=A\,\operatorname{Var}[Z\mid Y]\,A^{\ast}=AA^{\ast}%
+-AHA^{\ast}=\Sigma-\Sigma B{(B^{\ast}\Sigma B)}^{-1}B^{\ast}\Sigma\,." display="block"><mrow><mrow><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>∣</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mi>A</mi></mpadded><mo>⁢</mo><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>∣</mo><mi>Y</mi><mo rspace="4.2pt" stretchy="false">]</mo></mrow></mrow><mo>⁢</mo><msup><mi>A</mi><mo>∗</mo></msup></mrow><mo>=</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mo>∗</mo></msup></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mi>H</mi><mo>⁢</mo><msup><mi>A</mi><mo>∗</mo></msup></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">Σ</mi><mo>-</mo><mrow><mi mathvariant="normal">Σ</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi mathvariant="normal">Σ</mi><mo>⁢</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mpadded width="+1.7pt"><mi mathvariant="normal">Σ</mi></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmthmx1.p13" class="ltx_para">
+<p class="ltx_p">Of course, the conditional distribution of <math id="Thmthmx1.p13.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> given <math id="Thmthmx1.p13.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is the same
+as that of <math id="Thmthmx1.p13.m3" class="ltx_Math" alttext="(I-H)Z" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>-</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi></mrow></math>, which is multi-variate normal.
+</p>
+</div>
+<div id="Thmthmx1.p14" class="ltx_para">
+<p class="ltx_p">The formula in the statement of this theorem, for the single-dimensional case,
+follows from substituting in <math id="Thmthmx1.p14.m1" class="ltx_Math" alttext="\operatorname{Var}[Y]=\operatorname{Var}[B^{\ast}X]=B^{\ast}\Sigma B" display="inline"><mrow><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi>X</mi></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>B</mi><mo>∗</mo></msup><mo>⁢</mo><mi mathvariant="normal">Σ</mi><mo>⁢</mo><mi>B</mi></mrow></mrow></math>.
+The formula for when <math id="Thmthmx1.p14.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> does not have zero
+mean follows from applying the base case to the shifted
+variable <math id="Thmthmx1.p14.m3" class="ltx_Math" alttext="X-\mathbb{E}[X]" display="inline"><mrow><mi>X</mi><mo>-</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">conditional distribution of multi-variate normal variable</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ConditionalDistributionOfMultivariateNormalVariable</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:39:09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:39:09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62E15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 60E05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:03:35 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

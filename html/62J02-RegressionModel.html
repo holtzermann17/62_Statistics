@@ -1,0 +1,229 @@
+<!DOCTYPE html><html>
+<head>
+<title>regression model</title>
+<!--Generated on Sat Feb 10 12:05:26 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">regression model</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">In statistical modeling of <math id="p2.m1" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> data observations (<math id="p2.m2" class="ltx_Math" alttext="N&lt;\infty" display="inline"><mrow><mi>N</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>), two types of variables are usually defined. One is the response variable or variate, usually denoted by <math id="p2.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>, and the other is the explanatory variable or covariate <math id="p2.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. While there is only one response variable, there may be one or more than one explanatory variables. The response variable is considered random, where as the explanatory variable(s) may or may not be random.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Based on the above setup, a <em class="ltx_emph ltx_font_italic">univariate regression model</em>, or simply <em class="ltx_emph ltx_font_italic">regression model</em>, is a statistical model with the following assumptions:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">all of the variables, random or not, are <em class="ltx_emph ltx_font_italic">continuous</em> in nature (as opposed to categorical in nature)</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">the response variable <math id="I1.i2.p1.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> can be expressed as the sum of a function <math id="I1.i2.p1.m2" class="ltx_Math" alttext="f(\textbf{X})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>𝐗</mtext><mo stretchy="false">)</mo></mrow></mrow></math>, called the <em class="ltx_emph ltx_font_italic">regression function</em>, where <span class="ltx_text ltx_markedasmath ltx_font_bold">X</span> represents the row vector of explanatory variables, and an error term <math id="I1.i2.p1.m4" class="ltx_Math" alttext="\varepsilon_{i}" display="inline"><msub><mi>ε</mi><mi>i</mi></msub></math>:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="Y=f(\textbf{X})+\varepsilon=f(X_{1},\ldots,X_{p})+\varepsilon" display="block"><mrow><mi>Y</mi><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>𝐗</mtext><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>ε</mi></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>ε</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I1.i2.p1.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is the number of explanatory variables. <math id="I1.i2.p1.m6" class="ltx_Math" alttext="f(\textbf{X})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>𝐗</mtext><mo stretchy="false">)</mo></mrow></mrow></math> is called the systematic component, and <math id="I1.i2.p1.m7" class="ltx_Math" alttext="\varepsilon" display="inline"><mi>ε</mi></math> is the random error component.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">the error component and the systematic component are independent</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">random error variables <math id="I1.i4.p1.m1" class="ltx_Math" alttext="\varepsilon_{i}" display="inline"><msub><mi>ε</mi><mi>i</mi></msub></math> for the <math id="I1.i4.p1.m2" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> observations are iid normal with mean 0 and variance <math id="I1.i4.p1.m3" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math></p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Any unknown variables appearing in the regression function <math id="p4.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, other than the covariates, are called the <em class="ltx_emph ltx_font_italic">regression coefficients</em>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span></p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">The conditional distribution of <math id="I2.i1.p1.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>, given <span class="ltx_text ltx_markedasmath ltx_font_bold">X</span> is normal, or Gaussian, with mean <math id="I2.i1.p1.m3" class="ltx_Math" alttext="\mu=\operatorname{E}\big{[}Y\mid\textbf{X}=\boldsymbol{x}\big{]}=\operatorname%
+{E}\big{[}Y\mid X_{1}=x_{1},\ldots,X_{p}=x_{p}\big{]}" display="inline"><mrow><mi>μ</mi><mo>=</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>Y</mi><mo>∣</mo><mrow><mtext>𝐗</mtext><mo>=</mo><mi>𝒙</mi></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>Y</mi><mo>∣</mo><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>X</mi><mi>p</mi></msub><mo>=</mo><msub><mi>x</mi><mi>p</mi></msub></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow></math> and variance <math id="I2.i1.p1.m4" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math>. In addition, the random variables <math id="I2.i1.p1.m5" class="ltx_Math" alttext="Y_{i}" display="inline"><msub><mi>Y</mi><mi>i</mi></msub></math> corresponding to the reponses are independent.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Sometimes, Condition 4 above is skipped to encompass a wider class of regression models. Those models that observe Condition 4 is generally called a normal, or Gaussian regression model. Otherwise, they are classified under the non-linear regression model discussed below. Some well known non-normal regression models are the logistic regression for binary data and the Poisson regression for count data.
+</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">A regression model can be classified by the number or explanatory variables. If there is only one explanatory variable, it is called a <em class="ltx_emph ltx_font_italic">simple regression model</em>. Otherwise, it is a <em class="ltx_emph ltx_font_italic">multiple regression model</em>.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">A regression model can also be classified by the form of the regression function <math id="I2.i4.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. If <math id="I2.i4.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can be expressed as a linear combination of the regression coefficients:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="f(\textbf{X})=\beta_{0}z_{0}(\textbf{X})+\cdots+\beta_{k}z_{k}(\textbf{X})," display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>𝐗</mtext><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>β</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>z</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>𝐗</mtext><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>β</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>z</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>𝐗</mtext><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the functions <math id="I2.i4.p1.m3" class="ltx_Math" alttext="z_{i}(\textbf{X})" display="inline"><mrow><msub><mi>z</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>𝐗</mtext><mo stretchy="false">)</mo></mrow></mrow></math> do not contain any regression coefficients, then the model is called a <em class="ltx_emph ltx_font_italic">linear regression model</em>. Two examples of linear regression models are:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="Y=\beta_{0}+\beta_{1}X_{1}+\beta_{2}X_{2}+\beta_{3}X_{1}X_{2}+\varepsilon" display="block"><mrow><mi>Y</mi><mo>=</mo><mrow><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>β</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>X</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>β</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>X</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><msub><mi>β</mi><mn>3</mn></msub><mo>⁢</mo><msub><mi>X</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>X</mi><mn>2</mn></msub></mrow><mo>+</mo><mi>ε</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="Y=\beta_{0}+\beta_{1}X+\cdots+\beta_{k}X^{k}+\varepsilon" display="block"><mrow><mi>Y</mi><mo>=</mo><mrow><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>β</mi><mn>1</mn></msub><mo>⁢</mo><mi>X</mi></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>β</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>X</mi><mi>k</mi></msup></mrow><mo>+</mo><mi>ε</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The last one is called a <em class="ltx_emph ltx_font_italic">polynomial regression model</em>. Linear regression models belong to a more general class of statistical models called the general linear model, where explanatory variables are no longer restricted to be continuous ones only. When <math id="I2.i4.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can not be expressed linearly in terms of the regression coefficients, the model is known as a <em class="ltx_emph ltx_font_italic">non-linear regression model</em>. An example of a non-linear regression model is</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="Y=\beta_{0}+\frac{1}{\beta_{1}+\beta_{2}X}+\varepsilon" display="block"><mrow><mi>Y</mi><mo>=</mo><mrow><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>β</mi><mn>1</mn></msub><mo>+</mo><mrow><msub><mi>β</mi><mn>2</mn></msub><mo>⁢</mo><mi>X</mi></mrow></mrow></mfrac><mo>+</mo><mi>ε</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p">The univariate regression model can be generalized to what is known as the <em class="ltx_emph ltx_font_italic">multivariate regression model</em>, where at least two response variables are considered.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">regression model</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RegressionModel</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:30:31</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:30:31</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62J02</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62J05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">univariate regression model</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LinearLeastSquaresFit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">regression function</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">regression coefficient</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">simple regression model</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">multiple regression model</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">linear regression model</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">polynomial regression model</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">non-linear regression model</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:05:26 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

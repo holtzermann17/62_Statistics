@@ -1,0 +1,226 @@
+<!DOCTYPE html><html>
+<head>
+<title>Fisher information matrix</title>
+<!--Generated on Sat Feb 10 12:05:21 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Fisher information matrix</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Given a statistical model <math id="p2.m1" class="ltx_Math" alttext="\{f_{\textbf{X}}(\boldsymbol{x}\mid\boldsymbol{\theta})\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mtext>𝐗</mtext></msub><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo>∣</mo><mi>𝜽</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></math> of a random vector <span class="ltx_text ltx_markedasmath ltx_font_bold">X</span>, the <em class="ltx_emph ltx_font_italic">Fisher information matrix</em>, <math id="p2.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, is the variance of the score function <math id="p2.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>. So,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="I=\operatorname{Var}[U]." display="block"><mrow><mrow><mi>I</mi><mo>=</mo><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>U</mi><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If there is only one parameter involved, then <math id="p2.m5" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is simply called the <em class="ltx_emph ltx_font_italic">Fisher information</em> or <em class="ltx_emph ltx_font_italic">information</em> of <math id="p2.m6" class="ltx_Math" alttext="f_{\textbf{X}}(\boldsymbol{x}\mid\theta)" display="inline"><mrow><msub><mi>f</mi><mtext>𝐗</mtext></msub><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo>∣</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span></p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i1.p1.m1" class="ltx_Math" alttext="f_{\textbf{X}}(\boldsymbol{x}\mid\boldsymbol{\theta})" display="inline"><mrow><msub><mi>f</mi><mtext>𝐗</mtext></msub><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo>∣</mo><mi>𝜽</mi><mo stretchy="false">)</mo></mrow></mrow></math> belongs to the exponential family, <math id="I1.i1.p1.m2" class="ltx_Math" alttext="I=\operatorname{E}\big{[}U^{\operatorname{T}}U\big{]}" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mrow><msup><mi>U</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>U</mi></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow></math>. Furthermore, with some regularity conditions imposed, we have</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="I=-\operatorname{E}\Big{[}\frac{\partial U}{\partial\boldsymbol{\theta}}\Big{]}." display="block"><mrow><mrow><mi>I</mi><mo>=</mo><mrow><mo>-</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>U</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>𝜽</mi></mrow></mfrac><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">As an example, the normal distribution, <math id="I1.i2.p1.m1" class="ltx_Math" alttext="N(\mu,\sigma^{2})" display="inline"><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></math>, belongs to the exponential family and its log-likelihood function <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\ell(\boldsymbol{\theta}\mid x)" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mrow><mo stretchy="false">(</mo><mi>𝜽</mi><mo>∣</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="-\frac{1}{2}\operatorname{ln}(2\pi\sigma^{2})-\frac{(x-\mu)^{2}}{2\sigma^{2}}," display="block"><mrow><mrow><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>-</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\boldsymbol{\theta}=(\mu,\sigma^{2})" display="inline"><mrow><mi>𝜽</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></math>. Then the score function <math id="I1.i2.p1.m4" class="ltx_Math" alttext="U(\boldsymbol{\theta})" display="inline"><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝜽</mi><mo stretchy="false">)</mo></mrow></mrow></math> is given by</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\Big{(}\frac{\partial\ell}{\partial\mu},\frac{\partial\ell}{\partial\sigma^{2}%
+}\Big{)}=\Big{(}\frac{x-\mu}{\sigma^{2}},\frac{(x-\mu)^{2}}{2\sigma^{4}}-\frac%
+{1}{2\sigma^{2}}\Big{)}." display="block"><mrow><mrow><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi mathvariant="normal">ℓ</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>μ</mi></mrow></mfrac><mo>,</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi mathvariant="normal">ℓ</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow><mo>=</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mrow><mi>x</mi><mo>-</mo><mi>μ</mi></mrow><msup><mi>σ</mi><mn>2</mn></msup></mfrac><mo>,</mo><mrow><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>4</mn></msup></mrow></mfrac><mo>-</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Taking the derivative with respect to <math id="I1.i2.p1.m5" class="ltx_Math" alttext="\boldsymbol{\theta}" display="inline"><mi>𝜽</mi></math>, we have</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\frac{\partial U}{\partial\boldsymbol{\theta}}=\begin{pmatrix}\displaystyle{%
+\frac{\partial U_{1}}{\partial\mu}}&amp;\displaystyle{\frac{\partial U_{2}}{%
+\partial\mu}}\\
+\\
+\displaystyle{\frac{\partial U_{1}}{\partial\sigma^{2}}}&amp;\displaystyle{\frac{%
+\partial U_{2}}{\partial\sigma^{2}}}\\
+\end{pmatrix}=\begin{pmatrix}\displaystyle{\frac{-1}{\sigma^{2}}}&amp;%
+\displaystyle{-\frac{x-\mu}{\sigma^{4}}}\\
+\\
+\displaystyle{-\frac{x-\mu}{\sigma^{4}}}&amp;\displaystyle{\frac{1}{2\sigma^{4}}-%
+\frac{(x-\mu)^{2}}{\sigma^{6}}}\end{pmatrix}." display="block"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>U</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>𝜽</mi></mrow></mfrac><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>U</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>μ</mi></mrow></mfrac></mtd><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>U</mi><mn>2</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>μ</mi></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>U</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mtd><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>U</mi><mn>2</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><msup><mi>σ</mi><mn>2</mn></msup></mfrac></mtd><mtd columnalign="center"><mrow><mo>-</mo><mfrac><mrow><mi>x</mi><mo>-</mo><mi>μ</mi></mrow><msup><mi>σ</mi><mn>4</mn></msup></mfrac></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mfrac><mrow><mi>x</mi><mo>-</mo><mi>μ</mi></mrow><msup><mi>σ</mi><mn>4</mn></msup></mfrac></mrow></mtd><mtd columnalign="center"><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>4</mn></msup></mrow></mfrac><mo>-</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><msup><mi>σ</mi><mn>6</mn></msup></mfrac></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, the Fisher information matrix <math id="I1.i2.p1.m6" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="-\operatorname{E}\Big{[}\frac{\partial U}{\partial\boldsymbol{\theta}}\Big{]}=%
+\frac{1}{2\sigma^{4}}\begin{pmatrix}2\sigma^{2}&amp;0\\
+0&amp;-1\end{pmatrix}." display="block"><mrow><mrow><mrow><mo>-</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>U</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>𝜽</mi></mrow></mfrac><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>4</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Now, in linear regression model with constant variance <math id="I1.i3.p1.m1" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math>, it can be shown that the Fisher information matrix <math id="I1.i3.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\frac{1}{\sigma^{2}}\textbf{X}^{\operatorname{T}}\textbf{X}," display="block"><mrow><mrow><mfrac><mn>1</mn><msup><mi>σ</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><msup><mtext>𝐗</mtext><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mtext>𝐗</mtext></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <span class="ltx_text ltx_markedasmath ltx_font_bold">X</span> is the design matrix of the regression model.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">In general, the Fisher information meansures how much “information” is known about a parameter <math id="I1.i4.p1.m1" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>. If <math id="I1.i4.p1.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is an unbiased estimator of <math id="I1.i4.p1.m3" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>, it can be shown that</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\operatorname{Var}\big{[}T(X)\big{]}\geq\frac{1}{I(\theta)}" display="block"><mrow><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow><mo>≥</mo><mfrac><mn>1</mn><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This is known as the <em class="ltx_emph ltx_font_italic">Cramer-Rao inequality</em>, and the number <math id="I1.i4.p1.m4" class="ltx_Math" alttext="1/I(\theta)" display="inline"><mrow><mrow><mn>1</mn><mo>/</mo><mi>I</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is known as the <em class="ltx_emph ltx_font_italic">Cramer-Rao lower bound</em>. The smaller the variance of the estimate of <math id="I1.i4.p1.m5" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>, the more information we have on <math id="I1.i4.p1.m6" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>. If there is more than one parameter, the above can be generalized by saying that</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\operatorname{Var}\big{[}T(X)\big{]}-I(\boldsymbol{\theta})^{-1}" display="block"><mrow><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow><mo>-</mo><mrow><mi>I</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>𝜽</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is positive semidefinite, where <math id="I1.i4.p1.m7" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is the Fisher information matrix.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Fisher information matrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FisherInformationMatrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:30:15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:30:15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62H99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62B10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62A01</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">information matrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Fisher information</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">information</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Cramer-Rao inequality</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Cramer-Rao lower bound</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:05:21 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

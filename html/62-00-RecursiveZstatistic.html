@@ -1,0 +1,116 @@
+<!DOCTYPE html><html>
+<head>
+<title>Recursive Z-statistic</title>
+<!--Generated on Sat Feb 10 12:02:20 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Recursive Z-statistic</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">In respones to: Consider a standard Z-statistic used in hypothesis testing. One of the variables needed to compute the Z-statistic is the number of observations. The problem is that with each additional observation one has to recompute the Z-statistic from scratch. It seems like there is no recursive formulation, e.g. a representation such as
+Z(n) = Z(n-1) + new piece of information. Is there perhaps an approximate recursive formulation? Any other thoughts?
+Thanks.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">An example hypothesis test is:</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><math id="p3.m1" class="ltx_Math" alttext="H_{0}:" display="inline"><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi></mi></mrow></math> <math id="p3.m2" class="ltx_Math" alttext="\mu=\mu_{0}" display="inline"><mrow><mi>μ</mi><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub></mrow></math></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><math id="p4.m1" class="ltx_Math" alttext="H_{1}:" display="inline"><mrow><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><mi></mi></mrow></math> <math id="p4.m2" class="ltx_Math" alttext="\mu\neq\mu_{0}" display="inline"><mrow><mi>μ</mi><mo>≠</mo><msub><mi>μ</mi><mn>0</mn></msub></mrow></math>
+</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">We reject this hypothesis if <math id="p5.m1" class="ltx_Math" alttext="\overline{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¯</mo></mover></math> is either greater than or lower than a critical value.
+Assuming the critical values do not change all you have to update is <math id="p5.m2" class="ltx_Math" alttext="Z_{0}" display="inline"><msub><mi>Z</mi><mn>0</mn></msub></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The test statistic is:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="Z_{0}=\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}" display="block"><mrow><msub><mi>Z</mi><mn>0</mn></msub><mo>=</mo><mfrac><mrow><mover accent="true"><mi>X</mi><mo>¯</mo></mover><mo>-</mo><mi>μ</mi></mrow><mrow><mi>σ</mi><mo>/</mo><msqrt><mi>n</mi></msqrt></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Assuming you know <math id="p7.m1" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>, when you get a new variable <math id="p7.m2" class="ltx_Math" alttext="X_{n+1}" display="inline"><msub><mi>X</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></math> you can update <math id="p7.m3" class="ltx_Math" alttext="\overline{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¯</mo></mover></math>
+using <math id="p7.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, <math id="p7.m5" class="ltx_Math" alttext="\overline{X}" display="inline"><mover accent="true"><mi>X</mi><mo>¯</mo></mover></math>, and <math id="p7.m6" class="ltx_Math" alttext="X_{n+1}" display="inline"><msub><mi>X</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></math>, then recalculate <math id="p7.m7" class="ltx_Math" alttext="Z_{0}" display="inline"><msub><mi>Z</mi><mn>0</mn></msub></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Now if you do not know <math id="p8.m1" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>, and your sample size is large enough to use the Normal distribution, you have
+to update your sample variance, <math id="p8.m2" class="ltx_Math" alttext="S^{2}" display="inline"><msup><mi>S</mi><mn>2</mn></msup></math>. If your sample size is not large enough and you are using the t-distribution then
+your critical values will change when <math id="p8.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> changes.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">To do update <math id="p9.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> without recalculating, you should keep running totals of <math id="p9.m2" class="ltx_Math" alttext="\sum_{i}X_{i}" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>i</mi></msub><msub><mi>X</mi><mi>i</mi></msub></mrow></math> and <math id="p9.m3" class="ltx_Math" alttext="\sum_{i}X_{i}^{2}" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>i</mi></msub><msubsup><mi>X</mi><mi>i</mi><mn>2</mn></msubsup></mrow></math>,
+so you can update <math id="p9.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> using the computation formula for the sample variance.</p>
+</div>
+<div id="p10" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Recursive Z-statistic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RecursiveZstatistic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:11:30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:11:30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">statsCab (25915)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">statsCab (25915)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">statsCab (25915)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 62-00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:02:20 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

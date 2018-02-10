@@ -1,0 +1,160 @@
+<!DOCTYPE html><html>
+<head>
+<title>hypothesis testing</title>
+<!--Generated on Sat Feb 10 12:03:05 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">hypothesis testing</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Hypothesis testing is a statistical inferencial procedure in which a statement based on some experimental or observational study is formulated, tested, then put through a decision process. The decision process either accepts or rejects the statement.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">More precisely, the hypothesis testing procedure can be broken down into three steps:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Formulation of a (hypothetical) statement.</p>
+</div>
+<div id="I1.i1.p2" class="ltx_para">
+<p class="ltx_p">The hypothetical statement formed is called the null hypothesis, or <math id="I1.i1.p2.m1" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math>. For example, in testing whether a coin is “fair”, it is tossed 100 times and the number of heads are counted. <math id="I1.i1.p2.m2" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math> could be <math id="I1.i1.p2.m3" class="ltx_Math" alttext="\{\mbox{ The number of heads = }50\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mtext> The number of heads = </mtext><mo>⁢</mo><mn>50</mn></mrow><mo stretchy="false">}</mo></mrow></math>. Accompanying the null hypothesis <math id="I1.i1.p2.m4" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math> is the alternative hypothesis <math id="I1.i1.p2.m5" class="ltx_Math" alttext="H_{a}" display="inline"><msub><mi>H</mi><mi>a</mi></msub></math>. The statement in <math id="I1.i1.p2.m6" class="ltx_Math" alttext="H_{a}" display="inline"><msub><mi>H</mi><mi>a</mi></msub></math> is the compliment of the statement in <math id="I1.i1.p2.m7" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math> (the universe is the sample space). For example, <math id="I1.i1.p2.m8" class="ltx_Math" alttext="H_{a}" display="inline"><msub><mi>H</mi><mi>a</mi></msub></math> would be <math id="I1.i1.p2.m9" class="ltx_Math" alttext="\{\mbox{ The number of heads }\neq 50\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mtext> The number of heads </mtext><mo>≠</mo><mn>50</mn></mrow><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Testing of the statement.</p>
+</div>
+<div id="I1.i2.p2" class="ltx_para">
+<p class="ltx_p">This is usually the most mathematical part of the procedure. To test <math id="I1.i2.p2.m1" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math>, first assume <math id="I1.i2.p2.m2" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math> is true. Then apply an appropriate test statistic using values obtained from the study. There are many test statistics, depending on <math id="I1.i2.p2.m3" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math>, <math id="I1.i2.p2.m4" class="ltx_Math" alttext="H_{a}" display="inline"><msub><mi>H</mi><mi>a</mi></msub></math>, and the nature of the study.</p>
+</div>
+<div id="I1.i2.p3" class="ltx_para">
+<p class="ltx_p">Based on the distributional forms of these test statistics, four major types of tests are of interest. A <em class="ltx_emph ltx_font_italic">t test</em> is based on a test statistic that has a t-distribution. An <em class="ltx_emph ltx_font_italic">f test</em> (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/fdistribution</span>) and a <math id="I1.i2.p3.m1" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math> <em class="ltx_emph ltx_font_italic">test</em> (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ChiSquaredRandomVariable</span>) are so named for the same reason. A <em class="ltx_emph ltx_font_italic">z-test</em> is one that is based on a test statistic having a normal or Gaussian distribution.</p>
+</div>
+<div id="I1.i2.p4" class="ltx_para">
+<p class="ltx_p">Before calculating the test statistic, a value of the <em class="ltx_emph ltx_font_italic">significance level</em> of the test needs to be specified. The significance level, known as <math id="I1.i2.p4.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>, is the probability of rejecting <math id="I1.i2.p4.m2" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math> (or accepting <math id="I1.i2.p4.m3" class="ltx_Math" alttext="H_{a}" display="inline"><msub><mi>H</mi><mi>a</mi></msub></math>) when in fact, <math id="I1.i2.p4.m4" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math> is true: <math id="I1.i2.p4.m5" class="ltx_Math" alttext="\alpha=P(H_{a}\mid H_{0})" display="inline"><mrow><mi>α</mi><mo>=</mo><mi>P</mi><mrow><mo stretchy="false">(</mo><msub><mi>H</mi><mi>a</mi></msub><mo>∣</mo><msub><mi>H</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Deciding whether to accept or reject the statement.</p>
+</div>
+<div id="I1.i3.p2" class="ltx_para">
+<p class="ltx_p">Once the value of the test statistic is obtained, it is used to find a corresponding probability of obtaining such a statistic given that <math id="I1.i3.p2.m1" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math> is true. This probability is called the <em class="ltx_emph ltx_font_italic">p-value</em>. This <math id="I1.i3.p2.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-value is then compared <math id="I1.i3.p2.m3" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>, the significance level of the test. If <math id="I1.i3.p2.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-value <math id="I1.i3.p2.m5" class="ltx_Math" alttext="&lt;\alpha" display="inline"><mrow><mi></mi><mo>&lt;</mo><mi>α</mi></mrow></math>, then the usual next step is to reject the null hypothesis <math id="I1.i3.p2.m6" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math> (and <math id="I1.i3.p2.m7" class="ltx_Math" alttext="H_{a}" display="inline"><msub><mi>H</mi><mi>a</mi></msub></math> accepted). Otherwise, <math id="I1.i3.p2.m8" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math> will be accepted.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">When a statement (whether it is null hypothesis or the alternative hypothesis) is accepted, it merely says that, statistically, there is not enough evidence to reject the statement. Acceptance of a hypothetical statement does not prove that the underlying statement is true.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The concept of statistical hypothesis testing can be found in any standard introductory statistics textbooks, as well as numerous internet websites (for example, <span class="ltx_text ltx_font_typewriter">http://www.google.com/search?hl=en&amp;lr=&amp;q=hypothesis+testing</span>click to find the result of a Google search). The purpose of this entry is to give a very brief description of hypothesis testing and to serve as a link reference for other entries.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">hypothesis testing</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HypothesisTesting</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:42:12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:42:12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62A01</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ChiSquaredStatistic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">null hypothesis</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alternative hypothesis</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">significance level</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">t test</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">f test</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">chi-squared test</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">chi-square test</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">
+<math id="p4.m1" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math> test</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">p-value</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:03:05 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

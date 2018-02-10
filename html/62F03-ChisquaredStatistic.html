@@ -1,0 +1,424 @@
+<!DOCTYPE html><html>
+<head>
+<title>chi-squared statistic</title>
+<!--Generated on Sat Feb 10 12:04:33 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">chi-squared statistic</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a discrete random variable with <math id="p2.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> possible outcomes
+<math id="p2.m3" class="ltx_Math" alttext="x_{1},\ldots,x_{m}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>m</mi></msub></mrow></math> with probability of each outcome
+<math id="p2.m4" class="ltx_Math" alttext="\operatorname{P}(X=x_{i})=p_{i}" display="inline"><mrow><mrow><mi mathvariant="normal">P</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>=</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></math>.
+
+<br class="ltx_break">
+<br class="ltx_break"><math id="p2.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> independent observations are obtained where each observation has
+the same distribution as <math id="p2.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. Bin the observations into <math id="p2.m7" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> groups,
+so that each group contains all observations having the same outcome
+<math id="p2.m8" class="ltx_Math" alttext="x_{i}" display="inline"><msub><mi>x</mi><mi>i</mi></msub></math>. Next, count the number of observations in each group to get
+<math id="p2.m9" class="ltx_Math" alttext="n_{1},\ldots,n_{k}" display="inline"><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>n</mi><mi>k</mi></msub></mrow></math> corresponding to the outcomes <math id="p2.m10" class="ltx_Math" alttext="x_{1},\ldots,x_{k}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>k</mi></msub></mrow></math>, so
+that <math id="p2.m11" class="ltx_Math" alttext="n=\sum n_{i}" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mo largeop="true" symmetric="true">∑</mo><msub><mi>n</mi><mi>i</mi></msub></mrow></mrow></math>. It is desired to find out how close the actual
+number of outcomes <math id="p2.m12" class="ltx_Math" alttext="n_{i}" display="inline"><msub><mi>n</mi><mi>i</mi></msub></math> are to their expected values <math id="p2.m13" class="ltx_Math" alttext="np_{i}" display="inline"><mrow><mi>n</mi><mo>⁢</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></math>.
+
+<br class="ltx_break">
+<br class="ltx_break">Intuitively, this “closeness” depends on how big the sample is,
+and how large the deviations are between the observed and the
+expected, for all categories. The value</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\chi^{2}=\sum_{i=1}^{m}\frac{(n_{i}-np_{i})^{2}}{np_{i}}," display="inline"><mrow><mrow><msup><mi>χ</mi><mn>2</mn></msup><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mi>n</mi><mo>⁢</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">called the <math id="p2.m14" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math> <em class="ltx_emph ltx_font_italic">statistic</em>, or the <em class="ltx_emph ltx_font_italic">chi-squared
+statistic</em>, is such a measure of “closeness”. It is also known as
+the <em class="ltx_emph ltx_font_italic">Pearson-chi-squared</em> statistic, in honor of the English
+statistician Karl Pearson, who showed that (1) has approximately a
+chi-squared distribution (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ChiSquaredRandomVariable</span>) with
+<math id="p2.m15" class="ltx_Math" alttext="m-1" display="inline"><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></math> degrees of freedom. The degree of freedom depends on the
+number of free variables in <math id="p2.m16" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math>, and is not always <math id="p2.m17" class="ltx_Math" alttext="m-1" display="inline"><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></math>, as we
+will see in Example <math id="p2.m18" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math>.
+
+<br class="ltx_break">
+<br class="ltx_break">Usually, <math id="p2.m19" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math> statistic is utilized in hypothesis testing, where
+the null hypothesis specifies that the actual equals the expected. A
+large value of <math id="p2.m20" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math> means either the deviations from the
+expectations are large or the sample is small, and therefore, either
+the null hypothesis should be rejected or there is not enough
+information to give a meaningful interpretation. How large of a
+deviation, compared to the sample size, is enough to reject the null
+hypothesis depends on the degree of freedom of chi-squared
+distribution of <math id="p2.m21" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math> and the specified critical values.
+
+<br class="ltx_break">
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Examples</span>.</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Suppose a coin is tossed 10 times and 7 heads are observed.
+We would like to know if the coin is fair based on the
+observations. We have the following hypothesis:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="H_{0}:p=\frac{1}{2}\qquad H_{1}:p\neq\frac{1}{2}." display="block"><mrow><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mrow><mi>p</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo mathvariant="italic" separator="true">  </mo><msub><mi>H</mi><mn>1</mn></msub></mrow></mrow><mo>:</mo><mrow><mi>p</mi><mo>≠</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Break up the observations into two groups: heads and tails. Then,
+according to <math id="I1.i1.p1.m1" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math>,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\chi^{2}=\frac{(7-5)^{2}}{5}+\frac{(3-5)^{2}}{5}=1.60." display="block"><mrow><mrow><msup><mi>χ</mi><mn>2</mn></msup><mo>=</mo><mrow><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>7</mn><mo>-</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mn>5</mn></mfrac><mo>+</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>-</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mn>5</mn></mfrac></mrow><mo>=</mo><mn>1.60</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Checking the table of critical values of chi-squared distributions,
+we see that at degree of freedom <math id="I1.i1.p1.m2" class="ltx_Math" alttext="=1" display="inline"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></math>, there is a 0.100 chance that the
+<math id="I1.i1.p1.m3" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math> value is higher than 2.706. Since <math id="I1.i1.p1.m4" class="ltx_Math" alttext="1.600&lt;2.706" display="inline"><mrow><mn>1.600</mn><mo>&lt;</mo><mn>2.706</mn></mrow></math>, we may
+not want to reject the null hypothesis. However, we may not want
+to outrightly accept it either simply because the sample size is not very
+large.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Now, a coin is tossed 100 times and 70 heads are observed.
+Using the same null hypothesis as above,</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\chi^{2}=\frac{(70-50)^{2}}{50}+\frac{(30-50)^{2}}{50}=16.00." display="block"><mrow><mrow><msup><mi>χ</mi><mn>2</mn></msup><mo>=</mo><mrow><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>70</mn><mo>-</mo><mn>50</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mn>50</mn></mfrac><mo>+</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>30</mn><mo>-</mo><mn>50</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mn>50</mn></mfrac></mrow><mo>=</mo><mn>16.00</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Even at p-value <math id="I1.i2.p1.m1" class="ltx_Math" alttext="=0.005" display="inline"><mrow><mi></mi><mo>=</mo><mn>0.005</mn></mrow></math>, the corresponding critical value of 7.879
+is quite a bit smaller than 16. So we will reject the null
+hypothesis even at confidence level 99.5%(<math id="I1.i2.p1.m2" class="ltx_Math" alttext="=1-" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>1</mn><mo>-</mo></mrow></mrow></math>p-value).</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math> statistic can be used in non-parametric situations as
+well, particularly, in contingency tables. Three dice of varying
+sizes are each tossed 100 times and the top faces are recorded. The
+results of the count of each possible value of the top face, for
+each die is summarized in the following table:</p>
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t">Die<math id="I1.i3.p1.m2" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>top face</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">1</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">2</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">3</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">4</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">5</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">6</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">all</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t">Die 1</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">16</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">19</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">17</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">15</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">19</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">14</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">100</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t">Die 2</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">17</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">18</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">14</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">13</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">22</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">16</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">100</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t">Die 3</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">12</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">20</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">19</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">18</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">20</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">11</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">100</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r ltx_border_t">All dice</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">45</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">57</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">50</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">46</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">61</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">41</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">300</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">Let <math id="I1.i3.p1.m3" class="ltx_Math" alttext="X_{i}=" display="inline"><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>=</mo><mi></mi></mrow></math> count of top face<math id="I1.i3.p1.m4" class="ltx_Math" alttext="=i" display="inline"><mrow><mi></mi><mo>=</mo><mi>i</mi></mrow></math>, and <math id="I1.i3.p1.m5" class="ltx_Math" alttext="Y_{j}=" display="inline"><mrow><msub><mi>Y</mi><mi>j</mi></msub><mo>=</mo><mi></mi></mrow></math> Die <math id="I1.i3.p1.m6" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>. Next, we
+want to test the following hypotheses:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="H_{0}:X_{i}\mbox{ is independent of }Y_{j}\qquad H_{1}:\mbox{otherwise}." display="block"><mrow><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mrow><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>⁢</mo><mtext> is independent of </mtext><mo>⁢</mo><msub><mi>Y</mi><mi>j</mi></msub></mrow><mo mathvariant="italic" separator="true">  </mo><msub><mi>H</mi><mn>1</mn></msub></mrow><mo>:</mo><mtext>otherwise</mtext></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since we do not know the exact distribution of
+the top faces, we approximate the distribution by using the last
+row. For example, the (marginal) probability that top face = 1 is
+<math id="I1.i3.p1.m7" class="ltx_Math" alttext="\frac{45}{300}=0.15" display="inline"><mrow><mfrac><mn>45</mn><mn>300</mn></mfrac><mo>=</mo><mn>0.15</mn></mrow></math>. This says that the probability that top face = 1
+in Die <math id="I1.i3.p1.m8" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> = <math id="I1.i3.p1.m9" class="ltx_Math" alttext="0.15\times\frac{1}{3}=0.05" display="inline"><mrow><mrow><mn>0.15</mn><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><mo>=</mo><mn>0.05</mn></mrow></math>. Then, based on the
+null hypothesis, we have the following table of “expected count”:</p>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_l ltx_border_r ltx_border_t">Die<math id="I1.i3.p1.m10" class="ltx_Math" alttext="\backslash" display="inline"><mo>\</mo></math>top face</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t">1</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t">2</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t">3</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t">4</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t">5</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t">6</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t">Die 1</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">15.0</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">19.0</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">16.7</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">15.3</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">20.3</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">13.7</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t">Die 2</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">15.0</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">19.0</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">16.7</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">15.3</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">20.3</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">13.7</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r ltx_border_t">Die 3</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">15.0</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">19.0</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">16.7</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">15.3</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">20.3</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">13.7</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">For each die, we can compute the <math id="I1.i3.p1.m11" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math>. For instance, for the
+first die,</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle\frac{(16-15.0)^{2}}{15.0}+\frac{(19-19.0)^{2}}{19.0}+\frac{(17-1%
+6.7)^{2}}{16.7}+" display="inline"><mrow><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>16</mn><mo>-</mo><mn>15.0</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mn>15.0</mn></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>19</mn><mo>-</mo><mn>19.0</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mn>19.0</mn></mfrac></mstyle><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>17</mn><mo>-</mo><mn>16.7</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mn>16.7</mn></mfrac></mstyle><mo>+</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle\frac{(15-15.3)^{2}}{15.3}+\frac{(19-20.3)^{2}}{20.3}+\frac{(14-1%
+3.7)^{2}}{13.7}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>15</mn><mo>-</mo><mn>15.3</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mn>15.3</mn></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>19</mn><mo>-</mo><mn>20.3</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mn>20.3</mn></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>14</mn><mo>-</mo><mn>13.7</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mn>13.7</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle 0.176" display="inline"><mn>0.176</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The results are summarized in the following</p>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_th ltx_th_column ltx_border_l ltx_border_r ltx_border_t"></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><math id="I1.i3.p1.m12" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t">degrees of freedom</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t">Die 1</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">0.176</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">5</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t">Die 2</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">1.636</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">5</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t">Die 3</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">1.969</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">0</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r ltx_border_t">All dice</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">3.781</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">10</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">Note that the degree of freedom for the last dice is 0 because the
+expected counts in the last row are completely determined by those
+in the first two rows (and the totals). Looking up the table, we
+see that there is a <math id="I1.i3.p1.m13" class="ltx_Math" alttext="90\%" display="inline"><mrow><mn>90</mn><mo lspace="0pt" rspace="3.5pt">%</mo></mrow></math> that the value of <math id="I1.i3.p1.m14" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math> will be
+greater than <math id="I1.i3.p1.m15" class="ltx_Math" alttext="4.865" display="inline"><mn>4.865</mn></math>, and since <math id="I1.i3.p1.m16" class="ltx_Math" alttext="3.781&lt;4.865" display="inline"><mrow><mn>3.781</mn><mo>&lt;</mo><mn>4.865</mn></mrow></math>, we accept the null
+hypothesis: the outcomes of the tosses have no bearing on which die
+is tossed.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark.</span> In general, for a <math id="p2.m22" class="ltx_Math" alttext="p\times q" display="inline"><mrow><mi>p</mi><mo>×</mo><mi>q</mi></mrow></math> 2-way contingency
+table, the <math id="p2.m23" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math> statistic is given by</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle\chi^{2}=\sum_{i=1}^{p}\sum_{j=1}^{q}\frac{(n_{ij}-m_{ij})^{2}}{m%
+_{ij}}," display="inline"><mrow><mrow><msup><mi>χ</mi><mn>2</mn></msup><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>p</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>q</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>n</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>-</mo><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mfrac></mstyle></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="p2.m24" class="ltx_Math" alttext="n_{ij}" display="inline"><msub><mi>n</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> and <math id="p2.m25" class="ltx_Math" alttext="m_{ij}" display="inline"><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> are the actual and expected counts in
+Cell <math id="p2.m26" class="ltx_Math" alttext="(i,j)" display="inline"><mrow><mo stretchy="false">(</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></math>. When the sample is large, <math id="p2.m27" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math> has a chi-squared
+distribution with <math id="p2.m28" class="ltx_Math" alttext="(p-1)(q-1)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> degrees of freedom. In particular,
+when testing for the independence between two categorical variables,
+the expected count <math id="p2.m29" class="ltx_Math" alttext="m_{ij}" display="inline"><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> is</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="m_{ij}=\frac{n_{i*}n_{*j}}{n},\mbox{ where }n_{i*}=\sum_{j=1}^{q}n_{ij},\mbox{
+}n_{*j}=\sum_{i=1}^{p}n_{ij},\mbox{ and
+}n=\sum_{i=1}^{p}\sum_{j=1}^{q}n_{ij}." display="block"><mrow><mrow><mrow><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mrow><msub><mi>n</mi><mrow><mi>i</mi><mo>⁣</mo><mo>*</mo></mrow></msub><mo>⁢</mo><msub><mi>n</mi><mrow><mi></mi><mo>*</mo><mi>j</mi></mrow></msub></mrow><mi>n</mi></mfrac></mrow><mo>,</mo><mrow><mrow><mrow><mtext> where </mtext><mo>⁢</mo><msub><mi>n</mi><mrow><mi>i</mi><mo>⁣</mo><mo>*</mo></mrow></msub></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>q</mi></munderover><msub><mi>n</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow><mo>,</mo><mrow><mrow><mrow><mtext> </mtext><mo>⁢</mo><msub><mi>n</mi><mrow><mi></mi><mo>*</mo><mi>j</mi></mrow></msub></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>p</mi></munderover><msub><mi>n</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow><mo>,</mo><mrow><mrow><mtext> and </mtext><mo>⁢</mo><mi>n</mi></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>p</mi></munderover><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>q</mi></munderover><msub><mi>n</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">chi-squared statistic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ChisquaredStatistic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:10:00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:10:00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62F03</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62G10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62H17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">
+<math id="p2.m30" class="ltx_Math" alttext="\chi^{2}" display="inline"><msup><mi>χ</mi><mn>2</mn></msup></math> statistic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">chi-square statistic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Pearson-chi-squared statistic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Pearson-chi-square statistic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ChiSquaredRandomVariable</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">HypothesisTesting</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:04:33 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

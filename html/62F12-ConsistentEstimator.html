@@ -1,0 +1,225 @@
+<!DOCTYPE html><html>
+<head>
+<title>consistent estimator</title>
+<!--Generated on Sat Feb 10 12:04:48 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">consistent estimator</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Given a set of samples <math id="p1.m1" class="ltx_Math" alttext="X_{1},\ldots,X_{n}" display="inline"><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></math> from a given probability
+distribution <math id="p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> with an unknown parameter <math id="p1.m3" class="ltx_Math" alttext="\theta\in\Theta" display="inline"><mrow><mi>θ</mi><mo>∈</mo><mi mathvariant="normal">Θ</mi></mrow></math>, where
+<math id="p1.m4" class="ltx_Math" alttext="\Theta" display="inline"><mi mathvariant="normal">Θ</mi></math> is the parameter space that is a subset of <math id="p1.m5" class="ltx_Math" alttext="\mathbb{R}^{m}" display="inline"><msup><mi>ℝ</mi><mi>m</mi></msup></math>.
+Let <math id="p1.m6" class="ltx_Math" alttext="U(=U(X_{1},\ldots,X_{n}))" display="inline"><mrow><mi>U</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>=</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> be an estimator of <math id="p1.m7" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>. Allowing
+the sample size <math id="p1.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> to vary, we get a sequence of estimators for
+<math id="p1.m9" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle U_{1}" display="inline"><msub><mi>U</mi><mn>1</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle U(X_{1})," display="inline"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle U_{n}" display="inline"><msub><mi>U</mi><mi>n</mi></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle U(X_{1},\ldots,X_{n})," display="inline"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle\vdots" display="inline"><mi mathvariant="normal">⋮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We say that the sequence of estimators <math id="p1.m10" class="ltx_Math" alttext="\{U_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>U</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math>
+<em class="ltx_emph ltx_font_italic">consistent</em> (or that <math id="p1.m11" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is a <em class="ltx_emph ltx_font_italic">consistent estimator</em> of
+<math id="p1.m12" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>), if <math id="p1.m13" class="ltx_Math" alttext="U_{i}" display="inline"><msub><mi>U</mi><mi>i</mi></msub></math> converges in probability to <math id="p1.m14" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> for
+<em class="ltx_emph ltx_font_italic">every</em> <math id="p1.m15" class="ltx_Math" alttext="\theta\in\Theta" display="inline"><mrow><mi>θ</mi><mo>∈</mo><mi mathvariant="normal">Θ</mi></mrow></math>. That is, for every <math id="p1.m16" class="ltx_Math" alttext="\varepsilon&gt;0" display="inline"><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow></math>,
+</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\lim_{n\rightarrow\infty}P(|h_{n}-\theta|\geq\varepsilon)=0" display="block"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mi>P</mi><mrow><mo stretchy="false">(</mo><mo stretchy="false">|</mo><msub><mi>h</mi><mi>n</mi></msub><mo>-</mo><mi>θ</mi><mo stretchy="false">|</mo><mo>≥</mo><mi>ε</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="p1.m17" class="ltx_Math" alttext="\theta\in\Theta" display="inline"><mrow><mi>θ</mi><mo>∈</mo><mi mathvariant="normal">Θ</mi></mrow></math>.
+
+<br class="ltx_break">
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Remark</span>. Suppose <math id="p1.m18" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is an estimator of <math id="p1.m19" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> such that
+the sequence <math id="p1.m20" class="ltx_Math" alttext="\{U_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>U</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> is consistent. If
+<math id="p1.m21" class="ltx_Math" alttext="\alpha_{n}\to\alpha\in\mathbb{R}" display="inline"><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>→</mo><mi>α</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> and <math id="p1.m22" class="ltx_Math" alttext="\beta_{n}\to\beta\in\mathbb{R}^{m}" display="inline"><mrow><msub><mi>β</mi><mi>n</mi></msub><mo>→</mo><mi>β</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow></math> are two convergent sequences of constants with
+<math id="p1.m23" class="ltx_Math" alttext="0&lt;|\alpha|&lt;\infty" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> and <math id="p1.m24" class="ltx_Math" alttext="|\beta|&lt;\infty" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>β</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>, then the sequence <math id="p1.m25" class="ltx_Math" alttext="\{V_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>V</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math>, defined by <math id="p1.m26" class="ltx_Math" alttext="V_{n}:=\alpha_{n}U_{n}+\beta_{n}" display="inline"><mrow><msub><mi>V</mi><mi>n</mi></msub><mo>:=</mo><mrow><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>U</mi><mi>n</mi></msub></mrow><mo>+</mo><msub><mi>β</mi><mi>n</mi></msub></mrow></mrow></math>, is consistent,
+<math id="p1.m27" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is an estimator of <math id="p1.m28" class="ltx_Math" alttext="\alpha\theta+\beta" display="inline"><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>θ</mi></mrow><mo>+</mo><mi>β</mi></mrow></math>.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">First, observe that</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle|V_{n}-(\alpha\theta+\beta)|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><msub><mi>V</mi><mi>n</mi></msub><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>θ</mi></mrow><mo>+</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle|\alpha_{n}U_{n}+\beta_{n}-\alpha\theta-\beta|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mrow><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>U</mi><mi>n</mi></msub></mrow><mo>+</mo><msub><mi>β</mi><mi>n</mi></msub></mrow><mo>-</mo><mrow><mi>α</mi><mo>⁢</mo><mi>θ</mi></mrow><mo>-</mo><mi>β</mi></mrow><mo stretchy="false">|</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle|\alpha_{n}U_{n}-\alpha\theta|+|\beta_{n}-\beta|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>U</mi><mi>n</mi></msub></mrow><mo>-</mo><mrow><mi>α</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>+</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>β</mi><mi>n</mi></msub><mo>-</mo><mi>β</mi></mrow><mo stretchy="false">|</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle|\alpha_{n}U_{n}-\alpha_{n}\theta+\alpha_{n}\theta-\alpha\theta|+%
+|\beta_{n}-\beta|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><mrow><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>U</mi><mi>n</mi></msub></mrow><mo>-</mo><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo>+</mo><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo>-</mo><mrow><mi>α</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>+</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>β</mi><mi>n</mi></msub><mo>-</mo><mi>β</mi></mrow><mo stretchy="false">|</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle|\alpha_{n}U_{n}-\alpha_{n}\theta|+|\alpha_{n}\theta-\alpha\theta%
+|+|\beta_{n}-\beta|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>U</mi><mi>n</mi></msub></mrow><mo>-</mo><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>+</mo><mrow><mo stretchy="false">|</mo><mrow><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><mi>θ</mi></mrow><mo>-</mo><mrow><mi>α</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>+</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>β</mi><mi>n</mi></msub><mo>-</mo><mi>β</mi></mrow><mo stretchy="false">|</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m3" class="ltx_Math" alttext="\displaystyle|\alpha_{n}||U_{n}-\theta|+|\alpha_{n}-\alpha||\theta|+|\beta_{n}%
+-\beta|." display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">|</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>U</mi><mi>n</mi></msub><mo>-</mo><mi>θ</mi></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>-</mo><mi>α</mi></mrow><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>θ</mi><mo stretchy="false">|</mo></mrow></mrow><mo>+</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>β</mi><mi>n</mi></msub><mo>-</mo><mi>β</mi></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This implies</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m3" class="ltx_Math" alttext="\displaystyle P(|V_{n}-(\alpha\theta+\beta)|\geq\varepsilon)" display="inline"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mo stretchy="false">|</mo><msub><mi>V</mi><mi>n</mi></msub><mo>-</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mi>θ</mi><mo>+</mo><mi>β</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">|</mo><mo>≥</mo><mi>ε</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m3" class="ltx_Math" alttext="\displaystyle P(|\alpha_{n}||U_{n}-\theta|+|\alpha_{n}-\alpha||\theta|+|\beta_%
+{n}-\beta|\geq\varepsilon)" display="inline"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mo stretchy="false">|</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">|</mo><mo stretchy="false">|</mo><msub><mi>U</mi><mi>n</mi></msub><mo>-</mo><mi>θ</mi><mo stretchy="false">|</mo><mo>+</mo><mo stretchy="false">|</mo><msub><mi>α</mi><mi>n</mi></msub><mo>-</mo><mi>α</mi><mo stretchy="false">|</mo><mo stretchy="false">|</mo><mi>θ</mi><mo stretchy="false">|</mo><mo>+</mo><mo stretchy="false">|</mo><msub><mi>β</mi><mi>n</mi></msub><mo>-</mo><mi>β</mi><mo stretchy="false">|</mo><mo>≥</mo><mi>ε</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m3" class="ltx_Math" alttext="\displaystyle P(|U_{n}-\theta|\geq\frac{\varepsilon-|\beta_{n}-\beta|-|\alpha_%
+{n}-\alpha||\theta|}{|\alpha_{n}|})." display="inline"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mo stretchy="false">|</mo><msub><mi>U</mi><mi>n</mi></msub><mo>-</mo><mi>θ</mi><mo stretchy="false">|</mo><mo>≥</mo><mstyle displaystyle="true"><mfrac><mrow><mi>ε</mi><mo>-</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>β</mi><mi>n</mi></msub><mo>-</mo><mi>β</mi></mrow><mo stretchy="false">|</mo></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>-</mo><mi>α</mi></mrow><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>θ</mi><mo stretchy="false">|</mo></mrow></mrow></mrow><mrow><mo stretchy="false">|</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow></mfrac></mstyle><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As <math id="p2.m1" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, <math id="p2.m2" class="ltx_Math" alttext="|\beta_{n}-\beta|\to 0" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>β</mi><mi>n</mi></msub><mo>-</mo><mi>β</mi></mrow><mo stretchy="false">|</mo></mrow><mo>→</mo><mn>0</mn></mrow></math>,
+<math id="p2.m3" class="ltx_Math" alttext="|\alpha_{n}-\alpha||\theta|\to 0" display="inline"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>-</mo><mi>α</mi></mrow><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>θ</mi><mo stretchy="false">|</mo></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math>, and <math id="p2.m4" class="ltx_Math" alttext="|\alpha_{n}|\to|\alpha|\neq 0" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>→</mo><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow><mo>≠</mo><mn>0</mn></mrow></math>.
+So the last expression goes to <math id="p2.m5" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> as <math id="p2.m6" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>. Therefore,</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\lim_{n\to\infty}P(|V_{n}-(\alpha\theta+\beta)|\geq\varepsilon)=0," display="block"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mi>P</mi><mrow><mo stretchy="false">(</mo><mo stretchy="false">|</mo><msub><mi>V</mi><mi>n</mi></msub><mo>-</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mi>θ</mi><mo>+</mo><mi>β</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">|</mo><mo>≥</mo><mi>ε</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mn>0</mn><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and thus <math id="p2.m7" class="ltx_Math" alttext="\{V_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>V</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> is a consistent sequence of estimators
+of <math id="p2.m8" class="ltx_Math" alttext="\alpha\theta+\beta" display="inline"><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>θ</mi></mrow><mo>+</mo><mi>β</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">consistent estimator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ConsistentEstimator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:26:34</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:26:34</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62F12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">consistent sequence of estimators</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:04:48 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

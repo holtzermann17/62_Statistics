@@ -1,0 +1,304 @@
+<!DOCTYPE html><html>
+<head>
+<title>data types in statistics</title>
+<!--Generated on Sat Feb 10 12:02:38 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">data types in statistics</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Data drives statistics. In traditional statistical analysis, data can usually be visualized by a matrix. Each column in the matrix represents a data variable (slightly different from the mathematical definition of a variable), and each row respesents an observation or outcome, in which case only one data variable is involved, or a vector of observations or outcomes where several data variables are involved.
+</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The types of data that are being distinguished have to do with the data variables. Before going into the details, let’s begin with an example as a setting. A statistical analysis is conducted based on an observational study of autombile insurance data during a particular calendar year <math id="p3.m1" class="ltx_Math" alttext="Yr" display="inline"><mrow><mi>Y</mi><mo>⁢</mo><mi>r</mi></mrow></math>. A matrix of data is formed with the following data variables being observed:</p>
+<dl id="I1" class="ltx_description">
+<dt id="I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_description"></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">whether a policy has been involved in an accident during <math id="I1.ix1.p1.m1" class="ltx_Math" alttext="Yr" display="inline"><mrow><mi>Y</mi><mo>⁢</mo><mi>r</mi></mrow></math>,</p>
+</div>
+</dd>
+<dt id="I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_bold">NumAcc</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">number of accidents have a policy been involved in an accident during <math id="I1.ix2.p1.m1" class="ltx_Math" alttext="Yr" display="inline"><mrow><mi>Y</mi><mo>⁢</mo><mi>r</mi></mrow></math>,</p>
+</div>
+</dd>
+<dt id="I1.ix3" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_bold">Cost</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix3.p1" class="ltx_para">
+<p class="ltx_p">the total amount of money a policy cost the insurance company during <math id="I1.ix3.p1.m1" class="ltx_Math" alttext="Yr" display="inline"><mrow><mi>Y</mi><mo>⁢</mo><mi>r</mi></mrow></math>,</p>
+</div>
+</dd>
+<dt id="I1.ix4" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_bold">Gen</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix4.p1" class="ltx_para">
+<p class="ltx_p">gender of driver,</p>
+</div>
+</dd>
+<dt id="I1.ix5" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_bold">Mar</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix5.p1" class="ltx_para">
+<p class="ltx_p">marital status of driver,</p>
+</div>
+</dd>
+<dt id="I1.ix6" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_bold">Age</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix6.p1" class="ltx_para">
+<p class="ltx_p">age of driver,</p>
+</div>
+</dd>
+<dt id="I1.ix7" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_bold">Hist</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix7.p1" class="ltx_para">
+<p class="ltx_p">number of accidents a driver had prior to year <math id="I1.ix7.p1.m1" class="ltx_Math" alttext="Yr" display="inline"><mrow><mi>Y</mi><mo>⁢</mo><mi>r</mi></mrow></math>,</p>
+</div>
+</dd>
+<dt id="I1.ix8" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_bold">DrvZIP</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix8.p1" class="ltx_para">
+<p class="ltx_p">zip code location where the driver lives,</p>
+</div>
+</dd>
+<dt id="I1.ix9" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_bold">AccZIP</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix9.p1" class="ltx_para">
+<p class="ltx_p">zip code location where the accident happened,</p>
+</div>
+</dd>
+<dt id="I1.ix10" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_bold">AccSt</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix10.p1" class="ltx_para">
+<p class="ltx_p">a numerical code corresponding to the state or province where the accident took place (for example, 0=Alabama, 1=Alaska, etc…, 50=Wyoming),</p>
+</div>
+</dd>
+<dt id="I1.ix11" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_bold">Inj</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix11.p1" class="ltx_para">
+<p class="ltx_p">the extent of the injury sustained during an accident,</p>
+</div>
+</dd>
+<dt id="I1.ix12" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_bold">VehType</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix12.p1" class="ltx_para">
+<p class="ltx_p">the type of vehicle in the policy, and finally,</p>
+</div>
+</dd>
+<dt id="I1.ix13" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_bold">VehWgt</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix13.p1" class="ltx_para">
+<p class="ltx_p">the weight of the vehicle in the policy.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Now, we are ready to breakdown the data variables. First, the data variables can be broken down in terms of their uses:</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">response variable</em> or <em class="ltx_emph ltx_font_italic">predicted variable</em>. From the above example, , <span class="ltx_text ltx_font_bold">NumAcc</span>, <span class="ltx_text ltx_font_bold">Cost</span> can all be response variables. These are variables that we are trying to study, and predict.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">explanatory variable</em> or <em class="ltx_emph ltx_font_italic">predictor variable</em> or <em class="ltx_emph ltx_font_italic">control variable</em>. In the example above, given the response variable is , the explanatory variables can be any of the other variables except <span class="ltx_text ltx_font_bold">NumAcc</span>, <span class="ltx_text ltx_font_bold">Cost</span>, and <span class="ltx_text ltx_font_bold">Inj</span>. Although possibly highly correlated with , <span class="ltx_text ltx_font_bold">NumAcc</span>, <span class="ltx_text ltx_font_bold">Cost</span>, and <span class="ltx_text ltx_font_bold">Inj</span> do not “explain” why an accident occurs. In particular, <span class="ltx_text ltx_font_bold">Inj</span> is only valid when there was an accident.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Usually, the response variable(s) <math id="p4.m1" class="ltx_Math" alttext="\boldsymbol{y}" display="inline"><mi>𝒚</mi></math> and the explanatory variable(s) <math id="p4.m2" class="ltx_Math" alttext="\boldsymbol{x}" display="inline"><mi>𝒙</mi></math> can be related functionally as</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\boldsymbol{y}=f(\boldsymbol{x})." display="block"><mrow><mrow><mi>𝒚</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">A breakdown of data variables in terms of the natures of the variables is as follows:</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">categorical variable</em> or <em class="ltx_emph ltx_font_italic">discrete variable</em>. These are data variables whose ranges are countable, often finite. Any value of a categorical variable is called a <em class="ltx_emph ltx_font_italic">level</em>, or a <em class="ltx_emph ltx_font_italic">category</em>. For example,  is a categorical variable whose values are “Yes” (to mean that at least an accident occurred during year <math id="I3.i1.p1.m1" class="ltx_Math" alttext="Yr" display="inline"><mrow><mi>Y</mi><mo>⁢</mo><mi>r</mi></mrow></math>) and “No” (to mean otherwise). A categorical variable whose number of values is two is often called a <em class="ltx_emph ltx_font_italic">binary variable</em> or a <em class="ltx_emph ltx_font_italic">dichotomous variable</em>. A categorical variable that has more than two values is called a <em class="ltx_emph ltx_font_italic">multinomial variable</em> or a <em class="ltx_emph ltx_font_italic">polychotomous variable</em>. <span class="ltx_text ltx_font_bold">DrvZip</span>, <span class="ltx_text ltx_font_bold">Inj</span> (no injury, light, medium, serious injuries, or death), <span class="ltx_text ltx_font_bold">VehType</span> (family sedan, sports coupe, etc…) and <span class="ltx_text ltx_font_bold">NumAcc</span> are examples of a multinomial variable.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">continuous variable</em>. Any data variable that is not a categorical variable is a continuous variable. <span class="ltx_text ltx_font_bold">Age</span> and <span class="ltx_text ltx_font_bold">VehWgt</span> are both examples of continuous variables. In real situations, these continuous variables usually lie within a certain bounded interval or ball (in higher dimensions). For example, it is safe to say that the range of the variable <span class="ltx_text ltx_font_bold">Age</span> is <math id="I3.i2.p1.m1" class="ltx_Math" alttext="[\ 0,140\ ]" display="inline"><mrow><mo stretchy="false">[</mo><mn> 0</mn><mo>,</mo><mpadded width="+5pt"><mn>140</mn></mpadded><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">In many statistical modeling situations, it is often convenient, sometimes even desirable to change continuous variables to categorical ones, and vice versa. Discretization is a way to turn a continuous variable into a categorical one. For example, the continuous variable <span class="ltx_text ltx_font_bold">Age</span> can be turned into a dichotomous variable by the grouping: “Young” = Age <math id="p6.m1" class="ltx_Math" alttext="\in[0,25]" display="inline"><mrow><mi></mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>25</mn><mo stretchy="false">]</mo></mrow></mrow></math> and “Not Young” = Age <math id="p6.m2" class="ltx_Math" alttext="\in(25,140]" display="inline"><mrow><mi></mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>25</mn><mo>,</mo><mn>140</mn><mo stretchy="false">]</mo></mrow></mrow></math>. Another possible grouping rule may be “Young” = Age <math id="p6.m3" class="ltx_Math" alttext="\in[0,25]" display="inline"><mrow><mi></mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>25</mn><mo stretchy="false">]</mo></mrow></mrow></math>, “Mature” = Age <math id="p6.m4" class="ltx_Math" alttext="\in(25,55]" display="inline"><mrow><mi></mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>25</mn><mo>,</mo><mn>55</mn><mo stretchy="false">]</mo></mrow></mrow></math> Age and “Old” = Age <math id="p6.m5" class="ltx_Math" alttext="\in(55,140]" display="inline"><mrow><mi></mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>55</mn><mo>,</mo><mn>140</mn><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Conversely, to turn a categorical variable into a continuous one, either the method of extension or transformation, or both, are used. For example, <span class="ltx_text ltx_font_bold">Hist</span>, the number of prior accidents is a discrete variable taking on non-negative integer values, can be extended to a continuous variable taking on all non-negative real values to suit a certain modeling function <math id="p7.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, even though non-integral values do not make sense and are not used in actual predictions. <span class="ltx_text ltx_font_bold">AccZIP</span> can be transformed into a two-dimensional real-valued vector (longitude, latitude), since each (U.S.) zip code corresponds to an area with a unique centroid whose coordinate is measured in longitude and latitude.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Next, data variables can be grouped as whether they are:</p>
+<ol id="I4" class="ltx_enumerate">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">quantitative</em>. All variables such as <span class="ltx_text ltx_font_bold">Age</span>, <span class="ltx_text ltx_font_bold">NumAcc</span>, <span class="ltx_text ltx_font_bold">Hist</span>, and <span class="ltx_text ltx_font_bold">VehWgt</span> are quantitative variables since they take on numerical values. Variable <span class="ltx_text ltx_font_bold">AccSt</span> is not a quantitative variable even though it is numeric in nature, since its values have no intrinsic numerical meanings. Another possible non-quantitative variable may be <span class="ltx_text ltx_font_bold">DrvZIP</span>.</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">qualitative</em>. Variables like <span class="ltx_text ltx_font_bold">Gen</span>, <span class="ltx_text ltx_font_bold">Mar</span>, <span class="ltx_text ltx_font_bold">Inj</span>, as well as <span class="ltx_text ltx_font_bold">AccSt</span> and <span class="ltx_text ltx_font_bold">DrvZIP</span> are all qualitative variables.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Finally, data variables can be classified in terms of whether they can be ordered or not:</p>
+<ol id="I5" class="ltx_enumerate">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">nominal</em> variables have no intrinsic ordering structure. <span class="ltx_text ltx_font_bold">Gen</span> and <span class="ltx_text ltx_font_bold">Mar</span> are such examples, as are <span class="ltx_text ltx_font_bold">AccSt</span>, <span class="ltx_text ltx_font_bold">DrvZIP</span> and <span class="ltx_text ltx_font_bold">VehType</span>.</p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I5.i2.p1" class="ltx_para">
+<p class="ltx_p">The meaning of <em class="ltx_emph ltx_font_italic">ordinal</em> variables is self-explanatory. Usually, numerical variables are ordinal, except when they are multi-dimensional or vectorial. <span class="ltx_text ltx_font_bold">AccZIP</span>, when transformed into longitude,latitude, is not ordinal. However, fixing any one of the two coordinates turns the other coordinate into an ordinal variable. An example of a non-numerical ordinal variable is <span class="ltx_text ltx_font_bold">Inj</span>. Since the levels of <span class="ltx_text ltx_font_bold">Inj</span> can be ranked by their severity, from “no injury” to “death”, it is ordinal.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">The data variables in the above example is summarized in the following table:</p>
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">data types in statistics</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DataTypesInStatistics</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:44:27</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:44:27</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62-07</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">response variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">explanatory variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">continuous variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">discrete variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">categorical variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">nominal variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ordinal variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">predictor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">control variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">observation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">qualitative variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">quantitative variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">dichotomous</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">polychotomous</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t"><span class="ltx_ERROR undefined">\@unrecurse</span></td>
+<td class="ltx_td ltx_border_t"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:02:38 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

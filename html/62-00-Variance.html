@@ -1,0 +1,259 @@
+<!DOCTYPE html><html>
+<head>
+<title>variance</title>
+<!--Generated on Sat Feb 10 12:02:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">variance</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Definition</h2>
+
+<div id="S0.SSx1.p1" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">variance</em> of a real-valued random variable <math id="S0.SSx1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\operatorname{Var}X=\mathbb{E}\bigl{[}(X-m)^{2}\bigr{]}\,,\quad m=\mathbb{E}X\,," display="block"><mrow><mrow><mrow><mrow><mi>Var</mi><mo>⁡</mo><mi>X</mi></mrow><mo>=</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo maxsize="120%" minsize="120%" rspace="4.2pt">]</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>m</mi><mo>=</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>X</mi></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">provided that both expectations <math id="S0.SSx1.p1.m2" class="ltx_Math" alttext="\mathbb{E}X" display="inline"><mrow><mi>𝔼</mi><mo>⁢</mo><mi>X</mi></mrow></math> and <math id="S0.SSx1.p1.m3" class="ltx_Math" alttext="\mathbb{E}[(X-m)^{2}]" display="inline"><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo stretchy="false">]</mo></mrow></mrow></math> exist.</p>
+</div>
+<div id="S0.SSx1.p2" class="ltx_para">
+<p class="ltx_p">The variance of <math id="S0.SSx1.p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is often denoted by <math id="S0.SSx1.p2.m2" class="ltx_Math" alttext="\sigma^{2}(X)" display="inline"><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="S0.SSx1.p2.m3" class="ltx_Math" alttext="\sigma^{2}_{X}" display="inline"><msubsup><mi>σ</mi><mi>X</mi><mn>2</mn></msubsup></math>,
+or simply <math id="S0.SSx1.p2.m4" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math>.
+The exponent on <math id="S0.SSx1.p2.m5" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> is put there so that the number
+<math id="S0.SSx1.p2.m6" class="ltx_Math" alttext="\sigma=\sqrt{\sigma^{2}}" display="inline"><mrow><mi>σ</mi><mo>=</mo><msqrt><msup><mi>σ</mi><mn>2</mn></msup></msqrt></mrow></math>
+is measured in the same units as the random variable <math id="S0.SSx1.p2.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>
+itself.</p>
+</div>
+<div id="S0.SSx1.p3" class="ltx_para">
+<p class="ltx_p">The quantity <math id="S0.SSx1.p3.m1" class="ltx_Math" alttext="\sigma=\sqrt{\operatorname{Var}X}" display="inline"><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mi>Var</mi><mo>⁡</mo><mi>X</mi></mrow></msqrt></mrow></math> is called the <em class="ltx_emph ltx_font_italic">standard deviation</em>
+of <math id="S0.SSx1.p3.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>;
+because of the compatibility of the measuring units,
+standard deviation is usually the quantity that is quoted
+to describe an emprical probability distribution, rather than the variance.</p>
+</div>
+</section>
+<section id="S0.SSx2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Usage</h2>
+
+<div id="S0.SSx2.p1" class="ltx_para">
+<p class="ltx_p">The variance is a measure of the dispersion or variation
+of a random variable
+about its mean <math id="S0.SSx2.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>.</p>
+</div>
+<div id="S0.SSx2.p2" class="ltx_para">
+<p class="ltx_p">It is not always the best measure of dispersion for all random variables,
+but compared to other measures,
+such as the absolute mean deviation, <math id="S0.SSx2.p2.m1" class="ltx_Math" alttext="\mathbb{E}[\lvert X-m\rvert]" display="inline"><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mo fence="true" stretchy="false">|</mo><mrow><mi>X</mi><mo>-</mo><mi>m</mi></mrow><mo fence="true" stretchy="false">|</mo></mrow><mo stretchy="false">]</mo></mrow></mrow></math>,
+the variance is the most tractable analytically.</p>
+</div>
+<div id="S0.SSx2.p3" class="ltx_para">
+<p class="ltx_p">The variance is closely related to the <math id="S0.SSx2.p3.m1" class="ltx_Math" alttext="\mathbf{L}^{2}" display="inline"><msup><mi>𝐋</mi><mn>2</mn></msup></math> norm for
+random variables over a probability space.</p>
+</div>
+</section>
+<section id="S0.SSx3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Properties</h2>
+
+<div id="S0.SSx3.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The variance of <math id="I1.i1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is the second moment of <math id="I1.i1.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> minus
+the square of the first moment:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\operatorname{Var}X=\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2}\,." display="block"><mrow><mrow><mrow><mi>Var</mi><mo>⁡</mo><mi>X</mi></mrow><mo>=</mo><mrow><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>X</mi><mn>2</mn></msup><mo stretchy="false">]</mo></mrow></mrow><mo>-</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mn>2</mn></msup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This formula is often used to calculate variance analytically.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Variance is not a linear function. It scales quadratically,
+and is not affected by shifts in the mean of the distribution:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\operatorname{Var}[aX+b]=a^{2}\operatorname{Var}X\,,\quad\text{ for any $a,b%
+\in\mathbb{R}$.}" display="block"><mrow><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>X</mi></mrow><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mi>Var</mi><mo>⁡</mo><mpadded width="+1.7pt"><mi>X</mi></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mtext> for any </mtext><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><mtext>.</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">A random variable <math id="I1.i3.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is constant almost surely if and only
+if <math id="I1.i3.p1.m2" class="ltx_Math" alttext="\operatorname{Var}X=0" display="inline"><mrow><mrow><mi>Var</mi><mo>⁡</mo><mi>X</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">The variance can also be characterized as
+the minimum of expected squared deviation of a random variable from any point:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\operatorname{Var}X=\inf_{a\in\mathbb{R}}\mathbb{E}[(X-a)^{2}]\,." display="block"><mrow><mrow><mrow><mi>Var</mi><mo>⁡</mo><mi>X</mi></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">inf</mo><mrow><mi>a</mi><mo>∈</mo><mi>ℝ</mi></mrow></munder><mo>⁡</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo rspace="4.2pt" stretchy="false">]</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">For any two random variables <math id="I1.i5.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="I1.i5.p1.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> whose variances exist,
+the variance of the linear combination <math id="I1.i5.p1.m3" class="ltx_Math" alttext="aX+bY" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>X</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>Y</mi></mrow></mrow></math>
+can be expressed in terms of their covariance:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\operatorname{Var}[aX+bY]=a^{2}\operatorname{Var}X+b^{2}\operatorname{Var}Y+2%
+ab\operatorname{Cov}[X,Y]\,," display="block"><mrow><mrow><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>X</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>Y</mi></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mi>Var</mi><mo>⁡</mo><mi>X</mi></mrow></mrow><mo>+</mo><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mi>Var</mi><mo>⁡</mo><mi>Y</mi></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mrow><mi>Cov</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo rspace="4.2pt" stretchy="false">]</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I1.i5.p1.m4" class="ltx_Math" alttext="\operatorname{Cov}[X,Y]=\mathbb{E}[(X-\mathbb{E}X)(Y-\mathbb{E}Y)]" display="inline"><mrow><mrow><mi>Cov</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mi>X</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>-</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mi>Y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math>,
+and <math id="I1.i5.p1.m5" class="ltx_Math" alttext="a,b\in\mathbb{R}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p">For a random variable <math id="I1.i6.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, with actual observations <math id="I1.i6.p1.m2" class="ltx_Math" alttext="x_{1},\ldots,x_{n}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></math>,
+its variance is often estimated
+empirically with the <em class="ltx_emph ltx_font_italic">sample variance</em>:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\operatorname{Var}X\approx s^{2}=\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2%
+}\,,\quad\bar{x}=\frac{1}{n}\sum_{j=1}^{n}x_{j}\,." display="block"><mrow><mrow><mrow><mrow><mi>Var</mi><mo>⁡</mo><mi>X</mi></mrow><mo>≈</mo><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>-</mo><mover accent="true"><mi>x</mi><mo stretchy="false">¯</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">¯</mo></mover><mo>=</mo><mrow><mfrac><mn>1</mn><mi>n</mi></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mpadded width="+1.7pt"><msub><mi>x</mi><mi>j</mi></msub></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.SSx3.p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">variance</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Variance</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:53:46</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:53:46</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 83-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 82-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GeometricDistribution2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">StandardDeviation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Covariance</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">MeanSquareDeviation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:02:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

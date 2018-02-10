@@ -1,0 +1,312 @@
+<!DOCTYPE html><html>
+<head>
+<title>incidence structure</title>
+<!--Generated on Sat Feb 10 12:06:03 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">incidence structure</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. An <span class="ltx_text ltx_font_italic">incidence structure</span> <math id="p2.m1" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math> is a triple <math id="p2.m2" class="ltx_Math" alttext="(\mathcal{P},\mathcal{B},\mathcal{I})" display="inline"><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo stretchy="false">)</mo></mrow></math>, where</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math> and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> are two disjoint sets; the elements of <math id="I1.i1.p1.m3" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math> and <math id="I1.i1.p1.m4" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> are respectively <span class="ltx_text ltx_font_italic">points</span> and <span class="ltx_text ltx_font_italic">blocks</span> of <math id="I1.i1.p1.m5" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math>, and</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mathcal{I}\subseteq\mathcal{P}\times\mathcal{B}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>⊆</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>×</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></mrow></math> called the <em class="ltx_emph ltx_font_italic">incidence relation</em> of <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">and a point <math id="p2.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and a block <math id="p2.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are said to be <span class="ltx_text ltx_font_italic">incident</span> iff <math id="p2.m5" class="ltx_Math" alttext="(P,B)\in\mathcal{I}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℐ</mi></mrow></math>. The <span class="ltx_text ltx_font_italic">dual</span> incidence structure <math id="p2.m6" class="ltx_Math" alttext="\mathcal{I}^{*}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>*</mo></msup></math> is the same structure with the labels “point” and “block” reversed.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Every block <math id="p3.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> has a set <math id="p3.m2" class="ltx_Math" alttext="\mathcal{P}_{B}\subseteq\mathcal{P}" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>B</mi></msub><mo>⊆</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi></mrow></math> of points it is incident with. The collection of all <math id="p3.m3" class="ltx_Math" alttext="\mathcal{P}_{B}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>B</mi></msub></math> is a multiset, since it is possible that identical sets of points be related to distinct blocks. When <math id="p3.m4" class="ltx_Math" alttext="\mathcal{P}_{B^{\prime}}\neq\mathcal{P}_{B^{\prime\prime}}" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><msup><mi>B</mi><mo>′</mo></msup></msub><mo>≠</mo><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><msup><mi>B</mi><mo>′′</mo></msup></msub></mrow></math> whenever <math id="p3.m5" class="ltx_Math" alttext="B^{\prime}\neq B^{\prime\prime}" display="inline"><mrow><msup><mi>B</mi><mo>′</mo></msup><mo>≠</mo><msup><mi>B</mi><mo>′′</mo></msup></mrow></math>, the incidence structure is said to be <span class="ltx_text ltx_font_italic">simple</span>. In a simple incidence structure, we could identify each block <math id="p3.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> with its <math id="p3.m7" class="ltx_Math" alttext="\mathcal{P}_{B}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>B</mi></msub></math> so that blocks no longer <span class="ltx_text ltx_font_italic">have</span> sets of points they are incident with but <span class="ltx_text ltx_font_italic">are</span> such sets. If we define it that way, then</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">a <span class="ltx_text ltx_font_italic">simple</span> incidence structure consists of a set <math id="I2.i1.p1.m1" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math> and a set <math id="I2.i1.p1.m2" class="ltx_Math" alttext="\mathcal{B}\subseteq P(\mathcal{P})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>⊆</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> where <math id="I2.i1.p1.m3" class="ltx_Math" alttext="P(\mathcal{P})" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the powerset of <math id="I2.i1.p1.m4" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">A simple incidence structure is also called a hypergraph (with points as vertices, and blocks as an extended type of “edges” that are no longer restricted to exactly two vertices each).</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Every point <math id="p4.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> also has a set <math id="p4.m2" class="ltx_Math" alttext="\mathcal{B}_{P}\subseteq\mathcal{B}" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℬ</mi><mi>P</mi></msub><mo>⊆</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></math> of blocks it is incident with. Often, a simple incidence structure also has a simple dual, but the set theory formalism does not allow us to regard blocks as sets of points and simultaneously points as sets of blocks! Nevertheless, it is often useful to alternate between these dual interpretations.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The definition given above is quite general, so one can easily come up with arbitrary examples. Nevertheless, interesting examples of incidence structures are found mainly in geometry and combinatorics. In geometry, incidence is usually interpreted as set inclusion, so when we say a line is incident with a plane, we are saying that the line is included (as a subset) in the plane. In combinatorics, the main use of incidence structure is in the study of block designs: grouping a finite collection of objects so that certain “incidence” properties are satisfied.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Incidence structures are examples of relational structures. As such, we can define substructures and homomorphisms between structures:</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Given an incidence structure <math id="p7.m1" class="ltx_Math" alttext="\mathcal{S}=(\mathcal{P},\mathcal{B},\mathcal{I})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒮</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo stretchy="false">)</mo></mrow></mrow></math>, a <em class="ltx_emph ltx_font_italic">substructure</em> of <math id="p7.m2" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math> is an incidence structure <math id="p7.m3" class="ltx_Math" alttext="(\mathcal{P}^{\prime},\mathcal{B}^{\prime},\mathcal{I}^{\prime})" display="inline"><mrow><mo stretchy="false">(</mo><msup><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>′</mo></msup><mo>,</mo><msup><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>′</mo></msup><mo>,</mo><msup><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></math> such that <math id="p7.m4" class="ltx_Math" alttext="\mathcal{P}^{\prime}\subseteq\mathcal{P}" display="inline"><mrow><msup><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>′</mo></msup><mo>⊆</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi></mrow></math>, <math id="p7.m5" class="ltx_Math" alttext="\mathcal{B}^{\prime}\subseteq\mathcal{B}" display="inline"><mrow><msup><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>′</mo></msup><mo>⊆</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></math>, and <math id="p7.m6" class="ltx_Math" alttext="\mathcal{I}^{\prime}=\mathcal{I}\cap(\mathcal{P}^{\prime}\times\mathcal{B}^{%
+\prime})" display="inline"><mrow><msup><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>′</mo></msup><mo>=</mo><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>′</mo></msup><mo>×</mo><msup><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>′</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Given two incidence structures <math id="p8.m1" class="ltx_Math" alttext="\mathcal{S}_{1}=(\mathcal{P}_{1},\mathcal{B}_{1},\mathcal{I}_{1})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒮</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>1</mn></msub><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">ℬ</mi><mn>1</mn></msub><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">ℐ</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="p8.m2" class="ltx_Math" alttext="\mathcal{S}_{2}=(\mathcal{P}_{2},\mathcal{B}_{2},\mathcal{I}_{2})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒮</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>2</mn></msub><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">ℬ</mi><mn>2</mn></msub><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">ℐ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math>, a <em class="ltx_emph ltx_font_italic">homomorphism</em> from <math id="p8.m3" class="ltx_Math" alttext="\mathcal{S}_{1}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒮</mi><mn>1</mn></msub></math> to <math id="p8.m4" class="ltx_Math" alttext="\mathcal{S}_{2}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒮</mi><mn>2</mn></msub></math> is a pair of functions <math id="p8.m5" class="ltx_Math" alttext="f:\mathcal{P}_{1}\to\mathcal{P}_{2}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>1</mn></msub><mo>→</mo><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>2</mn></msub></mrow></mrow></math> and <math id="p8.m6" class="ltx_Math" alttext="g:\mathcal{B}_{1}\to\mathcal{B}_{2}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">ℬ</mi><mn>1</mn></msub><mo>→</mo><msub><mi class="ltx_font_mathcaligraphic">ℬ</mi><mn>2</mn></msub></mrow></mrow></math> such that <math id="p8.m7" class="ltx_Math" alttext="(P,B)\in\mathcal{I}_{1}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msub><mi class="ltx_font_mathcaligraphic">ℐ</mi><mn>1</mn></msub></mrow></math> iff <math id="p8.m8" class="ltx_Math" alttext="(f(P),g(B))\in\mathcal{I}_{2}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><msub><mi class="ltx_font_mathcaligraphic">ℐ</mi><mn>2</mn></msub></mrow></math>. A homomorphism is an isomorphism if both <math id="p8.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p8.m10" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> are bijections. An isomorphism is an automorphism if <math id="p8.m11" class="ltx_Math" alttext="\mathcal{S}^{\prime}=\mathcal{S}" display="inline"><mrow><msup><mi class="ltx_font_mathcaligraphic">𝒮</mi><mo>′</mo></msup><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></mrow></math>. It is easy to see that if both <math id="p8.m12" class="ltx_Math" alttext="\mathcal{S}_{1}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒮</mi><mn>1</mn></msub></math> and <math id="p8.m13" class="ltx_Math" alttext="\mathcal{S}_{2}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒮</mi><mn>2</mn></msub></math> are simple, then a homomorphism can be thought of as a single function <math id="p8.m14" class="ltx_Math" alttext="f:\mathcal{P}_{1}\to\mathcal{P}_{2}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>1</mn></msub><mo>→</mo><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>2</mn></msub></mrow></mrow></math> such that <math id="p8.m15" class="ltx_Math" alttext="P\in B" display="inline"><mrow><mi>P</mi><mo>∈</mo><mi>B</mi></mrow></math> iff <math id="p8.m16" class="ltx_Math" alttext="f(P)\in f(B)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, where <math id="p8.m17" class="ltx_Math" alttext="f(B)=\{f(Q)\mid Q\in B\}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∣</mo><mrow><mi>Q</mi><mo>∈</mo><mi>B</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Incidence structures are special cases of a general form of geometry called Buekenhout-Tits geometry. Given an incidence structure <math id="p9.m1" class="ltx_Math" alttext="(\mathcal{P},\mathcal{B},\mathcal{I})" display="inline"><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo stretchy="false">)</mo></mrow></math>, form the disjoint union <math id="p9.m2" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> of <math id="p9.m3" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math> and <math id="p9.m4" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math>, and define a function <math id="p9.m5" class="ltx_Math" alttext="\tau:\Lambda\to\{0,1\}" display="inline"><mrow><mi>τ</mi><mo>:</mo><mrow><mi mathvariant="normal">Λ</mi><mo>→</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math> where <math id="p9.m6" class="ltx_Math" alttext="\tau(x)=0" display="inline"><mrow><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> iff <math id="p9.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a point. Finally, define binary relation <math id="p9.m8" class="ltx_Math" alttext="\#" display="inline"><mi mathvariant="normal">#</mi></math> on <math id="p9.m9" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> so that <math id="p9.m10" class="ltx_Math" alttext="x\#y" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi mathvariant="normal">#</mi><mo>⁢</mo><mi>y</mi></mrow></math> iff one is incident with another, or <math id="p9.m11" class="ltx_Math" alttext="x=y" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>y</mi></mrow></math>. Then <math id="p9.m12" class="ltx_Math" alttext="(\Lambda,\#,\{0,1\},\tau)" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Λ</mi><mo>,</mo><mi mathvariant="normal">#</mi><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo></mrow></math> so constructed is a geometry of rank 2.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_align_left ltx_title_subsection">Finite planes</h2>
+
+<div id="S0.SSx1.p1" class="ltx_para ltx_align_left">
+<p class="ltx_p">The term <span class="ltx_text ltx_font_bold">line</span> has a specific meaning for 2-designs in general: for any two points, it is the intersection of all blocks containing both those points. For 2-designs that are also Steiner systems (<math id="S0.SSx1.p1.m1" class="ltx_Math" alttext="\tau=2" display="inline"><mrow><mi>τ</mi><mo>=</mo><mn>2</mn></mrow></math> and <math id="S0.SSx1.p1.m2" class="ltx_Math" alttext="\lambda=1" display="inline"><mrow><mi>λ</mi><mo>=</mo><mn>1</mn></mrow></math>) there
+is only one such block, so line becomes a synonym for block. And it becomes a finite analogue of the usual geometric meaning of the word.</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">An <math id="I3.i1.p1.m1" class="ltx_Math" alttext="S(2,\kappa,\nu)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mi>κ</mi><mo>,</mo><mi>ν</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the finite analogue of a <span class="ltx_text ltx_font_bold">plane</span>, with blocks in the rôle of <span class="ltx_text ltx_font_bold">lines</span></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">in the following sense: the design property now requires there to be, for any two different points, exactly one line “through” both those points. Just like in a real (continuous) plane.</p>
+</div>
+<div id="S0.SSx1.p2" class="ltx_para ltx_align_left">
+<p class="ltx_p">This also implies that, for any two different lines <math id="S0.SSx1.p2.m1" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math> and <math id="S0.SSx1.p2.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, there is <span class="ltx_text ltx_font_italic">no more</span> than one point “on” both those lines (if both of <math id="S0.SSx1.p2.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and <math id="S0.SSx1.p2.m4" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> were on both those lines, there would be two lines through those points).
+It does not imply there is always such a point: just like in a real plane, lines can be parallel.</p>
+</div>
+<div id="S0.SSx1.p3" class="ltx_para ltx_align_left">
+<p class="ltx_p">One example is a (finite) <span class="ltx_text ltx_font_bold">affine plane</span> with <math id="S0.SSx1.p3.m1" class="ltx_Math" alttext="q^{2}" display="inline"><msup><mi>q</mi><mn>2</mn></msup></math> points and <math id="S0.SSx1.p3.m2" class="ltx_Math" alttext="q^{2}+q" display="inline"><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi></mrow></math> lines. It can be obtained by deleting one line (and all its points) from a projective plane (for which see below). Lines that used to intersect in one of the deleted points are parallel in the affine plane.</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p">A (finite) <span class="ltx_text ltx_font_bold">projective plane</span> is an <math id="I4.i1.p1.m1" class="ltx_Math" alttext="S(2,q+1,q^{2}+q+1)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">and it has no parallel lines. Because any two lines meet in a point, the dual is again a projective plane. So a projective plane is a square design, as well as being a great many other things.</p>
+</div>
+<div id="S0.SSx1.p4" class="ltx_para ltx_align_left">
+<p class="ltx_p">It is easy to prove that the property of being a plane dual to a plane (i.e. the absence of parallel lines) implies, apart from a few trivial cases, numbers of the form <math id="S0.SSx1.p4.m1" class="ltx_Math" alttext="q+1" display="inline"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math> and <math id="S0.SSx1.p4.m2" class="ltx_Math" alttext="q^{2}+q+1" display="inline"><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math>. Much harder is determining for which <math id="S0.SSx1.p4.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>
+such planes exist. The parameter <math id="S0.SSx1.p4.m4" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is known as the <span class="ltx_text ltx_font_bold">order</span> of the plane (this agrees with order as defined above for designs in general).</p>
+</div>
+<div id="S0.SSx1.p5" class="ltx_para ltx_align_left">
+<p class="ltx_p">Highly symmetric “classical” (aka Desarguesian, Pappian) projective planes can be constructed based on finite fields, for any prime power <math id="S0.SSx1.p5.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>. Many non-Desarguesian projective planes are known, but thus far their <math id="S0.SSx1.p5.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> are also prime powers. The <span class="ltx_text ltx_font_bold">prime power conjecture</span> is that orders of all projective planes will be prime powers.</p>
+</div>
+<div id="S0.SSx1.p6" class="ltx_para ltx_align_left">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">Bruck–Ryser theorem</span> states that if <math id="S0.SSx1.p6.m1" class="ltx_Math" alttext="q\equiv 1" display="inline"><mrow><mi>q</mi><mo>≡</mo><mn>1</mn></mrow></math> or <math id="S0.SSx1.p6.m2" class="ltx_Math" alttext="2\pmod{4}" display="inline"><mrow><mn>2</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, and not (a square or) the sum of two squares, it cannot be the order of a projective plane. This rules out 6 for instance, as well as 14 etc. It has been extended
+to the <span class="ltx_text ltx_font_bold">Bruck–Ryser–Chowla theorem</span> for all square 2-designs, with a more complicated constraint.</p>
+</div>
+<div id="S0.SSx1.p7" class="ltx_para ltx_align_left">
+<p class="ltx_p">The only other order ruled out to date is 10, via an epic computer search by Lam, Swiercz and Thiel (read
+<span class="ltx_text ltx_font_typewriter">http://www.cecm.sfu.ca/organics/papers/lam/index.htmlhttp://www.cecm.sfu.ca/organics/papers/lam/index.html</span> for Lam’s account).</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+</span>
+      </li>
+      
+<li id="bib.bibx1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">AK93</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">E. F. Assmus</span> and <span class="ltx_text ltx_font_smallcaps">J. D. Key</span>,
+<span class="ltx_text ltx_font_slanted">Designs and their Codes
+<br class="ltx_break"></span>(pbk. ed. w. corr.), Camb. Univ. Pr. 1993,
+<span class="ltx_text ltx_font_typewriter" style="font-size:90%;">ISBN  0 521 45839 0
+<br class="ltx_break"></span><span class="ltx_text ltx_font_italic">first part has thorough introduction to
+various flavors of incidence structure</span>
+
+<div class="ltx_pagination ltx_role_newpage"></div>
+</span>
+      </li>
+      
+<li id="bib.bibx2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">Cam94</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">Peter J. Cameron</span>,
+<span class="ltx_text ltx_font_slanted">Combinatorics: topics, techniques, algorithms</span>,
+<br class="ltx_break">Camb. Univ. Pr. 1994, <span class="ltx_text ltx_font_typewriter" style="font-size:90%;">ISBN  0 521 45761 0
+<br class="ltx_break"><span class="ltx_text" style="font-size:111%;">http://www.maths.qmul.ac.uk/ pjc/comb/http://www.maths.qmul.ac.uk/ pjc/comb/</span></span>
+(solutions, errata &amp;c.)
+<br class="ltx_break"><span class="ltx_text ltx_font_italic">good combinatorics textbook, with detail</span>
+
+</span>
+      </li>
+      
+<li id="bib.bibx3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">Pot95</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">Alexander Pott</span>,
+<span class="ltx_text ltx_font_slanted">Finite Geometry and Character Theory</span>,
+<br class="ltx_break">Lect. Notes in Math. <span class="ltx_text ltx_font_bold">1601</span>, Springer 1995,
+<span class="ltx_text ltx_font_typewriter" style="font-size:90%;">ISBN  3 540 59065 X
+<br class="ltx_break"></span><span class="ltx_text ltx_font_italic">includes clear introduction to incidence
+structures</span>
+
+</span>
+      </li>
+      
+<li id="bib.bibx4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">CD96</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">Charles J. Colbourn</span> and <span class="ltx_text ltx_font_smallcaps">Jeffrey H. Dinitz</span>, eds.
+<br class="ltx_break"><span class="ltx_text ltx_font_slanted">The CRC Handbook of Combinatorial Designs</span>,
+<br class="ltx_break">CRC Press 1996, <span class="ltx_text ltx_font_typewriter" style="font-size:90%;">ISBN  0 8493 8948 8
+<br class="ltx_break"><span class="ltx_text" style="font-size:111%;">http://www.emba.uvm.edu/ dinitz/hcd.htmlhttp://www.emba.uvm.edu/ dinitz/hcd.html</span></span> (errata, new results)
+<br class="ltx_break"><span class="ltx_text ltx_font_italic">the reference work on designs incl. Steiner systems,
+proj. planes</span>
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p10" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">incidence structure</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">IncidenceStructure</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:10:56</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:10:56</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">18</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62K10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51E30</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51E05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05B25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05B07</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05B05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Hypergraph</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SteinerSystem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TacticalDecomposition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ProjectivePlane2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FiniteProjectivePlane4</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">BuekenhoutTitsGeometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">incidence relation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">point</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">block</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">incident</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">simple incidence structure</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">affine plane</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">finite affine plane</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:06:03 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html><html>
+<head>
+<title>logistic regression</title>
+<!--Generated on Sat Feb 10 12:05:49 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">logistic regression</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Given a binary respose variable <math id="p2.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> with probability of success <math id="p2.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, the <em class="ltx_emph ltx_font_italic">logistic regression</em> is a non-linear
+regression model with the following model equation:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\operatorname{E}[Y]=\frac{\operatorname{exp}(\boldsymbol{X}^{\operatorname{T}}%
+\boldsymbol{\beta})}{1+\operatorname{exp}(\boldsymbol{X}^{\operatorname{T}}%
+\boldsymbol{\beta})}," display="block"><mrow><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>𝑿</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝜷</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>1</mn><mo>+</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>𝑿</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝜷</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p2.m3" class="ltx_Math" alttext="\boldsymbol{X}^{\operatorname{T}}\boldsymbol{\beta}" display="inline"><mrow><msup><mi>𝑿</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝜷</mi></mrow></math> is the product of the transpose of the column matrix
+<math id="p2.m4" class="ltx_Math" alttext="\boldsymbol{X}" display="inline"><mi>𝑿</mi></math> of explanatory variables and the unknown column matrix <math id="p2.m5" class="ltx_Math" alttext="\boldsymbol{\beta}" display="inline"><mi>𝜷</mi></math> of regression coefficients.
+Rewriting this so that the right hand side is <math id="p2.m6" class="ltx_Math" alttext="\boldsymbol{X}^{\operatorname{T}}\boldsymbol{\beta}" display="inline"><mrow><msup><mi>𝑿</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝜷</mi></mrow></math>, we arrive at a new
+equation</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\ln\Big{(}\frac{\operatorname{E}[Y]}{1-\operatorname{E}[Y]}\Big{)}=\boldsymbol%
+{X}^{\operatorname{T}}\boldsymbol{\beta}." display="block"><mrow><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>𝑿</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝜷</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The left hand side of this new equation is known as the logit function, defined on the open unit interval <math id="p2.m7" class="ltx_Math" alttext="(0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> with
+range the entire real line <math id="p2.m8" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\operatorname{logit}(p):=\ln(\frac{p}{1-p})\mbox{ where }p\in(0,1)." display="block"><mrow><mrow><mrow><mi>logit</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mfrac><mi>p</mi><mrow><mn>1</mn><mo>-</mo><mi>p</mi></mrow></mfrac><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mtext> where </mtext><mo>⁢</mo><mi>p</mi></mrow><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that the logit of <math id="p2.m9" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is the same as the natural log of the odds of success (over failures) with the probability of
+success = <math id="p2.m10" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.
+Since <math id="p2.m11" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is a binary response variable, so it has a binomial distribution with parameter (probability of success)
+<math id="p2.m12" class="ltx_Math" alttext="p=\operatorname{E}[Y]" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, the logistic regression model equation can be rewritten as</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\operatorname{logit}\big{(}\operatorname{E}[Y]\big{)}=\operatorname{logit}(p)=%
+\boldsymbol{X}^{\operatorname{T}}\boldsymbol{\beta}." display="block"><mrow><mrow><mrow><mi>logit</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>=</mo><mrow><mi>logit</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>𝑿</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝜷</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Logistic regression is a particular type of generalized linear model. In addition, the associated logit function is
+the most appropriate and natural choice for a link function. By natural we mean that <math id="p3.m1" class="ltx_Math" alttext="\operatorname{logit}(p)" display="inline"><mrow><mi>logit</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> is equal
+to the natural parameter <math id="p3.m2" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> appearing in the distribution function for the GLM (generalized linear model). To see
+this, first note that the distribution function for a binomial random variable <math id="p3.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is
+</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="P(Y=y)=\left({n\atop y}\right)p^{y}(1-p)^{(n-y)}," display="block"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>=</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>y</mi></mfrac><mo>)</mo></mrow><msup><mi>p</mi><mi>y</mi></msup><msup><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></msup><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p3.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is the number of trials and <math id="p3.m5" class="ltx_Math" alttext="Y=y" display="inline"><mrow><mi>Y</mi><mo>=</mo><mi>y</mi></mrow></math> is the event that there are <math id="p3.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> success in these <math id="p3.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> trials. <math id="p3.m8" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, the
+parameter, is the probability of success. Let there be <math id="p3.m9" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> iid binomial random variables <math id="p3.m10" class="ltx_Math" alttext="Y_{1},Y_{2},\ldots,Y_{N}" display="inline"><mrow><msub><mi>Y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>Y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>Y</mi><mi>N</mi></msub></mrow></math> each
+corresponding to <math id="p3.m11" class="ltx_Math" alttext="n_{i}" display="inline"><msub><mi>n</mi><mi>i</mi></msub></math> trials with <math id="p3.m12" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math> probability of success. Then the joint probability distribution of these <math id="p3.m13" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>
+random variables is simply the product of the individual binomial distributions. Equating this to the distribution for
+the GLM, which belongs to the exponential family of distributions, we have:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\prod_{i=1}^{N}\left({n_{i}\atop y_{i}}\right){p_{i}}^{y_{i}}(1-p_{i})^{(n_{i}%
+-y_{i})}=\prod_{i=1}^{N}\operatorname{exp}\big{[}y_{i}\theta_{i}-b(\theta_{i})%
++c(y_{i})\big{]}." display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><msub><mi>n</mi><mi>i</mi></msub><msub><mi>y</mi><mi>i</mi></msub></mfrac><mo>)</mo></mrow><mo>⁢</mo><mmultiscripts><mi>p</mi><mi>i</mi><none></none><none></none><msub><mi>y</mi><mi>i</mi></msub></mmultiscripts><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>-</mo><msub><mi>y</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></msup></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mrow><mrow><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>θ</mi><mi>i</mi></msub></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>θ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Taking the natural log on both sides, we have the equality of log-likelihood function in two different forms:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\sum_{i=1}^{N}\big{[}\ln\left({n_{i}\atop y_{i}}\right)+y_{i}\ln p_{i}+(n_{i}-%
+y_{i})\ln(1-p_{i})\big{]}=\sum_{i=1}^{N}\big{[}y_{i}\theta_{i}-b(\theta_{i})+c%
+(y_{i})\big{]}." display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mrow><mo maxsize="120%" minsize="120%">[</mo><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><msub><mi>n</mi><mi>i</mi></msub><msub><mi>y</mi><mi>i</mi></msub></mfrac><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>-</mo><msub><mi>y</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mrow><mo maxsize="120%" minsize="120%">[</mo><mrow><mrow><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>θ</mi><mi>i</mi></msub></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>θ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Rearranging the left hand side and comparing term <math id="p3.m14" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>, we have</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="y_{i}\ln(\frac{p_{i}}{1-p_{i}})+n_{i}\ln(1-p_{i})+\ln\left({n_{i}\atop y_{i}}%
+\right)=y_{i}\theta_{i}-b(\theta_{i})+c(y_{i})," display="block"><mrow><mrow><mrow><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mfrac><msub><mi>p</mi><mi>i</mi></msub><mrow><mn>1</mn><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></mfrac><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><msub><mi>n</mi><mi>i</mi></msub><msub><mi>y</mi><mi>i</mi></msub></mfrac><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>θ</mi><mi>i</mi></msub></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>θ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that <math id="p3.m15" class="ltx_Math" alttext="\theta_{i}=\ln\big{(}p_{i}/(1-p_{i})\big{)}=\operatorname{logit}(p_{i})" display="inline"><mrow><msub><mi>θ</mi><mi>i</mi></msub><mo>=</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>=</mo><mrow><mi>logit</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Next, setting the natural link function logit of the expected value of <math id="p4.m1" class="ltx_Math" alttext="Y_{i}" display="inline"><msub><mi>Y</mi><mi>i</mi></msub></math>, which is <math id="p4.m2" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math>, to the linear portion of
+the GLM, we have</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\operatorname{logit}(p_{i})={\boldsymbol{X}_{i}}^{\operatorname{T}}\boldsymbol%
+{\beta}," display="block"><mrow><mrow><mrow><mi>logit</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mmultiscripts><mi>𝑿</mi><mi>i</mi><none></none><none></none><mi mathvariant="normal">T</mi></mmultiscripts><mo>⁢</mo><mi>𝜷</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">giving us the model formula for the logistic regression.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks.</span></p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Comparing model equation for the logistic regression to that of the normal or Gaussian linear regression model, we
+see that the difference is in the choice of link function. In normal liner model, the regression equation looks like</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="\operatorname{E}[Y]=\boldsymbol{X}^{\operatorname{T}}\boldsymbol{\beta}." display="block"><mrow><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>𝑿</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝜷</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The link function in this case is the identity function. The model equation is consistent because the linear terms on
+the right hand side allow <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\operatorname{E}[Y]" display="inline"><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></math> on the left hand side to vary over the reals. However, for a binary
+response variable, Equation (2) would not be appropriate as the left hand side is restricted to only within the unit
+interval, whereas the right hand side has the possibility of going outside of <math id="I1.i1.p1.m2" class="ltx_Math" alttext="(0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>. Therefore, Equation (1) is more
+appropriate when we are dealing with a binary response data variable.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The logit function is not the only choice of link function for the logistic regression. Other, “non-natural”
+link functions are available. Two such examples are the probit function, or the inverse cumulative normal distribution
+function <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\Phi^{-1}(p)" display="inline"><mrow><msup><mi mathvariant="normal">Φ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> and the complimentary-log-log function <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\ln(-\ln(1-p))" display="inline"><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. Both of these functions map the open
+unit interval to <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">logistic regression</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">LogisticRegression</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:47:51</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:47:51</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62J12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62J02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">logit</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">probit</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">complementary-log-log</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:05:49 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html><html>
+<head>
+<title>mean square error</title>
+<!--Generated on Sat Feb 10 12:05:37 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">mean square error</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">mean square error</em> of an estimator <math id="p1.m1" class="ltx_Math" alttext="\hat{\theta}" display="inline"><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover></math> of a
+parameter <math id="p1.m2" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> in a statistical model is defined as:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\operatorname{MSE}(\hat{\theta})\colon=\operatorname{E}\big{[}(\hat{\theta}-%
+\theta)^{2}\big{]}." display="block"><mrow><mrow><mrow><mi>MSE</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover><mo>-</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">From the definition of the variance
+<math id="p2.m1" class="ltx_Math" alttext="\operatorname{Var}[X]=\operatorname{E}[X^{2}]-\operatorname{E}[X]^{2}" display="inline"><mrow><mi>Var</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi mathvariant="normal">E</mi><mrow><mo stretchy="false">[</mo><msup><mi>X</mi><mn>2</mn></msup><mo stretchy="false">]</mo></mrow><mo>-</mo><mi mathvariant="normal">E</mi><msup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mn>2</mn></msup></mrow></math>,
+we can express the mean square error in terms of the bias by
+expanding the right hand side above:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\operatorname{MSE}(\hat{\theta})=\operatorname{Var}\big{[}\hat{\theta}\big{]}+%
+\operatorname{Bias}(\hat{\theta})^{2}." display="block"><mrow><mi>MSE</mi><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>Var</mi><mrow><mo maxsize="120%" minsize="120%">[</mo><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover><mo maxsize="120%" minsize="120%">]</mo></mrow><mo>+</mo><mi>Bias</mi><msup><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">If <math id="p3.m1" class="ltx_Math" alttext="\hat{\theta}" display="inline"><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover></math> is an unbiased estimator, then its mean square
+error is identical to its variance:
+<math id="p3.m2" class="ltx_Math" alttext="\operatorname{MSE}(\hat{\theta})=\operatorname{Var}[\hat{\theta}]" display="inline"><mrow><mrow><mi>MSE</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">]</mo></mrow></mrow></mrow></math>.
+An unbiased estimator such that <math id="p3.m3" class="ltx_Math" alttext="\operatorname{MSE}(\hat{\theta})" display="inline"><mrow><mi>MSE</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math>
+is a minimum value among all unbiased estimators for <math id="p3.m4" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is
+called a <em class="ltx_emph ltx_font_italic">minimum variance unbiased estimator</em>, abbreviated <em class="ltx_emph ltx_font_italic">MVUE</em>, or <em class="ltx_emph ltx_font_italic">uniformly minimum variance unbiased estimator</em>, abbreviated <em class="ltx_emph ltx_font_italic">UMVU</em> estimator.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example</span>. Suppose <math id="p4.m1" class="ltx_Math" alttext="X_{1},X_{2},\ldots,X_{n}" display="inline"><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><msub><mi>X</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></math> are iid random
+variables (<math id="p4.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> independent measurements of the radius of a coin,
+etc…) from a normal distribution <math id="p4.m3" class="ltx_Math" alttext="N(\mu,\sigma^{2})" display="inline"><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></math> (for example,
+<math id="p4.m4" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> would be the true radius of the coin, and <math id="p4.m5" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math> would be
+the error component of the measurements). Suppose <math id="p4.m6" class="ltx_Math" alttext="\overline{X}" display="inline"><mover accent="true"><mi>X</mi><mo>¯</mo></mover></math>
+(<math id="p4.m7" class="ltx_Math" alttext="=\overline{X}_{n}" display="inline"><mrow><mi></mi><mo>=</mo><msub><mover accent="true"><mi>X</mi><mo>¯</mo></mover><mi>n</mi></msub></mrow></math>) is the sample mean. Then <math id="p4.m8" class="ltx_Math" alttext="\overline{X}" display="inline"><mover accent="true"><mi>X</mi><mo>¯</mo></mover></math> is an
+unbiased estimator, so that</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\operatorname{MSE}(\overline{X})=\operatorname{Var}\left[\overline{X}\right]=%
+\operatorname{Var}\left[\frac{1}{n}\sum_{i=1}^{n}X_{i}\right]=\frac{1}{n^{2}}%
+\left(\sum_{i=1}^{n}\sigma^{2}\right)=\frac{\sigma^{2}}{n}." display="block"><mrow><mrow><mrow><mi>MSE</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>X</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo>[</mo><mover accent="true"><mi>X</mi><mo>¯</mo></mover><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo>[</mo><mrow><mfrac><mn>1</mn><mi>n</mi></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>X</mi><mi>i</mi></msub></mrow></mrow><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msup><mi>n</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mi>σ</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mfrac><msup><mi>σ</mi><mn>2</mn></msup><mi>n</mi></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. The square root of MSE is called the “root mean square error”, or <em class="ltx_emph ltx_font_italic">rms error</em> for short.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">mean square error</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MeanSquareError</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:07:42</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:07:42</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62J10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 94A12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MSE</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MVUE</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">UMVU</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">UMVUE</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">uniformly minimum variance unbiased</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MeanSquareDeviation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">minimum variance unbiased estimator</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rms error</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">root-mean-square</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">root mean square</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">rms</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:05:37 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

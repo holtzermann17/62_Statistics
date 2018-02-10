@@ -1,0 +1,128 @@
+<!DOCTYPE html><html>
+<head>
+<title>random variable</title>
+<!--Generated on Sat Feb 10 12:02:18 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">random variable</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">If <math id="p1.m1" class="ltx_Math" alttext="(\Omega,\mathcal{A},P)" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>,</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></math> is a probability space, then a <span class="ltx_text ltx_font_bold">random variable</span> on <math id="p1.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> is a measurable function <math id="p1.m3" class="ltx_Math" alttext="X:(\Omega,\mathcal{A})\to S" display="inline"><mrow><mi>X</mi><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>S</mi></mrow></mrow></math> to a measurable space <math id="p1.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> (frequently taken to be the real numbers with the standard measure). The <em class="ltx_emph ltx_font_italic">law</em> of a random variable is the probability measure <math id="p1.m5" class="ltx_Math" alttext="PX^{-1}:S\to\mathbb{R}" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><msup><mi>X</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> defined by <math id="p1.m6" class="ltx_Math" alttext="PX^{-1}(s)=P(X^{-1}(s))" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><msup><mi>X</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">A random variable <math id="p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is said to be <em class="ltx_emph ltx_font_italic">discrete</em> if the set <math id="p2.m2" class="ltx_Math" alttext="\{X(\omega):\omega\in\Omega\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mi>ω</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow><mo stretchy="false">}</mo></mrow></math> (i.e. the range of <math id="p2.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>) is finite or countable. A more general version of this definition is as follows: A random variable <math id="p2.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is discrete if there is a countable subset <math id="p2.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> of the range of <math id="p2.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> such that <math id="p2.m7" class="ltx_Math" alttext="P(X\in B)=1" display="inline"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>∈</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> (Note that, as a countable subset of <math id="p2.m8" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, <math id="p2.m9" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is measurable).</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">A random variable <math id="p3.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is said to be <em class="ltx_emph ltx_font_italic"></em> if it has a cumulative distribution function which is absolutely continuous (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/AbsolutelyContinuousFunction2</span>).</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Example:</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Consider the event of throwing a coin. Thus, <math id="p5.m1" class="ltx_Math" alttext="\Omega=\{H,T\}" display="inline"><mrow><mi mathvariant="normal">Ω</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>H</mi><mo>,</mo><mi>T</mi><mo stretchy="false">}</mo></mrow></mrow></math> where <math id="p5.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is the event in which the coin falls head and <math id="p5.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> the event in which falls tails.
+Let <math id="p5.m4" class="ltx_Math" alttext="X=" display="inline"><mrow><mi>X</mi><mo>=</mo><mi></mi></mrow></math>number of tails in the experiment. Then <math id="p5.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a (discrete) random variable.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">random variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RandomVariable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:53:10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:53:10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">21</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11R32</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03-01</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20B25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DistributionFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DensityFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GeometricDistribution2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">discrete random variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">continuous random variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">law of a random variable</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:02:18 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
