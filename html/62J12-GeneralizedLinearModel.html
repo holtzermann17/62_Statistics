@@ -20,19 +20,19 @@
 <br class="ltx_break">
 </div>
 <div id="p2" class="ltx_para">
-<p class="ltx_p">Given a random vector, or the response variable, <span class="ltx_text ltx_font_bold">Y</span>, a <em class="ltx_emph ltx_font_italic">generalized linear model</em>, or GLM for short, is a statistical model <math id="p2.m1" class="ltx_Math" alttext="\{f_{\textbf{Y}}(\boldsymbol{y}\mid\boldsymbol{\theta})\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mtext>𝐘</mtext></msub><mrow><mo stretchy="false">(</mo><mi>𝒚</mi><mo>∣</mo><mi>𝜽</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></math> such that
+<p class="ltx_p">Given a <a class="nnexus_concept" href="http://planetmath.org/randomvector">random vector</a>, or the <a class="nnexus_concept" href="http://planetmath.org/datatypesinstatistics">response variable</a>, <span class="ltx_text ltx_font_bold">Y</span>, a <em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://planetmath.org/generalizedlinearmodel">generalized linear model</a></em>, or GLM for short, is a <a class="nnexus_concept" href="http://planetmath.org/statisticalmodel">statistical model</a> <math id="p2.m1" class="ltx_Math" alttext="\{f_{\textbf{Y}}(\boldsymbol{y}\mid\boldsymbol{\theta})\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mtext>𝐘</mtext></msub><mrow><mo stretchy="false">(</mo><mi>𝒚</mi><mo>∣</mo><mi>𝜽</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></math> such that
 </p>
 <ol id="I1" class="ltx_enumerate">
 <li id="I1.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">1.</span> 
 <div id="I1.i1.p1" class="ltx_para">
-<p class="ltx_p">the components of <span class="ltx_text ltx_font_bold">Y</span> are mutually independent of each other,</p>
+<p class="ltx_p">the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">components</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/coordinatevector"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/frame"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of <span class="ltx_text ltx_font_bold">Y</span> are mutually independent of each other,</p>
 </div>
 </li>
 <li id="I1.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">2.</span> 
 <div id="I1.i2.p1" class="ltx_para">
-<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="f_{Y_{i}}(y_{i}\mid\theta_{i})" display="inline"><mrow><msub><mi>f</mi><msub><mi>Y</mi><mi>i</mi></msub></msub><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>∣</mo><msub><mi>θ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> belongs to the exponential family of distributions and has the following canonical form:</p>
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="f_{Y_{i}}(y_{i}\mid\theta_{i})" display="inline"><mrow><msub><mi>f</mi><msub><mi>Y</mi><mi>i</mi></msub></msub><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>∣</mo><msub><mi>θ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> belongs to the <a class="nnexus_concept" href="http://planetmath.org/exponentialfamily">exponential family</a> of <a class="nnexus_concept" href="http://dlmf.nist.gov/1.16#SS1.p5">distributions</a> and has the following canonical form:</p>
 <table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -42,13 +42,13 @@ y)]," display="block"><mrow><msub><mi>f</mi><msub><mi>Y</mi><mi>i</mi></msub></m
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">where the parameter <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\theta_{i}" display="inline"><msub><mi>θ</mi><mi>i</mi></msub></math> is called the <em class="ltx_emph ltx_font_italic">canonical parameter</em> and <math id="I1.i2.p1.m3" class="ltx_Math" alttext="b(\theta_{i})" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>θ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is called the <em class="ltx_emph ltx_font_italic">cumulant function</em>.</p>
+<p class="ltx_p">where the <a class="nnexus_concept" href="http://mathworld.wolfram.com/Parameter.html">parameter</a> <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\theta_{i}" display="inline"><msub><mi>θ</mi><mi>i</mi></msub></math> is called the <em class="ltx_emph ltx_font_italic">canonical parameter</em> and <math id="I1.i2.p1.m3" class="ltx_Math" alttext="b(\theta_{i})" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>θ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is called the <em class="ltx_emph ltx_font_italic">cumulant function</em>.</p>
 </div>
 </li>
 <li id="I1.i3" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">3.</span> 
 <div id="I1.i3.p1" class="ltx_para">
-<p class="ltx_p">for each component or variate <math id="I1.i3.p1.m1" class="ltx_Math" alttext="Y_{i}" display="inline"><msub><mi>Y</mi><mi>i</mi></msub></math>, with a corresponding set of <math id="I1.i3.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> covariates <math id="I1.i3.p1.m3" class="ltx_Math" alttext="X_{ij}" display="inline"><msub><mi>X</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math>, there exists a monotone differentiable function <math id="I1.i3.p1.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, called the <em class="ltx_emph ltx_font_italic">link function</em>, such that</p>
+<p class="ltx_p">for each component or variate <math id="I1.i3.p1.m1" class="ltx_Math" alttext="Y_{i}" display="inline"><msub><mi>Y</mi><mi>i</mi></msub></math>, with a corresponding set of <math id="I1.i3.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> covariates <math id="I1.i3.p1.m3" class="ltx_Math" alttext="X_{ij}" display="inline"><msub><mi>X</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math>, there exists a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">monotone</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Monotone.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/increasingdecreasingmonotonefunction"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <a class="nnexus_concept" href="http://planetmath.org/differentiablefunction">differentiable function</a> <math id="I1.i3.p1.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, called the <em class="ltx_emph ltx_font_italic">link function</em>, such that</p>
 <table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -64,7 +64,7 @@ y)]," display="block"><mrow><msub><mi>f</mi><msub><mi>Y</mi><mi>i</mi></msub></m
 </ol>
 </div>
 <div id="p3" class="ltx_para">
-<p class="ltx_p">In practice, an extra parameter called the dispersion parameter, <math id="p3.m1" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>, is introducted to the model to lower a phenonmenon known as overdispersion. The GLM now looks like:</p>
+<p class="ltx_p">In practice, an extra parameter called the <a class="nnexus_concept" href="http://planetmath.org/overdispersion">dispersion parameter</a>, <math id="p3.m1" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>, is introducted to the model to lower a phenonmenon known as overdispersion. The GLM now looks like:</p>
 <table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">

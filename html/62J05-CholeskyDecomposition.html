@@ -24,16 +24,16 @@
 <span class="ltx_tag ltx_tag_section">1 </span>Cholesky Decomposition</h2>
 
 <div id="S1.p1" class="ltx_para">
-<p class="ltx_p">A symmetric and positive definite matrix can be efficiently decomposed into a lower and upper triangular matrix. For a matrix of any type, this is achieved by the LU decomposition which factorizes <math id="S1.p1.m1" class="ltx_Math" alttext="A=LU" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><mi>U</mi></mrow></mrow></math>. If <math id="S1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> satisfies the above criteria, one can decompose more efficiently into <math id="S1.p1.m3" class="ltx_Math" alttext="A=LL^{T}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><msup><mi>L</mi><mi>T</mi></msup></mrow></mrow></math> where <math id="S1.p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a lower triangular matrix with positive diagonal elements. <math id="S1.p1.m5" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is called the <em class="ltx_emph ltx_font_italic">Cholesky triangle</em>.</p>
+<p class="ltx_p">A <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">symmetric</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/symmetry"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/symmetricmatrix"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> and <a class="nnexus_concept" href="http://mathworld.wolfram.com/PositiveDefiniteMatrix.html">positive definite matrix</a> can be efficiently decomposed into a lower and <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">upper triangular matrix</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/UpperTriangularMatrix.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/triangularmatrix"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>. For a matrix of any type, this is achieved by the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">LU decomposition</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/LUDecomposition.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/ludecomposition"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> which factorizes <math id="S1.p1.m1" class="ltx_Math" alttext="A=LU" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><mi>U</mi></mrow></mrow></math>. If <math id="S1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> satisfies the above criteria, one can decompose more efficiently into <math id="S1.p1.m3" class="ltx_Math" alttext="A=LL^{T}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><msup><mi>L</mi><mi>T</mi></msup></mrow></mrow></math> where <math id="S1.p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a <a class="nnexus_concept" href="http://mathworld.wolfram.com/LowerTriangularMatrix.html">lower triangular matrix</a> with <a class="nnexus_concept" href="http://planetmath.org/positive">positive</a> <a class="nnexus_concept" href="http://mathworld.wolfram.com/Diagonal.html">diagonal</a> elements. <math id="S1.p1.m5" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is called the <em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://planetmath.org/choleskydecomposition">Cholesky triangle</a></em>.</p>
 </div>
 <div id="S1.p2" class="ltx_para">
 <p class="ltx_p">To solve <math id="S1.p2.m1" class="ltx_Math" alttext="Ax=b" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mi>b</mi></mrow></math>, one solves first <math id="S1.p2.m2" class="ltx_Math" alttext="Ly=b" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mi>b</mi></mrow></math> for <math id="S1.p2.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, and then <math id="S1.p2.m4" class="ltx_Math" alttext="L^{T}x=y" display="inline"><mrow><mrow><msup><mi>L</mi><mi>T</mi></msup><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mi>y</mi></mrow></math> for <math id="S1.p2.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.</p>
 </div>
 <div id="S1.p3" class="ltx_para">
-<p class="ltx_p">A variant of the Cholesky decomposition is the form <math id="S1.p3.m1" class="ltx_Math" alttext="A=R^{T}R" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><msup><mi>R</mi><mi>T</mi></msup><mo>⁢</mo><mi>R</mi></mrow></mrow></math> , where <math id="S1.p3.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is upper triangular.</p>
+<p class="ltx_p">A variant of the <a class="nnexus_concept" href="http://mathworld.wolfram.com/CholeskyDecomposition.html">Cholesky decomposition</a> is the form <math id="S1.p3.m1" class="ltx_Math" alttext="A=R^{T}R" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><msup><mi>R</mi><mi>T</mi></msup><mo>⁢</mo><mi>R</mi></mrow></mrow></math> , where <math id="S1.p3.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is upper triangular.</p>
 </div>
 <div id="S1.p4" class="ltx_para">
-<p class="ltx_p">Cholesky decomposition is often used to solve the normal equations in linear least squares problems; they give <math id="S1.p4.m1" class="ltx_Math" alttext="A^{T}Ax=A^{T}b" display="inline"><mrow><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mi>b</mi></mrow></mrow></math> , in which <math id="S1.p4.m2" class="ltx_Math" alttext="A^{T}A" display="inline"><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mi>A</mi></mrow></math> is symmetric and positive definite.</p>
+<p class="ltx_p">Cholesky decomposition is often used to solve the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">normal equations</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/NormalEquation.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/normalequations"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> in <a class="nnexus_concept" href="http://planetmath.org/linearleastsquares">linear least squares</a> problems; they give <math id="S1.p4.m1" class="ltx_Math" alttext="A^{T}Ax=A^{T}b" display="inline"><mrow><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mi>b</mi></mrow></mrow></math> , in which <math id="S1.p4.m2" class="ltx_Math" alttext="A^{T}A" display="inline"><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mi>A</mi></mrow></math> is symmetric and <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">positive definite</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/positivedefiniteform"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/positivedefinite"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>.</p>
 </div>
 <div id="S1.p5" class="ltx_para">
 <p class="ltx_p">To derive <math id="S1.p5.m1" class="ltx_Math" alttext="A=LL^{T}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><msup><mi>L</mi><mi>T</mi></msup></mrow></mrow></math>, we simply equate coefficients on both sides of the equation:</p>
@@ -82,7 +82,7 @@ l_{n1}&amp;l_{n2}&amp;\cdots&amp;l_{nn}\end{bmatrix}\begin{bmatrix}l_{11}&amp;l_
 </table>
 </div>
 <div id="S1.p9" class="ltx_para">
-<p class="ltx_p">Because <math id="S1.p9.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is symmetric and positive definite, the expression under the square root is always positive, and all <math id="S1.p9.m2" class="ltx_Math" alttext="l_{ij}" display="inline"><msub><mi>l</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> are real.
+<p class="ltx_p">Because <math id="S1.p9.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is symmetric and positive definite, the <a class="nnexus_concept" href="http://planetmath.org/expression">expression</a> under the <a class="nnexus_concept" href="http://planetmath.org/squareroot">square root</a> is always positive, and all <math id="S1.p9.m2" class="ltx_Math" alttext="l_{ij}" display="inline"><msub><mi>l</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> are real.
 </p>
 </div>
 </section>
@@ -110,7 +110,7 @@ l_{n1}&amp;l_{n2}&amp;\cdots&amp;l_{nn}\end{bmatrix}\begin{bmatrix}l_{11}&amp;l_
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Cholesky decomposition</td>
 </tr>
 <tr class="ltx_tr">
-<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</td>
 <td class="ltx_td ltx_align_left ltx_border_r">CholeskyDecomposition</td>
 </tr>
 <tr class="ltx_tr">
@@ -139,7 +139,7 @@ l_{n1}&amp;l_{n2}&amp;\cdots&amp;l_{nn}\end{bmatrix}\begin{bmatrix}l_{11}&amp;l_
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
-<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><a class="nnexus_concept" href="http://planetmath.org/definition">Definition</a></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
@@ -159,7 +159,7 @@ l_{n1}&amp;l_{n2}&amp;\cdots&amp;l_{nn}\end{bmatrix}\begin{bmatrix}l_{11}&amp;l_
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
-<td class="ltx_td ltx_align_left ltx_border_r">matrix square root</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><a class="nnexus_concept" href="http://mathworld.wolfram.com/MatrixSquareRoot.html">matrix square root</a></td>
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>

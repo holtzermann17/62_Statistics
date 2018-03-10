@@ -20,22 +20,22 @@
 <br class="ltx_break">
 </div>
 <div id="p2" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_bold">Background</span>. In estimating a parameter from a statistical model, one is interested in how the estimates deviate from the true value of the parameter. The deviations generally come from two sources. One source is known as the <em class="ltx_emph ltx_font_italic">noise</em>, or <em class="ltx_emph ltx_font_italic">random error</em>, which has to do with the random nature of observations or measurements in general. For example, when a fair coin is tossed 100 times and the number of heads is counted. One might get 51 even though the true parameter is 50. The difference of 1 is due to the random nature of coin tossing.</p>
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Background</span>. In estimating a <a class="nnexus_concept" href="http://planetmath.org/parametre">parameter</a> from a <a class="nnexus_concept" href="http://planetmath.org/statisticalmodel">statistical model</a>, one is interested in how the <a class="nnexus_concept" href="http://planetmath.org/estimator">estimates</a> deviate from the true value of the parameter. The deviations generally come from two sources. One source is known as the <em class="ltx_emph ltx_font_italic">noise</em>, or <em class="ltx_emph ltx_font_italic">random error</em>, which has to do with the random nature of <a class="nnexus_concept" href="http://planetmath.org/datatypesinstatistics">observations</a> or measurements in general. For example, when a fair coin is tossed 100 times and the number of heads is counted. One might get 51 even though the true parameter is 50. The <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">difference</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/difference"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/setdifference"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of 1 is due to the random nature of <a class="nnexus_concept" href="http://mathworld.wolfram.com/CoinTossing.html">coin tossing</a>.</p>
 </div>
 <div id="p3" class="ltx_para">
-<p class="ltx_p">The other source of deviation is known as the <em class="ltx_emph ltx_font_italic">bias</em>, or <em class="ltx_emph ltx_font_italic">systematic error</em>, which has to do with how the observations are made, how the instruments are set up to make the measurements, and most of all, how these observations or
-measurements are tallied and summarized to come up with an estimate of the true parameter. For example, a rating scheme is proposed for an online collaborative encyclopedia on entries contributed by individuals who are members of the online website hosting the encyclopedia. The purpose of this rating scheme is to give the readers, members or non-members inclusive, a better idea on the quality of the entries by their corresponding numerical values. Suppose that members are asked to rate an entry from a scale of 1 to
-10. For simplicity, members who are intimately familiar with the concept in the entry rate it with a perfect 10. Next, members who are not that familiar with the entry give it a 5. Finally, the remaining members choose to not participate and the rating scale from them default to a 0. A simple arithmetic average is computed and a rating of 2.5 is produced. Would this 2.5 be a good indicator
+<p class="ltx_p">The other source of deviation is known as the <em class="ltx_emph ltx_font_italic">bias</em>, or <em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://planetmath.org/bias">systematic error</a></em>, which has to do with how the observations are made, how the instruments are set up to make the measurements, and most of all, how these observations or
+measurements are tallied and summarized to come up with an estimate of the true parameter. For example, a rating scheme is proposed for an online collaborative encyclopedia on entries contributed by <a class="nnexus_concept" href="http://mathworld.wolfram.com/Individual.html">individuals</a> who are members of the online website hosting the encyclopedia. The purpose of this rating scheme is to give the readers, members or non-members inclusive, a better idea on the quality of the entries by their corresponding numerical values. Suppose that members are asked to rate an entry from a scale of 1 to
+10. For simplicity, members who are intimately familiar with the <a class="nnexus_concept" href="http://planetmath.org/conceptlattice">concept</a> in the entry rate it with a perfect 10. Next, members who are not that familiar with the entry give it a 5. Finally, the remaining members choose to not participate and the rating scale from them default to a 0. A simple <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">arithmetic</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/arithmetic"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/arithmeticalhierarchy"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> average is computed and a rating of 2.5 is produced. Would this 2.5 be a good <a class="nnexus_concept" href="http://mathworld.wolfram.com/Indicator.html">indicator</a>
 of the overall quality of the entry? Maybe not. Here, biases are introduced. First, the participants of the rating scheme do not include non-members, who, collectively, may very well represent a different level of understanding of the rated entry than members. Secondly, even among the members, there is a considerable amount of differences in terms of levels of understanding of the entry, etc… To some, the entry may be accurately and perfectly written, not
 everyone will rate it the same way in the end. Finally, there are the non-raters. We have no idea as to how they would rate the entries. Their votes should certainly count if they decide to rate in the last minute. The final rate, however, would most likely be different.</p>
 </div>
 <div id="p4" class="ltx_para">
-<p class="ltx_p">The difference between the bias and the noise is that one can be reduced while the other can not. Mathematically, we have the following:</p>
+<p class="ltx_p">The difference between the bias and the noise is that one can be <a class="nnexus_concept" href="http://planetmath.org/reducedautomaton">reduced</a> while the other can not. Mathematically, we have the following:</p>
 </div>
 <div id="p5" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. If <math id="p5.m1" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is a parameter in a statistical
-model, the bias of an estimator <math id="p5.m2" class="ltx_Math" alttext="\hat{\theta}" display="inline"><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover></math> of <math id="p5.m3" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>, is the
-difference between expectation of <math id="p5.m4" class="ltx_Math" alttext="\hat{\theta}" display="inline"><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover></math> and the value of
+<p class="ltx_p"><span class="ltx_text ltx_font_bold"><a class="nnexus_concept" href="http://planetmath.org/definition">Definition</a></span>. If <math id="p5.m1" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is a parameter in a statistical
+model, the bias of an <a class="nnexus_concept" href="http://mathworld.wolfram.com/Estimator.html">estimator</a> <math id="p5.m2" class="ltx_Math" alttext="\hat{\theta}" display="inline"><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover></math> of <math id="p5.m3" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>, is the
+difference between <a class="nnexus_concept" href="http://planetmath.org/expectedvalue">expectation</a> of <math id="p5.m4" class="ltx_Math" alttext="\hat{\theta}" display="inline"><mover accent="true"><mi>θ</mi><mo stretchy="false">^</mo></mover></math> and the value of
 <math id="p5.m5" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>, which, by abuse of notation, is also denoted <math id="p5.m6" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>:</p>
 <table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
 
@@ -45,9 +45,9 @@ difference between expectation of <math id="p5.m4" class="ltx_Math" alttext="\ha
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">An estimator is called an <em class="ltx_emph ltx_font_italic">unbiased estimator</em> if its bias is
+<p class="ltx_p">An estimator is called an <em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://mathworld.wolfram.com/UnbiasedEstimator.html">unbiased estimator</a></em> if its bias is
 zero at <em class="ltx_emph ltx_font_italic">all</em> values of <math id="p5.m7" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>. Otherwise, it is a
-<em class="ltx_emph ltx_font_italic">biased estimator</em>.</p>
+<em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://mathworld.wolfram.com/BiasedEstimator.html">biased estimator</a></em>.</p>
 </div>
 <div id="p6" class="ltx_para">
 <p class="ltx_p">Note that the random error does not appear in the above definition because its expectation is zero.</p>
@@ -58,8 +58,8 @@ zero at <em class="ltx_emph ltx_font_italic">all</em> values of <math id="p5.m7"
 <li id="I1.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">1.</span> 
 <div id="I1.i1.p1" class="ltx_para">
-<p class="ltx_p">If observations <math id="I1.i1.p1.m1" class="ltx_Math" alttext="X_{1},\ldots,X_{n}" display="inline"><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></math> are iid from a normal distribution with
-mean <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> and variance <math id="I1.i1.p1.m3" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math>, then the sample mean estimator
+<p class="ltx_p">If observations <math id="I1.i1.p1.m1" class="ltx_Math" alttext="X_{1},\ldots,X_{n}" display="inline"><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></math> are iid from a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">normal distribution</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/NormalDistribution.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/normalrandomvariable"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> with
+mean <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> and <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">variance</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Variance.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/variance"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <math id="I1.i1.p1.m3" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math>, then the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">sample mean</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/SampleMean.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/statistic"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> estimator
 <math id="I1.i1.p1.m4" class="ltx_Math" alttext="\overline{X}" display="inline"><mover accent="true"><mi>X</mi><mo>¯</mo></mover></math> is an unbiased estimator for <math id="I1.i1.p1.m5" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>. To see this, recall the definition of a sample mean</p>
 <table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
 
@@ -80,7 +80,7 @@ mean <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\mu" display="inline"><mi>
 </tr>
 </table>
 <p class="ltx_p">But <math id="I1.i1.p1.m6" class="ltx_Math" alttext="\mu=\operatorname{E}[X_{1}]=\cdots=\operatorname{E}[X_{n}]" display="inline"><mrow><mi>μ</mi><mo>=</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">⋯</mi><mo>=</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, the
-above expression reduces to</p>
+above <a class="nnexus_concept" href="http://planetmath.org/expression">expression</a> reduces to</p>
 <table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -97,7 +97,7 @@ above expression reduces to</p>
 <span class="ltx_tag ltx_tag_enumerate">2.</span> 
 <div id="I1.i2.p1" class="ltx_para">
 <p class="ltx_p">Here is another example of an unbiased estimator. Again, assume observations <math id="I1.i2.p1.m1" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math>, <math id="I1.i2.p1.m2" class="ltx_Math" alttext="i=1,\ldots,n" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math> are iid as normal distribution
-<math id="I1.i2.p1.m3" class="ltx_Math" alttext="N(\mu,\sigma^{2})" display="inline"><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></math>. The sample variance estimator <math id="I1.i2.p1.m4" class="ltx_Math" alttext="s^{2}" display="inline"><msup><mi>s</mi><mn>2</mn></msup></math> is defined
+<math id="I1.i2.p1.m3" class="ltx_Math" alttext="N(\mu,\sigma^{2})" display="inline"><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></math>. The <a class="nnexus_concept" href="http://mathworld.wolfram.com/SampleVariance.html">sample variance</a> estimator <math id="I1.i2.p1.m4" class="ltx_Math" alttext="s^{2}" display="inline"><msup><mi>s</mi><mn>2</mn></msup></math> is defined
 by</p>
 <table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
 
@@ -107,7 +107,7 @@ by</p>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">Expressing <math id="I1.i2.p1.m5" class="ltx_Math" alttext="s^{2}" display="inline"><msup><mi>s</mi><mn>2</mn></msup></math> explicitly in terms of the random variables <math id="I1.i2.p1.m6" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math>,
+<p class="ltx_p">Expressing <math id="I1.i2.p1.m5" class="ltx_Math" alttext="s^{2}" display="inline"><msup><mi>s</mi><mn>2</mn></msup></math> explicitly in terms of the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">random variables</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/RandomVariable.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/randomvariable"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <math id="I1.i2.p1.m6" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math>,
 we have</p>
 <table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
 
@@ -128,7 +128,7 @@ we have</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
 </tr></tbody>
 </table>
-<p class="ltx_p">Now, for <math id="I1.i2.p1.m7" class="ltx_Math" alttext="i\neq j" display="inline"><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></math>, <math id="I1.i2.p1.m8" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math> and <math id="I1.i2.p1.m9" class="ltx_Math" alttext="X_{j}" display="inline"><msub><mi>X</mi><mi>j</mi></msub></math> are independent so that</p>
+<p class="ltx_p">Now, for <math id="I1.i2.p1.m7" class="ltx_Math" alttext="i\neq j" display="inline"><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></math>, <math id="I1.i2.p1.m8" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math> and <math id="I1.i2.p1.m9" class="ltx_Math" alttext="X_{j}" display="inline"><msub><mi>X</mi><mi>j</mi></msub></math> are <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">independent</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/projectivebasis"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/independent"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> so that</p>
 <table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -234,7 +234,7 @@ _{i&lt;j}\mu^{2}\}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><m
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">bias</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</th>
 <td class="ltx_td ltx_align_left ltx_border_r">Bias</td>
 </tr>
 <tr class="ltx_tr">
@@ -266,7 +266,7 @@ _{i&lt;j}\mu^{2}\}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><m
 <td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></th>
 <td class="ltx_td ltx_align_left ltx_border_r">msc 62A01</td>
 </tr>
 <tr class="ltx_tr">

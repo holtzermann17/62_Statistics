@@ -20,10 +20,10 @@
 <br class="ltx_break">
 </div>
 <div id="p2" class="ltx_para">
-<p class="ltx_p">In statistical modeling of <math id="p2.m1" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> data observations (<math id="p2.m2" class="ltx_Math" alttext="N&lt;\infty" display="inline"><mrow><mi>N</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>), two types of variables are usually defined. One is the response variable or variate, usually denoted by <math id="p2.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>, and the other is the explanatory variable or covariate <math id="p2.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. While there is only one response variable, there may be one or more than one explanatory variables. The response variable is considered random, where as the explanatory variable(s) may or may not be random.</p>
+<p class="ltx_p">In statistical modeling of <math id="p2.m1" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> data <a class="nnexus_concept" href="http://planetmath.org/datatypesinstatistics">observations</a> (<math id="p2.m2" class="ltx_Math" alttext="N&lt;\infty" display="inline"><mrow><mi>N</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>), two types of variables are usually defined. One is the response variable or <a class="nnexus_concept" href="http://mathworld.wolfram.com/Variate.html">variate</a>, usually denoted by <math id="p2.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>, and the other is the explanatory variable or covariate <math id="p2.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. While there is only one response variable, there may be one or more than one explanatory variables. The response variable is considered random, where as the explanatory variable(s) may or may not be random.</p>
 </div>
 <div id="p3" class="ltx_para">
-<p class="ltx_p">Based on the above setup, a <em class="ltx_emph ltx_font_italic">univariate regression model</em>, or simply <em class="ltx_emph ltx_font_italic">regression model</em>, is a statistical model with the following assumptions:</p>
+<p class="ltx_p">Based on the above setup, a <em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://planetmath.org/regressionmodel">univariate regression model</a></em>, or simply <em class="ltx_emph ltx_font_italic">regression model</em>, is a <a class="nnexus_concept" href="http://planetmath.org/statisticalmodel">statistical model</a> with the following assumptions:</p>
 <ol id="I1" class="ltx_enumerate">
 <li id="I1.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">1.</span> 
@@ -34,7 +34,7 @@
 <li id="I1.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">2.</span> 
 <div id="I1.i2.p1" class="ltx_para">
-<p class="ltx_p">the response variable <math id="I1.i2.p1.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> can be expressed as the sum of a function <math id="I1.i2.p1.m2" class="ltx_Math" alttext="f(\textbf{X})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>𝐗</mtext><mo stretchy="false">)</mo></mrow></mrow></math>, called the <em class="ltx_emph ltx_font_italic">regression function</em>, where <span class="ltx_text ltx_markedasmath ltx_font_bold">X</span> represents the row vector of explanatory variables, and an error term <math id="I1.i2.p1.m4" class="ltx_Math" alttext="\varepsilon_{i}" display="inline"><msub><mi>ε</mi><mi>i</mi></msub></math>:</p>
+<p class="ltx_p">the response variable <math id="I1.i2.p1.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> can be expressed as the sum of a function <math id="I1.i2.p1.m2" class="ltx_Math" alttext="f(\textbf{X})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>𝐗</mtext><mo stretchy="false">)</mo></mrow></mrow></math>, called the <em class="ltx_emph ltx_font_italic">regression function</em>, where <span class="ltx_text ltx_markedasmath ltx_font_bold">X</span> represents the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">row vector</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/RowVector.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/listvector"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of explanatory variables, and an error term <math id="I1.i2.p1.m4" class="ltx_Math" alttext="\varepsilon_{i}" display="inline"><msub><mi>ε</mi><mi>i</mi></msub></math>:</p>
 <table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -43,25 +43,25 @@
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">where <math id="I1.i2.p1.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is the number of explanatory variables. <math id="I1.i2.p1.m6" class="ltx_Math" alttext="f(\textbf{X})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>𝐗</mtext><mo stretchy="false">)</mo></mrow></mrow></math> is called the systematic component, and <math id="I1.i2.p1.m7" class="ltx_Math" alttext="\varepsilon" display="inline"><mi>ε</mi></math> is the random error component.</p>
+<p class="ltx_p">where <math id="I1.i2.p1.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is the number of explanatory variables. <math id="I1.i2.p1.m6" class="ltx_Math" alttext="f(\textbf{X})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mtext>𝐗</mtext><mo stretchy="false">)</mo></mrow></mrow></math> is called the systematic <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">component</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/connectedgraph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/coordinatevector"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/frame"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>, and <math id="I1.i2.p1.m7" class="ltx_Math" alttext="\varepsilon" display="inline"><mi>ε</mi></math> is the random error component.</p>
 </div>
 </li>
 <li id="I1.i3" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">3.</span> 
 <div id="I1.i3.p1" class="ltx_para">
-<p class="ltx_p">the error component and the systematic component are independent</p>
+<p class="ltx_p">the error component and the systematic component are <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">independent</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/projectivebasis"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/independent"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup></p>
 </div>
 </li>
 <li id="I1.i4" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">4.</span> 
 <div id="I1.i4.p1" class="ltx_para">
-<p class="ltx_p">random error variables <math id="I1.i4.p1.m1" class="ltx_Math" alttext="\varepsilon_{i}" display="inline"><msub><mi>ε</mi><mi>i</mi></msub></math> for the <math id="I1.i4.p1.m2" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> observations are iid normal with mean 0 and variance <math id="I1.i4.p1.m3" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math></p>
+<p class="ltx_p">random error variables <math id="I1.i4.p1.m1" class="ltx_Math" alttext="\varepsilon_{i}" display="inline"><msub><mi>ε</mi><mi>i</mi></msub></math> for the <math id="I1.i4.p1.m2" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> observations are iid normal with mean 0 and <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">variance</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Variance.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/variance"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <math id="I1.i4.p1.m3" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math></p>
 </div>
 </li>
 </ol>
 </div>
 <div id="p4" class="ltx_para">
-<p class="ltx_p">Any unknown variables appearing in the regression function <math id="p4.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, other than the covariates, are called the <em class="ltx_emph ltx_font_italic">regression coefficients</em>.</p>
+<p class="ltx_p">Any unknown variables appearing in the regression function <math id="p4.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, other than the covariates, are called the <em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://mathworld.wolfram.com/RegressionCoefficient.html">regression coefficients</a></em>.</p>
 </div>
 <div id="p5" class="ltx_para">
 <p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span></p>
@@ -69,14 +69,14 @@
 <li id="I2.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_itemize">•</span> 
 <div id="I2.i1.p1" class="ltx_para">
-<p class="ltx_p">The conditional distribution of <math id="I2.i1.p1.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>, given <span class="ltx_text ltx_markedasmath ltx_font_bold">X</span> is normal, or Gaussian, with mean <math id="I2.i1.p1.m3" class="ltx_Math" alttext="\mu=\operatorname{E}\big{[}Y\mid\textbf{X}=\boldsymbol{x}\big{]}=\operatorname%
-{E}\big{[}Y\mid X_{1}=x_{1},\ldots,X_{p}=x_{p}\big{]}" display="inline"><mrow><mi>μ</mi><mo>=</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>Y</mi><mo>∣</mo><mrow><mtext>𝐗</mtext><mo>=</mo><mi>𝒙</mi></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>Y</mi><mo>∣</mo><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>X</mi><mi>p</mi></msub><mo>=</mo><msub><mi>x</mi><mi>p</mi></msub></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow></math> and variance <math id="I2.i1.p1.m4" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math>. In addition, the random variables <math id="I2.i1.p1.m5" class="ltx_Math" alttext="Y_{i}" display="inline"><msub><mi>Y</mi><mi>i</mi></msub></math> corresponding to the reponses are independent.</p>
+<p class="ltx_p">The conditional distribution of <math id="I2.i1.p1.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>, given <span class="ltx_text ltx_markedasmath ltx_font_bold">X</span> is normal, or <a class="nnexus_concept" href="http://planetmath.org/normalrandomvariable">Gaussian</a>, with mean <math id="I2.i1.p1.m3" class="ltx_Math" alttext="\mu=\operatorname{E}\big{[}Y\mid\textbf{X}=\boldsymbol{x}\big{]}=\operatorname%
+{E}\big{[}Y\mid X_{1}=x_{1},\ldots,X_{p}=x_{p}\big{]}" display="inline"><mrow><mi>μ</mi><mo>=</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>Y</mi><mo>∣</mo><mrow><mtext>𝐗</mtext><mo>=</mo><mi>𝒙</mi></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>Y</mi><mo>∣</mo><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>X</mi><mi>p</mi></msub><mo>=</mo><msub><mi>x</mi><mi>p</mi></msub></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow></math> and variance <math id="I2.i1.p1.m4" class="ltx_Math" alttext="\sigma^{2}" display="inline"><msup><mi>σ</mi><mn>2</mn></msup></math>. In <a class="nnexus_concept" href="http://planetmath.org/addition">addition</a>, the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">random variables</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/RandomVariable.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/randomvariable"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <math id="I2.i1.p1.m5" class="ltx_Math" alttext="Y_{i}" display="inline"><msub><mi>Y</mi><mi>i</mi></msub></math> corresponding to the reponses are independent.</p>
 </div>
 </li>
 <li id="I2.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_itemize">•</span> 
 <div id="I2.i2.p1" class="ltx_para">
-<p class="ltx_p">Sometimes, Condition 4 above is skipped to encompass a wider class of regression models. Those models that observe Condition 4 is generally called a normal, or Gaussian regression model. Otherwise, they are classified under the non-linear regression model discussed below. Some well known non-normal regression models are the logistic regression for binary data and the Poisson regression for count data.
+<p class="ltx_p">Sometimes, Condition 4 above is skipped to encompass a wider class of regression models. Those models that observe Condition 4 is generally called a normal, or Gaussian regression model. Otherwise, they are classified under the non-linear regression model discussed below. Some well known non-normal regression models are the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">logistic regression</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/LogisticRegression.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/logisticregression"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> for binary data and the Poisson regression for count data.
 </p>
 </div>
 </li>
@@ -89,7 +89,7 @@
 <li id="I2.i4" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_itemize">•</span> 
 <div id="I2.i4.p1" class="ltx_para">
-<p class="ltx_p">A regression model can also be classified by the form of the regression function <math id="I2.i4.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. If <math id="I2.i4.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can be expressed as a linear combination of the regression coefficients:</p>
+<p class="ltx_p">A regression model can also be classified by the form of the regression function <math id="I2.i4.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. If <math id="I2.i4.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can be expressed as a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">linear combination</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/LinearCombination.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/linearcombination"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of the regression coefficients:</p>
 <table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -116,7 +116,7 @@
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">The last one is called a <em class="ltx_emph ltx_font_italic">polynomial regression model</em>. Linear regression models belong to a more general class of statistical models called the general linear model, where explanatory variables are no longer restricted to be continuous ones only. When <math id="I2.i4.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can not be expressed linearly in terms of the regression coefficients, the model is known as a <em class="ltx_emph ltx_font_italic">non-linear regression model</em>. An example of a non-linear regression model is</p>
+<p class="ltx_p">The last one is called a <em class="ltx_emph ltx_font_italic">polynomial regression model</em>. Linear regression models belong to a more general class of statistical models called the <a class="nnexus_concept" href="http://planetmath.org/generallinearmodel">general linear model</a>, where explanatory variables are no longer restricted to be continuous ones only. When <math id="I2.i4.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can not be expressed linearly in terms of the regression coefficients, the model is known as a <em class="ltx_emph ltx_font_italic">non-linear regression model</em>. An example of a non-linear regression model is</p>
 <table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -173,7 +173,7 @@
 <td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
 </tr>
 <tr class="ltx_tr">
-<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></td>
 <td class="ltx_td ltx_align_left ltx_border_r">msc 62J02</td>
 </tr>
 <tr class="ltx_tr">
